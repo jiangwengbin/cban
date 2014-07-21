@@ -1,0 +1,54 @@
+/*--各类TITLE集合--*/
+/*--2PX 底部蓝线、当前与非常当前状态，注意排列倒序--*/
+#title_blueline{
+	width:890px;
+	height:30px;
+	line-height:30px;
+	font-size:18px;
+	text-indent: 10px;
+	font-family:"黑体";
+	font-weight:bold;
+	margin-top:10px;
+	margin-left: auto;
+	margin-right: auto;
+	border-bottom-width: 2px;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: solid;
+	border-left-style: none;
+	border-bottom-color: #07A8E8;
+}
+#title_blueline_atpresent{
+	float:right;
+	color:#FFF;
+	background-color:#0695CD;
+	display:block;
+	height:22px;
+	width:82px;
+	margin-top:5px;
+	line-height:22px;
+	text-align: left;
+	font-weight:normal;
+}
+#title_blueline_nopresent{
+	float:right;
+	line-height:32px;
+	padding-left:10px;
+	padding-right:10px;
+}
+/*--2PX 底部蓝线、当前与非常当前状态，注意排列倒序--*/
+/*--1PX 底部蓝线内容标题，宽度自己增长--*/
+#title_blueline_1px_bottom{
+	height:36px;
+	line-height:36px;
+	font-size:15px;
+	font-family:"微软雅黑", "黑体";
+	font-weight:bold;
+	border-bottom-width: 1px;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: solid;
+	border-left-style: none;
+	border-bottom-color: #07A8E8;
+}
+/*--1PX 底部蓝线内容标题，宽度自己增长--*/

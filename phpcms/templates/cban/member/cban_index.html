@@ -1,0 +1,48 @@
+{template 'content', 'header'}
+
+<div id="m_box">
+	<div id="m_top">中国家品牌网 > 会员专区 > 基本信息</div>
+    <div id="m_left">{template 'member', 'cban_account_manage_left'}</div>
+    <div id="m_content">
+			<script language="JavaScript">
+            <!--
+            $(function(){
+                $.formValidator.initConfig({autotip:true,formid:"myform",onerror:function(msg){}});
+                {$formValidator}
+            });
+            
+            //-->
+            </script>
+
+			<form method="post" action="" id="myform" name="myform">
+				<table width="100%" cellspacing="0" class="table_form">
+					
+					<tr>
+						<th width="100">用户名：</th> 
+						<td>{$_username}</td>
+					</tr>
+                    <tr>
+						<th width="100">会员类型：</th> 
+						<td>{$_usertype}</td>
+					</tr>
+					{loop $forminfos $k $v}
+					<tr>
+						<th width="100">{if $v['isbase']}<font color=red>*</font>{/if} {$v['name']}：{if $v['tips']}<br />({$v['tips']}){/if}</th> 
+						<td>{$v['form']}</td>
+					</tr>
+					{/loop}
+					<tr>
+						<th></th>
+						<td><input name="dosubmit" type="submit" id="dosubmit" value="{L('submit')}" class="button"></td>
+					</tr>
+				</table>
+			</form>
+    </div>
+</div>
+
+	{template 'content', 'footer2'}
+    
+</div>
+
+</body>
+</html>

@@ -1,0 +1,94 @@
+{template 'content', 'header'}
+
+<div id="m_box">
+	<div id="m_top">中国家品牌网 > 会员专区 > 门店信息发布</div>
+    <div id="m_left">{template 'member', 'cban_account_manage_left'}</div>
+    <div id="m_content">
+				<form method="post" action="" id="myform" name="myform" onsubmit="return sureupdate()">
+				<table width="100%" cellspacing="0" class="table_form">
+					
+					<tr>
+						<th width="80"><font color=red>*</font> 门店名称： </th>        
+						<td><input name="info[mdname]" id="mdname" type="text" size="30" value="{$info[mdname]}" class="input-text"></td>
+					</tr>
+                    <tr>
+						<th width="80"><font color=red>*</font> 地区： </th>        
+						<td>{menu_linkage(1,'L_1',$info[diqu])}</td>
+					</tr>
+                    <tr>
+						<th width="80"><font color=red>*</font> 地址：</th>        
+						<td><input name="info[dizhi]" id="dizhi" type="text" size="30" value="{$info[dizhi]}" class="input-text" ></td>
+					</tr>
+                     <tr>
+						<th width="80"><font color=red>*</font> 联系人： </th>        
+						<td><input name="info[lxr]" id="lxr" type="text" size="30" value="{$info[lxr]}" class="input-text" ></td>
+					</tr>
+                     <tr>
+						<th width="80"><font color=red>*</font> 手机： </th>        
+						<td><input name="info[tel]" id="tel" type="text" size="30" value="{$info[tel]}" class="input-text"></td>
+					</tr>
+                    <tr>
+						<th width="80"><font color=red>*</font> 固定电话： </th>        
+						<td><input name="info[dianhua]" id="dianhua" type="text" size="30" value="{$info[dianhua]}" class="input-text"></td>
+					</tr>
+                    <tr>
+						<th width="80"> 传真： </th>        
+						<td><input name="info[chuanzhen]" id="chuanzhen" type="text" size="30" value="{$info[chuanzhen]}" class="input-text"></td>
+					</tr>
+                    <tr>
+						<th width="80"><font color=red>*</font> EMail： </th>        
+						<td><input name="info[email]" id="email" type="text" size="30" value="{$info[email]}" class="input-text"></td>
+					</tr>
+                    <tr>
+						<th width="80"> QQ： </th>        
+						<td><input name="info[qq]" id="qq" type="text" size="30" value="{$info[qq]}" class="input-text"></td>
+					</tr>
+                    <tr>
+						<th width="80"> 微信： </th>        
+						<td><input name="info[weixin]" id="weixin" type="text" size="30" value="{$info[weixin]}" class="input-text"></td>
+					</tr>
+                    <tr>
+						<th width="100"><font color=red>*</font> 文章详细信息： </th> 
+						<td>
+							<textarea name="content" id="content">{$info[content]}</textarea>{form::editor('content','full','mendian_info','','','1','0','gif|jpg|jpeg|png|bmp','200')}
+                        </td>
+					</tr>
+					<tr>
+						<th>
+                        	<input name="id" id="id" type="hidden" value="{$info[id]}" >
+                        </th>
+						<td><input name="dosubmit" type="submit" id="dosubmit" value="提交" class="button"></td>
+					</tr>
+				</table>
+
+				
+			</form>
+    </div>
+</div>
+			
+
+<script type="text/javascript">
+<!--
+$(function(){
+
+	$.formValidator.initConfig({autotip:true,formid:"myform",onerror:function(msg){}});
+	$("#mdname").formValidator({onshow:"请输入门店名称",onfocus:"请输入门店名称"}).inputValidator({min:6,max:20,onerror:"门店名称应该为6-20位之间"});
+	$("#L_1-2").formValidator({onshow:"请选择所在地区",onfocus:"请选择城市"}).inputValidator({min:1,max:5,onerror:"地区选择需要详细到市级"});
+	$("#dizhi").formValidator({onshow:"请输入详细地址",onfocus:"请输入详细地址"}).inputValidator({min:6,max:100,onerror:"详细地址应该为6-100位之间"});
+	$("#lxr").formValidator({onshow:"请输入联系人姓名",onfocus:"联系人姓名应该为2-14位之间"}).inputValidator({min:2,max:14,onerror:"联系人姓名应该为2-14位之间"});
+	$("#tel").formValidator({onshow:"为了方便客户联系，请输入正确的手机号",onfocus:"为了方便客户联系，请输入正确的手机号"}).inputValidator({min:1,max:11,onerror:"为了方便客户联系，请输入正确的手机号"}).regexValidator({regexp:"^(1)[0-9]{10}$",onerror:"为了方便客户联系，请输入正确的手机号"});
+	$("#dianhua").formValidator({onshow:"请输入固定电话",onfocus:"请输入固定电话"}).inputValidator({min:1,max:13,onerror:"固定电话最长不能超过13位"});
+	$("#email").formValidator({onshow:"请输入邮箱",onfocus:"邮箱格式错误",oncorrect:"邮箱格式正确"}).inputValidator({min:2,max:32,onerror:"邮箱应该为2-32位之间"}).regexValidator({regexp:"email",datatype:"enum",onerror:"邮箱格式错误"});
+	$("#content").formValidator({onshow:"请输入文章内容",onfocus:"请输入文章内容"}).inputValidator({min:1,max:3000,onerror:"文章长度过长，请简化"});
+
+})
+
+function sureupdate(){
+	if(document.getElementById('id').value){
+		return confirm('修改内容将会重新提交审核，确定修改吗？');
+	}
+}
+
+//-->
+</script>
+{template 'content', 'footer2'}

@@ -1,0 +1,90 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>{if isset($SEO['title']) && !empty($SEO['title'])}{$SEO['title']}{/if}{$SEO['site_title']}</title>
+<meta name="keywords" content="{$SEO['keyword']}">
+<meta name="description" content="{$SEO['description']}">
+<link href="{CBAN_PATH}css/main.css" type="text/css" rel="stylesheet"/>
+<link href="{CBAN_PATH}css/base.css" type="text/css" rel="stylesheet"/>
+<link href="{CBAN_PATH}css/wh_footer.css" type="text/css" rel="stylesheet"/>
+<link href="{CBAN_PATH}css/wh_title.css" type="text/css" rel="stylesheet"/>
+</head>
+
+<!--轮换图片 开始-->
+
+<script src="{CBAN_PATH}js/jquery-1.10.2.min.js" type="text/javascript"></script>
+<script src="{CBAN_PATH}js/jquery.kinMaxShow-1.1.min.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="{CBAN_PATH}js/main.js"></script>
+<script type="text/javascript">
+$(function(){
+	$("#kinMaxShow").kinMaxShow({height:200,
+								width:320,
+								button:{
+									showIndex:true,
+									normal:{width:'18px',height:'18px',lineHeight:'18px',right:'16px',bottom:'6px',fontSize:'12px',opacity:0.8,background:"#666666",border:"1px solid #999999",color:"#CCCCCC",marginRight:'6px'},
+									focus:{background:"#CC0000",border:"1px solid #FF0000",color:"#000000"}
+								}});
+});
+</script>
+<!--轮换图片 结束-->
+
+<body>
+<a name="top"></a>
+<div id="header">
+	<center>
+    	<div id="top">
+        	<div id="top_tool_bar">
+        	
+            	<script type="text/javascript">document.write('<iframe src="{APP_PATH}index.php?m=member&c=index&a=mini&forward='+encodeURIComponent(location.href)+'&siteid={get_siteid()}" allowTransparency="true"  width="500" height="24" frameborder="0" scrolling="no"></iframe>')</script>
+                
+                <div id="controls">
+                    <form name="select_form" action="" method="post">
+                        <select name="type">
+                          <option value="0">商品</option>
+                          <option value="1">type1</option>
+                          <option value="2">type2</option>
+                        </select>
+                        
+                        <input name="select" type="text" />
+                        <button>搜&nbsp;索</button>
+                    </form>
+                </div>
+            </div>
+            
+        	<div>
+            	<img class="logo_img" src="{CBAN_PATH}img/logo.jpg" height="100" />
+            </div>
+            
+        </div>
+        
+        <div id="header_nav">
+        	<ul>
+            	<li>
+                	<a href="{siteurl($siteid)}"><div class="no">首页</div></a>
+                </li>
+                
+                {pc:content action="category" catid="9" num="25" siteid="$siteid" order="listorder ASC"}
+					{loop $data $r}
+						<li>
+							<a href="{$r[url]}"><div <?php if ($r[child]=='0') echo 'class="no"';?> >{$r[catname]}</div></a>
+							
+							{pc:content action="category" catid="$r[catid]" num="25" siteid="$siteid" order="listorder ASC"}
+								 <ol class="next_nav">
+								 	{loop $data $r2}
+				                    	<li>
+				                        	<a href="{$r2[url]}"><div class="no_border">{$r2[catname]}</div></a>
+				                        </li>
+			                        {/loop}
+			                      </ol>
+							{/pc}
+							
+						</li>
+					{/loop}
+	       		{/pc}
+                
+            </ul>
+        </div>
+        
+    </center>
+</div>

@@ -1,0 +1,53 @@
+/* CSS Document */
+
+#bottom_body{
+	width:982px;
+	border:#e2e2e2 1px solid;
+	background-color:#FFF;
+	margin-left: auto;
+	margin-right: auto;
+	font-family:"宋体";
+	color:#383838;
+	background-image:url(../img/toy.gif);
+	background-repeat: no-repeat;
+	background-position: 780px 200px;
+	clear:both;
+	}
+/* CSS Document */
+/*--友情链接开始--*/
+#friendlink_body{
+	width:890px;
+	line-height:25px;
+	font-size:15px;
+	margin-left: auto;
+	margin-right: auto;
+}
+#friendlink_body ul li{
+	display:inline;
+	vertical-align: bottom;
+	list-style-type:none;
+}
+/*--友情链接结束--*/
+/*--站点引导开始--*/
+#guild_body{
+	width:890px;
+	line-height:25px;
+	font-size:14px;
+	margin-left: auto;
+	margin-right: auto;
+}
+/*--站点引导结束--*/
+/*--版权图片开始--*/
+.bottom_rights{
+	width:890px;
+	height:90px;
+	line-height:80px;
+	font-size:12px;
+	margin-left: auto;
+	margin-right: auto;
+}
+.bottom_rights img{
+	vertical-align:middle;
+	padding-right:10px;
+}
+/*--版权图片结束--*/

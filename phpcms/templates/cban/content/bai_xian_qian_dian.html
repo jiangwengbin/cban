@@ -1,0 +1,177 @@
+{template "content","header"}
+
+<div id="content_background">
+	<center>
+        <div id="content">
+        	<div class="main_link">
+            	<h4 class="title title_br"><span>中国家电品牌网</span>><span>白县千店</span>><span>门店一览表</span></h4>
+                <div class="a_link2">
+               	  <div class="medium_win">
+                    <div class="conunt">
+                            共计: <span>{$count}个门店</span>
+                        </div>
+                        <div class="all">
+                            省份: <span>全部</span>
+                        </div>
+                        
+                    <ul>
+                    	{loop $date_linkage $r}
+                            <li>
+                                <div><a href="{siteurl($siteid)}/index.php?m=cban&c=index&a=init&id={$r[linkageid]}">{$r[name]}</a></div>
+                            </li>
+                        {/loop} 
+                      </ul>
+                        
+                    
+          <?php      
+               if($mendian){
+           ?>
+                      <table class="list" cellspacing="0">
+                          <tr>
+                              <th width="60">
+                                  地理位置
+                              </th>
+                              <th width="100">
+                                  门店名称
+                              </th>
+                              <th width="150">
+                                  地址
+                              </th>
+                              <th width="90">
+                                  资讯电话
+                              </th>
+                          </tr>
+                          
+                 {loop $mendian $k $r}         
+                          <tr>
+                           	  <td class="in">
+                           	  	 {$r[diquname]}
+                              </td>
+                              <td class="out">
+                               	  {$r[mdname]}
+                              </td>
+                              <td class="in">
+                               	  {$r[dizhi]}
+                              </td>
+                              <td class="out">
+                               	  {$r[dianhua1]}
+                              </td>
+                          </tr>
+                {/loop}   
+               
+                          <tr>
+                           	  <td colspan="4">
+                              	<ul class="page_gu">
+                              		 {$pages}
+                                	
+                                </ul>
+                              </td>
+                          </tr>                            
+                      </table>
+                      
+           <?php      
+               }
+           ?>            
+                    </div>
+                    
+                    <div class="mini_win">
+                    	<h4 class="title title_br">门店检索</h4>
+                        <div class="left_border"></div>
+                        <div class="right_border"></div>
+                        
+						<form name="" action="?m=cban&c=index&a=serMendian" method="post">
+						<table width="300" border="0" cellspacing="0" cellpadding="0">
+						  <tr>
+						    <th height="30" align="left">省市：</th>
+						    <td height="30" align="left">{menu_linkage(1,'L_1')}</td>
+						    </tr>
+						  <tr>
+						    <th width="46" height="30" align="left">类型：</th>
+						    <td align="left">
+                            <input type="radio" name="type" value='1' />销售<input type="radio" name="type" value='2' />维修
+                            </td>
+					      </tr>
+						</table>
+						<input style="margin-left:260px; name="serMendian" margin-top:20px;" type="image" src="{CBAN_PATH}img/se_form.jpg" value="检索" />
+						</form>
+                        
+                        <h4 class="title title_br">新家门店</h4>
+                        <div class="left_border"></div>
+                        <div class="right_border"></div>
+                        
+                        <div class="win_dir win_dir_lift" style="width:100%;">
+                        	<ul class="win_dir_lift">
+                                <li>
+                                    <span>1</span>
+                                    <a href="javascript:;">商品1sadasdasd</a>
+                                </li>
+                                <li>
+                                    <span>2</span>
+                                    <a href="javascript:;">商品2</a>
+                                </li>
+                                <li>
+                                    <span>3</span>
+                                    <a href="javascript:;">商品2</a>
+                                </li>
+                                <li>
+                                    <span class="color">4</span>
+                                    <a href="javascript:;">商品2</a>
+                                </li>
+                                <li>
+                                    <span class="color">5</span>
+                                    <a href="javascript:;">商品2</a>
+                                </li>
+                            </ul>                            
+                        </div>
+                        
+                        
+                        <h4 class="title title_br">门店图片</h4>
+                        <div class="left_border"></div>
+                        <div class="right_border"></div>
+                        
+                        <div class="win_dir">
+                        	<ul class="win_dir_lift_img">
+                                <li>
+                                	<a href="javascript:;">
+                                        <img src="images/tmp3.jpg" width="150" height="120" />
+                                        <div>说明说明说明说明说明说明说明说明明说明</div>
+                                    </a>
+                                </li>
+                                <li>
+                                	<a href="javascript:;">
+                                        <img src="images/tmp3.jpg" width="150" height="120" />
+                                        <div>说明说明说明说明说明说明说明说明明说明</div>
+                                    </a>
+                                </li>
+                                <li>
+                                	<a href="javascript:;">
+                                        <img src="images/tmp3.jpg" width="150" height="120" />
+                                        <div>说明说明说明说明说明说明说明说明明说明</div>
+                                    </a>
+                                </li>
+                                <li>
+                                	<a href="javascript:;">
+                                        <img src="images/tmp3.jpg" width="150" height="120" />
+                                        <div>说明说明说明说明说明说明说明说明明说明</div>
+                                    </a>
+                                </li>
+                                <li>
+                                	<a href="javascript:;">
+                                        <img src="images/tmp3.jpg" width="150" height="120" />
+                                        <div>说明说明说明说明说明说明说明说明明说明</div>
+                                    </a>
+                                </li>
+                            </ul>                            
+                        </div>
+                	</div>
+                </div>
+            </div>
+            <!--页底开始-->
+			{template "content","footer"}
+			
+    </center>
+    
+</div>
+
+</body>
+</html>

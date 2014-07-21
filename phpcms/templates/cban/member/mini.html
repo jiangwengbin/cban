@@ -1,0 +1,75 @@
+<style type="text/css">
+*{
+	margin:0px 0px 0px 0px;
+	padding:0px 0px 0px 0px;
+	
+}
+
+ul{
+	height:40px;
+	font-size:13px;
+}
+
+ul li{
+	float:left;
+	list-style:none;
+	margin-left:10px;
+	border-right:#000 1px solid;
+	margin-top:10px;
+	padding-right:10px;
+}
+
+ul .no{
+	border-right:none;
+}
+
+ul a {color:#000; text-decoration:none;}
+
+</style>
+
+{if $_username}
+
+<ul>
+
+	<li>
+		你好 {get_nickname()} , <a href="{APP_PATH}index.php?m=member&c=cban_member" target="_blank">会员中心</a>
+	</li>
+	<li>
+		<a href="{APP_PATH}index.php?m=member&c=index&a=logout&forward={urlencode($_GET['forward'])}&siteid={$siteid}" target="_top">退出</a>
+	</li>
+	
+	<li>
+		<a href="#">联系我们</a>
+	</li>
+	<li>
+		<a href="#">客服中心</a>
+	</li>
+	<li class="no">
+		<a href="#"> 更多</a>
+	</li>
+
+</ul>
+
+{else}
+
+<ul>
+	<li>
+		<a href="{APP_PATH}index.php?m=member&c=index&a=login&forward={urlencode($_GET['forward'])}&siteid={$siteid}" target="_top">登录</a>
+	</li>
+	<li>
+		<a href="{APP_PATH}index.php?m=member&c=index&a=register&siteid={$siteid}" target="_blank">注册</a>
+	</li>
+	
+	<li>
+		<a href="#">联系我们</a>
+	</li>
+	<li>
+		<a href="#">客服中心</a>
+	</li>
+	<li class="no">
+		<a href="#"> 更多</a>
+	</li>
+	
+</ul>
+
+{/if}

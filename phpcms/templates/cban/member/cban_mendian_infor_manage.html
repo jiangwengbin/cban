@@ -1,0 +1,74 @@
+{template 'content', 'header'}
+
+<div id="m_box">
+	<div id="m_top">中国家品牌网 > 会员专区 > 门店信息管理</div>
+    <div id="m_left">{template 'member', 'cban_account_manage_left'}</div>
+    <div id="m_content">
+                
+       <table id="ser" width="800" border="0" cellspacing="0" cellpadding="0">
+        <form action="" method="get">
+        <input type="hidden" value="member" name="m">
+        <input type="hidden" value="index" name="c">
+        <input type="hidden" value="mendian_infor_manage" name="a">
+           <tr>
+                <td align="left" valign="middle">关键字：<input name="keyword" id="keyword" type="text" value="{$_GET[keyword]}" /></td>
+                <td align="left" valign="middle">地区：{menu_linkage(1,'L_1',$_GET['L_1-2'])}</td>
+                <td align="left" valign="middle">类型：
+                  <input type="checkbox" name="type[1]" value="1" {php if($_get[type][1])echo 'checked="checked"';}  />
+                  供应
+                  <input type="checkbox" name="type[2]" value="2" {php if($_get[type][2])echo 'checked="checked"';} />
+                求购 </td>
+              </tr>
+              <tr>
+                <td align="left" valign="middle"></td>
+                <td align="left" valign="middle">&nbsp;</td>
+                <td align="left" valign="middle">
+                <input type="checkbox" name="status_mes[1]" value="1" {php if($_GET[status_mes][1])echo 'checked="checked"';} />现有信息 
+                <input type="checkbox" name="status_mes[2]" value="2" {php if($_GET[status_mes][2])echo 'checked="checked"';} />历史信息
+                <input id="ser_but" type="submit" name="dosubmit" value="提交" />
+                
+                </td>
+              </tr>
+        </form>
+        </table>
+        
+         <br /> <br />
+        
+        <table id="c" width="800" border="0" cellspacing="0" cellpadding="0">
+          <tr id="c_1">
+            <td align="center" valign="middle">门店名称</td>
+            <td align="center" valign="middle">地区</td>
+            <td align="center" valign="middle">详细地址</td>
+            <td align="center" valign="middle">联系人</td>
+            <td align="center" valign="middle">咨询电话</td>
+            <td align="center" valign="middle">发布时间</td>
+            <td align="center" valign="middle">操作/当前状态</td>
+          </tr>
+         {loop $mendain_infor_list $k $r}
+          <tr>
+            <td height="50" align="center" valign="middle"><a href="index.php?m=member&c=index&a=mendian_infor&id={$r[id]}" >{$r[mdname]}</a></td>
+            <td align="center" valign="middle">{get_linkage($r[diqu],1,' - ')}</td>
+            <td align="center" valign="middle">{$r[dizhi]}</td>
+            <td align="center" valign="middle">{$r[lxr]}</td>
+            <td align="center" valign="middle">{$r[dianhua]}</td>
+            <td align="center" valign="middle">{date('Y-m-d H:i',$r[time])}</td>
+            <td align="center" valign="middle">
+            <a href="index.php?{$_SERVER['argv'][0]}&status=del&id={$r[id]}" onclick="return confirm('确定要删除该信息吗？');" title="点击删除	">删除</a> /
+                <?php 
+                    if($r[status]==1)
+                    echo '<a href="index.php?'.$_SERVER['argv'][0].'&status='.$r[status].'&id='.$r[id].'" onclick="return confirm(\'确定要撤销该信息吗？\');" title="点击撤销	">发布中</a>';
+                    if($r[status]==2) echo '<font color="#FF9900">发布成功</font>';
+                    if($r[status]==3) echo '<a href="index.php?'.$_SERVER['argv'][0].'&status='.$r[status].'&id='.$r[id].'" onclick="return confirm(\'确定要重新发布该信息吗？\');" title="点击发布">已撤销</a>';
+                    if($r[status]==4) echo '<font color="red">发布失败</font>';
+                ?>
+            </td>
+          </tr>
+         {/loop}
+        </table>
+        
+        <div id="page">{$pages}</div>
+
+    </div>
+</div>
+
+{template 'content', 'footer2'}
