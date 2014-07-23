@@ -110,7 +110,7 @@ class content extends foreground {
 				showmessage(L('contributors_checked'), APP_PATH.'index.php?m=member&c=content&a=published');
 			}
 			
-		} else {		
+		} else {
 			$show_header = $show_dialog = $show_validator = '';
 			$temp_language = L('news','','content');
 			$sitelist = getcache('sitelist','commons');
@@ -235,7 +235,7 @@ class content extends foreground {
 				$_POST['linkurl'] = str_replace(array('"','(',')',",",' ','%'),'',new_html_special_chars(strip_tags($_POST['linkurl'])));
 				$this->content_db->edit_content($_POST['info'],$id);
 				$forward = $_POST['forward'];
-				showmessage(L('update_success'),$forward);
+				showmessage('更新成功',$forward);
 			}
 		} else {
 			$show_header = $show_dialog = $show_validator = '';

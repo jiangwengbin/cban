@@ -4,26 +4,52 @@
 	<div id="m_top">中国家品牌网 > 会员专区 > 基本信息</div>
     <div id="m_left">{template 'member', 'cban_account_manage_left'}</div>
     <div id="m_content">
-			<script language="JavaScript">
-            <!--
-            $(function(){
-                $.formValidator.initConfig({autotip:true,formid:"myform",onerror:function(msg){}});
-                {$formValidator}
-            });
-            
-            //-->
-            </script>
+<script language="JavaScript">
+<!--
+$(function(){
+	$.formValidator.initConfig({autotip:true,formid:"myform",onerror:function(msg){}});
+	
+		$("#license").formValidator({onshow:"营业执照和组织机构代码至少填一项",onfocus:"营业执照最长不能超过15个字符"}).inputValidator({min:0,max:15,onerror:"营业执照最长不能超过15个字符"});
+	$("#orgcode").formValidator({onshow:"营业执照和组织机构代码至少填一项",onfocus:"组织机构代码最长不能超过15个字符"}).inputValidator({min:0,max:15,onerror:"组织机构代码最长不能超过15个字符"});
+	
+	$("#nickname").formValidator({onshow:"{L('input').L('nickname')}",onfocus:"{L('nickname').L('between_2_to_20')}"}).inputValidator({min:2,max:20,onerror:"{L('nickname').L('between_2_to_20')}"}).regexValidator({regexp:"ps_username",datatype:"enum",onerror:"{L('nickname').L('format_incorrect')}"}).ajaxValidator({
+	    type : "get",
+		url : "",
+		data :"m=member&c=index&a=public_checknickname_ajax&userid={$memberinfo[userid]}",
+		datatype : "html",
+		async:'false',
+		success : function(data){
+            if( data == "1" ) {
+                return true;
+			} else {
+                return false;
+			}
+		},
+		buttons: $("#dosubmit"),
+		onerror : "{L('already_exist')}",
+		onwait : "{L('connecting_please_wait')}"
+	}).defaultPassed();
+
+	{$formValidator}
+});
+
+//-->
+</script>
 
 			<form method="post" action="" id="myform" name="myform">
 				<table width="100%" cellspacing="0" class="table_form">
 					
 					<tr>
 						<th width="100">用户名：</th> 
-						<td>{$_username}</td>
+						<td>{$memberinfo['username']}</td>
 					</tr>
                     <tr>
 						<th width="100">会员类型：</th> 
-						<td>{$_usertype}</td>
+						<td>{$memberinfo['usertype']}</td>
+					</tr>
+                    <tr>
+						<th width="100">昵称：</th> 
+						<td><input id="nickname" name="nickname" value="{$memberinfo['nickname']}" type="text" class="input-text" size="30"></td>
 					</tr>
 					{loop $forminfos $k $v}
 					<tr>

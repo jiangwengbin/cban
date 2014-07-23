@@ -11,6 +11,7 @@
 <script type="text/javascript" src="{JS_PATH}dialog.js"></script>
 <link href="{CSS_PATH}reset.css" rel="stylesheet" type="text/css" />
 <link href="{CSS_PATH}dialog_simp.css" rel="stylesheet" type="text/css" />
+<link href="{CBAN_PATH}css/member.css" type="text/css" rel="stylesheet"/>
 <script language="JavaScript">
 <!--
 $(function(){
@@ -52,7 +53,28 @@ $(function(){
 		onerror : "{L('deny_register').L('or').L('email_already_exist')}",
 		onwait : "{L('connecting_please_wait')}"
 	});
-
+	$("#nickname").formValidator({onshow:"{L('input').L('nickname')}",onfocus:"{L('nickname').L('between_2_to_20')}"}).inputValidator({min:2,max:20,onerror:"{L('nickname').L('between_2_to_20')}"}).regexValidator({regexp:"ps_username",datatype:"enum",onerror:"{L('nickname').L('format_incorrect')}"}).ajaxValidator({
+			type : "get",
+			url : "",
+			data :"m=member&c=index&a=public_checknickname_ajax",
+			datatype : "html",
+			async:'false',
+			success : function(data){
+				if( data == "1" ) {
+					return true;
+				} else {
+					return false;
+				}
+			},
+			buttons: $("#dosubmit"),
+			onerror : "{L('already_exist').L('already_exist')}",
+			onwait : "{L('connecting_please_wait')}"
+		});
+	
+	$("#license").formValidator({onshow:"营业执照和组织机构代码至少填一项",onfocus:"营业执照最长不能超过15个字符"}).inputValidator({min:0,max:15,onerror:"营业执照最长不能超过15个字符"});
+	$("#orgcode").formValidator({onshow:"营业执照和组织机构代码至少填一项",onfocus:"组织机构代码最长不能超过15个字符"}).inputValidator({min:0,max:15,onerror:"组织机构代码最长不能超过15个字符"});
+	
+		
 	$(":checkbox[name='protocol']").formValidator({tipid:"protocoltip",onshow:"{L('read_protocol')}",onfocus:"{L('read_protocol')}"}).inputValidator({min:1,onerror:"{L('read_protocol')}"});
 	
 	{if $member_setting['mobile_checktype']=='2' && $sms_setting['sms_enable']=='1'}
@@ -192,7 +214,7 @@ function show_protocol() {
 <body>
 <div id="header">
 	<div class="content">
-	<div class="logo"><img src="{CBAN_PATH}img/logo.jpg" height="60" /></div>
+	<div class="logo"><!--<img src="{IMG_PATH}v9/member_logo.jpg"/>--><img src="{CBAN_PATH}img/logo.jpg" height="60" /></div>
     <span class="log"></span>
     </div>
 </div>
@@ -217,8 +239,8 @@ function show_protocol() {
 		<!--是否开启选择会员模型选项-->
     	<div class="point">
             <div class="content">
-				<strong class="title">{L('notice')}</strong>
-				<p>{L('register_notice')}</p>
+				<strong class="title">注意：</strong>
+				<p>更改注册的会员类型会刷新页面，请首先选择会员类型。</p>
 				<p>{$description}</p>
             </div>
             <span class="o1"></span><span class="o2"></span><span class="o3"></span><span class="o4"></span>
@@ -235,11 +257,11 @@ function show_protocol() {
 			{/loop}
 		{/if}
 
-    	<div class="input"><label><font color=red>*</font> {L('username')}：</label><input type="text" id="username" name="username" size="36" class="input-text"></div>
-        <div class="input"><label><font color=red>*</font> {L('password')}：</label><input type="password" id="password" name="password" size="36" class="input-text"></div>
-        <div class="input"><label><font color=red>*</font> {L('cofirmpwd')}：</label><input type="password" name="pwdconfirm" id="pwdconfirm" size="36" class="input-text"></div>
-        <div class="input"><label><font color=red>*</font> {L('email')}：</label><input type="text" id="email" name="email" size="36" class="input-text"></div>
-
+    	<div class="input"><label>{L('username')}：</label><input type="text" id="username" name="username" size="36" class="input-text"></div>
+        <div class="input"><label>{L('password')}：</label><input type="password" id="password" name="password" size="36" class="input-text"></div>
+        <div class="input"><label>{L('cofirmpwd')}：</label><input type="password" name="pwdconfirm" id="pwdconfirm" size="36" class="input-text"></div>
+        <div class="input"><label>{L('email')}：</label><input type="text" id="email" name="email" size="36" class="input-text"></div>
+		<div class="input"><label>{L('nickname')}：</label><input type="text" id="nickname" name="nickname" size="36" class="input-text"></div>
 		{if $member_setting['choosemodel']}
 			<!--是否开启选择会员模型选项-->
 			<script language="JavaScript">
@@ -381,4 +403,4 @@ function send_newmail() {
     </div>
 </div>
 
-{template 'member', 'footer'}
+{template 'content', 'footer2'}

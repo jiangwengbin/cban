@@ -1,0 +1,55 @@
+{template 'content', 'header'}
+
+
+<div id="m_box">
+	<div id="m_top">中国家品牌网 > 会员专区 > 门店信息发布</div>
+    <div id="m_left">{template 'member', 'cban_account_manage_left'}</div>
+    <div id="m_content">
+
+
+			<form method="post" action="" id="myform" name="myform">
+				<table width="100%" cellspacing="0" class="table_form">
+					
+					{loop $forminfos $k $v}
+					<tr>
+						<th width="100">{if $v['star']} <font color="red">*</font>{/if} {$v['name']}：</th> 
+						<td>{$v['form']}{if $v['tips']}{$v['tips']}{/if}</td>
+					</tr>
+					{/loop}
+					<tr>
+					
+						<td>
+						<input name="forward" type="hidden" value="{HTTP_REFERER}">
+						<input name="id" type="hidden" value="{$id}">
+                        {if $id}
+                        	<input name="dosubmit" type="submit" id="dosubmit" value="提交" class="button" onclick="return confirm('重新提交将会重新审核\r\n确定要重新提交吗？');">
+                        {else}
+                        	<input name="dosubmit" type="submit" id="dosubmit" value="提交" class="button">
+                        {/if}
+						</td>
+					</tr>
+				</table>
+			</form>
+    </div>
+</div>
+<div class="clear"></div>
+<script type="text/javascript"> 
+<!--
+//只能放到最下面
+$(function(){
+	$.formValidator.initConfig({formid:"myform",autotip:true,onerror:function(msg,obj){window.top.art.dialog({content:msg,lock:true,width:'200',height:'50'}, 	function(){$(obj).focus();
+	boxid = $(obj).attr('id');
+	if($('#'+boxid).attr('boxid')!=undefined) {
+		check_content(boxid);
+	}
+	})}});
+	{$formValidator}
+})
+//-->
+</script>
+	{template 'content', 'footer2'}
+    
+</div>
+
+</body>
+</html>

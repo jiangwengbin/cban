@@ -8,21 +8,27 @@
 <script type="text/javascript" src="{JS_PATH}formvalidator.js" charset="UTF-8"></script>
 <script type="text/javascript" src="{JS_PATH}formvalidatorregex.js" charset="UTF-8"></script>
 <script language="javascript" type="text/javascript" src="{JS_PATH}dialog.js"></script>
+<script language="javascript" type="text/javascript" src="{JS_PATH}content_addtop.js"></script>
 	
     	<ul>
         	<li class="l_1"><strong>会员专区</strong></li>
             <li class='l_2'><strong>会员中心</strong></li>
-            <li><a href="index.php?m=member&c=cban_member">基本信息</a></li>
+            <li><a href="index.php?m=member&c=index">基本信息</a></li>
             <li><a href="index.php?m=member&c=index&a=account_manage_password">修改邮箱/密码</a></li>
             <li class='l_2'><strong>商机信息</strong></li>
             <li><a href="index.php?m=member&c=cban_member&a=supply_infor">供应信息发布</a></li>
             <li><a href="index.php?m=member&c=cban_member&a=supply_infor_manage">历史发布管理</a></li>
-            <li class='l_2'><strong>门店信息</strong></li>
-            <li><a href="index.php?m=member&c=cban_member&a=mendian_infor">门店信息发布</a></li>
-            <li><a href="index.php?m=member&c=cban_member&a=mendian_infor_per">门店信息完善</a></li>
-            <li><a href="index.php?m=member&c=cban_member&a=mendian_infor_manage">门店信息管理</a></li>
+            
+            {if $this->memberinfo['modelid']==12}
+            <li class='l_2'><strong>门店信息</strong></li> 
+            <li><a href="index.php?m=member&c=content&a=publish">门店信息发布/修改</a>
+            	 <font color="#FF6600" size="2">{get_content_status($this->memberinfo['modelid'] , $this->memberinfo['username'])}</font>
+            </li>
+            {elseif $this->memberinfo['modelid']==13}
             <li class='l_2'><strong>企业信息</strong></li>
-            <li><a href="#">企业信息发布</a></li>
-            <li><a href="#">企业信息管理</a></li>
+            <li><a href="index.php?m=member&c=content&a=publish">企业信息发布/修改</a>
+            	<font color="#FF6600" size="2">{get_content_status($this->memberinfo['modelid'] , $this->memberinfo['username'])}</font>
+            </li>
+            {/if}
         </ul>
    
