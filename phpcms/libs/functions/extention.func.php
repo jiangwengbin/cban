@@ -167,7 +167,7 @@ function get_imglist_filepath($arr){
 
 /**
  * 
- * @param unknown $string 字符串
+ * @param unknown $string 含有图片的字符串
  * @return unknown 数组返回所有图片地址
  */
 function preg_img_src($string){
@@ -178,12 +178,27 @@ function preg_img_src($string){
 }
 
 /**
+ *
+ * @param unknown $string 含有http的字符串
+ * @return unknown 数组返回所有图片地址
+ */
+function get_pinpai_url($string){
+	
+	$arr = string2array($string);
+	foreach ($arr as $k=>$v){
+		$src_list[$k]=$v[url];
+	}
+	return $src_list;
+}
+
+/**
  * 修改内容中，所有附件的状态为未使用
  * @param unknown $content
  * 
  */
-function update_content_attachment($content){
-	$src_list = preg_img_src($content);
+function update_attachments($string){
+	if(is_array($string)) $src_list = $string;
+	else $src_list = preg_img_src($string);
 	$attachmentdb = pc_base::load_model('attachment_model');
 	$attachmentdb->update('status=0', sql_where_or(get_imglist_filepath($src_list),'filepath'));
 }

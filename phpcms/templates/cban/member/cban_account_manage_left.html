@@ -20,7 +20,7 @@
             <li><a href="index.php?m=member&c=cban_member&a=supply_infor_manage">历史发布管理</a></li>
             
             {if $this->memberinfo['modelid']==12}
-            <li class='l_2'><strong>门店信息</strong></li> 
+            <li class='l_2'><strong>门店信息</strong></li>
             <li><a href="index.php?m=member&c=content&a=publish">门店信息发布/修改</a>
             	 <font color="#FF6600" size="2">{get_content_status($this->memberinfo['modelid'] , $this->memberinfo['username'])}</font>
             </li>

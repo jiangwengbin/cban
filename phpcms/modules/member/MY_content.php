@@ -26,7 +26,37 @@ class MY_content extends content {
 		
 		if(isset($_POST['dosubmit'])) {
 			
-			if($id) $this->_edit_news($catid , $id);
+			if($id) {
+				
+				if($catid=='9'){
+					$thisdb = get_cbandb('cban_news_md_data');
+					
+				}else if($catid=='10'){
+					
+					if(count($_POST['pinpai_url'])>10){
+						showmessage('最多只能添加10个品牌');
+					}
+					$thisdb = get_cbandb('cban_news_qy_data');
+					$content = $thisdb -> get_one('id='.$id,'pinpai');
+					$content = new_stripslashes($content['pinpai']);
+					$src_list = get_pinpai_url($content);
+					update_attachments($src_list);
+					$attachmentdb = pc_base::load_model('attachment_model');
+					$src_list = $_POST['pinpai_url'];
+					$attachmentdb->update('status=1', sql_where_or(get_imglist_filepath($src_list),'filepath'));
+					
+				}
+				
+				$content = $thisdb -> get_one('id='.$id,'content');
+				$content = new_stripslashes($content['content']);
+				update_attachments($content);
+				$attachmentdb = pc_base::load_model('attachment_model');
+				$src_list = preg_img_src(new_stripslashes($_POST['info']['content']));
+				$attachmentdb->update('status=1', sql_where_or(get_imglist_filepath($src_list),'filepath'));
+				//先把原来的附近都设置为未使用，在把传过来的附近设置成已使用
+				
+				$this->_edit_news($catid , $id);
+			}
 			else  $this->_add_news($catid);
 			
 		}else{
@@ -69,10 +99,8 @@ class MY_content extends content {
 				
 			$data = array_merge($r,$r2);
 			require CACHE_MODEL_PATH.'content_form.class.php';
-			$content_form = new content_form($modelid,$catid,$CATEGORYS);
-		
-			$forminfos_data = $content_form->get($data);
-				
+			$content_form = new content_form($modelid,$catid,$CATEGORYS);	
+			$forminfos_data = $content_form->get($data);			
 			$forminfos = array();
 			foreach($forminfos_data as $_fk=>$_fv) {
 				if($_fv['isomnipotent']) continue;
@@ -93,6 +121,15 @@ class MY_content extends content {
 	}
 	
 	private function _add_news($catid){
+		
+		if(count($_POST['pinpai_url'])>10){
+			showmessage('最多只能添加10个品牌');
+		}
+		$src_list = preg_img_src(new_stripslashes($_POST['info']['content']));
+		$where = sql_where_or(get_imglist_filepath($src_list),'filepath');
+		$attachmentdb = pc_base::load_model('attachment_model');
+		$attachmentdb->update('status=1',$where);
+		//把内容中的附件设置为已使用
 		
 		$memberinfo = $this->memberinfo;
 		$grouplist = getcache('grouplist');
@@ -192,6 +229,7 @@ class MY_content extends content {
 	 */
 	private function _edit_news($catid , $id){
 		
+		$_POST['info']['diqu'] = $_POST['diqu-2'];
 		$siteids = getcache('category_content', 'commons');
 		$siteid = $siteids[$catid];
 		$CATEGORYS = getcache('category_content_'.$siteid, 'commons');
@@ -208,7 +246,7 @@ class MY_content extends content {
 			if(!$grouplist[$memberinfo['groupid']]['allowpostverify'] || $setting['workflowid']) {
 				$_POST['info']['status'] = 1;
 			}
-			$info = array();
+			
 			foreach($_POST['info'] as $_k=>$_v) {
 				if($_k == 'content') {
 					$_POST['info'][$_k] = strip_tags($_v, '<p><a><br><img><ul><li><div>');
@@ -217,9 +255,10 @@ class MY_content extends content {
 				}
 			}
 			$_POST['linkurl'] = str_replace(array('"','(',')',",",' ','%'),'',new_html_special_chars(strip_tags($_POST['linkurl'])));
+			
 			$this->content_db->edit_content($_POST['info'],$id);
-			$forward = $_POST['forward'];
-			showmessage('更新成功',$forward);
+			
+			showmessage('更新成功','index.php?m=member&c=content&a=publish');
 		}
 	}
 	

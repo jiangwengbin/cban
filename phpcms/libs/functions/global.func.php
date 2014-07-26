@@ -980,6 +980,7 @@ function menu_linkage($linkageid = 0, $id = 'linkid', $defaultvalue = 0) {
 						$ld5.ld({ajaxOptions : {"url" : "'.APP_PATH.'api.php?op=get_linkage&act=ajax_select&keyid='.$linkageid.'"},defaultParentId : 0,style : {"width" : 120}})	 
 						var ld5_api = $ld5.ld("api");
 						ld5_api.selected('.$default_txt.');
+								
 						$ld5.bind("change",onchange);
 						function onchange(e){
 							var $target = $(e.target);

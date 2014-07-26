@@ -17,9 +17,8 @@
 					</tr>
 					{/loop}
 					<tr>
-					
 						<td>
-						<input name="forward" type="hidden" value="{HTTP_REFERER}">
+						
 						<input name="id" type="hidden" value="{$id}">
                         {if $id}
                         	<input name="dosubmit" type="submit" id="dosubmit" value="提交" class="button" onclick="return confirm('重新提交将会重新审核\r\n确定要重新提交吗？');">
@@ -43,6 +42,7 @@ $(function(){
 		check_content(boxid);
 	}
 	})}});
+	$("#diqu-2").formValidator({onshow:""}).inputValidator({min:1,max:5,onerror:"地区选择需要详细到市级"});
 	{$formValidator}
 })
 //-->

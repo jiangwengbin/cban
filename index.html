@@ -2,200 +2,724 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta http-equiv="X-UA-Compatible" content="IE=7" />
-<title>PHPCMS演示站</title>
-<meta name="keywords" content="PHPCMS演示站">
-<meta name="description" content="PHPCMS演示站">
-<link href="http://127.0.0.1:8080/cban/statics/css/reset.css" rel="stylesheet" type="text/css" />
-<link href="http://127.0.0.1:8080/cban/statics/css/default_blue.css" rel="stylesheet" type="text/css" />
-<script type="text/javascript" src="http://127.0.0.1:8080/cban/statics/js/jquery.min.js"></script>
-<script type="text/javascript" src="http://127.0.0.1:8080/cban/statics/js/jquery.sgallery.js"></script>
-<script type="text/javascript" src="http://127.0.0.1:8080/cban/statics/js/search_common.js"></script>
+<title>无标题文档</title>
+
+<link href="http://127.0.0.1:8080/cban/statics/cban/css/main.css" type="text/css" rel="stylesheet"/>
 </head>
-<body>
-<div class="body-top">
-    <div class="content">
-        		<div id="announ">
-                 <ul>
-                                  </ul>
-            </div>
-     	 <script type="text/javascript">
-$(function(){
-	startmarquee('announ',22,1,500,3000);
-})
-</script>
-            <div class="login lh24 blue"><a href="http://127.0.0.1:8080/cban/index.php?m=content&c=rss&siteid=1" class="rss ib">rss</a><span class="rt"><script type="text/javascript">document.write('<iframe src="http://127.0.0.1:8080/cban/index.php?m=member&c=index&a=mini&forward='+encodeURIComponent(location.href)+'&siteid=1" allowTransparency="true"  width="500" height="24" frameborder="0" scrolling="no"></iframe>')</script></span></div>
-    </div>
-</div>
-<div class="header">
-	<div class="logo"><a href="http://127.0.0.1:8080/cban/"><img src="http://127.0.0.1:8080/cban/statics/images/v9/logo.jpg" /></a></div>
 
-    <div class="search">
-    	<div class="tab" id="search">
-																<a href="javascript:;" onclick="setmodel(1, $(this));" style="outline:medium none;" hidefocus="true"  class="on" >新闻</a><span> | </span>										<a href="javascript:;" onclick="setmodel(3, $(this));" style="outline:medium none;" hidefocus="true" >图片</a><span> | </span>										<a href="javascript:;" onclick="setmodel(2, $(this));" style="outline:medium none;" hidefocus="true" >下载</a><span> | </span>										<a href="javascript:;" onclick="setmodel(52, $(this));" style="outline:medium none;" hidefocus="true" >专题</a>								</div>
-
-        <div class="bd">
-            <form action="http://127.0.0.1:8080/cban/index.php" method="get" target="_blank">
-				<input type="hidden" name="m" value="search"/>
-				<input type="hidden" name="c" value="index"/>
-				<input type="hidden" name="a" value="init"/>
-				<input type="hidden" name="typeid" value="1" id="typeid"/>
-				<input type="hidden" name="siteid" value="1" id="siteid"/>
-                <input type="text" class="text" name="q" id="q"/><input type="submit" value="搜 索" class="button" />
-            </form>
-        </div>
-    </div>
-
-    <div class="banner"><script language="javascript" src="http://127.0.0.1:8080/cban/index.php?m=poster&c=index&a=show_poster&id=1"></script></div>
-    <div class="bk3"></div>
-    <div class="nav-bar">
-    	<map>
-    	        	<ul class="nav-site">
-			<li><a href="http://127.0.0.1:8080/cban"><span>首页</span></a></li>
-						<li class="line">|</li>
-			<li><a href="http://127.0.0.1:8080/cban"><span>国内</span></a></li>
-						<li class="line">|</li>
-			<li><a href="http://127.0.0.1:8080/cban"><span>下载</span></a></li>
-						<li class="line">|</li>
-			<li><a href="http://127.0.0.1:8080/cban"><span>图片</span></a></li>
-			            </ul>
-        		        </map>
-    </div> 
-	
-	</div>
-</div><!--main-->
-<div class="main">
-	<div class="col-left">
-    	<div class="news-hot">
-        	<div class="content">
-        	        	   
-                
-            </div>
-        </div>
-        <div class="slide">
-            <div class="FocusPic">
-                        	<div class="content" id="main-slide">
-                    <div class="changeDiv">  
-                                        </div>
-                </div>
-                        </div>
-            <div class="bk10"></div>
-        	<div class="box extend">
-            	<div class="col-left">争议</div>
-                <div class="col-auto">
-								</div>
-                <script language="javascript" src="http://127.0.0.1:8080/cban/caches/poster_js/10.js"></script>
-            </div>
-        </div>
-        <div class="bk10"></div>
-        <div class="box">
-        		<h5>图片新闻</h5>
-                      <ul class="content news-photo picbig">
-                         </ul>
-                    </div>
-        <div class="bk10"></div>
-                        <div class="box cat-area" style=" margin-right:10px">
-        		<h5 class="title-1">国内<a href="" class="more">更多>></a></h5>
-             <div class="content">
-                                                        
-                <div class="bk15 hr"></div>
-                
-                <ul class="list lh24 f14">
-                                </ul>
-                            </div>
-        </div>
-        		                <div class="box cat-area" >
-        		<h5 class="title-1">下载<a href="" class="more">更多>></a></h5>
-             <div class="content">
-                                                        
-                <div class="bk15 hr"></div>
-                
-                <ul class="list lh24 f14">
-                                </ul>
-                            </div>
-        </div>
-        <div class="bk10"></div>		                <div class="box cat-area" style=" margin-right:10px">
-        		<h5 class="title-1">图片<a href="" class="more">更多>></a></h5>
-             <div class="content">
-                                                        
-                <div class="bk15 hr"></div>
-                
-                <ul class="list lh24 f14">
-                                </ul>
-                            </div>
-        </div>
-        		    </div>
-    <div class="col-auto">
-    	<div class="box">
-        	 <h5 class="title-2">公告<a href="" class="more">&nbsp;</a></h5>
-             <div class="content">
-                                <ul class="list lh24 f14">
-                                   </ul>
-                            </div>
-        </div>
-        <div class="bk10"></div>
-        <div class="box">
-        	<h5 class="title-2">专题<a href="http://127.0.0.1:8080/cban/index.php?m=special&c=index&a=special&siteid=1" class="more">更多>></a></h5>
-            <div class="content special">
-                                                </div>
-        </div>
-        <div class="bk10"></div>
-        <div class="box">
-            <h5 class="title-2"><span class="rt fn f12 tab SwapTab"><span class="fb">热点</span> | <span >评论</span> | <span>关注</span></span>排行</h5>
-            <div class="tab-content">
-            <ul class="content digg">
-										            </ul>
-            <ul class="content digg hidden">
-										            </ul>
-            <ul class="content digg hidden">
-										            </ul>
-            </div>
-        </div><div class="bk10"></div>
-        <div class="box">
-            <h5 class="title-2">调查问卷<a href="http://127.0.0.1:8080/cban/index.php?m=vote&c=index&siteid=1" class="more">更多>></a></h5>
- 
-<script language="javascript" src="http://127.0.0.1:8080/cban/index.php?m=vote&c=index&a=show&action=js&subjectid=1&type=3"></script>
-        </div>
-    </div>
-    <div class="bk10"></div>
-	
-	<div class="box blogroll ylink">
-    	<h5><a href="http://127.0.0.1:8080/cban/index.php?m=link&siteid=1" hidefocus="true" class="rt">更多>></a>友情链接<a href="http://127.0.0.1:8080/cban/index.php?m=link&c=index&a=register&siteid=1" class="red">申请链接</a></h5>
-        <div class="bk10"></div>
-	<ul class="colli imgul">
-                        <li><a href="http://www.phpcms.cn" title="PHPCMS" target="_blank"><img src="http://www.phpcms.cn/images/logo_88_31.gif" width="88" height="31" /></a></li>
-                <li><a href="http://www.sdo.com" title="盛大在线" target="_blank"><img src="http://www.snda.com/cn/logo/comp_logo_sdo.gif" width="88" height="31" /></a></li>
-                    </ul>
-          <div class="bk10"></div>
-	<div class="linka">
-		 	</div>
-	</div>
-</div>
-<script type="text/javascript"> 
-$(function(){
-	new slide("#main-slide","cur",310,260,1);//焦点图
-	new SwapTab(".SwapTab","span",".tab-content","ul","fb");//排行TAB
-})
-</script>
-<div class="footer">
-<p class="info">
-<a href="http://127.0.0.1:8080/cban/html/about/aboutus/" target="_blank">关于我们</a> |  
-<a href="http://127.0.0.1:8080/cban/html/about/contactus/" target="_blank">联系方式</a> |  
-<a href="http://test.phpcms.cn/index.php?m=content&c=index&a=lists&catid=4" target="_blank">版权声明</a> |  
-<a href="http://127.0.0.1:8080/cban/html/about/hr/" target="_blank">招聘信息</a> |  
-<a href="http://127.0.0.1:8080/cban/index.php?m=link" target="_blank">友情链接</a>
-<br />
-Powered by <strong><a href="http://www.phpcms.cn" target="_blank">PHPCMS</a></strong> <em>V9.5.7</em> &copy; 2011 <img src="http://127.0.0.1:8080/cban/statics/images/copyright.gif"/></p>
-</div>
+<!--轮换图片 开始-->
+<link type="text/css" href="http://127.0.0.1:8080/cban/statics/cban/css/base.css" rel="stylesheet" />
+<script src="http://127.0.0.1:8080/cban/statics/cban/js/jquery-1.10.2.min.js" type="text/javascript"></script>
+<script src="http://127.0.0.1:8080/cban/statics/cban/js/jquery.kinMaxShow-1.1.min.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="http://127.0.0.1:8080/cban/statics/cban/js/main.js"></script>
 <script type="text/javascript">
 $(function(){
-	$(".picbig").each(function(i){
-		var cur = $(this).find('.img-wrap').eq(0);
-		var w = cur.width();
-		var h = cur.height();
-	   $(this).find('.img-wrap img').LoadImage(true, w, h,'http://127.0.0.1:8080/cban/statics/images/msg_img/loading.gif');
-	});
-})
+	$("#kinMaxShow").kinMaxShow({height:200,
+								width:320,
+								button:{
+									showIndex:true,
+									normal:{width:'18px',height:'18px',lineHeight:'18px',right:'16px',bottom:'6px',fontSize:'12px',opacity:0.8,background:"#666666",border:"1px solid #999999",color:"#CCCCCC",marginRight:'6px'},
+									focus:{background:"#CC0000",border:"1px solid #FF0000",color:"#000000"}
+								}});
+});
 </script>
+<!--轮换图片 结束-->
+
+<body>
+<a name="top"></a>
+<div id="header">
+	<center>
+    
+    	<div id="top">
+        	<div id="logo">
+            	<img class="logo_img" src="http://127.0.0.1:8080/cban/statics/cban/img/logo.jpg" height="100" />
+            </div>
+        	<div id="top_tool_bar">
+            <table height="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td rowspan="2" class="zz"><a href=""><img src="http://127.0.0.1:8080/cban/statics/cban/img/zz.jpg" border="0" /></a></td>
+                <td align="right">
+					<script type="text/javascript">document.write('<iframe src="http://127.0.0.1:8080/cban/index.php?m=member&c=index&a=mini&forward='+encodeURIComponent(location.href)+'&siteid=1" allowTransparency="true"  width="450" height="30" frameborder="0" scrolling="no"></iframe>')</script>
+                </td>
+              </tr>
+              <tr>
+                <td align="left">
+                    <div id="controls">
+                            <form name="select_form" action="" method="post">
+                                <select name="type">
+                                  <option value="0">商品</option>
+                                  <option value="1">type1</option>
+                                  <option value="2">type2</option>
+                                </select>
+                                
+                                <input name="select" type="text" />
+                                <button>搜&nbsp;索</button>
+                            </form>
+                 	</div>
+                </td>
+              </tr>
+            </table>
+            </div>
+            
+      </div>
+        
+        <div id="header_nav">
+        	<ul>
+            	<li>
+                	<a href="#"><div class="no">首页</div></a>
+                </li>
+                <li>
+                	<a href="#"><div>行业资讯</div></a>
+                    <ol class="next_nav">
+                    	<li>
+                        	<a href="#"><div class="no_border">二级导航</div></a>
+                        </li>
+                        <li>
+                        	<a href="#"><div class="no_border">二级导航</div></a>
+                        </li>
+                        <li>
+                        	<a href="#"><div class="no_border">二级导航</div></a>
+                        </li>
+                        <li>
+                        	<a href="#"><div class="no_border">二级导航</div></a>
+                        </li>
+                    </ol>
+                </li>
+                <li>
+                	<a href="#"><div>商机信息</div></a>
+					<ol class="next_nav">
+                    	<li>
+                        	<a href="#"><div class="no_border">二级导航</div></a>
+                        </li>
+                        <li>
+                        	<a href="#"><div class="no_border">二级导航</div></a>
+                        </li>
+                        <li>
+                        	<a href="#"><div class="no_border">二级导航</div></a>
+                        </li>
+                        <li>
+                        	<a href="#"><div class="no_border">二级导航</div></a>
+                        </li>
+                    </ol>
+                </li>
+                <li>
+                	<a href="#"><div class="no">展会信息</div></a>
+                </li>
+                <li>
+                	<a href="#"><div class="no">白县千店</div></a>
+                </li>
+                <li>
+                	<a href="#"><div class="no">家电维修</div></a>
+                </li>
+                <li>
+                	<a href="#"><div class="no">家电名企</div></a>
+                </li>
+                <li>
+                	<a href="#"><div class="no">畅销单品</div></a>
+                </li>
+                <li>
+                	<a href="#"><div class="no">会员专区</div></a>
+                </li>
+            </ul>
+        </div> 
+        
+    </center>
+</div>
+<div id="content_background">
+	<center>
+        <div id="content">
+        	<div class="main_1 main_div">
+            	<div class="type_nav div">
+                	<ul>
+                    	<li class="type_name">
+                        	家电分类目录
+                        </li>
+                        <li>
+                        	<a href="#"><div>分类测试,分类测试</div></a>
+                        </li>
+                        <li class="type_one">
+                        	<a href="#"><div>分类测试</div></a>
+                        </li>
+                        <li>
+                        	<a href="#"><div>分类测试</div></a>
+                        </li>
+                        <li class="type_one">
+                        	<a href="#"><div>分类测试</div></a>
+                        </li>
+                        <li>
+                        	<a href="#"><div>分类测试</div></a>
+                        </li>
+                        <li class="type_one">
+                        	<a href="#"><div>分类测试</div></a>
+                        </li>
+                        <li>
+                        	<a href="#"><div>分类测试</div></a>
+                        </li>
+                        <li class="type_one">
+                        	<a href="#"><div>分类测试</div></a>
+                        </li>
+                        <li>
+                        	<a href="#"><div>分类测试</div></a>
+                        </li>
+                        <li class="type_one">
+                        	<a href="#"><div>分类测试</div></a>
+                        </li>
+                        <li>
+                        	<a href="#"><div>分类测试</div></a>
+                        </li>
+                        <li class="all_type">
+                        	<a href="#">全类分类目录</a>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="show_1 div">
+                	<!--图片新闻 开始-->
+                	<h4 class="title">图片新闻</h4>
+                	<div id="kinMaxShow">
+                        <div>
+                            <a href="#" target="_blank"><img src="http://127.0.0.1:8080/cban/statics/cban/images/demo_default_images/1.jpg"  /></a>
+                        </div>
+                        <div>
+                            <a href="#" target="_blank"><img src="http://127.0.0.1:8080/cban/statics/cban/images/demo_default_images/2.jpg"  /></a>
+                        </div>
+                        <div>
+                            <a href="#" target="_blank"><img src="http://127.0.0.1:8080/cban/statics/cban/images/demo_default_images/3.jpg"   /></a>
+                        </div>
+                        <div>
+                            <a href="#" target="_blank"><img src="http://127.0.0.1:8080/cban/statics/cban/images/demo_default_images/4.jpg"   /></a>
+                        </div>
+                        <div>
+                            <a href="#" target="_blank"><img src="http://127.0.0.1:8080/cban/statics/cban/images/demo_default_images/5.jpg"   /></a>
+                        </div>
+                        <div>
+                            <a href="#" target="_blank"><img src="http://127.0.0.1:8080/cban/statics/cban/images/demo_default_images/6.jpg"   /></a>
+                        </div>  
+                    </div>
+                    <!--图片轮换结束-->
+                    
+                    <!--列表类型-->
+                    <h4 class="title title_br">商机资讯</h4>
+                    <div class="cont">
+                    	<ul class="ul_list">
+                        	<li class="li_list">
+                            	<div class="col_cont">新闻</div><div class="col_blck"><a href="#">新闻标题标题标题标题标题</a></div>
+                            </li>
+                            <li class="li_list">
+                            	<div class="col_cont">新闻</div><div class="col_blck"><a href="#">新闻标题标题标题标题标题</a></div>
+                            </li>
+                            <li class="li_list">
+                            	<div class="col_cont">新闻</div><div class="col_blck"><a href="#">新闻标题标题标题标题标题</a></div>
+                            </li>
+                            <li class="li_list">
+                            	<div class="col_cont">新闻</div><div class="col_blck"><a href="#">新闻标题标题标题标题标题</a></div>
+                            </li>
+                            <li class="li_list">
+                            	<div class="col_cont">新闻</div><div class="col_blck"><a href="#">新闻标题标题标题标题标题</a></div>
+                            </li>
+                            <li class="li_list">
+                            	<div class="col_cont">新闻</div><div class="col_blck"><a href="#">新闻标题标题标题标题标题</a></div>
+                            </li>
+                            <li class="li_list">
+                            	<div class="col_cont">新闻</div><div class="col_blck"><a href="#">新闻标题标题标题标题标题</a></div>
+                            </li>
+                            <li class="li_list">
+                            	<div class="col_cont">新闻</div><div class="col_blck"><a href="#">新闻标题标题标题标题标题</a></div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="show_1 div2">
+                	<!--列表类型-->
+                    <h4 class="title">行业资讯</h4>
+                    <div class="cont">
+                    	<ul class="ul_list">
+                        	<li class="li_list">
+                            	<div class="col_cont">新闻</div><div class="col_blck"><a href="#">新闻标题标题标题标题标题标题标题</a></div>
+                            </li>
+                            <li class="li_list">
+                            	<div class="col_cont">新闻</div><div class="col_blck"><a href="#">新闻标题标题标题标题标题</a></div>
+                            </li>
+                            <li class="li_list">
+                            	<div class="col_cont">新闻</div><div class="col_blck"><a href="#">新闻标题标题标题标题标题</a></div>
+                            </li>
+                            <li class="li_list">
+                            	<div class="col_cont">新闻</div><div class="col_blck"><a href="#">新闻标题标题标题标题标题</a></div>
+                            </li>
+                            <li class="li_list">
+                            	<div class="col_cont">新闻</div><div class="col_blck"><a href="#">新闻标题标题标题标题标题</a></div>
+                            </li>
+                            <li class="li_list">
+                            	<div class="col_cont">新闻</div><div class="col_blck"><a href="#">新闻标题标题标题标题标题</a></div>
+                            </li>
+                            <li class="li_list">
+                            	<div class="col_cont">新闻</div><div class="col_blck"><a href="#">新闻标题标题标题标题标题</a></div>
+                            </li>
+                            <li class="li_list">
+                            	<div class="col_cont">新闻</div><div class="col_blck"><a href="#">新闻标题标题标题标题标题</a></div>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <!--图片类型列表-->
+                    <h4 class="title title_br">展会信息</h4>
+					<div class="cont">
+                    	<ul class="ul_list">
+                        	<li class="li_list">
+                            	<div class="img"><img src="http://127.0.0.1:8080/cban/statics/cban/images/list_img.jpg" width="103" height="66" /></div><div class="col_blck"><a href="#">新闻标题标题</a><div class="col_text"><span>展会地址:</span>地址地址</div><div class="col_text"><span>展会时间:</span>0000年00月00日</div></div>
+                            </li>
+                        	<li class="li_list">
+                            	<div class="img"><img src="http://127.0.0.1:8080/cban/statics/cban/images/list_img.jpg" width="103" height="66" /></div><div class="col_blck"><a href="#">新闻标题标题</a><div class="col_text"><span>展会地址:</span>地址地址</div><div class="col_text"><span>展会时间:</span>0000年00月00日</div></div>
+                            </li>
+                        	<li class="li_list">
+                            	<div class="img"><img src="http://127.0.0.1:8080/cban/statics/cban/images/list_img.jpg" width="103" height="66" /></div><div class="col_blck"><a href="#">新闻标题标题</a><div class="col_text"><span>展会地址:</span>地址地址</div><div class="col_text"><span>展会时间:</span>0000年00月00日</div></div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                          
+            </div>
+            
+            <div class="main_2 main_div">
+            	<div class="show_2 div">
+                	<!--图片类型列表-->
+                    <h4 class="title title_br">展会信息</h4>
+                    <div class="cont">
+                        <ul class="ul_list">
+                            <li class="li_list">
+                                <div class="img"><img src="http://127.0.0.1:8080/cban/statics/cban/images/list_img.jpg" width="103" height="66" /></div><div class="col_blck"><a href="#">新闻标题标题</a><div class="col_text_wh col_text">说明说明说明说明说明说明说明说明说明说明</div>
+                            </li>
+                            <li class="li_list">
+                                <div class="img"><img src="http://127.0.0.1:8080/cban/statics/cban/images/list_img.jpg" width="103" height="66" /></div><div class="col_blck"><a href="#">新闻标题标题</a><div class="col_text_wh col_text">说明说明说明说明说明说明说明说明说明说明</div>
+                            </li>
+                            <li class="li_list">
+                                <div class="img"><img src="http://127.0.0.1:8080/cban/statics/cban/images/list_img.jpg" width="103" height="66" /></div><div class="col_blck"><a href="#">新闻标题标题</a><div class="col_text_wh col_text">说明说明说明说明说明说明说明说明说明说明</div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="show_2 div">
+                	<!--图片类型列表-->
+                    <h4 class="title title_br">&nbsp;</h4>
+                    <div class="cont">
+                        <ul class="ul_list">
+                            <li class="li_list">
+                                <div class="img"><img src="http://127.0.0.1:8080/cban/statics/cban/images/list_img.jpg" width="103" height="66" /></div><div class="col_blck"><a href="#">新闻标题标题</a><div class="col_text_wh col_text">说明说明说明说明说明说明说明说明说明说明</div>
+                            </li>
+                            <li class="li_list">
+                                <div class="img"><img src="http://127.0.0.1:8080/cban/statics/cban/images/list_img.jpg" width="103" height="66" /></div><div class="col_blck"><a href="#">新闻标题标题</a><div class="col_text_wh col_text">说明说明说明说明说明说明说明说明说明说明</div>
+                            </li>
+                            <li class="li_list">
+                                <div class="img"><img src="http://127.0.0.1:8080/cban/statics/cban/images/list_img.jpg" width="103" height="66" /></div><div class="col_blck"><a href="#">新闻标题标题</a><div class="col_text_wh col_text">说明说明说明说明说明说明说明说明说明说明</div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="show_2 div">
+                	<!--图片类型列表-->
+                    <h4 class="title title_br">展会信息</h4>
+                    <div class="cont">
+                        <ul class="ul_list">
+                            <li class="li_list">
+                                <div class="img"><img src="http://127.0.0.1:8080/cban/statics/cban/images/list_img.jpg" width="103" height="66" /></div><div class="col_blck"><a href="#">新闻标题标题</a><div class="col_text_wh col_text">说明说明说明说明说明说明说明说明说明说明</div>
+                            </li>
+                            <li class="li_list">
+                                <div class="img"><img src="http://127.0.0.1:8080/cban/statics/cban/images/list_img.jpg" width="103" height="66" /></div><div class="col_blck"><a href="#">新闻标题标题</a><div class="col_text_wh col_text">说明说明说明说明说明说明说明说明说明说明</div>
+                            </li>
+                            <li class="li_list">
+                                <div class="img"><img src="http://127.0.0.1:8080/cban/statics/cban/images/list_img.jpg" width="103" height="66" /></div><div class="col_blck"><a href="#">新闻标题标题</a><div class="col_text_wh col_text">说明说明说明说明说明说明说明说明说明说明</div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="main_link">
+            	<h4 class="title title_br">家电名企</h4>
+                <div class="a_link">
+                	<ul>
+                    	<li>
+                        	<div><a href="javascript:;">连接连接连接</a></div>
+                        </li>
+                        <li>
+                        	<div><a href="javascript:;">连接</a></div>
+                        </li>
+                        <li>
+                        	<div><a href="javascript:;">连接</a></div>
+                        </li>
+                        <li>
+                        	<div><a href="javascript:;">连接</a></div>
+                        </li>
+                        <li>
+                        	<div><a href="javascript:;">连接</a></div>
+                        </li>
+                        <li>
+                        	<div><a href="javascript:;">连接连接连接</a></div>
+                        </li>
+                        <li>
+                        	<div><a href="javascript:;">连接</a></div>
+                        </li>
+                        <li>
+                        	<div><a href="javascript:;">连接</a></div>
+                        </li>
+                        <li>
+                        	<div><a href="javascript:;">连接</a></div>
+                        </li>
+                        <li>
+                        	<div><a href="javascript:;">连接</a></div>
+                        </li>
+                        <li>
+                        	<div><a href="javascript:;">连接连接连接</a></div>
+                        </li>
+                        <li>
+                        	<div><a href="javascript:;">连接</a></div>
+                        </li>
+                        <li>
+                        	<div><a href="javascript:;">连接</a></div>
+                        </li>
+                        <li>
+                        	<div><a href="javascript:;">连接</a></div>
+                        </li>
+                        <li>
+                        	<div><a href="javascript:;">连接</a></div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="main_link2">
+            	<h4 class="title title_br">家电排行</h4>
+                <div class="a_link">
+              		<div class="mini_win">
+                        <div class="win_title">
+                            <ul>
+                            	<!--
+                                	属性说明:
+                                	class="group_div"   : 	切换效果 识别用的div(固定值)
+                                    data-type="X"		:	切换效果类型(1 or 2)
+                                    data-class="XXX"	:	表现组的class名称
+                                    data-id="XXX"		:	对应要显示的id名称
+                                -->
+                                <li class="event_in group_div" data-type="1" data-class="group_name" data-id="left_div_1">
+                                    热门
+                                </li>
+                                <li class="event_out group_div" data-type="1" data-class="group_name" data-id="left_div_2">
+                                    新品
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="win_dir main_win_he">
+                            <ul id="left_div_1" class="group_name">
+                                <li>
+                                	<span>1</span>
+                                    <a href="javascript:;">商品1sadasdasd</a><br />
+                                    <img src="http://127.0.0.1:8080/cban/statics/cban/images/tmp.jpg" height="40" />
+                                </li>
+                                <li>
+                                	<span>2</span>
+                                    <a href="javascript:;">商品2</a>
+                                </li>
+                                <li>
+                                	<span>3</span>
+                                    <a href="javascript:;">商品2</a>
+                                </li>
+                                <li>
+                                	<span class="color">4</span>
+                                    <a href="javascript:;">商品2</a>
+                        		</li>
+                                <li>
+                                	<span class="color">5</span>
+                                    <a href="javascript:;">商品2</a>
+                        		</li>
+                            </ul>
+                            
+                            <ul id="left_div_2" style="display:none;" class="group_name">
+                                <li>
+                                	<span>1</span>
+                                    <a href="javascript:;">测试1sadasdasd</a><br />
+                                    <img src="http://127.0.0.1:8080/cban/statics/cban/images/tmp.jpg" height="40" />
+                                </li>
+                                <li>
+                                	<span>2</span>
+                                    <a href="javascript:;">测试2</a>
+                        		</li>
+                                <li>
+                                	<span>3</span>
+                                    <a href="javascript:;">测试2</a>
+                        		</li>
+                                <li>
+                                	<span class="color">4</span>
+                                    <a href="javascript:;">测试2</a>
+                        		</li>
+                                <li>
+                                	<span class="color">5</span>
+                                    <a href="javascript:;">测试2</a>
+                        		</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <!--
+                        属性说明:
+                        class="group_div"   : 	切换效果 识别用的div(固定值)
+                        data-type="X"		:	切换效果类型(1 or 2)
+                        data-class="XXX"	:	表现组的class名称
+                        data-id="XXX"		:	对应要显示的id名称
+                    -->
+                    
+                    <div class="medium_win">
+                    	<div class="win_title">
+                            <ul>
+                                <li class="event group_div" data-class="group_bar" data-type="2" data-id="div_type_a_1">
+                                    电视
+                                </li>
+                                <li class="group_div" data-class="group_bar" data-type="2" data-id="div_type_a_2">
+                                    冰箱
+                                </li>
+                                <li class="group_div" data-class="group_bar" data-type="2" data-id="div_type_a_3">
+                                	微波炉
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <div class="win_dir group_bar" id="div_type_a_1">
+                        	<ul>
+                                <li>
+                                    <a href="javascript:;">
+                                        <img src="http://127.0.0.1:8080/cban/statics/cban/images/tmp2.jpg" height="100"/>
+                                        电视
+                                    </a>
+                                    <div class="pic"><span>参考价格:</span>¥12,341</div>
+                                </li>
+                                <li>
+                                    <a href="javascript:;">
+                                        <img src="http://127.0.0.1:8080/cban/statics/cban/images/tmp2.jpg" height="100"/>
+                                        商品商品商品商品商品商品商品商品商品商品商品商品
+                                    </a>
+                                    <div class="pic"><span>参考价格:</span>¥12,341</div>
+                                </li>
+                                <li>
+                                    <a href="javascript:;">
+                                        <img src="http://127.0.0.1:8080/cban/statics/cban/images/tmp2.jpg" height="100"/>
+                                        商品商品商品商品商品商品商品商品商品商品商品商品
+                                    </a>
+                                    <div class="pic"><span>参考价格:</span>¥12,341</div>
+                                </li>
+                                <li>
+                                    <a href="javascript:;">
+                                        <img src="http://127.0.0.1:8080/cban/statics/cban/images/tmp2.jpg" height="100"/>
+                                        商品商品商品商品商品商品商品商品商品商品商品商品
+                                    </a>
+                                    <div class="pic"><span>参考价格:</span>¥12,341</div>
+                                </li>
+                                <li>
+                                    <a href="javascript:;">
+                                        <img src="http://127.0.0.1:8080/cban/statics/cban/images/tmp2.jpg" height="100"/>
+                                        商品商品商品商品商品商品商品商品商品商品商品商品
+                                    </a>
+                                    <div class="pic"><span>参考价格:</span>¥12,341</div>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <div class="win_dir group_bar" style="display:none;" id="div_type_a_2">
+                        	<ul>
+                                <li>
+                                    <a href="javascript:;">
+                                        <img src="http://127.0.0.1:8080/cban/statics/cban/images/tmp2.jpg" height="100"/>
+                                        冰箱
+                                    </a>
+                                    <div class="pic"><span>参考价格:</span>¥12,341</div>
+                                </li>
+                                <li>
+                                    <a href="javascript:;">
+                                        <img src="http://127.0.0.1:8080/cban/statics/cban/images/tmp2.jpg" height="100"/>
+                                        商品商品商品商品商品商品商品商品商品商品商品商品
+                                    </a>
+                                    <div class="pic"><span>参考价格:</span>¥12,341</div>
+                                </li>
+                                <li>
+                                    <a href="javascript:;">
+                                        <img src="http://127.0.0.1:8080/cban/statics/cban/images/tmp2.jpg" height="100"/>
+                                        商品商品商品商品商品商品商品商品商品商品商品商品
+                                    </a>
+                                    <div class="pic"><span>参考价格:</span>¥12,341</div>
+                                </li>
+                                <li>
+                                    <a href="javascript:;">
+                                        <img src="http://127.0.0.1:8080/cban/statics/cban/images/tmp2.jpg" height="100"/>
+                                        商品商品商品商品商品商品商品商品商品商品商品商品
+                                    </a>
+                                    <div class="pic"><span>参考价格:</span>¥12,341</div>
+                                </li>
+                                <li>
+                                    <a href="javascript:;">
+                                        <img src="http://127.0.0.1:8080/cban/statics/cban/images/tmp2.jpg" height="100"/>
+                                        商品商品商品商品商品商品商品商品商品商品商品商品
+                                    </a>
+                                    <div class="pic"><span>参考价格:</span>¥12,341</div>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <div class="win_dir group_bar" style="display:none;" id="div_type_a_3">
+                        	<ul>
+                                <li>
+                                    <a href="javascript:;">
+                                        <img src="http://127.0.0.1:8080/cban/statics/cban/images/tmp2.jpg" height="100"/>
+                                        微波炉
+                                    </a>
+                                    <div class="pic"><span>参考价格:</span>¥12,341</div>
+                                </li>
+                                <li>
+                                    <a href="javascript:;">
+                                        <img src="http://127.0.0.1:8080/cban/statics/cban/images/tmp2.jpg" height="100"/>
+                                        商品商品商品商品商品商品商品商品商品商品商品商品
+                                    </a>
+                                    <div class="pic"><span>参考价格:</span>¥12,341</div>
+                                </li>
+                                <li>
+                                    <a href="javascript:;">
+                                        <img src="http://127.0.0.1:8080/cban/statics/cban/images/tmp2.jpg" height="100"/>
+                                        商品商品商品商品商品商品商品商品商品商品商品商品
+                                    </a>
+                                    <div class="pic"><span>参考价格:</span>¥12,341</div>
+                                </li>
+                                <li>
+                                    <a href="javascript:;">
+                                        <img src="http://127.0.0.1:8080/cban/statics/cban/images/tmp2.jpg" height="100"/>
+                                        商品商品商品商品商品商品商品商品商品商品商品商品
+                                    </a>
+                                    <div class="pic"><span>参考价格:</span>¥12,341</div>
+                                </li>
+                                <li>
+                                    <a href="javascript:;">
+                                        <img src="http://127.0.0.1:8080/cban/statics/cban/images/tmp2.jpg" height="100"/>
+                                        商品商品商品商品商品商品商品商品商品商品商品商品
+                                    </a>
+                                    <div class="pic"><span>参考价格:</span>¥12,341</div>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <div class="win_link">
+                            <ol>
+                            	<li>
+                                	热门品牌:
+                                </li>
+                            	<li>
+                                	<a href="javascript:;">品牌</a>
+                                </li>
+                                <li>
+                                	<a href="javascript:;">品牌</a>
+                                </li>
+                                <li>
+                                	<a href="javascript:;">品牌</a>
+                                </li>
+                                <li>
+                                	<a href="javascript:;">品牌</a>
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                    
+                    
+                </div>
+            </div>
+            
+            
+            <!--页底开始-->
+						<div class="main_link">
+            	<h4 class="title title_br">友情连接</h4>
+                <div class="a_link">
+                	<ul>
+                    	<li>
+                        	<div><a href="javascript:;">连接连接连接</a></div>
+                        </li>
+                        <li>
+                        	<div><a href="javascript:;">连接</a></div>
+                        </li>
+                        <li>
+                        	<div><a href="javascript:;">连接</a></div>
+                        </li>
+                        <li>
+                        	<div><a href="javascript:;">连接</a></div>
+                        </li>
+                        <li>
+                        	<div><a href="javascript:;">连接</a></div>
+                        </li>
+                        <li>
+                        	<div><a href="javascript:;">连接连接连接</a></div>
+                        </li>
+                        <li>
+                        	<div><a href="javascript:;">连接</a></div>
+                        </li>
+                        <li>
+                        	<div><a href="javascript:;">连接</a></div>
+                        </li>
+                        <li>
+                        	<div><a href="javascript:;">连接</a></div>
+                        </li>
+                        <li>
+                        	<div><a href="javascript:;">连接</a></div>
+                        </li>
+                        <li>
+                        	<div><a href="javascript:;">连接连接连接</a></div>
+                        </li>
+                        <li>
+                        	<div><a href="javascript:;">连接</a></div>
+                        </li>
+                        <li>
+                        	<div><a href="javascript:;">连接</a></div>
+                        </li>
+                        <li>
+                        	<div><a href="javascript:;">连接</a></div>
+                        </li>
+                        <li>
+                        	<div><a href="javascript:;">连接</a></div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            
+            
+            <div class="main_link">
+                <div class="img_link a_link">
+                	<ul>
+                    	<li>
+                        	<div><a href="javascript:;">连接连接</a></div>
+                        </li>
+                        <li>
+                        	<div><a href="javascript:;">连接连接</a></div>
+                        </li>
+                        <li>
+                        	<div><a href="javascript:;">连接连接</a></div>
+                        </li>
+                        <li>
+                        	<div><a href="javascript:;">连接连接</a></div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            
+            <div class="main_link">
+                <span><br />文字文字文字文字文字文字文字文字文字</span>
+                <span><br />文字文字文字文字文字文字文字文字文字</span>
+                <span><br />文字文字文字文字文字文字文字文字文字</span>
+                <br />
+                <img src="http://127.0.0.1:8080/cban/statics/cban/img/tail.jpg" height="121" />
+                <img src="http://127.0.0.1:8080/cban/statics/cban/img/tail.jpg" height="121" />
+            </div>            
+        </div>
+        
+    </center>
+    
+</div>
+
 </body>
 </html>
