@@ -45,7 +45,7 @@ class manage extends admin {
 				$date = $thisdb->select($where,'img');
 				$attachmentdb = get_cbandb('cban_attachment');
 				foreach ($date as $k){
-					$img_arr = unserialize($k['img']);
+					$img_arr = string2array($k['img']);
 					foreach ($img_arr as $kk){
 						$attachmentdb->update('status=0','filepath=\''.$kk['0'].'\'');
 					}
