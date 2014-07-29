@@ -495,5 +495,19 @@ return array (
     'installdate' => '2011-09-02',
     'updatedate' => '2011-09-02',
   ),
+  'supply_infor' => 
+  array (
+    'module' => 'supply_infor',
+    'name' => '商机信息',
+    'url' => '',
+    'iscore' => '0',
+    'version' => '1.0',
+    'description' => '',
+    'setting' => '',
+    'listorder' => '1',
+    'disabled' => '0',
+    'installdate' => '2014-07-29',
+    'updatedate' => '2014-07-29',
+  ),
 );
 ?>

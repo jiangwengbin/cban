@@ -1,10 +1,9 @@
 <?php
 return array (
   'title' => '中国',
-  'style' => '2',
+  'style' => '1',
   'setting' => 
   array (
-    'level' => '2',
   ),
   'siteid' => '0',
   'data' => 
@@ -45937,6 +45936,34 @@ return array (
       'parentid' => '485',
       'child' => 0,
       'arrchildid' => '3282',
+      'keyid' => '1',
+      'listorder' => '0',
+      'description' => '',
+      'setting' => NULL,
+      'siteid' => '0',
+    ),
+    3358 => 
+    array (
+      'linkageid' => '3358',
+      'name' => '钓鱼岛',
+      'style' => '',
+      'parentid' => '0',
+      'child' => 1,
+      'arrchildid' => '3358,3359',
+      'keyid' => '1',
+      'listorder' => '0',
+      'description' => '',
+      'setting' => NULL,
+      'siteid' => '0',
+    ),
+    3359 => 
+    array (
+      'linkageid' => '3359',
+      'name' => '钓鱼岛',
+      'style' => '',
+      'parentid' => '3358',
+      'child' => 0,
+      'arrchildid' => '3359',
       'keyid' => '1',
       'listorder' => '0',
       'description' => '',
