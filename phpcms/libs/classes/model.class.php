@@ -68,6 +68,28 @@ class model {
 	}
 
 	/**
+	 * 查询多条数据并分页cban分页样式
+	 * @param $where
+	 * @param $order
+	 * @param $page
+	 * @param $pagesize
+	 * @return unknown_type
+	 */
+	final public function cban_listinfo($where = '', $order = '', $page = 1, $pagesize = 20, $key='', $setpages = 10,$urlrule = '',$array = array(), $data = '*') {
+		$where = to_sqls($where);
+		$this->number = $this->count($where);
+		$page = max(intval($page), 1);
+		$offset = $pagesize*($page-1);
+		$this->pages = cban_pages($this->number, $page, $pagesize, $urlrule, $array, $setpages);
+		$array = array();
+		if ($this->number > 0) {
+			return $this->select($where, $data, "$offset, $pagesize", $order, '', $key);
+		} else {
+			return array();
+		}
+	}
+	
+	/**
 	 * 获取单条记录查询
 	 * @param $where 		查询条件
 	 * @param $data 		需要查询的字段值[例`name`,`gender`,`birthday`]

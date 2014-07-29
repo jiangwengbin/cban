@@ -353,6 +353,142 @@ class MY_index extends index{
 		}
 	}
 	
+
+	/*供应信息发布*/
+	public function supply_infor()
+	{
+		//删除曾经上传的文件的cookie，则关闭“未处理文件“的功能
+		param::set_cookie('att_json','');
+	
+		if($_POST['dosubmit']){
+			if(count($_POST['imglist_url'])<1 || count($_POST['imglist_url'])>5){
+				showmessage('商品图片数量在 1 - 5 张');
+			}
+	
+			if( trim($_POST['info']['title']) && trim($_POST['info']['goods']) && strlen($_POST['info']['describe'])<40
+			&& $_POST['info']['type'] && trim($_POST['info']['num']) && trim($_POST['L_1-2'])
+			&& trim($_POST['info']['lxr']) && trim($_POST['info']['tel']) && strlen($_POST['info']['note'])<100 )
+			{
+				pc_base::load_app_func('global');
+	
+				$date['title'] = addslashes(trim($_POST['info']['title']));
+				$date['userid'] = param::get_cookie('_userid');
+				$date['username'] = param::get_cookie('_username');
+				$date['goods'] = addslashes(trim($_POST['info']['goods']));
+				$date['describe'] = $_POST['info']['describe'] ? addslashes($_POST['info']['describe']) : '';
+				$date['type'] = $_POST['info']['type'];
+				$date['num'] = $_POST['info']['num'];
+				$date['diqu'] = $_POST['L_1-2'];
+				$date['lxr'] = addslashes(trim($_POST['info']['lxr']));
+				$date['tel'] = addslashes(trim($_POST['info']['tel']));
+				$date['note'] = $_POST['info']['note'] ? addslashes($_POST['info']['note']) : '';
+				$date['time'] = SYS_TIME;
+				$date['img'] = serialize(merger_array(get_imglist_filepath($_POST['imglist_url']),$_POST['imglist_alt']));
+	
+				$attachmentdb = pc_base::load_model('attachment_model');
+	
+				$where = sql_where_or(get_imglist_filepath($_POST['imglist_url']),'filepath');
+				$attachmentdb->update('status=1',$where);
+	
+				$thisdb = get_cbandb('cban_supply');
+	
+				if($thisdb->insert($date)) showmessage('添加成功，返回继续添加','index.php?m=member&c=index&a=supply_infor');
+	
+			}else{
+				showmessage('参数错误');
+			}
+	
+		}else{
+			//上传图片js参数
+			$name = "图片上传";
+			$args = "5,gif|jpg|jpeg|png|bmp,0";
+			$authkey = upload_key($args);
+			include template('member', 'cban_supply_infor');
+		}
+	}
+	
+	public function supply_infor_manage()
+	{
+		if($_GET['status'] && $_GET['id']){
+			$string = $_SERVER['argv'][0];
+			$string = preg_replace('/&id=[0-9]*/i','',$string);
+			$string = preg_replace('/&status=[0-9]*/i','',$string);
+			//  		echo $string."<br>";
+			$where['userid'] = addslashes(param::get_cookie('_userid'));
+			$where['id'] = addslashes($_GET['id']);
+			if ($_GET['status']==1)
+			{
+				$thisdb = get_cbandb('cban_supply');
+				if($thisdb->update('status=3',$where))
+					showmessage('撤销成功！','index.php?'.$string);
+			}
+			if ($_GET['status']==3)
+			{
+				$thisdb = get_cbandb('cban_supply');
+				if($thisdb->update('status=1',$where))
+					showmessage('重新发布成功！','index.php?'.$string);
+			}
+		}else{
+			$where = ' userid='.param::get_cookie('_userid');
+			if($_GET['dosubmit']){
+				if(trim($_GET['keyword'])){
+					$keywords = addslashes(trim($_GET['keyword']));
+					$where .= $where ? ' and title like \'%'.$keywords.'%\'' : ' title like \'%'.$keywords.'%\'';
+					$where .= $where ? ' or goods like \'%'.$keywords.'%\'' : ' goods like \'%'.$keywords.'%\'';
+	
+				}
+	
+				if(trim($_GET['L_1-1'])){
+	
+					if(trim($_GET['L_1-2'])){
+						$where .= $where ? ' and diqu =\''.addslashes(trim($_GET['L_1-2'])).'\'' : ' diqu =\''.addslashes(trim($_GET['L_1-2'])).'\'';
+					}else{
+						$db_linkage = pc_base::load_model('linkage_model');
+						$date_linkage = $db_linkage -> select(array('parentid'=>addslashes(trim($_GET['L_1-1']))),'linkageid');
+						// 						echo implode(',',$date_linkage);
+						$arr = array();
+						foreach ($date_linkage as $k=>$v){
+							$arr[$k] = $v[linkageid];
+						}
+						$where .= $where ? ' and diqu in ('.implode(',',$arr).')' : ' diqu in ('.implode(',',$arr).')' ;
+					}
+				}
+	
+				if(trim($_GET['type'])){
+					$type='';
+					if(trim($_GET['type'][1])){
+						$type .= $type ? ' or type=1 ' :' type=1 ';
+					}
+					if(trim($_GET['type'][2])){
+						$type .= $type ? ' or type=2 ' :' type=2 ';
+					}
+					if(trim($_GET['type'][1]) && trim($_GET['type'][2])){
+						$type=' type in(1,2) ';
+					}
+					$where .= $where ? ' and '.$type : $type;
+				}
+				if(trim($_GET['status_mes'])){
+					$status='';
+					if(trim($_GET['status_mes'][1])){
+						$status .= $status ? ' or status=1 ' :' status=1 ';
+					}
+					if(trim($_GET['status_mes'][2])){
+						$status .= $status ? ' or status<>1 ' :' status<>1 ';
+					}
+					if(trim($_GET['status_mes'][1]) && trim($_GET['status_mes'][2])){
+						$status = ' status in(1,2,3,4) ';
+					}
+					$where .= $where ? ' and '.$status : $status;
+				}
+				// 				print_r($_SERVER['argv']);
+			}
+			$thisdb = get_cbandb('cban_supply');
+			$supply_infor_list = $thisdb->cban_listinfo($where,'time desc',$_GET['page'],20);
+			$pages = $thisdb->pages;
+			include template('member', 'cban_supply_infor_manage');
+		}
+	}
+	
 	private function _session_start() {
 		$session_storage = 'session_'.pc_base::load_config('system','session_storage');
 		pc_base::load_sys_class($session_storage);
