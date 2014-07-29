@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 -- 
 -- 主机: localhost
--- 生成日期: 2014 年 07 月 29 日 07:05
+-- 生成日期: 2014 年 07 月 29 日 08:07
 -- 服务器版本: 5.0.51
 -- PHP 版本: 5.2.6
 
@@ -24,7 +24,7 @@ START TRANSACTION;
 -- 表的结构 `cban_admin`
 -- 
 -- 创建时间: 2014 年 07 月 29 日 10:07
--- 最后更新时间: 2014 年 07 月 29 日 10:28
+-- 最后更新时间: 2014 年 07 月 29 日 15:28
 -- 
 
 DROP TABLE IF EXISTS `cban_admin`;
@@ -49,7 +49,7 @@ CREATE TABLE IF NOT EXISTS `cban_admin` (
 -- 
 
 INSERT DELAYED IGNORE INTO `cban_admin` (`userid`, `username`, `password`, `roleid`, `encrypt`, `lastloginip`, `lastlogintime`, `email`, `realname`, `card`, `lang`) VALUES 
-(1, 'admin', '9e4f7c2cb05d56ed0d33889e6dd8f216', 1, 'tMXppt', '127.0.0.1', 1406122849, '1@qq.com', '', '', '');
+(1, 'admin', '9e4f7c2cb05d56ed0d33889e6dd8f216', 1, 'tMXppt', '127.0.0.1', 1406618663, '1@qq.com', '', '', '');
 
 -- --------------------------------------------------------
 
@@ -4512,7 +4512,7 @@ INSERT DELAYED IGNORE INTO `cban_linkage` (`linkageid`, `name`, `style`, `parent
 -- 表的结构 `cban_log`
 -- 
 -- 创建时间: 2014 年 07 月 29 日 10:07
--- 最后更新时间: 2014 年 07 月 29 日 10:28
+-- 最后更新时间: 2014 年 07 月 29 日 15:53
 -- 
 
 DROP TABLE IF EXISTS `cban_log`;
@@ -4532,7 +4532,7 @@ CREATE TABLE IF NOT EXISTS `cban_log` (
   PRIMARY KEY  (`logid`),
   KEY `module` (`module`,`file`,`action`),
   KEY `username` (`username`,`action`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=305 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=317 ;
 
 -- 
 -- 导出表中的数据 `cban_log`
@@ -4842,7 +4842,19 @@ INSERT DELAYED IGNORE INTO `cban_log` (`logid`, `field`, `value`, `module`, `fil
 (301, '', 0, 'content', '', 'sitemodel_field', '?m=content&c=sitemodel_field&a=edit', '', 1, 'admin', '127.0.0.1', '2014-07-23 21:53:13'),
 (302, '', 0, 'content', '', 'sitemodel_field', '?m=content&c=sitemodel_field&a=edit', '', 1, 'admin', '127.0.0.1', '2014-07-23 21:53:27'),
 (303, '', 0, 'content', '', 'sitemodel_field', '?m=content&c=sitemodel_field&a=edit', '', 1, 'admin', '127.0.0.1', '2014-07-23 21:53:40'),
-(304, '', 0, 'content', '', 'sitemodel_field', '?m=content&c=sitemodel_field&a=edit', '', 1, 'admin', '127.0.0.1', '2014-07-23 21:53:43');
+(304, '', 0, 'content', '', 'sitemodel_field', '?m=content&c=sitemodel_field&a=edit', '', 1, 'admin', '127.0.0.1', '2014-07-23 21:53:43'),
+(305, '', 0, 'admin', '', 'index', '?m=admin&c=index&a=login', '', 0, '', '127.0.0.1', '2014-07-29 15:24:17'),
+(306, '', 0, 'admin', '', 'index', '?m=admin&c=index&a=login', '', 0, '', '127.0.0.1', '2014-07-29 15:24:23'),
+(307, '', 0, 'admin', '', 'menu', '?m=admin&c=menu&a=add', '', 1, 'admin', '127.0.0.1', '2014-07-29 15:50:16'),
+(308, '', 0, 'admin', '', 'menu', '?m=admin&c=menu&a=add', '', 1, 'admin', '127.0.0.1', '2014-07-29 15:50:35'),
+(309, '', 0, 'admin', '', 'menu', '?m=admin&c=menu&a=add', '', 1, 'admin', '127.0.0.1', '2014-07-29 15:50:39'),
+(310, '', 0, 'admin', '', 'menu', '?m=admin&c=menu&a=add', '', 1, 'admin', '127.0.0.1', '2014-07-29 15:51:35'),
+(311, '', 0, 'admin', '', 'menu', '?m=admin&c=menu&a=edit', '', 1, 'admin', '127.0.0.1', '2014-07-29 15:52:19'),
+(312, '', 0, 'admin', '', 'menu', '?m=admin&c=menu&a=edit', '', 1, 'admin', '127.0.0.1', '2014-07-29 15:52:36'),
+(313, '', 0, 'admin', '', 'menu', '?m=admin&c=menu&a=edit', '', 1, 'admin', '127.0.0.1', '2014-07-29 15:52:46'),
+(314, '', 0, 'admin', '', 'menu', '?m=admin&c=menu&a=edit', '', 1, 'admin', '127.0.0.1', '2014-07-29 15:53:02'),
+(315, '', 0, 'admin', '', 'menu', '?m=admin&c=menu&a=add', '', 1, 'admin', '127.0.0.1', '2014-07-29 15:53:11'),
+(316, '', 0, 'admin', '', 'menu', '?m=admin&c=menu&a=add', '', 1, 'admin', '127.0.0.1', '2014-07-29 15:53:57');
 
 -- --------------------------------------------------------
 
@@ -5116,7 +5128,7 @@ CREATE TABLE IF NOT EXISTS `cban_member_vip` (
 -- 表的结构 `cban_menu`
 -- 
 -- 创建时间: 2014 年 07 月 29 日 10:07
--- 最后更新时间: 2014 年 07 月 29 日 10:07
+-- 最后更新时间: 2014 年 07 月 29 日 15:53
 -- 最后检查时间: 2014 年 07 月 29 日 10:07
 -- 
 
@@ -5140,7 +5152,7 @@ CREATE TABLE IF NOT EXISTS `cban_menu` (
   KEY `listorder` (`listorder`),
   KEY `parentid` (`parentid`),
   KEY `module` (`m`,`c`,`a`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1577 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1580 ;
 
 -- 
 -- 导出表中的数据 `cban_menu`
@@ -5481,7 +5493,10 @@ INSERT DELAYED IGNORE INTO `cban_menu` (`id`, `name`, `parentid`, `m`, `c`, `a`,
 (1573, 'sms_pay_history', 1571, 'sms', 'sms', 'sms_pay_history', '', 0, '1', 1, 1, 1, 1, 1),
 (1574, 'sms_buy_history', 1571, 'sms', 'sms', 'sms_buy_history', '', 0, '1', 1, 1, 1, 1, 1),
 (1575, 'sms_api', 1571, 'sms', 'sms', 'sms_api', '', 0, '1', 1, 1, 1, 1, 1),
-(1576, 'sms_sent', 1571, 'sms', 'sms', 'sms_sent', '', 0, '1', 1, 1, 1, 1, 1);
+(1576, 'sms_sent', 1571, 'sms', 'sms', 'sms_sent', '', 0, '1', 1, 1, 1, 1, 1),
+(1577, 'cban', 0, 'cban', 'cban', 'cban', '', 0, '1', 1, 1, 1, 1, 1),
+(1578, 'supply', 1577, 'cban', 'manage', 'supply_list', '', 0, '1', 1, 1, 1, 1, 1),
+(1579, 'supply', 1578, 'cban', 'manage', 'supply_list', '', 0, '1', 1, 1, 1, 1, 1);
 
 -- --------------------------------------------------------
 
@@ -6665,7 +6680,7 @@ CREATE TABLE IF NOT EXISTS `cban_session` (
 -- 
 
 INSERT DELAYED IGNORE INTO `cban_session` (`sessionid`, `userid`, `ip`, `lastvisit`, `roleid`, `groupid`, `m`, `c`, `a`, `data`) VALUES 
-('e05b6fe35de6f951d4ca88bca1b9667e', 0, '127.0.0.1', 1406616414, 0, 0, 'attachment', 'attachments', 'swfupload_json', 'code|s:5:"gzygr";');
+('e05b6fe35de6f951d4ca88bca1b9667e', 1, '127.0.0.1', 1406621174, 1, 0, 'cban', 'manage', 'supply_list', 'code|s:4:"s472";userid|s:1:"1";roleid|s:1:"1";pc_hash|s:6:"AkMD8R";lock_screen|i:0;');
 
 -- --------------------------------------------------------
 

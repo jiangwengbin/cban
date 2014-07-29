@@ -53,6 +53,9 @@ define('APP_PATH',pc_base::load_config('system','app_path'));
 //cban路径
 define('CBAN_PATH',pc_base::load_config('system','cban_path'));
 
+//cban附件路径
+define('UPLOAD_URL',pc_base::load_config('system','upload_url'));
+
 //应用静态文件路径
 define('PLUGIN_STATICS_PATH',WEB_PATH.'statics/plugin/');
 
