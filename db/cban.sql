@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 -- 
 -- 主机: localhost
--- 生成日期: 2014 年 07 月 29 日 08:07
+-- 生成日期: 2014 年 07 月 29 日 08:34
 -- 服务器版本: 5.0.51
 -- PHP 版本: 5.2.6
 
@@ -171,7 +171,7 @@ CREATE TABLE IF NOT EXISTS `cban_announce` (
 -- 表的结构 `cban_attachment`
 -- 
 -- 创建时间: 2014 年 07 月 29 日 10:07
--- 最后更新时间: 2014 年 07 月 29 日 14:47
+-- 最后更新时间: 2014 年 07 月 29 日 16:34
 -- 
 
 DROP TABLE IF EXISTS `cban_attachment`;
@@ -194,21 +194,19 @@ CREATE TABLE IF NOT EXISTS `cban_attachment` (
   `siteid` smallint(5) unsigned NOT NULL default '0',
   PRIMARY KEY  (`aid`),
   KEY `authcode` (`authcode`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=9 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=11 ;
 
 -- 
 -- 导出表中的数据 `cban_attachment`
 -- 
 
 INSERT DELAYED IGNORE INTO `cban_attachment` (`aid`, `module`, `catid`, `filename`, `filepath`, `filesize`, `fileext`, `isimage`, `isthumb`, `downloads`, `userid`, `uploadtime`, `uploadip`, `status`, `authcode`, `siteid`) VALUES 
-(1, 'mendian_info', 0, '64181e08jw1ei4j681dgdj20c8083q3x.jpg', '2014/0723/20140723123322242.jpg', 35613, 'jpg', 1, 0, 0, 1, 1406046802, '127.0.0.1', 0, 'd262df8ae98cf8dab307fbd18fc0bc81', 1),
 (2, 'content', 9, '64181e08jw1ei4j699gecj20c80hl40s.jpg', '2014/0723/20140723123504336.jpg', 71786, 'jpg', 1, 0, 0, 1, 1406046904, '127.0.0.1', 0, '6d103dbc8227976ac6cd01e42824ba88', 1),
 (3, 'content', 9, '冬瓜炒西红柿.jpg', '2014/0723/20140723124032333.jpg', 54530, 'jpg', 1, 0, 0, 1, 1406047232, '127.0.0.1', 0, '0349d39082a1cfd07887003b9e41d28f', 1),
 (4, 'content', 9, '64181e08jw1ei4j681dgdj20c8083q3x.jpg', '2014/0723/20140723125207535.jpg', 35613, 'jpg', 1, 0, 0, 1, 1406047927, '127.0.0.1', 0, '8ab77d4b651372ef06fa61d86d440215', 1),
 (5, 'content', 9, '清蒸鲈鱼.jpg', '2014/0723/20140723125228409.jpg', 460061, 'jpg', 1, 0, 0, 1, 1406047948, '127.0.0.1', 0, 'fc0475dd0a549a9aea072f076b25603f', 1),
-(6, 'supply_infor', 0, ']1F]~55~8JI0R1C(5VP_%L2.jpg', '2014/0729/20140729022806338.jpg', 29230, 'jpg', 1, 0, 0, 1, 1406615286, '127.0.0.1', 1, '62818365aab616ea298405467d0e92b7', 1),
-(7, 'supply_infor', 0, '_3L%INRYFGEKRS%Y0GCOMS.jpg', '2014/0729/20140729022806990.jpg', 81044, 'jpg', 1, 0, 0, 1, 1406615286, '127.0.0.1', 1, 'a67e335703a91479b1417da26cdd378a', 1),
-(8, 'supply_infor', 0, 'psb.jpg', '2014/0729/20140729024654542.jpg', 77361, 'jpg', 1, 0, 0, 1, 1406616414, '127.0.0.1', 1, '00b16da5296789fd36fef089ef1319f3', 1);
+(10, 'supply_infor', 0, '_3L%INRYFGEKRS%Y0GCOMS.jpg', '2014/0729/20140729043049199.jpg', 81044, 'jpg', 1, 0, 0, 1, 1406622649, '127.0.0.1', 1, '22b8d402a5bd2b4f2c4b812fd13a709c', 1),
+(9, 'supply_infor', 0, ']1F]~55~8JI0R1C(5VP_%L2.jpg', '2014/0729/20140729043048502.jpg', 29230, 'jpg', 1, 0, 0, 1, 1406622648, '127.0.0.1', 1, 'f67d8ca581c79bfbec57604d0b82a806', 1);
 
 -- --------------------------------------------------------
 
@@ -4512,7 +4510,7 @@ INSERT DELAYED IGNORE INTO `cban_linkage` (`linkageid`, `name`, `style`, `parent
 -- 表的结构 `cban_log`
 -- 
 -- 创建时间: 2014 年 07 月 29 日 10:07
--- 最后更新时间: 2014 年 07 月 29 日 15:53
+-- 最后更新时间: 2014 年 07 月 29 日 16:30
 -- 
 
 DROP TABLE IF EXISTS `cban_log`;
@@ -4532,7 +4530,7 @@ CREATE TABLE IF NOT EXISTS `cban_log` (
   PRIMARY KEY  (`logid`),
   KEY `module` (`module`,`file`,`action`),
   KEY `username` (`username`,`action`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=317 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=318 ;
 
 -- 
 -- 导出表中的数据 `cban_log`
@@ -4854,7 +4852,8 @@ INSERT DELAYED IGNORE INTO `cban_log` (`logid`, `field`, `value`, `module`, `fil
 (313, '', 0, 'admin', '', 'menu', '?m=admin&c=menu&a=edit', '', 1, 'admin', '127.0.0.1', '2014-07-29 15:52:46'),
 (314, '', 0, 'admin', '', 'menu', '?m=admin&c=menu&a=edit', '', 1, 'admin', '127.0.0.1', '2014-07-29 15:53:02'),
 (315, '', 0, 'admin', '', 'menu', '?m=admin&c=menu&a=add', '', 1, 'admin', '127.0.0.1', '2014-07-29 15:53:11'),
-(316, '', 0, 'admin', '', 'menu', '?m=admin&c=menu&a=add', '', 1, 'admin', '127.0.0.1', '2014-07-29 15:53:57');
+(316, '', 0, 'admin', '', 'menu', '?m=admin&c=menu&a=add', '', 1, 'admin', '127.0.0.1', '2014-07-29 15:53:57'),
+(317, '', 0, 'attachment', '', 'manage', '?m=attachment&c=manage&a=delete', '', 1, 'admin', '127.0.0.1', '2014-07-29 16:29:59');
 
 -- --------------------------------------------------------
 
@@ -6680,7 +6679,7 @@ CREATE TABLE IF NOT EXISTS `cban_session` (
 -- 
 
 INSERT DELAYED IGNORE INTO `cban_session` (`sessionid`, `userid`, `ip`, `lastvisit`, `roleid`, `groupid`, `m`, `c`, `a`, `data`) VALUES 
-('e05b6fe35de6f951d4ca88bca1b9667e', 1, '127.0.0.1', 1406621174, 1, 0, 'cban', 'manage', 'supply_list', 'code|s:4:"s472";userid|s:1:"1";roleid|s:1:"1";pc_hash|s:6:"AkMD8R";lock_screen|i:0;');
+('e05b6fe35de6f951d4ca88bca1b9667e', 1, '127.0.0.1', 1406622785, 1, 0, 'admin', 'index', 'public_session_life', 'code|s:4:"s472";userid|s:1:"1";roleid|s:1:"1";pc_hash|s:6:"AkMD8R";lock_screen|i:0;');
 
 -- --------------------------------------------------------
 
@@ -7065,8 +7064,8 @@ INSERT DELAYED IGNORE INTO `cban_sso_settings` (`name`, `data`) VALUES
 -- 
 -- 表的结构 `cban_supply`
 -- 
--- 创建时间: 2014 年 07 月 29 日 10:59
--- 最后更新时间: 2014 年 07 月 29 日 14:47
+-- 创建时间: 2014 年 07 月 29 日 16:24
+-- 最后更新时间: 2014 年 07 月 29 日 16:31
 -- 
 
 DROP TABLE IF EXISTS `cban_supply`;
@@ -7087,15 +7086,14 @@ CREATE TABLE IF NOT EXISTS `cban_supply` (
   `time` int(10) unsigned NOT NULL,
   `status` tinyint(1) unsigned NOT NULL default '1' COMMENT '1发布中，2发布成功，3撤销发布，4发布失败',
   PRIMARY KEY  (`id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COMMENT='供应信息表' AUTO_INCREMENT=12 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COMMENT='供应信息表' AUTO_INCREMENT=2 ;
 
 -- 
 -- 导出表中的数据 `cban_supply`
 -- 
 
 INSERT DELAYED IGNORE INTO `cban_supply` (`id`, `userid`, `username`, `title`, `goods`, `describe`, `type`, `num`, `diqu`, `img`, `lxr`, `tel`, `note`, `time`, `status`) VALUES 
-(10, 1, 'nima', '超级强悍的电视', '液晶电视', '', 1, 2, 241, 'a:2:{i:0;a:2:{i:0;s:31:"2014/0729/20140729022806338.jpg";i:1;s:23:"]1F]~55~8JI0R1C(5VP_%L2";}i:1;a:2:{i:0;s:31:"2014/0729/20140729022806990.jpg";i:1;s:22:"_3L%INRYFGEKRS%Y0GCOMS";}}', '江桑', '11111111111', '', 1406615323, 1),
-(11, 1, 'nima', '超叼的5s', '苹果手机', '', 1, 2, 241, 'a:1:{i:0;a:2:{i:0;s:31:"2014/0729/20140729024654542.jpg";i:1;s:3:"psb";}}', '江桑', '11111111111', '', 1406616460, 1);
+(1, 1, 'nima', '超级强悍的电视', '液晶电视', '此电视很吊，吊炸天', 1, 100, 241, 'array (\n  0 => \n  array (\n    0 => ''2014/0729/20140729043048502.jpg'',\n    1 => '']1F]~55~8JI0R1C(5VP_%L2'',\n  ),\n  1 => \n  array (\n    0 => ''2014/0729/20140729043049199.jpg'',\n    1 => ''_3L%INRYFGEKRS%Y0GCOMS'',\n  ),\n)', '江桑', '11111111111', '', 1406622665, 1);
 
 -- --------------------------------------------------------
 

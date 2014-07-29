@@ -383,7 +383,7 @@ class MY_index extends index{
 				$date['tel'] = addslashes(trim($_POST['info']['tel']));
 				$date['note'] = $_POST['info']['note'] ? addslashes($_POST['info']['note']) : '';
 				$date['time'] = SYS_TIME;
-				$date['img'] = serialize(merger_array(get_imglist_filepath($_POST['imglist_url']),$_POST['imglist_alt']));
+				$date['img'] = array2string(merger_array(get_imglist_filepath($_POST['imglist_url']),$_POST['imglist_alt']));
 	
 				$attachmentdb = pc_base::load_model('attachment_model');
 	

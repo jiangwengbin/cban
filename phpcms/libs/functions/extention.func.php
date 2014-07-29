@@ -204,7 +204,7 @@ function update_attachments($string){
 }
 
 function supply_preview_img($arr){
-	$arr = unserialize($arr); 
+	$arr = string2array($arr); 
 	$string = '';
 	foreach($arr as $k){
 		$string .= '
