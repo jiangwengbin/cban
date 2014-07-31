@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 -- 
 -- 主机: localhost
--- 生成日期: 2014 年 07 月 31 日 08:05
+-- 生成日期: 2014 年 07 月 31 日 08:19
 -- 服务器版本: 5.0.51
 -- PHP 版本: 5.2.6
 
@@ -171,7 +171,7 @@ CREATE TABLE IF NOT EXISTS `cban_announce` (
 -- 表的结构 `cban_attachment`
 -- 
 -- 创建时间: 2014 年 07 月 29 日 16:38
--- 最后更新时间: 2014 年 07 月 31 日 16:03
+-- 最后更新时间: 2014 年 07 月 31 日 16:08
 -- 
 
 DROP TABLE IF EXISTS `cban_attachment`;
@@ -200,9 +200,6 @@ CREATE TABLE IF NOT EXISTS `cban_attachment` (
 -- 导出表中的数据 `cban_attachment`
 -- 
 
-INSERT DELAYED IGNORE INTO `cban_attachment` (`aid`, `module`, `catid`, `filename`, `filepath`, `filesize`, `fileext`, `isimage`, `isthumb`, `downloads`, `userid`, `uploadtime`, `uploadip`, `status`, `authcode`, `siteid`) VALUES 
-(10, 'supply_infor', 0, '_3L%INRYFGEKRS%Y0GCOMS.jpg', '2014/0729/20140729043049199.jpg', 81044, 'jpg', 1, 0, 0, 1, 1406622649, '127.0.0.1', 1, '22b8d402a5bd2b4f2c4b812fd13a709c', 1),
-(9, 'supply_infor', 0, ']1F]~55~8JI0R1C(5VP_%L2.jpg', '2014/0729/20140729043048502.jpg', 29230, 'jpg', 1, 0, 0, 1, 1406622648, '127.0.0.1', 1, 'f67d8ca581c79bfbec57604d0b82a806', 1);
 
 -- --------------------------------------------------------
 
@@ -4506,7 +4503,7 @@ INSERT DELAYED IGNORE INTO `cban_linkage` (`linkageid`, `name`, `style`, `parent
 -- 表的结构 `cban_log`
 -- 
 -- 创建时间: 2014 年 07 月 29 日 16:38
--- 最后更新时间: 2014 年 07 月 31 日 16:02
+-- 最后更新时间: 2014 年 07 月 31 日 16:15
 -- 
 
 DROP TABLE IF EXISTS `cban_log`;
@@ -4526,7 +4523,7 @@ CREATE TABLE IF NOT EXISTS `cban_log` (
   PRIMARY KEY  (`logid`),
   KEY `module` (`module`,`file`,`action`),
   KEY `username` (`username`,`action`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=493 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=500 ;
 
 -- 
 -- 导出表中的数据 `cban_log`
@@ -5025,7 +5022,14 @@ INSERT DELAYED IGNORE INTO `cban_log` (`logid`, `field`, `value`, `module`, `fil
 (489, '', 0, 'content', '', 'sitemodel_field', '?m=content&c=sitemodel_field&a=edit', '', 1, 'admin', '127.0.0.1', '2014-07-31 16:02:13'),
 (490, '', 0, 'content', '', 'sitemodel_field', '?m=content&c=sitemodel_field&a=edit', '', 1, 'admin', '127.0.0.1', '2014-07-31 16:02:18'),
 (491, '', 0, 'content', '', 'sitemodel_field', '?m=content&c=sitemodel_field&a=edit', '', 1, 'admin', '127.0.0.1', '2014-07-31 16:02:25'),
-(492, '', 0, 'content', '', 'sitemodel_field', '?m=content&c=sitemodel_field&a=edit', '', 1, 'admin', '127.0.0.1', '2014-07-31 16:02:29');
+(492, '', 0, 'content', '', 'sitemodel_field', '?m=content&c=sitemodel_field&a=edit', '', 1, 'admin', '127.0.0.1', '2014-07-31 16:02:29'),
+(493, '', 0, 'content', '', 'sitemodel_field', '?m=content&c=sitemodel_field&a=edit', '', 1, 'admin', '127.0.0.1', '2014-07-31 16:07:49'),
+(494, '', 0, 'content', '', 'sitemodel_field', '?m=content&c=sitemodel_field&a=edit', '', 1, 'admin', '127.0.0.1', '2014-07-31 16:09:15'),
+(495, '', 0, 'content', '', 'sitemodel_field', '?m=content&c=sitemodel_field&a=edit', '', 1, 'admin', '127.0.0.1', '2014-07-31 16:09:32'),
+(496, '', 0, 'content', '', 'sitemodel_field', '?m=content&c=sitemodel_field&a=edit', '', 1, 'admin', '127.0.0.1', '2014-07-31 16:09:45'),
+(497, '', 0, 'content', '', 'sitemodel_field', '?m=content&c=sitemodel_field&a=edit', '', 1, 'admin', '127.0.0.1', '2014-07-31 16:10:05'),
+(498, '', 0, 'content', '', 'sitemodel_field', '?m=content&c=sitemodel_field&a=edit', '', 1, 'admin', '127.0.0.1', '2014-07-31 16:10:14'),
+(499, '', 0, 'content', '', 'sitemodel_field', '?m=content&c=sitemodel_field&a=edit', '', 1, 'admin', '127.0.0.1', '2014-07-31 16:15:39');
 
 -- --------------------------------------------------------
 
@@ -5811,7 +5815,7 @@ INSERT DELAYED IGNORE INTO `cban_model` (`modelid`, `siteid`, `name`, `descripti
 -- 表的结构 `cban_model_field`
 -- 
 -- 创建时间: 2014 年 07 月 29 日 16:38
--- 最后更新时间: 2014 年 07 月 31 日 16:02
+-- 最后更新时间: 2014 年 07 月 31 日 16:10
 -- 最后检查时间: 2014 年 07 月 29 日 16:38
 -- 
 
@@ -6017,7 +6021,7 @@ INSERT DELAYED IGNORE INTO `cban_model_field` (`fieldid`, `modelid`, `siteid`, `
 (192, 16, 1, 'qq', 'QQ', '', '', 0, 15, '', '', 'text', 'array (\n  ''size'' => ''25'',\n  ''defaultvalue'' => '''',\n  ''ispassword'' => ''0'',\n)', '', '', '', 0, 1, 0, 1, 0, 1, 1, 0, 12, 0, 0),
 (193, 16, 1, 'weixin', '微信', '', '', 0, 25, '', '', 'text', 'array (\n  ''size'' => ''25'',\n  ''defaultvalue'' => '''',\n  ''ispassword'' => ''0'',\n)', '', '', '', 0, 1, 0, 1, 0, 1, 1, 0, 13, 0, 0),
 (194, 16, 1, 'tel', '联系人手机', '', '', 0, 11, '', '', 'text', 'array (\n  ''size'' => ''25'',\n  ''defaultvalue'' => '''',\n  ''ispassword'' => ''0'',\n)', '', '', '', 0, 1, 0, 1, 0, 1, 1, 0, 10, 0, 0),
-(195, 16, 1, 'pinpai', '品牌LOGO', '', '', 0, 0, '', '', 'images', 'array (\n  ''upload_allowext'' => ''gif|jpg|jpeg|png|bmp'',\n  ''isselectimage'' => ''0'',\n  ''upload_number'' => ''10'',\n)', '', '', '', 0, 0, 0, 1, 0, 1, 0, 0, 14, 0, 0);
+(195, 16, 1, 'pinpai', '品牌LOGO', '最多只能发布10个品牌，请在后面的输入框中输入品牌名称<br />双击第一个输入框可以预览图片<br />', '', 0, 0, '', '', 'images', 'array (\n  ''upload_allowext'' => ''gif|jpg|jpeg|png|bmp'',\n  ''isselectimage'' => ''0'',\n  ''upload_number'' => ''10'',\n)', '', '', '', 0, 0, 0, 1, 0, 1, 0, 0, 14, 0, 0);
 
 -- --------------------------------------------------------
 
@@ -6320,8 +6324,8 @@ INSERT DELAYED IGNORE INTO `cban_news_qy` (`id`, `catid`, `typeid`, `title`, `st
 -- 
 -- 表的结构 `cban_news_qy_data`
 -- 
--- 创建时间: 2014 年 07 月 31 日 15:52
--- 最后更新时间: 2014 年 07 月 31 日 16:01
+-- 创建时间: 2014 年 07 月 31 日 16:10
+-- 最后更新时间: 2014 年 07 月 31 日 16:10
 -- 
 
 DROP TABLE IF EXISTS `cban_news_qy_data`;
@@ -6888,7 +6892,7 @@ CREATE TABLE IF NOT EXISTS `cban_session` (
 -- 
 
 INSERT DELAYED IGNORE INTO `cban_session` (`sessionid`, `userid`, `ip`, `lastvisit`, `roleid`, `groupid`, `m`, `c`, `a`, `data`) VALUES 
-('3a8fc7a7c3cf87222072a77216af50b7', 1, '127.0.0.1', 1406793855, 1, 0, 'cban', 'manage', 'supply_list', 'code|s:5:"pbk7v";userid|s:1:"1";roleid|s:1:"1";pc_hash|s:6:"LWh8Ds";lock_screen|i:0;');
+('3a8fc7a7c3cf87222072a77216af50b7', 1, '127.0.0.1', 1406794716, 1, 0, 'admin', 'index', 'public_session_life', 'code|s:5:"pbk7v";userid|s:1:"1";roleid|s:1:"1";pc_hash|s:6:"LWh8Ds";lock_screen|i:0;');
 
 -- --------------------------------------------------------
 
@@ -7274,7 +7278,7 @@ INSERT DELAYED IGNORE INTO `cban_sso_settings` (`name`, `data`) VALUES
 -- 表的结构 `cban_supply`
 -- 
 -- 创建时间: 2014 年 07 月 29 日 16:38
--- 最后更新时间: 2014 年 07 月 29 日 16:38
+-- 最后更新时间: 2014 年 07 月 31 日 16:08
 -- 
 
 DROP TABLE IF EXISTS `cban_supply`;
@@ -7301,8 +7305,6 @@ CREATE TABLE IF NOT EXISTS `cban_supply` (
 -- 导出表中的数据 `cban_supply`
 -- 
 
-INSERT DELAYED IGNORE INTO `cban_supply` (`id`, `userid`, `username`, `title`, `goods`, `describe`, `type`, `num`, `diqu`, `img`, `lxr`, `tel`, `note`, `time`, `status`) VALUES 
-(1, 1, 'nima', '超级强悍的电视', '液晶电视', '此电视很吊，吊炸天', 1, 100, 241, 'array (\n  0 => \n  array (\n    0 => ''2014/0729/20140729043048502.jpg'',\n    1 => '']1F]~55~8JI0R1C(5VP_%L2'',\n  ),\n  1 => \n  array (\n    0 => ''2014/0729/20140729043049199.jpg'',\n    1 => ''_3L%INRYFGEKRS%Y0GCOMS'',\n  ),\n)', '江桑', '11111111111', '', 1406622665, 1);
 
 -- --------------------------------------------------------
 

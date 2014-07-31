@@ -435,7 +435,7 @@ return array (
     'siteid' => '1',
     'field' => 'pinpai',
     'name' => '品牌LOGO',
-    'tips' => '',
+    'tips' => '最多只能发布10个品牌，请在后面的输入框中输入品牌名称<br />双击第一个输入框可以预览图片<br />',
     'css' => '',
     'minlength' => '0',
     'maxlength' => '0',
