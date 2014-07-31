@@ -185,7 +185,7 @@ return array (
     'minlength' => '10',
     'maxlength' => '100',
     'pattern' => '',
-    'errortips' => '地址不能为空',
+    'errortips' => '详细地址不能为空',
     'formtype' => 'text',
     'setting' => 'array (
   \'size\' => \'50\',
@@ -222,7 +222,7 @@ return array (
     'minlength' => '4',
     'maxlength' => '20',
     'pattern' => '',
-    'errortips' => '',
+    'errortips' => '联系人不能为空',
     'formtype' => 'text',
     'setting' => 'array (
   \'size\' => \'25\',
@@ -295,7 +295,7 @@ return array (
     'css' => '',
     'minlength' => '0',
     'maxlength' => '11',
-    'pattern' => '/^(1)[0-9]{10}$/',
+    'pattern' => '',
     'errortips' => '',
     'formtype' => 'text',
     'setting' => 'array (

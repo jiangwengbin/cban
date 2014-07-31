@@ -7,8 +7,8 @@ class MY_content extends content {
 	}
 	
 	public function publish() {
-		
-		param::set_cookie('att_json','');
+		//关闭多图上传的‘未处理文件 ’功能
+		//param::set_cookie('att_json','');
 		
 		$modelid = $this->memberinfo['modelid'];
 		$_username = $this->memberinfo['username'];
