@@ -4,13 +4,6 @@ defined('IN_PHPCMS') or exit('No permission resources.');
 define('CACHE_MODEL_PATH',CACHE_PATH.'caches_model'.DIRECTORY_SEPARATOR.'caches_data'.DIRECTORY_SEPARATOR);
 pc_base::load_app_func('util','cban');
 class index {
-	private $db;
-	function __construct() {
-		$this->db = pc_base::load_model('cban_model');
-// 		$this->_userid = param::get_cookie('_userid');
-// 		$this->_username = param::get_cookie('_username');
-// 		$this->_groupid = param::get_cookie('_groupid');
-	}
 
 	//百县千店页面
 	public function init() {
@@ -27,8 +20,8 @@ class index {
 		//SEO
 		$SEO = seo($siteid);
 
-		$this->db->table_name = 'cban_member_mendian';
-		$count = $this->db->count('userid');
+ 		$thisdb = get_cbandb('cban_news_md');
+// 		$count = $this->db->count('userid');
 
 		$db_linkage = pc_base::load_model('linkage_model');
 		$date_linkage = $db_linkage -> select(array('parentid'=>'0','child'=>'1'),'linkageid,name','');
@@ -43,8 +36,8 @@ class index {
 				$where .= $where ? " or `diqu` = '$val[linkageid]' " : " `diqu` = '$val[linkageid]'";
 			}
 
-			$mendian = $this->db->cban_listinfo($where, 'userid desc',$_GET['page'], '20');
-			$pages = $this->db->pages;
+			$mendian = $thisdb->cban_listinfo($where, 'id desc',$_GET['page'], '20');
+			$pages = $thisdb->pages;
 
 			foreach ($mendian as $key => $val) {
 
@@ -53,8 +46,6 @@ class index {
 
 			}
 		}
-
-
 
 		include template('content','bai_xian_qian_dian');
 	}
@@ -83,15 +74,15 @@ class index {
 			$where .= $where ? " or `diqu` = '".$_POST['L_1-2']."'" : " `diqu` = '".$_POST['L_1-2']."'";
 
 		}
-		if($_POST['type']){$where .= " and type=".$_POST['type'];}
+		if($_POST['type']){$where .= " and service=".$_POST['type'];}
 
 		if($where!="")
 		{
 
-			$this->db->table_name = 'cban_member_mendian';
+			$thisdb = get_cbandb('cban_news_md');
 
-			$mendian = $this->db->cban_listinfo($where, 'userid desc',$_GET['page'], '20');
-			$pages = $this->db->pages;
+			$mendian = $thisdb->cban_listinfo($where, 'id desc',$_GET['page'], '20');
+			$pages = $thisdb->pages;
 
 			foreach ($mendian as $key => $val) {
 

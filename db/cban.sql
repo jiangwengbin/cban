@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 -- 
 -- 主机: localhost
--- 生成日期: 2014 年 07 月 31 日 08:19
+-- 生成日期: 2014 年 07 月 31 日 09:05
 -- 服务器版本: 5.0.51
 -- PHP 版本: 5.2.6
 
@@ -4503,7 +4503,7 @@ INSERT DELAYED IGNORE INTO `cban_linkage` (`linkageid`, `name`, `style`, `parent
 -- 表的结构 `cban_log`
 -- 
 -- 创建时间: 2014 年 07 月 29 日 16:38
--- 最后更新时间: 2014 年 07 月 31 日 16:15
+-- 最后更新时间: 2014 年 07 月 31 日 16:55
 -- 
 
 DROP TABLE IF EXISTS `cban_log`;
@@ -4523,7 +4523,7 @@ CREATE TABLE IF NOT EXISTS `cban_log` (
   PRIMARY KEY  (`logid`),
   KEY `module` (`module`,`file`,`action`),
   KEY `username` (`username`,`action`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=500 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=503 ;
 
 -- 
 -- 导出表中的数据 `cban_log`
@@ -5029,7 +5029,10 @@ INSERT DELAYED IGNORE INTO `cban_log` (`logid`, `field`, `value`, `module`, `fil
 (496, '', 0, 'content', '', 'sitemodel_field', '?m=content&c=sitemodel_field&a=edit', '', 1, 'admin', '127.0.0.1', '2014-07-31 16:09:45'),
 (497, '', 0, 'content', '', 'sitemodel_field', '?m=content&c=sitemodel_field&a=edit', '', 1, 'admin', '127.0.0.1', '2014-07-31 16:10:05'),
 (498, '', 0, 'content', '', 'sitemodel_field', '?m=content&c=sitemodel_field&a=edit', '', 1, 'admin', '127.0.0.1', '2014-07-31 16:10:14'),
-(499, '', 0, 'content', '', 'sitemodel_field', '?m=content&c=sitemodel_field&a=edit', '', 1, 'admin', '127.0.0.1', '2014-07-31 16:15:39');
+(499, '', 0, 'content', '', 'sitemodel_field', '?m=content&c=sitemodel_field&a=edit', '', 1, 'admin', '127.0.0.1', '2014-07-31 16:15:39'),
+(500, '', 0, 'admin', '', 'category', '?m=admin&c=category&a=edit', '', 1, 'admin', '127.0.0.1', '2014-07-31 16:25:09'),
+(501, '', 0, 'content', '', 'content', '?m=content&c=content&a=add', '', 1, 'admin', '127.0.0.1', '2014-07-31 16:28:35'),
+(502, '', 0, 'content', '', 'sitemodel_field', '?m=content&c=sitemodel_field&a=edit', '', 1, 'admin', '127.0.0.1', '2014-07-31 16:55:03');
 
 -- --------------------------------------------------------
 
@@ -5037,7 +5040,7 @@ INSERT DELAYED IGNORE INTO `cban_log` (`logid`, `field`, `value`, `module`, `fil
 -- 表的结构 `cban_member`
 -- 
 -- 创建时间: 2014 年 07 月 29 日 16:38
--- 最后更新时间: 2014 年 07 月 31 日 15:08
+-- 最后更新时间: 2014 年 07 月 31 日 17:05
 -- 
 
 DROP TABLE IF EXISTS `cban_member`;
@@ -5078,7 +5081,7 @@ CREATE TABLE IF NOT EXISTS `cban_member` (
 -- 
 
 INSERT DELAYED IGNORE INTO `cban_member` (`userid`, `phpssouid`, `username`, `password`, `encrypt`, `nickname`, `regdate`, `lastdate`, `regip`, `lastip`, `loginnum`, `email`, `groupid`, `areaid`, `amount`, `point`, `modelid`, `message`, `islock`, `vip`, `overduedate`, `siteid`, `connectid`, `from`, `mobile`) VALUES 
-(1, 1, 'nima', 'e3cdebc9a303d1e78b623146821d6192', 'D8IK1j', 'nima', 1406013245, 1406772799, '127.0.0.1', '127.0.0.1', 0, 'nima@qq.com', 2, 0, 0.00, 4, 12, 0, 0, 0, 0, 1, '', '', ''),
+(1, 1, 'nima', 'e3cdebc9a303d1e78b623146821d6192', 'D8IK1j', 'nima', 1406013245, 1406796145, '127.0.0.1', '127.0.0.1', 0, 'nima@qq.com', 2, 0, 0.00, 4, 12, 0, 0, 0, 0, 1, '', '', ''),
 (2, 2, 'hehe', '7f30f0b731b883d2aae66a4d4dddc366', '4sGUlJ', 'hehe', 1406013385, 1406790472, '127.0.0.1', '127.0.0.1', 0, 'hehe@qq.com', 2, 0, 0.00, 0, 13, 0, 0, 0, 0, 1, '', '', '');
 
 -- --------------------------------------------------------
@@ -6892,7 +6895,7 @@ CREATE TABLE IF NOT EXISTS `cban_session` (
 -- 
 
 INSERT DELAYED IGNORE INTO `cban_session` (`sessionid`, `userid`, `ip`, `lastvisit`, `roleid`, `groupid`, `m`, `c`, `a`, `data`) VALUES 
-('3a8fc7a7c3cf87222072a77216af50b7', 1, '127.0.0.1', 1406794716, 1, 0, 'admin', 'index', 'public_session_life', 'code|s:5:"pbk7v";userid|s:1:"1";roleid|s:1:"1";pc_hash|s:6:"LWh8Ds";lock_screen|i:0;');
+('3a8fc7a7c3cf87222072a77216af50b7', 1, '127.0.0.1', 1406797436, 1, 0, 'admin', 'index', 'public_session_life', 'code|s:5:"r9b56";userid|s:1:"1";roleid|s:1:"1";pc_hash|s:6:"LWh8Ds";lock_screen|i:0;');
 
 -- --------------------------------------------------------
 
@@ -7155,7 +7158,7 @@ INSERT DELAYED IGNORE INTO `cban_sso_applications` (`appid`, `type`, `name`, `ur
 -- 表的结构 `cban_sso_members`
 -- 
 -- 创建时间: 2014 年 07 月 29 日 16:38
--- 最后更新时间: 2014 年 07 月 31 日 15:08
+-- 最后更新时间: 2014 年 07 月 31 日 17:05
 -- 
 
 DROP TABLE IF EXISTS `cban_sso_members`;
@@ -7184,7 +7187,7 @@ CREATE TABLE IF NOT EXISTS `cban_sso_members` (
 -- 
 
 INSERT DELAYED IGNORE INTO `cban_sso_members` (`uid`, `username`, `password`, `random`, `email`, `regip`, `regdate`, `lastip`, `lastdate`, `appname`, `type`, `avatar`, `ucuserid`) VALUES 
-(1, 'nima', 'e3cdebc9a303d1e78b623146821d6192', 'D8IK1j', 'nima@qq.com', '127.0.0.1', 1406013245, '127.0.0.1', 1406772799, 'phpcms v9', 'app', 0, 0),
+(1, 'nima', 'e3cdebc9a303d1e78b623146821d6192', 'D8IK1j', 'nima@qq.com', '127.0.0.1', 1406013245, '127.0.0.1', 1406796145, 'phpcms v9', 'app', 0, 0),
 (2, 'hehe', '7f30f0b731b883d2aae66a4d4dddc366', '4sGUlJ', 'hehe@qq.com', '127.0.0.1', 1406014825, '127.0.0.1', 1406790472, 'phpcms v9', 'app', 0, 0);
 
 -- --------------------------------------------------------
