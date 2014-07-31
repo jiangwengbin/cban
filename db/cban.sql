@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 -- 
 -- 主机: localhost
--- 生成日期: 2014 年 07 月 29 日 08:54
+-- 生成日期: 2014 年 07 月 31 日 07:24
 -- 服务器版本: 5.0.51
 -- PHP 版本: 5.2.6
 
@@ -24,7 +24,7 @@ START TRANSACTION;
 -- 表的结构 `cban_admin`
 -- 
 -- 创建时间: 2014 年 07 月 29 日 16:38
--- 最后更新时间: 2014 年 07 月 29 日 16:38
+-- 最后更新时间: 2014 年 07 月 31 日 09:54
 -- 
 
 DROP TABLE IF EXISTS `cban_admin`;
@@ -49,7 +49,7 @@ CREATE TABLE IF NOT EXISTS `cban_admin` (
 -- 
 
 INSERT DELAYED IGNORE INTO `cban_admin` (`userid`, `username`, `password`, `roleid`, `encrypt`, `lastloginip`, `lastlogintime`, `email`, `realname`, `card`, `lang`) VALUES 
-(1, 'admin', '9e4f7c2cb05d56ed0d33889e6dd8f216', 1, 'tMXppt', '127.0.0.1', 1406618663, '1@qq.com', '', '', '');
+(1, 'admin', '9e4f7c2cb05d56ed0d33889e6dd8f216', 1, 'tMXppt', '127.0.0.1', 1406771033, '1@qq.com', '', '', '');
 
 -- --------------------------------------------------------
 
@@ -343,7 +343,7 @@ CREATE TABLE IF NOT EXISTS `cban_block_priv` (
 -- 表的结构 `cban_cache`
 -- 
 -- 创建时间: 2014 年 07 月 29 日 16:38
--- 最后更新时间: 2014 年 07 月 29 日 16:53
+-- 最后更新时间: 2014 年 07 月 31 日 09:55
 -- 
 
 DROP TABLE IF EXISTS `cban_cache`;
@@ -388,7 +388,8 @@ INSERT DELAYED IGNORE INTO `cban_cache` (`filename`, `path`, `data`) VALUES
 ('link.cache.php', 'caches_commons/caches_data/', '<?php\nreturn array (\n  1 => \n  array (\n    ''is_post'' => ''1'',\n    ''enablecheckcode'' => ''0'',\n  ),\n);\n?>'),
 ('type_.cache.php', 'caches_commons/caches_data/', '<?php\nreturn array (\n);\n?>'),
 ('category_items_15.cache.php', 'caches_commons/caches_data/', '<?php\nreturn array (\n  9 => ''1'',\n);\n?>'),
-('category_items_16.cache.php', 'caches_commons/caches_data/', '<?php\nreturn array (\n  10 => ''1'',\n);\n?>');
+('category_items_16.cache.php', 'caches_commons/caches_data/', '<?php\nreturn array (\n  10 => ''1'',\n);\n?>'),
+('type_content_1.cache.php', 'caches_commons/caches_data/', '<?php\nreturn array (\n);\n?>');
 
 -- --------------------------------------------------------
 
@@ -1096,7 +1097,7 @@ CREATE TABLE IF NOT EXISTS `cban_keylink` (
 -- 表的结构 `cban_keyword`
 -- 
 -- 创建时间: 2014 年 07 月 29 日 16:38
--- 最后更新时间: 2014 年 07 月 29 日 16:53
+-- 最后更新时间: 2014 年 07 月 31 日 15:08
 -- 
 
 DROP TABLE IF EXISTS `cban_keyword`;
@@ -1117,7 +1118,7 @@ CREATE TABLE IF NOT EXISTS `cban_keyword` (
 
 INSERT DELAYED IGNORE INTO `cban_keyword` (`id`, `siteid`, `keyword`, `pinyin`, `videonum`, `searchnums`) VALUES 
 (1, 1, 'dfsadfasdf', 'dfsadfasdf', 14, 0),
-(2, 1, '1234567', '1234567', 2, 0),
+(2, 1, '1234567', '1234567', 6, 0),
 (3, 1, '企业信息发布', 'qiyexinxifabu', 4, 0);
 
 -- --------------------------------------------------------
@@ -1191,7 +1192,7 @@ INSERT DELAYED IGNORE INTO `cban_link` (`linkid`, `siteid`, `typeid`, `linktype`
 -- 表的结构 `cban_linkage`
 -- 
 -- 创建时间: 2014 年 07 月 29 日 16:38
--- 最后更新时间: 2014 年 07 月 29 日 16:53
+-- 最后更新时间: 2014 年 07 月 31 日 10:38
 -- 
 
 DROP TABLE IF EXISTS `cban_linkage`;
@@ -1216,7 +1217,7 @@ CREATE TABLE IF NOT EXISTS `cban_linkage` (
 -- 
 
 INSERT DELAYED IGNORE INTO `cban_linkage` (`linkageid`, `name`, `style`, `parentid`, `child`, `arrchildid`, `keyid`, `listorder`, `description`, `setting`, `siteid`) VALUES 
-(1, '中国', '1', 0, 0, '', 0, 0, '', NULL, 0),
+(1, '中国', '2', 0, 0, '', 0, 0, '', 'array (\n  ''level'' => ''2'',\n)', 0),
 (2, '北京市', '0', 0, 1, '2,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52', 1, 0, '', NULL, 0),
 (3, '上海市', '0', 0, 1, '3,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71', 1, 0, '', NULL, 0),
 (4, '天津市', '0', 0, 1, '4,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89', 1, 0, '', NULL, 0),
@@ -4501,9 +4502,7 @@ INSERT DELAYED IGNORE INTO `cban_linkage` (`linkageid`, `name`, `style`, `parent
 (3279, '福海县', '0', 485, 0, '3279', 1, 0, '', NULL, 0),
 (3280, '哈巴河县', '0', 485, 0, '3280', 1, 0, '', NULL, 0),
 (3281, '青河县', '0', 485, 0, '3281', 1, 0, '', NULL, 0),
-(3282, '吉木乃县', '0', 485, 0, '3282', 1, 0, '', NULL, 0),
-(3358, '钓鱼岛', '', 0, 1, '3358,3359', 1, 0, '', NULL, 0),
-(3359, '钓鱼岛', '', 3358, 0, '3359', 1, 0, '', NULL, 0);
+(3282, '吉木乃县', '0', 485, 0, '3282', 1, 0, '', NULL, 0);
 
 -- --------------------------------------------------------
 
@@ -4511,7 +4510,7 @@ INSERT DELAYED IGNORE INTO `cban_linkage` (`linkageid`, `name`, `style`, `parent
 -- 表的结构 `cban_log`
 -- 
 -- 创建时间: 2014 年 07 月 29 日 16:38
--- 最后更新时间: 2014 年 07 月 29 日 16:53
+-- 最后更新时间: 2014 年 07 月 31 日 15:06
 -- 
 
 DROP TABLE IF EXISTS `cban_log`;
@@ -4531,7 +4530,7 @@ CREATE TABLE IF NOT EXISTS `cban_log` (
   PRIMARY KEY  (`logid`),
   KEY `module` (`module`,`file`,`action`),
   KEY `username` (`username`,`action`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=318 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=444 ;
 
 -- 
 -- 导出表中的数据 `cban_log`
@@ -4854,7 +4853,134 @@ INSERT DELAYED IGNORE INTO `cban_log` (`logid`, `field`, `value`, `module`, `fil
 (314, '', 0, 'admin', '', 'menu', '?m=admin&c=menu&a=edit', '', 1, 'admin', '127.0.0.1', '2014-07-29 15:53:02'),
 (315, '', 0, 'admin', '', 'menu', '?m=admin&c=menu&a=add', '', 1, 'admin', '127.0.0.1', '2014-07-29 15:53:11'),
 (316, '', 0, 'admin', '', 'menu', '?m=admin&c=menu&a=add', '', 1, 'admin', '127.0.0.1', '2014-07-29 15:53:57'),
-(317, '', 0, 'attachment', '', 'manage', '?m=attachment&c=manage&a=delete', '', 1, 'admin', '127.0.0.1', '2014-07-29 16:29:59');
+(317, '', 0, 'attachment', '', 'manage', '?m=attachment&c=manage&a=delete', '', 1, 'admin', '127.0.0.1', '2014-07-29 16:29:59'),
+(318, '', 0, 'admin', '', 'index', '?m=admin&c=index&a=login', '', 0, 'admin', '127.0.0.1', '2014-07-31 09:43:47'),
+(319, '', 0, 'admin', '', 'index', '?m=admin&c=index&a=login', '', 0, 'admin', '127.0.0.1', '2014-07-31 09:43:47'),
+(320, '', 0, 'admin', '', 'index', '?m=admin&c=index&a=login', '', 0, 'admin', '127.0.0.1', '2014-07-31 09:43:53'),
+(321, '', 0, 'content', '', 'sitemodel_field', '?m=content&c=sitemodel_field&a=edit', '', 1, 'admin', '127.0.0.1', '2014-07-31 09:53:01'),
+(322, '', 0, 'content', '', 'content', '?m=content&c=content&a=add', '', 1, 'admin', '127.0.0.1', '2014-07-31 09:53:24'),
+(323, '', 0, 'content', '', 'sitemodel_field', '?m=content&c=sitemodel_field&a=edit', '', 1, 'admin', '127.0.0.1', '2014-07-31 09:55:21'),
+(324, '', 0, 'content', '', 'sitemodel_field', '?m=content&c=sitemodel_field&a=edit', '', 1, 'admin', '127.0.0.1', '2014-07-31 09:55:25'),
+(325, '', 0, 'content', '', 'sitemodel_field', '?m=content&c=sitemodel_field&a=edit', '', 1, 'admin', '127.0.0.1', '2014-07-31 09:55:38'),
+(326, '', 0, 'content', '', 'sitemodel_field', '?m=content&c=sitemodel_field&a=edit', '', 1, 'admin', '127.0.0.1', '2014-07-31 09:55:42'),
+(327, '', 0, 'content', '', 'sitemodel_field', '?m=content&c=sitemodel_field&a=listorder', '', 1, 'admin', '127.0.0.1', '2014-07-31 09:57:49'),
+(328, '', 0, 'content', '', 'sitemodel_field', '?m=content&c=sitemodel_field&a=listorder', '', 1, 'admin', '127.0.0.1', '2014-07-31 09:58:07'),
+(329, '', 0, 'content', '', 'sitemodel_field', '?m=content&c=sitemodel_field&a=listorder', '', 1, 'admin', '127.0.0.1', '2014-07-31 09:58:40'),
+(330, '', 0, 'content', '', 'sitemodel_field', '?m=content&c=sitemodel_field&a=listorder', '', 1, 'admin', '127.0.0.1', '2014-07-31 09:58:58'),
+(331, '', 0, 'content', '', 'sitemodel_field', '?m=content&c=sitemodel_field&a=listorder', '', 1, 'admin', '127.0.0.1', '2014-07-31 10:00:29'),
+(332, '', 0, 'content', '', 'sitemodel_field', '?m=content&c=sitemodel_field&a=listorder', '', 1, 'admin', '127.0.0.1', '2014-07-31 10:01:24'),
+(333, '', 0, 'content', '', 'sitemodel_field', '?m=content&c=sitemodel_field&a=listorder', '', 1, 'admin', '127.0.0.1', '2014-07-31 10:02:26'),
+(334, '', 0, 'content', '', 'sitemodel_field', '?m=content&c=sitemodel_field&a=listorder', '', 1, 'admin', '127.0.0.1', '2014-07-31 10:03:02'),
+(335, '', 0, 'content', '', 'sitemodel_field', '?m=content&c=sitemodel_field&a=listorder', '', 1, 'admin', '127.0.0.1', '2014-07-31 10:04:51'),
+(336, '', 0, 'content', '', 'sitemodel_field', '?m=content&c=sitemodel_field&a=listorder', '', 1, 'admin', '127.0.0.1', '2014-07-31 10:05:38'),
+(337, '', 0, 'content', '', 'sitemodel_field', '?m=content&c=sitemodel_field&a=listorder', '', 1, 'admin', '127.0.0.1', '2014-07-31 10:05:49'),
+(338, '', 0, 'content', '', 'sitemodel_field', '?m=content&c=sitemodel_field&a=disabled', '', 1, 'admin', '127.0.0.1', '2014-07-31 10:06:52'),
+(339, '', 0, 'content', '', 'sitemodel_field', '?m=content&c=sitemodel_field&a=disabled', '', 1, 'admin', '127.0.0.1', '2014-07-31 10:07:34'),
+(340, '', 0, 'content', '', 'sitemodel_field', '?m=content&c=sitemodel_field&a=edit', '', 1, 'admin', '127.0.0.1', '2014-07-31 10:07:43'),
+(341, '', 0, 'admin', '', 'linkage', '?m=admin&c=linkage&a=delete', '', 1, 'admin', '127.0.0.1', '2014-07-31 10:08:21'),
+(342, '', 0, 'admin', '', 'linkage', '?m=admin&c=linkage&a=edit', '', 1, 'admin', '127.0.0.1', '2014-07-31 10:08:31'),
+(343, '', 0, 'admin', '', 'linkage', '?m=admin&c=linkage&a=edit', '', 1, 'admin', '127.0.0.1', '2014-07-31 10:09:33'),
+(344, '', 0, 'content', '', 'type_manage', '?m=content&c=type_manage&a=add', '', 1, 'admin', '127.0.0.1', '2014-07-31 10:09:51'),
+(345, '', 0, 'content', '', 'content', '?m=content&c=content&a=edit', '', 1, 'admin', '127.0.0.1', '2014-07-31 10:40:08'),
+(346, '', 0, 'member', '', 'member_model', '?m=member&c=member_model&a=manage', '', 1, 'admin', '127.0.0.1', '2014-07-31 10:43:15'),
+(347, '', 0, 'content', '', 'sitemodel_field', '?m=content&c=sitemodel_field&a=listorder', '', 1, 'admin', '127.0.0.1', '2014-07-31 10:48:49'),
+(348, '', 0, 'content', '', 'sitemodel_field', '?m=content&c=sitemodel_field&a=edit', '', 1, 'admin', '127.0.0.1', '2014-07-31 10:50:36'),
+(349, '', 0, 'content', '', 'sitemodel_field', '?m=content&c=sitemodel_field&a=listorder', '', 1, 'admin', '127.0.0.1', '2014-07-31 10:51:32'),
+(350, '', 0, 'content', '', 'sitemodel_field', '?m=content&c=sitemodel_field&a=add', '', 1, 'admin', '127.0.0.1', '2014-07-31 10:54:45'),
+(351, '', 0, 'content', '', 'sitemodel_field', '?m=content&c=sitemodel_field&a=add', '', 1, 'admin', '127.0.0.1', '2014-07-31 10:55:09'),
+(352, '', 0, 'content', '', 'sitemodel_field', '?m=content&c=sitemodel_field&a=listorder', '', 1, 'admin', '127.0.0.1', '2014-07-31 10:55:29'),
+(353, '', 0, 'content', '', 'sitemodel_field', '?m=content&c=sitemodel_field&a=edit', '', 1, 'admin', '127.0.0.1', '2014-07-31 10:55:33'),
+(354, '', 0, 'content', '', 'sitemodel_field', '?m=content&c=sitemodel_field&a=edit', '', 1, 'admin', '127.0.0.1', '2014-07-31 10:56:11'),
+(355, '', 0, 'content', '', 'sitemodel_field', '?m=content&c=sitemodel_field&a=edit', '', 1, 'admin', '127.0.0.1', '2014-07-31 11:01:38'),
+(356, '', 0, 'content', '', 'sitemodel_field', '?m=content&c=sitemodel_field&a=add', '', 1, 'admin', '127.0.0.1', '2014-07-31 11:01:46'),
+(357, '', 0, 'content', '', 'sitemodel_field', '?m=content&c=sitemodel_field&a=add', '', 1, 'admin', '127.0.0.1', '2014-07-31 11:02:17'),
+(358, '', 0, 'content', '', 'sitemodel_field', '?m=content&c=sitemodel_field&a=listorder', '', 1, 'admin', '127.0.0.1', '2014-07-31 11:02:24'),
+(359, '', 0, 'content', '', 'sitemodel_field', '?m=content&c=sitemodel_field&a=add', '', 1, 'admin', '127.0.0.1', '2014-07-31 11:06:36'),
+(360, '', 0, 'content', '', 'sitemodel_field', '?m=content&c=sitemodel_field&a=add', '', 1, 'admin', '127.0.0.1', '2014-07-31 11:22:22'),
+(361, '', 0, 'content', '', 'sitemodel_field', '?m=content&c=sitemodel_field&a=listorder', '', 1, 'admin', '127.0.0.1', '2014-07-31 11:22:29'),
+(362, '', 0, 'content', '', 'sitemodel_field', '?m=content&c=sitemodel_field&a=edit', '', 1, 'admin', '127.0.0.1', '2014-07-31 11:24:48'),
+(363, '', 0, 'content', '', 'sitemodel_field', '?m=content&c=sitemodel_field&a=edit', '', 1, 'admin', '127.0.0.1', '2014-07-31 11:25:14'),
+(364, '', 0, 'content', '', 'sitemodel_field', '?m=content&c=sitemodel_field&a=edit', '', 1, 'admin', '127.0.0.1', '2014-07-31 11:25:21'),
+(365, '', 0, 'content', '', 'sitemodel_field', '?m=content&c=sitemodel_field&a=edit', '', 1, 'admin', '127.0.0.1', '2014-07-31 11:25:28'),
+(366, '', 0, 'content', '', 'sitemodel_field', '?m=content&c=sitemodel_field&a=edit', '', 1, 'admin', '127.0.0.1', '2014-07-31 11:25:51'),
+(367, '', 0, 'content', '', 'sitemodel_field', '?m=content&c=sitemodel_field&a=edit', '', 1, 'admin', '127.0.0.1', '2014-07-31 11:26:32'),
+(368, '', 0, 'content', '', 'sitemodel_field', '?m=content&c=sitemodel_field&a=add', '', 1, 'admin', '127.0.0.1', '2014-07-31 14:03:15'),
+(369, '', 0, 'content', '', 'sitemodel_field', '?m=content&c=sitemodel_field&a=add', '', 1, 'admin', '127.0.0.1', '2014-07-31 14:04:02'),
+(370, '', 0, 'content', '', 'sitemodel_field', '?m=content&c=sitemodel_field&a=add', '', 1, 'admin', '127.0.0.1', '2014-07-31 14:05:43'),
+(371, '', 0, 'content', '', 'sitemodel_field', '?m=content&c=sitemodel_field&a=add', '', 1, 'admin', '127.0.0.1', '2014-07-31 14:07:54'),
+(372, '', 0, 'content', '', 'sitemodel_field', '?m=content&c=sitemodel_field&a=edit', '', 1, 'admin', '127.0.0.1', '2014-07-31 14:08:16'),
+(373, '', 0, 'content', '', 'sitemodel_field', '?m=content&c=sitemodel_field&a=edit', '', 1, 'admin', '127.0.0.1', '2014-07-31 14:08:22'),
+(374, '', 0, 'content', '', 'sitemodel_field', '?m=content&c=sitemodel_field&a=edit', '', 1, 'admin', '127.0.0.1', '2014-07-31 14:08:34'),
+(375, '', 0, 'content', '', 'sitemodel_field', '?m=content&c=sitemodel_field&a=edit', '', 1, 'admin', '127.0.0.1', '2014-07-31 14:08:38'),
+(376, '', 0, 'content', '', 'sitemodel_field', '?m=content&c=sitemodel_field&a=edit', '', 1, 'admin', '127.0.0.1', '2014-07-31 14:10:13'),
+(377, '', 0, 'content', '', 'sitemodel_field', '?m=content&c=sitemodel_field&a=edit', '', 1, 'admin', '127.0.0.1', '2014-07-31 14:10:23'),
+(378, '', 0, 'content', '', 'sitemodel_field', '?m=content&c=sitemodel_field&a=delete', '', 1, 'admin', '127.0.0.1', '2014-07-31 14:10:39'),
+(379, '', 0, 'content', '', 'sitemodel_field', '?m=content&c=sitemodel_field&a=add', '', 1, 'admin', '127.0.0.1', '2014-07-31 14:11:06'),
+(380, '', 0, 'content', '', 'sitemodel_field', '?m=content&c=sitemodel_field&a=add', '', 1, 'admin', '127.0.0.1', '2014-07-31 14:12:21'),
+(381, '', 0, 'content', '', 'sitemodel_field', '?m=content&c=sitemodel_field&a=listorder', '', 1, 'admin', '127.0.0.1', '2014-07-31 14:14:17'),
+(382, '', 0, 'content', '', 'sitemodel_field', '?m=content&c=sitemodel_field&a=add', '', 1, 'admin', '127.0.0.1', '2014-07-31 14:14:24'),
+(383, '', 0, 'content', '', 'sitemodel_field', '?m=content&c=sitemodel_field&a=add', '', 1, 'admin', '127.0.0.1', '2014-07-31 14:15:17'),
+(384, '', 0, 'content', '', 'sitemodel_field', '?m=content&c=sitemodel_field&a=add', '', 1, 'admin', '127.0.0.1', '2014-07-31 14:15:21'),
+(385, '', 0, 'content', '', 'sitemodel_field', '?m=content&c=sitemodel_field&a=add', '', 1, 'admin', '127.0.0.1', '2014-07-31 14:15:59');
+INSERT DELAYED IGNORE INTO `cban_log` (`logid`, `field`, `value`, `module`, `file`, `action`, `querystring`, `data`, `userid`, `username`, `ip`, `time`) VALUES 
+(386, '', 0, 'content', '', 'sitemodel_field', '?m=content&c=sitemodel_field&a=add', '', 1, 'admin', '127.0.0.1', '2014-07-31 14:16:04'),
+(387, '', 0, 'content', '', 'sitemodel_field', '?m=content&c=sitemodel_field&a=add', '', 1, 'admin', '127.0.0.1', '2014-07-31 14:16:30'),
+(388, '', 0, 'content', '', 'sitemodel_field', '?m=content&c=sitemodel_field&a=edit', '', 1, 'admin', '127.0.0.1', '2014-07-31 14:16:43'),
+(389, '', 0, 'content', '', 'sitemodel_field', '?m=content&c=sitemodel_field&a=edit', '', 1, 'admin', '127.0.0.1', '2014-07-31 14:17:20'),
+(390, '', 0, 'content', '', 'sitemodel_field', '?m=content&c=sitemodel_field&a=edit', '', 1, 'admin', '127.0.0.1', '2014-07-31 14:17:33'),
+(391, '', 0, 'content', '', 'sitemodel_field', '?m=content&c=sitemodel_field&a=edit', '', 1, 'admin', '127.0.0.1', '2014-07-31 14:20:16'),
+(392, '', 0, 'content', '', 'sitemodel_field', '?m=content&c=sitemodel_field&a=edit', '', 1, 'admin', '127.0.0.1', '2014-07-31 14:20:31'),
+(393, '', 0, 'content', '', 'sitemodel_field', '?m=content&c=sitemodel_field&a=edit', '', 1, 'admin', '127.0.0.1', '2014-07-31 14:20:34'),
+(394, '', 0, 'content', '', 'sitemodel_field', '?m=content&c=sitemodel_field&a=edit', '', 1, 'admin', '127.0.0.1', '2014-07-31 14:20:48'),
+(395, '', 0, 'content', '', 'sitemodel_field', '?m=content&c=sitemodel_field&a=edit', '', 1, 'admin', '127.0.0.1', '2014-07-31 14:20:51'),
+(396, '', 0, 'content', '', 'sitemodel_field', '?m=content&c=sitemodel_field&a=edit', '', 1, 'admin', '127.0.0.1', '2014-07-31 14:21:09'),
+(397, '', 0, 'content', '', 'sitemodel_field', '?m=content&c=sitemodel_field&a=edit', '', 1, 'admin', '127.0.0.1', '2014-07-31 14:21:46'),
+(398, '', 0, 'content', '', 'sitemodel_field', '?m=content&c=sitemodel_field&a=edit', '', 1, 'admin', '127.0.0.1', '2014-07-31 14:22:00'),
+(399, '', 0, 'content', '', 'sitemodel_field', '?m=content&c=sitemodel_field&a=edit', '', 1, 'admin', '127.0.0.1', '2014-07-31 14:22:33'),
+(400, '', 0, 'content', '', 'sitemodel_field', '?m=content&c=sitemodel_field&a=edit', '', 1, 'admin', '127.0.0.1', '2014-07-31 14:23:14'),
+(401, '', 0, 'content', '', 'sitemodel_field', '?m=content&c=sitemodel_field&a=edit', '', 1, 'admin', '127.0.0.1', '2014-07-31 14:23:40'),
+(402, '', 0, 'content', '', 'sitemodel_field', '?m=content&c=sitemodel_field&a=edit', '', 1, 'admin', '127.0.0.1', '2014-07-31 14:24:10'),
+(403, '', 0, 'content', '', 'sitemodel_field', '?m=content&c=sitemodel_field&a=delete', '', 1, 'admin', '127.0.0.1', '2014-07-31 14:25:04'),
+(404, '', 0, 'content', '', 'sitemodel_field', '?m=content&c=sitemodel_field&a=delete', '', 1, 'admin', '127.0.0.1', '2014-07-31 14:25:11'),
+(405, '', 0, 'content', '', 'sitemodel_field', '?m=content&c=sitemodel_field&a=edit', '', 1, 'admin', '127.0.0.1', '2014-07-31 14:25:14'),
+(406, '', 0, 'content', '', 'sitemodel_field', '?m=content&c=sitemodel_field&a=edit', '', 1, 'admin', '127.0.0.1', '2014-07-31 14:25:21'),
+(407, '', 0, 'content', '', 'sitemodel_field', '?m=content&c=sitemodel_field&a=edit', '', 1, 'admin', '127.0.0.1', '2014-07-31 14:25:25'),
+(408, '', 0, 'content', '', 'sitemodel_field', '?m=content&c=sitemodel_field&a=edit', '', 1, 'admin', '127.0.0.1', '2014-07-31 14:25:57'),
+(409, '', 0, 'content', '', 'sitemodel_field', '?m=content&c=sitemodel_field&a=listorder', '', 1, 'admin', '127.0.0.1', '2014-07-31 14:26:32'),
+(410, '', 0, 'content', '', 'sitemodel_field', '?m=content&c=sitemodel_field&a=add', '', 1, 'admin', '127.0.0.1', '2014-07-31 14:26:41'),
+(411, '', 0, 'content', '', 'sitemodel_field', '?m=content&c=sitemodel_field&a=add', '', 1, 'admin', '127.0.0.1', '2014-07-31 14:27:20'),
+(412, '', 0, 'content', '', 'sitemodel_field', '?m=content&c=sitemodel_field&a=listorder', '', 1, 'admin', '127.0.0.1', '2014-07-31 14:27:38'),
+(413, '', 0, 'content', '', 'sitemodel_field', '?m=content&c=sitemodel_field&a=add', '', 1, 'admin', '127.0.0.1', '2014-07-31 14:34:26'),
+(414, '', 0, 'content', '', 'sitemodel_field', '?m=content&c=sitemodel_field&a=add', '', 1, 'admin', '127.0.0.1', '2014-07-31 14:35:31'),
+(415, '', 0, 'content', '', 'sitemodel_field', '?m=content&c=sitemodel_field&a=add', '', 1, 'admin', '127.0.0.1', '2014-07-31 14:36:38'),
+(416, '', 0, 'content', '', 'sitemodel_field', '?m=content&c=sitemodel_field&a=add', '', 1, 'admin', '127.0.0.1', '2014-07-31 14:37:35'),
+(417, '', 0, 'content', '', 'sitemodel_field', '?m=content&c=sitemodel_field&a=add', '', 1, 'admin', '127.0.0.1', '2014-07-31 14:37:38'),
+(418, '', 0, 'content', '', 'sitemodel_field', '?m=content&c=sitemodel_field&a=add', '', 1, 'admin', '127.0.0.1', '2014-07-31 14:38:00'),
+(419, '', 0, 'content', '', 'sitemodel_field', '?m=content&c=sitemodel_field&a=listorder', '', 1, 'admin', '127.0.0.1', '2014-07-31 14:38:11'),
+(420, '', 0, 'content', '', 'sitemodel_field', '?m=content&c=sitemodel_field&a=add', '', 1, 'admin', '127.0.0.1', '2014-07-31 14:38:53'),
+(421, '', 0, 'content', '', 'sitemodel_field', '?m=content&c=sitemodel_field&a=add', '', 1, 'admin', '127.0.0.1', '2014-07-31 14:40:58'),
+(422, '', 0, 'content', '', 'sitemodel_field', '?m=content&c=sitemodel_field&a=add', '', 1, 'admin', '127.0.0.1', '2014-07-31 14:42:20'),
+(423, '', 0, 'content', '', 'sitemodel_field', '?m=content&c=sitemodel_field&a=edit', '', 1, 'admin', '127.0.0.1', '2014-07-31 14:43:23'),
+(424, '', 0, 'content', '', 'sitemodel_field', '?m=content&c=sitemodel_field&a=edit', '', 1, 'admin', '127.0.0.1', '2014-07-31 14:44:42'),
+(425, '', 0, 'content', '', 'sitemodel_field', '?m=content&c=sitemodel_field&a=edit', '', 1, 'admin', '127.0.0.1', '2014-07-31 14:45:05'),
+(426, '', 0, 'content', '', 'sitemodel_field', '?m=content&c=sitemodel_field&a=edit', '', 1, 'admin', '127.0.0.1', '2014-07-31 14:45:32'),
+(427, '', 0, 'content', '', 'sitemodel_field', '?m=content&c=sitemodel_field&a=edit', '', 1, 'admin', '127.0.0.1', '2014-07-31 14:45:57'),
+(428, '', 0, 'content', '', 'sitemodel_field', '?m=content&c=sitemodel_field&a=edit', '', 1, 'admin', '127.0.0.1', '2014-07-31 14:47:09'),
+(429, '', 0, 'content', '', 'sitemodel_field', '?m=content&c=sitemodel_field&a=edit', '', 1, 'admin', '127.0.0.1', '2014-07-31 14:51:32'),
+(430, '', 0, 'content', '', 'sitemodel_field', '?m=content&c=sitemodel_field&a=edit', '', 1, 'admin', '127.0.0.1', '2014-07-31 14:51:52'),
+(431, '', 0, 'content', '', 'sitemodel_field', '?m=content&c=sitemodel_field&a=edit', '', 1, 'admin', '127.0.0.1', '2014-07-31 14:52:09'),
+(432, '', 0, 'content', '', 'sitemodel_field', '?m=content&c=sitemodel_field&a=edit', '', 1, 'admin', '127.0.0.1', '2014-07-31 14:52:38'),
+(433, '', 0, 'content', '', 'sitemodel_field', '?m=content&c=sitemodel_field&a=edit', '', 1, 'admin', '127.0.0.1', '2014-07-31 14:53:39'),
+(434, '', 0, 'content', '', 'sitemodel_field', '?m=content&c=sitemodel_field&a=edit', '', 1, 'admin', '127.0.0.1', '2014-07-31 14:53:51'),
+(435, '', 0, 'content', '', 'sitemodel_field', '?m=content&c=sitemodel_field&a=listorder', '', 1, 'admin', '127.0.0.1', '2014-07-31 14:54:17'),
+(436, '', 0, 'content', '', 'sitemodel_field', '?m=content&c=sitemodel_field&a=edit', '', 1, 'admin', '127.0.0.1', '2014-07-31 15:02:26'),
+(437, '', 0, 'content', '', 'sitemodel_field', '?m=content&c=sitemodel_field&a=edit', '', 1, 'admin', '127.0.0.1', '2014-07-31 15:02:43'),
+(438, '', 0, 'content', '', 'sitemodel_field', '?m=content&c=sitemodel_field&a=edit', '', 1, 'admin', '127.0.0.1', '2014-07-31 15:04:09'),
+(439, '', 0, 'content', '', 'sitemodel_field', '?m=content&c=sitemodel_field&a=edit', '', 1, 'admin', '127.0.0.1', '2014-07-31 15:04:17'),
+(440, '', 0, 'content', '', 'sitemodel_field', '?m=content&c=sitemodel_field&a=edit', '', 1, 'admin', '127.0.0.1', '2014-07-31 15:05:44'),
+(441, '', 0, 'content', '', 'sitemodel_field', '?m=content&c=sitemodel_field&a=edit', '', 1, 'admin', '127.0.0.1', '2014-07-31 15:05:52'),
+(442, '', 0, 'content', '', 'sitemodel_field', '?m=content&c=sitemodel_field&a=edit', '', 1, 'admin', '127.0.0.1', '2014-07-31 15:06:28'),
+(443, '', 0, 'content', '', 'sitemodel_field', '?m=content&c=sitemodel_field&a=edit', '', 1, 'admin', '127.0.0.1', '2014-07-31 15:06:35');
 
 -- --------------------------------------------------------
 
@@ -4862,7 +4988,7 @@ INSERT DELAYED IGNORE INTO `cban_log` (`logid`, `field`, `value`, `module`, `fil
 -- 表的结构 `cban_member`
 -- 
 -- 创建时间: 2014 年 07 月 29 日 16:38
--- 最后更新时间: 2014 年 07 月 29 日 16:53
+-- 最后更新时间: 2014 年 07 月 31 日 15:08
 -- 
 
 DROP TABLE IF EXISTS `cban_member`;
@@ -4903,8 +5029,8 @@ CREATE TABLE IF NOT EXISTS `cban_member` (
 -- 
 
 INSERT DELAYED IGNORE INTO `cban_member` (`userid`, `phpssouid`, `username`, `password`, `encrypt`, `nickname`, `regdate`, `lastdate`, `regip`, `lastip`, `loginnum`, `email`, `groupid`, `areaid`, `amount`, `point`, `modelid`, `message`, `islock`, `vip`, `overduedate`, `siteid`, `connectid`, `from`, `mobile`) VALUES 
-(1, 1, 'nima', 'e3cdebc9a303d1e78b623146821d6192', 'D8IK1j', 'nima', 1406013245, 1406599880, '127.0.0.1', '127.0.0.1', 0, 'nima@qq.com', 2, 0, 0.00, 4, 12, 0, 0, 0, 0, 1, '', '', ''),
-(2, 2, 'hehe', '7f30f0b731b883d2aae66a4d4dddc366', '4sGUlJ', 'hehe', 1406013385, 1406104224, '127.0.0.1', '127.0.0.1', 0, 'hehe@qq.com', 2, 0, 0.00, 0, 13, 0, 0, 0, 0, 1, '', '', '');
+(1, 1, 'nima', 'e3cdebc9a303d1e78b623146821d6192', 'D8IK1j', 'nima', 1406013245, 1406772799, '127.0.0.1', '127.0.0.1', 0, 'nima@qq.com', 2, 0, 0.00, 4, 12, 0, 0, 0, 0, 1, '', '', ''),
+(2, 2, 'hehe', '7f30f0b731b883d2aae66a4d4dddc366', '4sGUlJ', 'hehe', 1406013385, 1406790472, '127.0.0.1', '127.0.0.1', 0, 'hehe@qq.com', 2, 0, 0.00, 0, 13, 0, 0, 0, 0, 1, '', '', '');
 
 -- --------------------------------------------------------
 
@@ -5640,7 +5766,7 @@ INSERT DELAYED IGNORE INTO `cban_model` (`modelid`, `siteid`, `name`, `descripti
 -- 表的结构 `cban_model_field`
 -- 
 -- 创建时间: 2014 年 07 月 29 日 16:38
--- 最后更新时间: 2014 年 07 月 29 日 16:38
+-- 最后更新时间: 2014 年 07 月 31 日 15:06
 -- 最后检查时间: 2014 年 07 月 29 日 16:38
 -- 
 
@@ -5676,7 +5802,7 @@ CREATE TABLE IF NOT EXISTS `cban_model_field` (
   PRIMARY KEY  (`fieldid`),
   KEY `modelid` (`modelid`,`disabled`),
   KEY `field` (`field`,`modelid`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=175 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=188 ;
 
 -- 
 -- 导出表中的数据 `cban_model_field`
@@ -5784,51 +5910,61 @@ INSERT DELAYED IGNORE INTO `cban_model_field` (`fieldid`, `modelid`, `siteid`, `
 (105, 11, 1, 'video', '视频上传', '', '', 0, 0, '', '', 'video', 'array (\n  ''upload_allowext'' => ''flv|rm|mp4|rmv'',\n)', '', '', '', 0, 0, 0, 1, 0, 1, 0, 0, 8, 0, 0),
 (106, 11, 1, 'vision', '画质', '', '', 0, 0, '', '', 'box', 'array (\n  ''options'' => ''高清|1\r\n普通|2'',\n  ''boxtype'' => ''select'',\n  ''fieldtype'' => ''varchar'',\n  ''minnumber'' => ''1'',\n  ''width'' => ''80'',\n  ''size'' => ''1'',\n  ''defaultvalue'' => ''0'',\n  ''outputtype'' => ''1'',\n  ''filtertype'' => ''1'',\n)', '', '', '', 0, 1, 0, 1, 0, 1, 0, 0, 9, 0, 0),
 (107, 11, 1, 'video_category', '视频分类', '', '', 0, 0, '', '', 'box', 'array (\n  ''options'' => ''喜剧|1\r\n爱情|2\r\n科幻|3\r\n剧情|4\r\n动作|5\r\n伦理|6'',\n  ''boxtype'' => ''select'',\n  ''fieldtype'' => ''varchar'',\n  ''minnumber'' => ''1'',\n  ''width'' => ''80'',\n  ''size'' => ''1'',\n  ''defaultvalue'' => ''1'',\n  ''outputtype'' => ''1'',\n  ''filtertype'' => ''1'',\n)', '', '', '', 0, 1, 0, 1, 0, 1, 0, 0, 9, 0, 0),
-(145, 15, 1, 'allow_comment', '允许评论', '', '', 0, 0, '', '', 'box', 'array (\n  ''options'' => ''允许评论|1\r\n不允许评论|0'',\n  ''boxtype'' => ''radio'',\n  ''fieldtype'' => ''tinyint'',\n  ''minnumber'' => ''1'',\n  ''width'' => ''88'',\n  ''size'' => ''1'',\n  ''defaultvalue'' => ''1'',\n  ''outputtype'' => ''0'',\n)', '', '', '', 0, 0, 0, 0, 0, 0, 0, 0, 54, 1, 0),
-(144, 15, 1, 'template', '内容页模板', '', '', 0, 30, '', '', 'template', 'array (\n  ''size'' => '''',\n  ''defaultvalue'' => '''',\n)', '', '-99', '-99', 0, 0, 0, 0, 0, 0, 0, 0, 53, 0, 0),
-(142, 15, 1, 'url', 'URL', '', '', 0, 100, '', '', 'text', '', '', '', '', 1, 1, 0, 1, 0, 0, 0, 0, 50, 0, 0),
-(143, 15, 1, 'listorder', '排序', '', '', 0, 6, '', '', 'number', '', '', '', '', 1, 1, 0, 1, 0, 0, 0, 0, 51, 0, 0),
-(141, 15, 1, 'groupids_view', '阅读权限', '', '', 0, 100, '', '', 'groupid', 'array (\n  ''groupids'' => '''',\n)', '', '', '', 0, 0, 0, 1, 0, 0, 0, 0, 19, 1, 0),
-(140, 15, 1, 'posids', '推荐位', '', '', 0, 0, '', '', 'posid', 'array (\n  ''cols'' => ''4'',\n  ''width'' => ''125'',\n)', '', '', '', 0, 1, 0, 1, 0, 0, 0, 0, 18, 0, 0),
+(145, 15, 1, 'allow_comment', '允许评论', '', '', 0, 0, '', '', 'box', 'array (\n  ''options'' => ''允许评论|1\r\n不允许评论|0'',\n  ''boxtype'' => ''radio'',\n  ''fieldtype'' => ''tinyint'',\n  ''minnumber'' => ''1'',\n  ''width'' => ''88'',\n  ''size'' => ''1'',\n  ''defaultvalue'' => ''1'',\n  ''outputtype'' => ''0'',\n)', '', '', '', 0, 0, 0, 0, 0, 0, 0, 0, 95, 1, 0),
+(144, 15, 1, 'template', '内容页模板', '', '', 0, 30, '', '', 'template', 'array (\n  ''size'' => '''',\n  ''defaultvalue'' => '''',\n)', '', '-99', '-99', 0, 0, 0, 0, 0, 0, 0, 0, 94, 0, 0),
+(142, 15, 1, 'url', 'URL', '', '', 0, 100, '', '', 'text', '', '', '', '', 1, 1, 0, 1, 0, 0, 0, 0, 93, 0, 0),
+(143, 15, 1, 'listorder', '排序', '', '', 0, 6, '', '', 'number', '', '', '', '', 1, 1, 0, 1, 0, 0, 0, 0, 23, 0, 0),
+(141, 15, 1, 'groupids_view', '阅读权限', '', '', 0, 100, '', '', 'groupid', 'array (\n  ''groupids'' => '''',\n)', '', '', '', 0, 0, 0, 1, 0, 0, 0, 0, 91, 1, 0),
+(140, 15, 1, 'posids', '推荐位', '', '', 0, 0, '', '', 'posid', 'array (\n  ''cols'' => ''4'',\n  ''width'' => ''125'',\n)', '', '', '', 0, 1, 0, 1, 0, 0, 0, 0, 90, 0, 0),
 (171, 12, 0, 'license', '营业执照', '', '', 0, 15, '', '', 'text', 'array (\n  ''size'' => ''25'',\n  ''defaultvalue'' => '''',\n  ''ispassword'' => ''0'',\n)', '', '', '', 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0),
 (172, 12, 0, 'orgcode', '组织机构代码', '', '', 0, 15, '', '', 'text', 'array (\n  ''size'' => ''25'',\n  ''defaultvalue'' => '''',\n  ''ispassword'' => ''0'',\n)', '', '', '', 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0),
 (173, 13, 0, 'license', '营业执照', '', '', 0, 15, '', '', 'text', 'array (\n  ''size'' => ''25'',\n  ''defaultvalue'' => '''',\n  ''ispassword'' => ''0'',\n)', '', '', '', 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0),
 (174, 13, 0, 'orgcode', '组织机构代码', '', '', 0, 15, '', '', 'text', 'array (\n  ''size'' => ''25'',\n  ''defaultvalue'' => '''',\n  ''ispassword'' => ''0'',\n)', '', '', '', 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0),
-(138, 15, 1, 'pages', '分页方式', '', '', 0, 0, '', '', 'pages', '', '', '-99', '-99', 0, 0, 0, 1, 0, 0, 0, 0, 16, 1, 0),
-(139, 15, 1, 'inputtime', '发布时间', '', '', 0, 0, '', '', 'datetime', 'array (\n  ''fieldtype'' => ''int'',\n  ''format'' => ''Y-m-d H:i:s'',\n  ''defaulttype'' => ''0'',\n)', '', '', '', 0, 1, 0, 0, 0, 0, 0, 1, 17, 0, 0),
-(136, 15, 1, 'thumb', '缩略图', '将作为标题图片', '', 0, 100, '', '', 'image', 'array (\n  ''size'' => ''50'',\n  ''defaultvalue'' => '''',\n  ''show_type'' => ''0'',\n  ''upload_maxsize'' => ''1024'',\n  ''upload_allowext'' => ''jpg|jpeg|gif|png|bmp'',\n  ''watermark'' => ''0'',\n  ''isselectimage'' => ''1'',\n  ''images_width'' => '''',\n  ''images_height'' => '''',\n)', '', '', '', 0, 1, 0, 0, 0, 1, 0, 1, 14, 0, 0),
-(135, 15, 1, 'content', '内容', '', '', 1, 999999, '', '内容不能为空', 'editor', 'array (\n  ''toolbar'' => ''full'',\n  ''defaultvalue'' => '''',\n  ''enablekeylink'' => ''1'',\n  ''replacenum'' => ''2'',\n  ''link_mode'' => ''0'',\n  ''enablesaveimage'' => ''0'',\n  ''height'' => '''',\n  ''disabled_page'' => ''1'',\n)', '', '', '', 0, 0, 0, 1, 0, 1, 1, 0, 13, 0, 0),
-(134, 15, 1, 'updatetime', '更新时间', '', '', 0, 0, '', '', 'datetime', 'array (\r\n  ''dateformat'' => ''int'',\r\n  ''format'' => ''Y-m-d H:i:s'',\r\n  ''defaulttype'' => ''1'',\r\n  ''defaultvalue'' => '''',\r\n)', '', '', '', 1, 1, 0, 1, 0, 0, 0, 0, 12, 0, 0),
-(132, 15, 1, 'keywords', '关键词', '多关键词之间用空格或者“,”隔开', '', 0, 40, '', '', 'keyword', 'array (\r\n  ''size'' => ''100'',\r\n  ''defaultvalue'' => '''',\r\n)', '', '-99', '-99', 0, 1, 0, 1, 1, 1, 1, 0, 7, 0, 0),
-(133, 15, 1, 'description', '摘要', '', '', 0, 255, '', '', 'textarea', 'array (\n  ''width'' => ''98'',\n  ''height'' => ''46'',\n  ''defaultvalue'' => '''',\n  ''enablehtml'' => ''0'',\n)', '', '', '', 0, 1, 0, 1, 0, 1, 1, 1, 10, 0, 0),
-(131, 15, 1, 'title', '标题', '', 'inputtitle', 1, 80, '', '请输入标题', 'title', '', '', '', '', 0, 1, 0, 1, 1, 1, 1, 1, 4, 0, 0),
+(138, 15, 1, 'pages', '分页方式', '', '', 0, 0, '', '', 'pages', '', '', '-99', '-99', 0, 0, 0, 1, 0, 0, 0, 0, 89, 1, 0),
+(139, 15, 1, 'inputtime', '发布时间', '', '', 0, 0, '', '', 'datetime', 'array (\n  ''fieldtype'' => ''int'',\n  ''format'' => ''Y-m-d H:i:s'',\n  ''defaulttype'' => ''0'',\n)', '', '', '', 0, 1, 0, 0, 0, 0, 0, 1, 20, 0, 0),
+(136, 15, 1, 'thumb', '缩略图', '将作为标题图片', '', 0, 100, '', '', 'image', 'array (\n  ''size'' => ''50'',\n  ''defaultvalue'' => '''',\n  ''show_type'' => ''0'',\n  ''upload_maxsize'' => ''1024'',\n  ''upload_allowext'' => ''jpg|jpeg|gif|png|bmp'',\n  ''watermark'' => ''0'',\n  ''isselectimage'' => ''1'',\n  ''images_width'' => '''',\n  ''images_height'' => '''',\n)', '', '', '', 0, 1, 0, 0, 0, 1, 0, 1, 22, 1, 0),
+(135, 15, 1, 'content', '内容', '<div class="content_attr"><label><input name="add_introduce" type="checkbox"  value="1" checked>是否截取内容</label><input type="text" name="introcude_length" value="200" size="3">字符至内容摘要\r\n<label><input type=''checkbox'' name=''auto_thumb'' value="1" checked>是否获取内容第</label><input type="text" name="auto_thumb_no" value="1" size="2" class="">张图片作为标题图片\r\n</div>', '', 1, 999999, '', '内容不能为空', 'editor', 'array (\n  ''toolbar'' => ''full'',\n  ''defaultvalue'' => '''',\n  ''enablekeylink'' => ''1'',\n  ''replacenum'' => ''2'',\n  ''link_mode'' => ''0'',\n  ''enablesaveimage'' => ''0'',\n  ''height'' => '''',\n  ''disabled_page'' => ''1'',\n)', '', '', '', 0, 0, 0, 1, 0, 1, 1, 0, 19, 0, 0),
+(134, 15, 1, 'updatetime', '更新时间', '', '', 0, 0, '', '', 'datetime', 'array (\r\n  ''dateformat'' => ''int'',\r\n  ''format'' => ''Y-m-d H:i:s'',\r\n  ''defaulttype'' => ''1'',\r\n  ''defaultvalue'' => '''',\r\n)', '', '', '', 1, 1, 0, 1, 0, 0, 0, 0, 21, 0, 0),
+(132, 15, 1, 'keywords', '关键词', '多关键词之间用空格或者“,”隔开', '', 0, 40, '', '', 'keyword', 'array (\r\n  ''size'' => ''100'',\r\n  ''defaultvalue'' => '''',\r\n)', '', '-99', '-99', 0, 1, 0, 1, 1, 1, 1, 0, 4, 0, 0),
+(133, 15, 1, 'description', '摘要', '', '', 0, 255, '', '', 'textarea', 'array (\n  ''width'' => ''98'',\n  ''height'' => ''46'',\n  ''defaultvalue'' => '''',\n  ''enablehtml'' => ''0'',\n)', '', '', '', 0, 1, 0, 1, 0, 1, 1, 1, 5, 0, 0),
+(131, 15, 1, 'title', '标题', '', 'inputtitle', 1, 80, '', '请输入标题', 'title', '', '', '', '', 0, 1, 0, 1, 1, 1, 1, 1, 3, 0, 0),
 (130, 15, 1, 'typeid', '类别', '', '', 0, 0, '', '', 'typeid', 'array (\n  ''minnumber'' => '''',\n  ''defaultvalue'' => '''',\n)', '', '', '', 0, 1, 0, 1, 1, 1, 0, 0, 2, 1, 0),
 (129, 15, 1, 'catid', '信息发布类型', '', '', 1, 6, '/^[0-9]{1,6}$/', '请选择栏目', 'catid', '', '', '', '', 0, 1, 0, 1, 1, 1, 0, 0, 1, 0, 0),
-(146, 15, 1, 'status', '状态', '', '', 0, 2, '', '', 'box', '', '', '', '', 1, 1, 0, 1, 0, 0, 0, 0, 55, 0, 0),
-(147, 15, 1, 'readpoint', '阅读收费', '', '', 0, 5, '', '', 'readpoint', 'array (\n  ''minnumber'' => ''1'',\n  ''maxnumber'' => ''99999'',\n  ''decimaldigits'' => ''0'',\n  ''defaultvalue'' => '''',\n)', '', '-99', '-99', 0, 0, 0, 0, 0, 0, 0, 0, 55, 1, 0),
+(146, 15, 1, 'status', '状态', '', '', 0, 2, '', '', 'box', '', '', '', '', 1, 1, 0, 1, 0, 0, 0, 0, 96, 0, 0),
+(147, 15, 1, 'readpoint', '阅读收费', '', '', 0, 5, '', '', 'readpoint', 'array (\n  ''minnumber'' => ''1'',\n  ''maxnumber'' => ''99999'',\n  ''decimaldigits'' => ''0'',\n  ''defaultvalue'' => '''',\n)', '', '-99', '-99', 0, 0, 0, 0, 0, 0, 0, 0, 97, 1, 0),
 (148, 15, 1, 'username', '用户名', '', '', 0, 20, '', '', 'text', '', '', '', '', 1, 1, 0, 1, 0, 0, 0, 0, 98, 0, 0),
-(149, 15, 1, 'islink', '转向链接', '', '', 0, 0, '', '', 'islink', '', '', '', '', 0, 1, 0, 1, 0, 1, 0, 0, 20, 1, 0),
+(149, 15, 1, 'islink', '转向链接', '', '', 0, 0, '', '', 'islink', '', '', '', '', 0, 1, 0, 1, 0, 1, 0, 0, 92, 1, 0),
 (150, 16, 1, 'catid', '信息发布类型', '', '', 1, 6, '/^[0-9]{1,6}$/', '请选择栏目', 'catid', '', '', '', '', 0, 1, 0, 1, 1, 1, 0, 0, 1, 0, 0),
 (151, 16, 1, 'typeid', '类别', '', '', 0, 0, '', '', 'typeid', 'array (\n  ''minnumber'' => '''',\n  ''defaultvalue'' => '''',\n)', '', '', '', 0, 1, 0, 1, 1, 1, 0, 0, 2, 1, 0),
-(152, 16, 1, 'title', '标题', '', 'inputtitle', 1, 80, '', '请输入标题', 'title', '', '', '', '', 0, 1, 0, 1, 1, 1, 1, 1, 4, 0, 0),
-(153, 16, 1, 'keywords', '关键词', '多关键词之间用空格或者“,”隔开', '', 0, 40, '', '', 'keyword', 'array (\r\n  ''size'' => ''100'',\r\n  ''defaultvalue'' => '''',\r\n)', '', '-99', '-99', 0, 1, 0, 1, 1, 1, 1, 0, 7, 0, 0),
-(154, 16, 1, 'description', '摘要', '', '', 0, 255, '', '', 'textarea', 'array (\r\n  ''width'' => ''98'',\r\n  ''height'' => ''46'',\r\n  ''defaultvalue'' => '''',\r\n  ''enablehtml'' => ''0'',\r\n)', '', '', '', 0, 1, 0, 1, 0, 1, 1, 1, 10, 0, 0),
-(155, 16, 1, 'updatetime', '更新时间', '', '', 0, 0, '', '', 'datetime', 'array (\r\n  ''dateformat'' => ''int'',\r\n  ''format'' => ''Y-m-d H:i:s'',\r\n  ''defaulttype'' => ''1'',\r\n  ''defaultvalue'' => '''',\r\n)', '', '', '', 1, 1, 0, 1, 0, 0, 0, 0, 12, 0, 0),
-(156, 16, 1, 'content', '内容', '', '', 1, 999999, '', '内容不能为空', 'editor', 'array (\n  ''toolbar'' => ''full'',\n  ''defaultvalue'' => '''',\n  ''enablekeylink'' => ''1'',\n  ''replacenum'' => ''2'',\n  ''link_mode'' => ''0'',\n  ''enablesaveimage'' => ''0'',\n  ''height'' => '''',\n  ''disabled_page'' => ''1'',\n)', '', '', '', 0, 0, 0, 1, 0, 1, 1, 0, 13, 0, 0),
-(157, 16, 1, 'thumb', '缩略图', '将作为标题图片', '', 0, 100, '', '', 'image', 'array (\n  ''size'' => ''50'',\n  ''defaultvalue'' => '''',\n  ''show_type'' => ''1'',\n  ''upload_maxsize'' => ''1024'',\n  ''upload_allowext'' => ''jpg|jpeg|gif|png|bmp'',\n  ''watermark'' => ''0'',\n  ''isselectimage'' => ''1'',\n  ''images_width'' => '''',\n  ''images_height'' => '''',\n)', '', '', '', 0, 1, 0, 0, 0, 1, 0, 1, 14, 0, 0),
-(158, 16, 1, 'relation', '相关文章', '', '', 0, 0, '', '', 'omnipotent', 'array (\n  ''formtext'' => ''<input type=\\''hidden\\'' name=\\''info[relation]\\'' id=\\''relation\\'' value=\\''{FIELD_VALUE}\\'' style=\\''50\\'' >\r\n<ul class="list-dot" id="relation_text"></ul>\r\n<div>\r\n<input type=\\''button\\'' value="添加相关" onclick="omnipotent(\\''selectid\\'',\\''?m=content&c=content&a=public_relationlist&modelid={MODELID}\\'',\\''添加相关文章\\'',1)" class="button" style="width:66px;">\r\n<span class="edit_content">\r\n<input type=\\''button\\'' value="显示已有" onclick="show_relation({MODELID},{ID})" class="button" style="width:66px;">\r\n</span>\r\n</div>'',\n  ''fieldtype'' => ''varchar'',\n  ''minnumber'' => ''1'',\n)', '', '2,6,4,5,1,17,18,7', '', 0, 0, 0, 0, 0, 0, 1, 0, 15, 1, 0),
-(159, 16, 1, 'pages', '分页方式', '', '', 0, 0, '', '', 'pages', '', '', '-99', '-99', 0, 0, 0, 1, 0, 0, 0, 0, 16, 1, 0),
-(160, 16, 1, 'inputtime', '发布时间', '', '', 0, 0, '', '', 'datetime', 'array (\n  ''fieldtype'' => ''int'',\n  ''format'' => ''Y-m-d H:i:s'',\n  ''defaulttype'' => ''0'',\n)', '', '', '', 0, 1, 0, 0, 0, 0, 0, 1, 17, 0, 0),
-(161, 16, 1, 'posids', '推荐位', '', '', 0, 0, '', '', 'posid', 'array (\n  ''cols'' => ''4'',\n  ''width'' => ''125'',\n)', '', '', '', 0, 1, 0, 1, 0, 0, 0, 0, 18, 0, 0),
-(162, 16, 1, 'groupids_view', '阅读权限', '', '', 0, 100, '', '', 'groupid', 'array (\n  ''groupids'' => '''',\n)', '', '', '', 0, 0, 0, 1, 0, 0, 0, 0, 19, 1, 0),
-(163, 16, 1, 'url', 'URL', '', '', 0, 100, '', '', 'text', '', '', '', '', 1, 1, 0, 1, 0, 0, 0, 0, 50, 0, 0),
-(164, 16, 1, 'listorder', '排序', '', '', 0, 6, '', '', 'number', '', '', '', '', 1, 1, 0, 1, 0, 0, 0, 0, 51, 0, 0),
-(165, 16, 1, 'template', '内容页模板', '', '', 0, 30, '', '', 'template', 'array (\n  ''size'' => '''',\n  ''defaultvalue'' => '''',\n)', '', '-99', '-99', 0, 0, 0, 0, 0, 0, 0, 0, 53, 0, 0),
-(166, 16, 1, 'allow_comment', '允许评论', '', '', 0, 0, '', '', 'box', 'array (\n  ''options'' => ''允许评论|1\r\n不允许评论|0'',\n  ''boxtype'' => ''radio'',\n  ''fieldtype'' => ''tinyint'',\n  ''minnumber'' => ''1'',\n  ''width'' => ''88'',\n  ''size'' => ''1'',\n  ''defaultvalue'' => ''1'',\n  ''outputtype'' => ''0'',\n)', '', '', '', 0, 0, 0, 0, 0, 0, 0, 0, 54, 1, 0),
-(167, 16, 1, 'status', '状态', '', '', 0, 2, '', '', 'box', '', '', '', '', 1, 1, 0, 1, 0, 0, 0, 0, 55, 0, 0),
-(168, 16, 1, 'readpoint', '阅读收费', '', '', 0, 5, '', '', 'readpoint', 'array (\n  ''minnumber'' => ''1'',\n  ''maxnumber'' => ''99999'',\n  ''decimaldigits'' => ''0'',\n  ''defaultvalue'' => '''',\n)', '', '-99', '-99', 0, 0, 0, 0, 0, 0, 0, 0, 55, 1, 0),
+(152, 16, 1, 'title', '标题', '', 'inputtitle', 1, 80, '', '请输入标题', 'title', '', '', '', '', 0, 1, 0, 1, 1, 1, 1, 1, 3, 0, 0),
+(153, 16, 1, 'keywords', '关键词', '多关键词之间用空格或者“,”隔开', '', 0, 40, '', '', 'keyword', 'array (\r\n  ''size'' => ''100'',\r\n  ''defaultvalue'' => '''',\r\n)', '', '-99', '-99', 0, 1, 0, 1, 1, 1, 1, 0, 4, 0, 0),
+(154, 16, 1, 'description', '摘要', '', '', 0, 255, '', '', 'textarea', 'array (\r\n  ''width'' => ''98'',\r\n  ''height'' => ''46'',\r\n  ''defaultvalue'' => '''',\r\n  ''enablehtml'' => ''0'',\r\n)', '', '', '', 0, 1, 0, 1, 0, 1, 1, 1, 5, 0, 0),
+(155, 16, 1, 'updatetime', '更新时间', '', '', 0, 0, '', '', 'datetime', 'array (\r\n  ''dateformat'' => ''int'',\r\n  ''format'' => ''Y-m-d H:i:s'',\r\n  ''defaulttype'' => ''1'',\r\n  ''defaultvalue'' => '''',\r\n)', '', '', '', 1, 1, 0, 1, 0, 0, 0, 0, 21, 0, 0),
+(156, 16, 1, 'content', '内容', '<div class="content_attr"><label><input name="add_introduce" type="checkbox"  value="1" checked>是否截取内容</label><input type="text" name="introcude_length" value="200" size="3">字符至内容摘要\r\n<label><input type=''checkbox'' name=''auto_thumb'' value="1" checked>是否获取内容第</label><input type="text" name="auto_thumb_no" value="1" size="2" class="">张图片作为标题图片\r\n</div>', '', 1, 999999, '', '内容不能为空', 'editor', 'array (\n  ''toolbar'' => ''full'',\n  ''defaultvalue'' => '''',\n  ''enablekeylink'' => ''1'',\n  ''replacenum'' => ''2'',\n  ''link_mode'' => ''0'',\n  ''enablesaveimage'' => ''0'',\n  ''height'' => '''',\n  ''disabled_page'' => ''1'',\n)', '', '', '', 0, 0, 0, 1, 0, 1, 1, 0, 19, 0, 0),
+(157, 16, 1, 'thumb', '缩略图', '将作为标题图片', '', 0, 100, '', '', 'image', 'array (\n  ''size'' => ''50'',\n  ''defaultvalue'' => '''',\n  ''show_type'' => ''1'',\n  ''upload_maxsize'' => ''1024'',\n  ''upload_allowext'' => ''jpg|jpeg|gif|png|bmp'',\n  ''watermark'' => ''0'',\n  ''isselectimage'' => ''1'',\n  ''images_width'' => '''',\n  ''images_height'' => '''',\n)', '', '', '', 0, 1, 0, 0, 0, 1, 0, 1, 22, 1, 0),
+(158, 16, 1, 'relation', '相关文章', '', '', 0, 0, '', '', 'omnipotent', 'array (\n  ''formtext'' => ''<input type=\\''hidden\\'' name=\\''info[relation]\\'' id=\\''relation\\'' value=\\''{FIELD_VALUE}\\'' style=\\''50\\'' >\r\n<ul class="list-dot" id="relation_text"></ul>\r\n<div>\r\n<input type=\\''button\\'' value="添加相关" onclick="omnipotent(\\''selectid\\'',\\''?m=content&c=content&a=public_relationlist&modelid={MODELID}\\'',\\''添加相关文章\\'',1)" class="button" style="width:66px;">\r\n<span class="edit_content">\r\n<input type=\\''button\\'' value="显示已有" onclick="show_relation({MODELID},{ID})" class="button" style="width:66px;">\r\n</span>\r\n</div>'',\n  ''fieldtype'' => ''varchar'',\n  ''minnumber'' => ''1'',\n)', '', '2,6,4,5,1,17,18,7', '', 0, 0, 0, 0, 0, 0, 1, 0, 24, 1, 0),
+(159, 16, 1, 'pages', '分页方式', '', '', 0, 0, '', '', 'pages', '', '', '-99', '-99', 0, 0, 0, 1, 0, 0, 0, 0, 89, 1, 0),
+(160, 16, 1, 'inputtime', '发布时间', '', '', 0, 0, '', '', 'datetime', 'array (\n  ''fieldtype'' => ''int'',\n  ''format'' => ''Y-m-d H:i:s'',\n  ''defaulttype'' => ''0'',\n)', '', '', '', 0, 1, 0, 0, 0, 0, 0, 1, 20, 0, 0),
+(161, 16, 1, 'posids', '推荐位', '', '', 0, 0, '', '', 'posid', 'array (\n  ''cols'' => ''4'',\n  ''width'' => ''125'',\n)', '', '', '', 0, 1, 0, 1, 0, 0, 0, 0, 90, 0, 0),
+(162, 16, 1, 'groupids_view', '阅读权限', '', '', 0, 100, '', '', 'groupid', 'array (\n  ''groupids'' => '''',\n)', '', '', '', 0, 0, 0, 1, 0, 0, 0, 0, 91, 1, 0),
+(163, 16, 1, 'url', 'URL', '', '', 0, 100, '', '', 'text', '', '', '', '', 1, 1, 0, 1, 0, 0, 0, 0, 93, 0, 0),
+(164, 16, 1, 'listorder', '排序', '', '', 0, 6, '', '', 'number', '', '', '', '', 1, 1, 0, 1, 0, 0, 0, 0, 23, 0, 0),
+(165, 16, 1, 'template', '内容页模板', '', '', 0, 30, '', '', 'template', 'array (\n  ''size'' => '''',\n  ''defaultvalue'' => '''',\n)', '', '-99', '-99', 0, 0, 0, 0, 0, 0, 0, 0, 94, 0, 0),
+(166, 16, 1, 'allow_comment', '允许评论', '', '', 0, 0, '', '', 'box', 'array (\n  ''options'' => ''允许评论|1\r\n不允许评论|0'',\n  ''boxtype'' => ''radio'',\n  ''fieldtype'' => ''tinyint'',\n  ''minnumber'' => ''1'',\n  ''width'' => ''88'',\n  ''size'' => ''1'',\n  ''defaultvalue'' => ''1'',\n  ''outputtype'' => ''0'',\n)', '', '', '', 0, 0, 0, 0, 0, 0, 0, 0, 95, 1, 0),
+(167, 16, 1, 'status', '状态', '', '', 0, 2, '', '', 'box', '', '', '', '', 1, 1, 0, 1, 0, 0, 0, 0, 96, 0, 0),
+(168, 16, 1, 'readpoint', '阅读收费', '', '', 0, 5, '', '', 'readpoint', 'array (\n  ''minnumber'' => ''1'',\n  ''maxnumber'' => ''99999'',\n  ''decimaldigits'' => ''0'',\n  ''defaultvalue'' => '''',\n)', '', '-99', '-99', 0, 0, 0, 0, 0, 0, 0, 0, 97, 1, 0),
 (169, 16, 1, 'username', '用户名', '', '', 0, 20, '', '', 'text', '', '', '', '', 1, 1, 0, 1, 0, 0, 0, 0, 98, 0, 0),
-(170, 16, 1, 'islink', '转向链接', '', '', 0, 0, '', '', 'islink', '', '', '', '', 0, 1, 0, 1, 0, 1, 0, 0, 20, 1, 0);
+(170, 16, 1, 'islink', '转向链接', '', '', 0, 0, '', '', 'islink', '', '', '', '', 0, 1, 0, 1, 0, 1, 0, 0, 92, 1, 0),
+(175, 15, 1, 'diqu', '地区', '', '', 1, 0, '', '', 'linkage', 'array (\n  ''linkageid'' => ''1'',\n  ''showtype'' => ''0'',\n  ''space'' => '''',\n  ''filtertype'' => ''0'',\n)', '', '', '', 0, 1, 0, 1, 0, 1, 0, 0, 6, 0, 0),
+(176, 16, 1, 'diqu', '地区', '', '', 1, 0, '', '', 'linkage', 'array (\n  ''linkageid'' => ''1'',\n  ''space'' => '''',\n)', '', '', '', 0, 1, 0, 1, 0, 1, 0, 0, 6, 0, 0),
+(177, 15, 1, 'add', '详细地址', '', '', 10, 100, '', '地址不能为空', 'text', 'array (\n  ''size'' => ''50'',\n  ''defaultvalue'' => '''',\n  ''ispassword'' => ''0'',\n)', '', '', '', 0, 1, 0, 1, 0, 1, 1, 0, 7, 0, 0),
+(178, 15, 1, 'lxr', '联系人', '', '', 4, 20, '', '', 'text', 'array (\n  ''size'' => ''25'',\n  ''defaultvalue'' => '''',\n  ''ispassword'' => ''0'',\n)', '', '', '', 0, 1, 0, 1, 0, 1, 1, 0, 8, 0, 0),
+(180, 15, 1, 'dianhua', '门店电话', '', '', 8, 15, '/^[0-9-]{6,13}$/', '门店电话不能为空', 'text', 'array (\n  ''size'' => ''25'',\n  ''defaultvalue'' => '''',\n  ''ispassword'' => ''0'',\n)', '', '', '', 0, 1, 0, 1, 0, 1, 1, 0, 9, 0, 0),
+(184, 15, 1, 'fax', '传真', '', '', 0, 25, '', '', 'text', 'array (\n  ''size'' => ''25'',\n  ''defaultvalue'' => '''',\n  ''ispassword'' => ''0'',\n)', '', '', '', 0, 1, 0, 1, 0, 1, 1, 0, 11, 0, 0),
+(185, 15, 1, 'qq', 'QQ', '', '', 0, 15, '', '', 'text', 'array (\n  ''size'' => ''25'',\n  ''defaultvalue'' => '''',\n  ''ispassword'' => ''0'',\n)', '', '', '', 0, 1, 0, 1, 0, 1, 1, 0, 12, 0, 0),
+(183, 15, 1, 'tel', '联系人手机', '', '', 0, 11, '/^(1)[0-9]{10}$/', '', 'text', 'array (\n  ''size'' => ''25'',\n  ''defaultvalue'' => '''',\n  ''ispassword'' => ''0'',\n)', '', '', '', 0, 1, 0, 1, 0, 1, 1, 0, 10, 0, 0),
+(186, 15, 1, 'weixin', '微信', '', '', 0, 25, '', '', 'text', 'array (\n  ''size'' => ''25'',\n  ''defaultvalue'' => '''',\n  ''ispassword'' => ''0'',\n)', '', '', '', 0, 1, 0, 1, 0, 1, 1, 0, 13, 0, 0),
+(187, 15, 1, 'service', '服务类型', '', '', 1, 1, '', '', 'box', 'array (\n  ''options'' => ''请选择\r\n销售类型|1\r\n支持维修|2'',\n  ''boxtype'' => ''select'',\n  ''fieldtype'' => ''tinyint'',\n  ''minnumber'' => ''1'',\n  ''width'' => ''80'',\n  ''size'' => ''1'',\n  ''defaultvalue'' => '''',\n  ''outputtype'' => ''1'',\n  ''filtertype'' => ''0'',\n)', '', '', '', 0, 1, 0, 1, 0, 1, 0, 0, 14, 0, 0);
 
 -- --------------------------------------------------------
 
@@ -6002,8 +6138,8 @@ CREATE TABLE IF NOT EXISTS `cban_news_data` (
 -- 
 -- 表的结构 `cban_news_md`
 -- 
--- 创建时间: 2014 年 07 月 29 日 16:38
--- 最后更新时间: 2014 年 07 月 29 日 16:38
+-- 创建时间: 2014 年 07 月 31 日 15:06
+-- 最后更新时间: 2014 年 07 月 31 日 15:06
 -- 
 
 DROP TABLE IF EXISTS `cban_news_md`;
@@ -6025,6 +6161,15 @@ CREATE TABLE IF NOT EXISTS `cban_news_md` (
   `username` char(20) NOT NULL,
   `inputtime` int(10) unsigned NOT NULL default '0',
   `updatetime` int(10) unsigned NOT NULL default '0',
+  `diqu` int(10) unsigned NOT NULL default '0',
+  `add` varchar(100) NOT NULL default '',
+  `lxr` varchar(20) NOT NULL default '',
+  `dianhua` varchar(15) NOT NULL default '',
+  `tel` varchar(11) NOT NULL default '',
+  `fax` varchar(25) NOT NULL default '',
+  `qq` varchar(15) NOT NULL default '',
+  `weixin` varchar(25) NOT NULL default '',
+  `service` tinyint(3) unsigned NOT NULL default '0',
   PRIMARY KEY  (`id`),
   KEY `status` (`status`,`listorder`,`id`),
   KEY `listorder` (`catid`,`status`,`listorder`,`id`),
@@ -6035,16 +6180,16 @@ CREATE TABLE IF NOT EXISTS `cban_news_md` (
 -- 导出表中的数据 `cban_news_md`
 -- 
 
-INSERT DELAYED IGNORE INTO `cban_news_md` (`id`, `catid`, `typeid`, `title`, `style`, `thumb`, `keywords`, `description`, `posids`, `url`, `listorder`, `status`, `sysadd`, `islink`, `username`, `inputtime`, `updatetime`) VALUES 
-(1, 9, 0, '1234567', '', '', '1234567', '7654321', 0, 'http://127.0.0.1:8080/cban/index.php?m=content&c=index&a=show&catid=9&id=1', 0, 1, 0, 0, 'nima', 1406122975, 1406122975);
+INSERT DELAYED IGNORE INTO `cban_news_md` (`id`, `catid`, `typeid`, `title`, `style`, `thumb`, `keywords`, `description`, `posids`, `url`, `listorder`, `status`, `sysadd`, `islink`, `username`, `inputtime`, `updatetime`, `diqu`, `add`, `lxr`, `dianhua`, `tel`, `fax`, `qq`, `weixin`, `service`) VALUES 
+(1, 9, 0, '1234567', '', 'http://127.0.0.1:8080/cban/uploadfile/2014/0723/20140723123322242.jpg', '1234567', '7654321', 0, 'http://127.0.0.1:8080/cban/index.php?m=content&c=index&a=show&catid=9&id=1', 0, 1, 0, 0, 'nima', 1406790312, 1406790312, 241, '11111111111', '1111', '11111111', '11111111111', '', '', '', 1);
 
 -- --------------------------------------------------------
 
 -- 
 -- 表的结构 `cban_news_md_data`
 -- 
--- 创建时间: 2014 年 07 月 29 日 16:38
--- 最后更新时间: 2014 年 07 月 29 日 16:38
+-- 创建时间: 2014 年 07 月 31 日 14:25
+-- 最后更新时间: 2014 年 07 月 31 日 14:25
 -- 
 
 DROP TABLE IF EXISTS `cban_news_md_data`;
@@ -6073,8 +6218,8 @@ INSERT DELAYED IGNORE INTO `cban_news_md_data` (`id`, `content`, `readpoint`, `g
 -- 
 -- 表的结构 `cban_news_qy`
 -- 
--- 创建时间: 2014 年 07 月 29 日 16:38
--- 最后更新时间: 2014 年 07 月 29 日 16:38
+-- 创建时间: 2014 年 07 月 31 日 11:02
+-- 最后更新时间: 2014 年 07 月 31 日 11:02
 -- 
 
 DROP TABLE IF EXISTS `cban_news_qy`;
@@ -6096,6 +6241,7 @@ CREATE TABLE IF NOT EXISTS `cban_news_qy` (
   `username` char(20) NOT NULL,
   `inputtime` int(10) unsigned NOT NULL default '0',
   `updatetime` int(10) unsigned NOT NULL default '0',
+  `diqu` int(10) unsigned NOT NULL default '0',
   PRIMARY KEY  (`id`),
   KEY `status` (`status`,`listorder`,`id`),
   KEY `listorder` (`catid`,`status`,`listorder`,`id`),
@@ -6106,16 +6252,16 @@ CREATE TABLE IF NOT EXISTS `cban_news_qy` (
 -- 导出表中的数据 `cban_news_qy`
 -- 
 
-INSERT DELAYED IGNORE INTO `cban_news_qy` (`id`, `catid`, `typeid`, `title`, `style`, `thumb`, `keywords`, `description`, `posids`, `url`, `listorder`, `status`, `sysadd`, `islink`, `username`, `inputtime`, `updatetime`) VALUES 
-(2, 10, 0, '企业信息发布111', '', '', '企业信息发布', '企业信息发布', 0, 'http://127.0.0.1:8080/cban/index.php?m=content&c=index&a=show&catid=10&id=2', 0, 1, 0, 0, 'hehe', 1406106485, 1406106485);
+INSERT DELAYED IGNORE INTO `cban_news_qy` (`id`, `catid`, `typeid`, `title`, `style`, `thumb`, `keywords`, `description`, `posids`, `url`, `listorder`, `status`, `sysadd`, `islink`, `username`, `inputtime`, `updatetime`, `diqu`) VALUES 
+(2, 10, 0, '企业信息发布111', '', '', '企业信息发布', '企业信息发布', 0, 'http://127.0.0.1:8080/cban/index.php?m=content&c=index&a=show&catid=10&id=2', 0, 1, 0, 0, 'hehe', 1406106485, 1406106485, 0);
 
 -- --------------------------------------------------------
 
 -- 
 -- 表的结构 `cban_news_qy_data`
 -- 
--- 创建时间: 2014 年 07 月 29 日 16:38
--- 最后更新时间: 2014 年 07 月 29 日 16:38
+-- 创建时间: 2014 年 07 月 31 日 09:55
+-- 最后更新时间: 2014 年 07 月 31 日 09:55
 -- 
 
 DROP TABLE IF EXISTS `cban_news_qy_data`;
@@ -6681,7 +6827,7 @@ CREATE TABLE IF NOT EXISTS `cban_session` (
 -- 
 
 INSERT DELAYED IGNORE INTO `cban_session` (`sessionid`, `userid`, `ip`, `lastvisit`, `roleid`, `groupid`, `m`, `c`, `a`, `data`) VALUES 
-('e05b6fe35de6f951d4ca88bca1b9667e', 1, '127.0.0.1', 1406624026, 1, 0, 'admin', 'linkage', 'init', 'code|s:4:"s472";userid|s:1:"1";roleid|s:1:"1";pc_hash|s:6:"AkMD8R";lock_screen|i:0;');
+('3a8fc7a7c3cf87222072a77216af50b7', 1, '127.0.0.1', 1406791356, 1, 0, 'admin', 'index', 'public_session_life', 'code|s:5:"pbk7v";userid|s:1:"1";roleid|s:1:"1";pc_hash|s:6:"LWh8Ds";lock_screen|i:0;');
 
 -- --------------------------------------------------------
 
@@ -6944,7 +7090,7 @@ INSERT DELAYED IGNORE INTO `cban_sso_applications` (`appid`, `type`, `name`, `ur
 -- 表的结构 `cban_sso_members`
 -- 
 -- 创建时间: 2014 年 07 月 29 日 16:38
--- 最后更新时间: 2014 年 07 月 29 日 16:38
+-- 最后更新时间: 2014 年 07 月 31 日 15:08
 -- 
 
 DROP TABLE IF EXISTS `cban_sso_members`;
@@ -6973,8 +7119,8 @@ CREATE TABLE IF NOT EXISTS `cban_sso_members` (
 -- 
 
 INSERT DELAYED IGNORE INTO `cban_sso_members` (`uid`, `username`, `password`, `random`, `email`, `regip`, `regdate`, `lastip`, `lastdate`, `appname`, `type`, `avatar`, `ucuserid`) VALUES 
-(1, 'nima', 'e3cdebc9a303d1e78b623146821d6192', 'D8IK1j', 'nima@qq.com', '127.0.0.1', 1406013245, '127.0.0.1', 1406599880, 'phpcms v9', 'app', 0, 0),
-(2, 'hehe', '7f30f0b731b883d2aae66a4d4dddc366', '4sGUlJ', 'hehe@qq.com', '127.0.0.1', 1406014825, '127.0.0.1', 1406104225, 'phpcms v9', 'app', 0, 0);
+(1, 'nima', 'e3cdebc9a303d1e78b623146821d6192', 'D8IK1j', 'nima@qq.com', '127.0.0.1', 1406013245, '127.0.0.1', 1406772799, 'phpcms v9', 'app', 0, 0),
+(2, 'hehe', '7f30f0b731b883d2aae66a4d4dddc366', '4sGUlJ', 'hehe@qq.com', '127.0.0.1', 1406014825, '127.0.0.1', 1406790472, 'phpcms v9', 'app', 0, 0);
 
 -- --------------------------------------------------------
 
