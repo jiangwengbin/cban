@@ -1,5 +1,41 @@
 <?php
 return array (
+  11 => 
+  array (
+    'catid' => '11',
+    'siteid' => '1',
+    'type' => '2',
+    'modelid' => '0',
+    'parentid' => '0',
+    'arrparentid' => '',
+    'child' => '0',
+    'arrchildid' => '',
+    'catname' => '千县万店',
+    'style' => '',
+    'image' => '',
+    'description' => '',
+    'parentdir' => '',
+    'catdir' => '',
+    'url' => 'http://127.0.0.1:8080/cban/index.php?m=cban&c=index&a=init',
+    'items' => '0',
+    'hits' => '0',
+    'setting' => 'array (
+  \'show_ruleid\' => \'\',
+  \'repeatchargedays\' => \'1\',
+)',
+    'listorder' => '0',
+    'ismenu' => '1',
+    'sethtml' => '0',
+    'letter' => '',
+    'usable_type' => '',
+    'create_to_html_root' => NULL,
+    'ishtml' => NULL,
+    'content_ishtml' => NULL,
+    'category_ruleid' => NULL,
+    'show_ruleid' => '',
+    'workflowid' => NULL,
+    'isdomain' => '0',
+  ),
   1 => 
   array (
     'catid' => '1',
