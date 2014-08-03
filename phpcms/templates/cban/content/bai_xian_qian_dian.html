@@ -82,13 +82,15 @@
 						<form name="" action="?m=cban&c=index&a=serMendian" method="post">
 						<table width="300" border="0" cellspacing="0" cellpadding="0">
 						  <tr>
-						    <th height="30" align="left">省市：</th>
-						    <td height="30" align="left">{menu_linkage(1,'L_1')}</td>
+						    <th width="20%" height="30" align="left">省市：</th>
+						    <td width="80%" height="30" align="left">{menu_linkage(1,'L_1')}</td>
 						    </tr>
 						  <tr>
 						    <th width="46" height="30" align="left">类型：</th>
-						    <td align="left">
-                            <input type="radio" name="type" value='1' />销售<input type="radio" name="type" value='2' />维修
+						    <td style="padding-top:10px;">
+                                <label><span>销售</span><input style="width:30px; border:0px;" type="radio" name="type" value='1' /></label>
+                                <br />
+                                <label><span>维修</span><input style="width:30px; border:0px;" type="radio" name="type" value='2' /></label>
                             </td>
 					      </tr>
 						</table>
