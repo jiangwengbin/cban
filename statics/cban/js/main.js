@@ -20,6 +20,13 @@ $(function() {
 });
 
 $(function() {
+	
+	$("#header_nav>>li").load(function() {
+		$(this).removeClass("de_ba");
+		$(this).find("a div").removeClass("de");
+		$(this).parent().find(".next_nav").hide();
+	});
+	
 	$("#header_nav>>li").mousemove(function() {
 		if($(this).find('li').length) {
 			$(this).addClass("de_ba");

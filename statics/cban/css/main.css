@@ -1023,6 +1023,7 @@ ol.next_nav{
 	z-index:50;
 	float:inherit;
 	background-color:#07a8e8;
+	display:none;
 }
 
 ol.next_nav li{
