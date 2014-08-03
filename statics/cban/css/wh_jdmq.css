@@ -1,0 +1,203 @@
+/* CSS Document */
+*{
+	padding:0px 0px;
+	margin:0px 0px;
+}
+body {
+	background-color: #F4F4F4;
+}
+#companylist_body{
+	width:1000px;
+	height:100%;
+	background-color:#FFF;
+	border: 1px solid #E2E2E2;
+	margin: auto;
+	font-family:"宋体";
+	overflow:auto;
+	}
+/* CSS Document */
+/*---家电名企业主要内容开始---*/
+.companylist{
+	width:555px;
+	float:left;
+	padding-left:28px;
+	}
+.companylist ul li{
+	vertical-align:middle;
+	list-style-type:none;
+}
+.companylist_tap{
+	width:555px;
+	height:128px;
+	margin-top:15px;
+	overflow:hidden;
+}
+
+.companylist_tap_img{
+	width:90px;
+	height:128px;
+	float:left;
+	display:block;
+	padding-top:10px;
+}
+.companylist_tap span{
+	width:100%;
+	height:100%;
+	font-size:13px;
+	font-family:"宋体";
+	color:#3E3E3E;
+	line-height:21px;
+}
+/*---家电名企业主要内容结束---*/
+#company_right{
+	width:300px;
+	float:left;
+	margin-left:30px;
+	margin-top:6px;
+}
+/*---分类导览开始---*/
+#company_view{
+	float:left;
+	width:300px;
+	font-size:13px;
+	font-family:"宋体";
+	line-height:21px;
+}
+#company_view ul{
+	font-weight:bold;
+	color:#0695CD;
+	list-style-type:none;
+}
+#company_view ul li{
+	font-weight:normal;
+	color:#3E3E3E;
+	display:inline;
+}
+/*---分类导览结束---*/
+/*---本月热门与最新家电厂商开始---*/
+#company_hot_new{
+	float:left;
+	width:300px;
+	font-size:13px;
+	font-family:"宋体";
+	line-height:29px;
+	margin-top:20px;
+}
+#company_hot_new ul li{
+	color:#3E3E3E;
+	list-style-type:none;
+	vertical-align: bottom;
+}
+#company_hot_new ul li img{
+	vertical-align:middle;
+	padding-right:10px;
+}
+/*---本月热门与最新家电厂商结束---*/
+/*---家电内容开始---*/
+.companycontent{
+	width:555px;
+	float:left;
+	padding-left:35px;
+	margin-top:10px;
+}
+.companycontent_info{
+	float:left;
+	height:24px;
+	width:100%;
+	line-height:24px;
+	font-size:13px;
+	font:"宋体";
+	color:#9A9A9A;
+}
+.companycontent_info img{
+	vertical-align:middle;
+	padding-left:5px;
+}
+#companycontent_table{
+	width:444px;
+	padding-left:50px;
+	margin-top:10px;
+	float:left;
+	font-size:14px;
+	font:"宋体";
+	color:#272727;
+	text-align: center;
+}
+#companycontent_table_title{
+	width:439px;
+	height:31px;
+	line-height:31px;
+	font-size:13px;
+	font:"宋体";
+	font-weight:bold;
+	color:#0091CA;
+	text-align: center;
+	float:left;
+	background-color:#7CCCEC;
+	border-top-style: none;
+	border-right-style: solid;
+	border-bottom-style: none;
+	border-left-style: solid;
+	border-right-color: #C6C6C6;
+	border-right-width: 1px;
+	border-top-style: solid;
+	border-top-width: 1px;
+	border-left-width: 1px;
+	border-top-color: #C6C6C6;
+	border-left-color: #C6C6C6;
+}
+#companycontent_table_l{
+	width:112px;
+	float:left;
+	background-color:#F4F4F4;
+	border-top-style: none;
+	border-right-style: solid;
+	border-bottom-style: none;
+	border-left-style: solid;
+	border-right-color: #C6C6C6;
+	border-right-width: 1px;
+	border-top-style: solid;
+	border-top-width: 1px;
+	border-left-width: 1px;
+	border-top-color: #C6C6C6;
+	border-left-color: #C6C6C6;
+}
+#companycontent_table_l ul li,#companycontent_table_r ul li{
+	vertical-align: bottom;
+	list-style-type:none;
+	min-height:26px;
+	line-height:26px;
+	border-bottom-width: 1px;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: solid;
+	border-left-style: none;
+	border-bottom-color: #c6c6c6;
+}
+#companycontent_table_r img{
+	padding-top:20px;
+}
+#companycontent_table_r{
+	width:326px;
+	float:left;
+	border-top-style: none;
+	border-right-style: solid;
+	border-bottom-style: none;
+	border-left-style: none;
+	border-right-color: #C6C6C6;
+	border-right-width: 1px;
+	border-top-style: solid;
+	border-top-width: 1px;
+	border-top-color: #C6C6C6;
+}
+#companycontent_artical{
+	padding-top:5px;
+	width:555px;
+	float:left;
+	font:"宋体";
+	font-size:14px;
+	color:#272727;
+	line-height:25px;
+	text-indent: 30px;
+}
+/*---家电内容结束---*/

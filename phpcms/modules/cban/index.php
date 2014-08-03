@@ -46,7 +46,8 @@ class index {
 
 			}
 		}
-
+// 		$CATEGORYS = getcache('category_content_'.$siteid,'commons');
+// 		print_r($CATEGORYS);
 		include template('content','bai_xian_qian_dian');
 	}
 
@@ -93,6 +94,10 @@ class index {
 
 		}
 		include template('content','bai_xian_qian_dian');
+	}
+	
+	public function jdmq(){
+		include template('content','jdmq');
 	}
 }
 ?>
