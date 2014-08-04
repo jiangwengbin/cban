@@ -70,58 +70,22 @@ $(function(){
             	<li>
                 	<a href="{siteurl($siteid)}"><div class="no">首页</div></a>
                 </li>
-                <li>
-                	<a href="#"><div>行业资讯</div></a>
-                    <ol class="next_nav">
-                    	<li>
-                        	<a href="#"><div class="no_border">二级导航</div></a>
-                        </li>
-                        <li>
-                        	<a href="#"><div class="no_border">二级导航</div></a>
-                        </li>
-                        <li>
-                        	<a href="#"><div class="no_border">二级导航</div></a>
-                        </li>
-                        <li>
-                        	<a href="#"><div class="no_border">二级导航</div></a>
-                        </li>
-                    </ol>
-                </li>
-                <li>
-                	<a href="#"><div>商机信息</div></a>
-					<ol class="next_nav">
-                    	<li>
-                        	<a href="#"><div class="no_border">二级导航</div></a>
-                        </li>
-                        <li>
-                        	<a href="#"><div class="no_border">二级导航</div></a>
-                        </li>
-                        <li>
-                        	<a href="#"><div class="no_border">二级导航</div></a>
-                        </li>
-                        <li>
-                        	<a href="#"><div class="no_border">二级导航</div></a>
-                        </li>
-                    </ol>
-                </li>
-                <li>
-                	<a href="#"><div class="no">展会信息</div></a>
-                </li>
-                <li>
-                	<a href="#"><div class="no">白县千店</div></a>
-                </li>
-                <li>
-                	<a href="#"><div class="no">家电维修</div></a>
-                </li>
-                <li>
-                	<a href="#"><div class="no">家电名企</div></a>
-                </li>
-                <li>
-                	<a href="#"><div class="no">畅销单品</div></a>
-                </li>
-                <li>
-                	<a href="#"><div class="no">会员专区</div></a>
-                </li>
+
+                 {pc:content action="category" catid="0" num="25" siteid="$siteid" order="listorder ASC"}
+                 {loop $data $r}
+                 	
+                    	{pc:content action="category" catid="$r[catid]" num="25" siteid="$siteid" order="listorder ASC"}
+                       		<li><a href="{$r[url]}"><div>{$r[catname]}</div></a></li>
+                        	 <ol class="next_nav">
+                             {loop $data $r}
+                             	<li><a href="{$r[url]}"><div>{$r[catname]}</div></a></li>
+                             {/loop}
+                         	</ol>
+                         {/pc} 
+                         
+                 {/loop}
+                 {/pc} 
+               
             </ul>
         </div> 
         

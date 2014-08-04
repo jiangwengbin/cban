@@ -118,6 +118,13 @@
             <ul>小家电<br />
                 <li>电暖气 | </li><li>电风扇 | </li><li>电熨斗 | </li><li>收音机</li>
             </ul>
+            
+            {pc:get sql="SELECT * FROM cban_linkage WHERE keyid='3360' ORDER BY listorder ASC" return="data"}
+            {loop $data $key $val}
+            	{$val[name]}
+            {/loop} 
+            {/pc}
+            
         </div>
         <!--分类导览结束、本月热门家电厂商开始-->
         <div id="company_hot_new">

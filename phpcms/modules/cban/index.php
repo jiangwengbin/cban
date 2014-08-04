@@ -24,7 +24,7 @@ class index {
 // 		$count = $this->db->count('userid');
 
 		$db_linkage = pc_base::load_model('linkage_model');
-		$date_linkage = $db_linkage -> select(array('parentid'=>'0','child'=>'1'),'linkageid,name','');
+		$date_linkage = $db_linkage -> select(array('parentid'=>'0','child'=>'1','keyid'=>'1'),'linkageid,name','');
 
 		if($_GET['id'])
 		{
@@ -48,14 +48,14 @@ class index {
 		}
 // 		$CATEGORYS = getcache('category_content_'.$siteid,'commons');
 // 		print_r($CATEGORYS);
-		include template('content','bai_xian_qian_dian');
+		include template('content','qxwd');
 	}
 
 	/*门店搜索*/
 	public function serMendian() {
 
 		$db_linkage = pc_base::load_model('linkage_model');
-		$date_linkage = $db_linkage -> select(array('parentid'=>'0','child'=>'1'),'linkageid,name','');
+		$date_linkage = $db_linkage -> select(array('parentid'=>'0','child'=>'1','keyid'=>'1'),'linkageid,name','');
 
 		$where = "";
 
@@ -93,7 +93,7 @@ class index {
 			}
 
 		}
-		include template('content','bai_xian_qian_dian');
+		include template('content','qxwd');
 	}
 	
 	public function jdmq(){
@@ -102,8 +102,13 @@ class index {
 		//SEO
 		$SEO = seo($siteid);
 		
-		$CATEGORYS = getcache('category_content_'.$siteid,'commons');
- 		print_r($CATEGORYS);
+// 		$CATEGORYS = getcache('category_content_'.$siteid,'commons');
+//  	print_r($CATEGORYS);
+
+// 		$db_linkage = pc_base::load_model('linkage_model');
+// 		$date_linkage = $db_linkage -> select(array('keyid'=>'3360'),'linkageid,name','');
+// 		print_r($date_linkage);
+
 		
 		include template('content','jdmq');
 	}
