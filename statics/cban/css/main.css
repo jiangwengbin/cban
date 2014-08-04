@@ -5,6 +5,7 @@
 	margin:0px 0px;
 	font-family: "Microsoft YaHei" ! important;
 	border:none;
+	
 }
 
 #top,#logo,#top_tool_bar{
@@ -14,12 +15,11 @@
 
 #top{
 	width:auto;
-	margin-left:100px;
-	
+	background-color:#FFF;
 }
 #logo{
 	float:left;
-	
+	margin-left:100px;
 }
 #top_tool_bar{
 	width:900px;
