@@ -10,30 +10,28 @@
             <input type="hidden" value="index" name="c">
             <input type="hidden" value="supply_infor_manage" name="a">
               <tr>
-                <td align="left" valign="middle">关键字：<input name="keyword" id="keyword" type="text" value="{$_GET[keyword]}" /></td>
-                <td align="left" valign="middle">地区：{menu_linkage(1,'L_1',$_GET['L_1-2'])}</td>
-                <td align="left" valign="middle">类型：
-                  <input type="checkbox" name="type[1]" value="1" {php if($_get[type][1])echo 'checked="checked"';}  />
-                  供应
-                  <input type="checkbox" name="type[2]" value="2" {php if($_get[type][2])echo 'checked="checked"';} />
-                求购 </td>
+                <td width="281" align="left" valign="middle">关键字：<input name="keyword" id="keyword" type="text" value="{$_GET[keyword]}" /></td>
+                <td width="519" align="left" valign="middle">地区：{menu_linkage(1,'L_1',$_GET['L_1-2'])}</td>
               </tr>
               <tr>
-                <td align="left" valign="middle"></td>
-                <td align="left" valign="middle">&nbsp;</td>
-                <td align="left" valign="middle">
-                <input type="checkbox" name="status_mes[1]" value="1" {php if($_GET[status_mes][1])echo 'checked="checked"';} />现有信息 
-                <input type="checkbox" name="status_mes[2]" value="2" {php if($_GET[status_mes][2])echo 'checked="checked"';} />历史信息
-                <input id="ser_but" type="submit" name="dosubmit" value="提交" />
-                
+                <td align="left" valign="middle">类型：
+                  <input type="checkbox" name="type[1]" value="1" {php if($_get[type][1])echo 'checked="checked"';}  />
+供应
+<input type="checkbox" name="type[2]" value="2" {php if($_get[type][2])echo 'checked="checked"';} />
+求购 </td>
+                <td align="left" valign="middle"><input type="checkbox" name="status_mes[1]" value="1" {php if($_get[status_mes][1])echo 'checked="checked"';} />
+                  发布中
+                  <input type="checkbox" name="status_mes[2]" value="2" {php if($_get[status_mes][2])echo 'checked="checked"';} />
+                历史发布 
+                <input style="margin-left:200px;" type="image" src="{CBAN_PATH}img/se_form.jpg" />
                 </td>
               </tr>
             </form>
             </table>
             
-            <br /> <br />
+<br /> <br />
             
-           <table id="c" width="800" border="0" cellspacing="0" cellpadding="0">
+           <table id="c" width="740" border="0" cellspacing="0" cellpadding="0" style="word-break:break-all; word-wrap:break-all;">
               <tr id="c_1">
                 <td align="center" valign="middle">标题</td>
                 <td align="center" valign="middle">商品信息</td>
@@ -44,12 +42,12 @@
               </tr>
              {loop $supply_infor_list $k $r}
               <tr>
-                <td height="50" align="center" valign="middle">{$r[title]}</td>
-                <td align="center" valign="middle">{$r[goods]}</td>
-                <td align="center" valign="middle">{get_linkage($r[diqu],1,' - ')}</td>
-                <td align="center" valign="middle">{php echo $r[type]=='1'?'供应':'求购';}</td>
-                <td align="center" valign="middle">{date('Y-m-d H:i',$r[time])}</td>
-                <td align="center" valign="middle">
+                <td height="50" align="center" valign="middle" width="150">{$r[title]}</td>
+                <td align="center" valign="middle" width="150">{$r[goods]}</td>
+                <td align="center" valign="middle" width="100">{get_linkage($r[diqu],1,' - ')}</td>
+                <td align="center" valign="middle" width="50">{php echo $r[type]=='1'?'供应':'求购';}</td>
+                <td align="center" valign="middle" width="120">{date('Y-m-d H:i',$r[time])}</td>
+                <td align="center" valign="middle" width="100">
                     <?php 
                         if($r[status]==1)
                         echo '<a href="index.php?'.$_SERVER['argv'][0].'&status='.$r[status].'&id='.$r[id].'" onclick="return confirm(\'确定要撤销该信息吗？\');" title="点击撤销	">发布中</a>';

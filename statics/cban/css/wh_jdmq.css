@@ -14,6 +14,8 @@ body {
 	margin: auto;
 	font-family:"宋体";
 	overflow:auto;
+	border-bottom:none;
+	padding-bottom:50px;
 	}
 /* CSS Document */
 /*---家电名企业主要内容开始---*/

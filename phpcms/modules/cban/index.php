@@ -6,7 +6,7 @@ pc_base::load_app_func('util','cban');
 class index {
 
 	//百县千店页面
-	public function init() {
+	public function qxwd() {
 
 		if(isset($_GET['siteid'])) {
 			$siteid = intval($_GET['siteid']);
@@ -97,6 +97,14 @@ class index {
 	}
 	
 	public function jdmq(){
+		$siteid = $GLOBALS['siteid'] = max($siteid,1);
+		
+		//SEO
+		$SEO = seo($siteid);
+		
+		$CATEGORYS = getcache('category_content_'.$siteid,'commons');
+ 		print_r($CATEGORYS);
+		
 		include template('content','jdmq');
 	}
 }

@@ -2,17 +2,15 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>{if isset($SEO['title']) && !empty($SEO['title'])}{$SEO['title']}{/if}{$SEO['site_title']}</title>
-<meta name="keywords" content="{$SEO['keyword']}">
-<meta name="description" content="{$SEO['description']}">
+<title>无标题文档</title>
+
 <link href="{CBAN_PATH}css/main.css" type="text/css" rel="stylesheet"/>
-<link href="{CBAN_PATH}css/base.css" type="text/css" rel="stylesheet"/>
-<link href="{CBAN_PATH}css/wh_footer.css" type="text/css" rel="stylesheet"/>
+<link href="{CBAN_PATH}css/wh_jdmq.css" type="text/css" rel="stylesheet"/>
 <link href="{CBAN_PATH}css/wh_title.css" type="text/css" rel="stylesheet"/>
 </head>
 
 <!--轮换图片 开始-->
-
+<link type="text/css" href="{CBAN_PATH}css/base.css" rel="stylesheet" />
 <script src="{CBAN_PATH}js/jquery-1.10.2.min.js" type="text/javascript"></script>
 <script src="{CBAN_PATH}js/jquery.kinMaxShow-1.1.min.js" type="text/javascript" charset="utf-8"></script>
 <script type="text/javascript" language="javascript" src="{CBAN_PATH}js/main.js"></script>
@@ -33,58 +31,99 @@ $(function(){
 <a name="top"></a>
 <div id="header">
 	<center>
+    
     	<div id="top">
-        	<div id="top_tool_bar">
-        	
-            	<script type="text/javascript">document.write('<iframe src="{APP_PATH}index.php?m=member&c=index&a=mini&forward='+encodeURIComponent(location.href)+'&siteid={get_siteid()}" allowTransparency="true"  width="500" height="24" frameborder="0" scrolling="no"></iframe>')</script>
-                
-                <div id="controls">
-                    <form name="select_form" action="" method="post">
-                        <select name="type">
-                          <option value="0">商品</option>
-                          <option value="1">type1</option>
-                          <option value="2">type2</option>
-                        </select>
-                        
-                        <input name="select" type="text" />
-                        <button>搜&nbsp;索</button>
-                    </form>
-                </div>
-            </div>
-            
-        	<div>
+        	<div id="logo">
             	<img class="logo_img" src="{CBAN_PATH}img/logo.jpg" height="100" />
             </div>
+        	<div id="top_tool_bar">
+            <table height="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td rowspan="2" class="zz"><a href=""><img src="{CBAN_PATH}img/zz.jpg" border="0" /></a></td>
+                <td align="right">
+					<script type="text/javascript">document.write('<iframe src="{APP_PATH}index.php?m=member&c=index&a=mini&forward='+encodeURIComponent(location.href)+'&siteid={get_siteid()}" allowTransparency="true"  width="450" height="30" frameborder="0" scrolling="no"></iframe>')</script>
+                </td>
+              </tr>
+              <tr>
+                <td align="left">
+                    <div id="controls">
+                            <form name="select_form" action="" method="post">
+                                <select name="type">
+                                  <option value="0">商品</option>
+                                  <option value="1">type1</option>
+                                  <option value="2">type2</option>
+                                </select>
+                                
+                                <input name="select" type="text" />
+                                <button>搜&nbsp;索</button>
+                            </form>
+                 	</div>
+                </td>
+              </tr>
+            </table>
+            </div>
             
-        </div>
+      </div>
         
         <div id="header_nav">
         	<ul>
             	<li>
-                	<a href="{siteurl($siteid)}"><div class="no">首页</div></a>
+                	<a href="#"><div class="no">首页</div></a>
                 </li>
-                
-                {pc:content action="category" catid="9" num="25" siteid="$siteid" order="listorder ASC"}
-					{loop $data $r}
-						<li>
-							<a href="{$r[url]}"><div <?php if ($r[child]=='0') echo 'class="no"';?> >{$r[catname]}</div></a>
-							
-							{pc:content action="category" catid="$r[catid]" num="25" siteid="$siteid" order="listorder ASC"}
-								 <ol class="next_nav">
-								 	{loop $data $r2}
-				                    	<li>
-				                        	<a href="{$r2[url]}"><div class="no_border">{$r2[catname]}</div></a>
-				                        </li>
-			                        {/loop}
-			                      </ol>
-							{/pc}
-							
-						</li>
-					{/loop}
-	       		{/pc}
-                
+                <li>
+                	<a href="#"><div>行业资讯</div></a>
+                    <ol class="next_nav">
+                    	<li>
+                        	<a href="#"><div class="no_border">二级导航</div></a>
+                        </li>
+                        <li>
+                        	<a href="#"><div class="no_border">二级导航</div></a>
+                        </li>
+                        <li>
+                        	<a href="#"><div class="no_border">二级导航</div></a>
+                        </li>
+                        <li>
+                        	<a href="#"><div class="no_border">二级导航</div></a>
+                        </li>
+                    </ol>
+                </li>
+                <li>
+                	<a href="#"><div>商机信息</div></a>
+					<ol class="next_nav">
+                    	<li>
+                        	<a href="#"><div class="no_border">二级导航</div></a>
+                        </li>
+                        <li>
+                        	<a href="#"><div class="no_border">二级导航</div></a>
+                        </li>
+                        <li>
+                        	<a href="#"><div class="no_border">二级导航</div></a>
+                        </li>
+                        <li>
+                        	<a href="#"><div class="no_border">二级导航</div></a>
+                        </li>
+                    </ol>
+                </li>
+                <li>
+                	<a href="#"><div class="no">展会信息</div></a>
+                </li>
+                <li>
+                	<a href="#"><div class="no">白县千店</div></a>
+                </li>
+                <li>
+                	<a href="#"><div class="no">家电维修</div></a>
+                </li>
+                <li>
+                	<a href="#"><div class="no">家电名企</div></a>
+                </li>
+                <li>
+                	<a href="#"><div class="no">畅销单品</div></a>
+                </li>
+                <li>
+                	<a href="#"><div class="no">会员专区</div></a>
+                </li>
             </ul>
-        </div>
+        </div> 
         
     </center>
 </div>
