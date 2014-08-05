@@ -20,7 +20,7 @@ class position extends admin {
 			$model = getcache('model','commons');
 			$where = "`siteid`='$current_siteid' OR `siteid`='0'";
 			$page = $_GET['page'] ? $_GET['page'] : '1';
-			$infos = $this->db->listinfo($where, $order = 'listorder DESC,posid DESC', $page, $pagesize = 20);
+			$infos = $this->db->listinfo($where, $order = 'listorder ASC,posid DESC', $page, $pagesize = 20);
 			$pages = $this->db->pages;
 			$show_dialog = true;
 			$big_menu = array('javascript:window.top.art.dialog({id:\'add\',iframe:\'?m=admin&c=position&a=add\', title:\''.L('posid_add').'\', width:\'500\', height:\'360\', lock:true}, function(){var d = window.top.art.dialog({id:\'add\'}).data.iframe;var form = d.document.getElementById(\'dosubmit\');form.click();return false;}, function(){window.top.art.dialog({id:\'add\'}).close()});void(0);', L('posid_add'));
@@ -150,7 +150,7 @@ class position extends admin {
 			$siteid = $this->get_siteid();
 			$CATEGORY = getcache('category_content_'.$siteid,'commons');
 			$page = $_GET['page'] ? $_GET['page'] : '1';
-			$pos_arr = $this->db_data->listinfo(array('posid'=>$posid,'siteid'=>$siteid),'listorder DESC', $page, $pagesize = 20);
+			$pos_arr = $this->db_data->listinfo(array('posid'=>$posid,'siteid'=>$siteid),'listorder ASC', $page, $pagesize = 20);
 			$pages = $this->db_data->pages;
 			$infos = array();
 			foreach ($pos_arr as $_k => $_v) {

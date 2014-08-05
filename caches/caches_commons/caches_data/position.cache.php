@@ -12,6 +12,18 @@ return array (
     'siteid' => '1',
     'thumb' => '',
   ),
+  17 => 
+  array (
+    'posid' => '17',
+    'modelid' => '0',
+    'catid' => '0',
+    'name' => '视频栏目精彩推荐',
+    'maxnum' => '20',
+    'extention' => '',
+    'listorder' => '99',
+    'siteid' => '1',
+    'thumb' => '',
+  ),
   16 => 
   array (
     'posid' => '16',
@@ -132,15 +144,27 @@ return array (
     'siteid' => '1',
     'thumb' => '',
   ),
-  17 => 
+  19 => 
   array (
-    'posid' => '17',
-    'modelid' => '0',
-    'catid' => '0',
-    'name' => '视频栏目精彩推荐',
+    'posid' => '19',
+    'modelid' => '16',
+    'catid' => '10',
+    'name' => '家电名企_本月热门家电厂商',
     'maxnum' => '20',
     'extention' => '',
-    'listorder' => '99',
+    'listorder' => '2',
+    'siteid' => '1',
+    'thumb' => '',
+  ),
+  20 => 
+  array (
+    'posid' => '20',
+    'modelid' => '16',
+    'catid' => '10',
+    'name' => '家电名企_最新入驻家电企业',
+    'maxnum' => '20',
+    'extention' => '',
+    'listorder' => '1',
     'siteid' => '1',
     'thumb' => '',
   ),

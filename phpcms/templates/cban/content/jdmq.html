@@ -57,32 +57,23 @@
         <div id="company_hot_new">
             <div class="title_blueline_1px_bottom" style="width:124px;">本月热门家电厂商</div><div class="title_blackline_1px_bottom" style="width:58%;"></div>
             <ul>
-              <li><img src="{CBAN_PATH}img/no_1.gif" width="15" height="15" />佛山市洛贝电器实业有限公司</li>
-              <li><img src="{CBAN_PATH}img/no_2.gif" width="15" height="15" />米技电子电器(上海)有限公司</li>
-              <li><img src="{CBAN_PATH}img/no_3.gif" width="15" height="15" />永康市芝英永意电器厂</li>
-              <li><img src="{CBAN_PATH}img/no_4.gif" width="15" height="15" />中山市乐庭电器有限公司</li>
-              <li><img src="{CBAN_PATH}img/no_5.gif" width="15" height="15" />广州市金铃家用电器有限公司</li>
-              <li><img src="{CBAN_PATH}img/no_6.gif" width="15" height="15" />山东小鸭集团家电有限公司</li>
-              <li><img src="{CBAN_PATH}img/no_7.gif" width="15" height="15" />厦门欣佳电科技有限公司</li>
-              <li><img src="{CBAN_PATH}img/no_8.gif" width="15" height="15" />中山市康华燃气具有限公司</li>
-              <li><img src="{CBAN_PATH}img/no_8.gif" width="15" height="15" />济南米乐电器有限公司</li>
-              <li><img src="{CBAN_PATH}img/no_10.gif" width="15" height="15" />常州珠光太阳能有限公司</li>
+              
+              {pc:content  action="position" posid="19" order="listorder asc" num="10"}
+              {loop $data $r}
+              <li><a href="#"><img src="{CBAN_PATH}img/no_{$r['listorder']}.gif" width="15" height="15" />{$r['title']}</a></li>
+              {/loop}
+              {/pc}
             </ul>
         </div>
         <!--本月热门家电厂商结束、最新加入厂家开始-->
             <div id="company_hot_new">
             <div class="title_blueline_1px_bottom" style="width:124px;">最新入驻家电企业</div><div class="title_blackline_1px_bottom" style="width:58%;"></div>
             <ul>
-              <li><img src="{CBAN_PATH}img/no_1.gif" width="15" height="15" />佛山市洛贝电器实业有限公司</li>
-              <li><img src="{CBAN_PATH}img/no_2.gif" width="15" height="15" />米技电子电器(上海)有限公司</li>
-              <li><img src="{CBAN_PATH}img/no_3.gif" width="15" height="15" />永康市芝英永意电器厂</li>
-              <li><img src="{CBAN_PATH}img/no_4.gif" width="15" height="15" />中山市乐庭电器有限公司</li>
-              <li><img src="{CBAN_PATH}img/no_5.gif" width="15" height="15" />广州市金铃家用电器有限公司</li>
-              <li><img src="{CBAN_PATH}img/no_6.gif" width="15" height="15" />山东小鸭集团家电有限公司</li>
-              <li><img src="{CBAN_PATH}img/no_7.gif" width="15" height="15" />厦门欣佳电科技有限公司</li>
-              <li><img src="{CBAN_PATH}img/no_8.gif" width="15" height="15" />中山市康华燃气具有限公司</li>
-              <li><img src="{CBAN_PATH}img/no_8.gif" width="15" height="15" />济南米乐电器有限公司</li>
-              <li><img src="{CBAN_PATH}img/no_10.gif" width="15" height="15" />常州珠光太阳能有限公司</li>
+              {pc:content  action="position" posid="20" order="listorder asc" num="10"}
+              {loop $data $r}
+              <li><a href="#"><img src="{CBAN_PATH}img/no_{$r['listorder']}.gif" width="15" height="15" />{$r['title']}</a></li>
+              {/loop}
+              {/pc}
             </ul>
         </div>
     </div>

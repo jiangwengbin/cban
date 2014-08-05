@@ -90,6 +90,9 @@ body {
 	line-height:29px;
 	margin-top:20px;
 }
+#company_hot_new a{
+	color:#3E3E3E;
+}
 #company_hot_new ul li{
 	color:#3E3E3E;
 	list-style-type:none;
