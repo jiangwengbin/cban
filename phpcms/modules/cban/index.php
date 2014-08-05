@@ -96,6 +96,7 @@ class index {
 		include template('content','qxwd');
 	}
 	
+	
 	public function jdmq(){
 		$siteid = $GLOBALS['siteid'] = max($siteid,1);
 		
@@ -104,11 +105,10 @@ class index {
 		
 // 		$CATEGORYS = getcache('category_content_'.$siteid,'commons');
 //  	print_r($CATEGORYS);
-
-// 		$db_linkage = pc_base::load_model('linkage_model');
-// 		$date_linkage = $db_linkage -> select(array('keyid'=>'3360'),'linkageid,name','');
-// 		print_r($date_linkage);
-
+		$thisdb = get_cbandb('cban_news_qy');
+		//status 99通过 1审核中 0退稿
+		$qy = $thisdb->cban_listinfo('status=99', 'id desc',$_GET['page'], '20');
+		$pages = $thisdb->pages;
 		
 		include template('content','jdmq');
 	}

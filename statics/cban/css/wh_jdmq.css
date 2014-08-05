@@ -30,17 +30,17 @@ body {
 }
 .companylist_tap{
 	width:555px;
-	height:128px;
-	margin-top:15px;
-	overflow:hidden;
+	height:100%;
+	margin-top:20px;
+	overflow:hidden;	
 }
 
 .companylist_tap_img{
 	width:90px;
-	height:128px;
+	height:100%;
 	float:left;
 	display:block;
-	padding-top:10px;
+
 }
 .companylist_tap span{
 	width:100%;
@@ -49,6 +49,7 @@ body {
 	font-family:"宋体";
 	color:#3E3E3E;
 	line-height:21px;
+	float:left;
 }
 /*---家电名企业主要内容结束---*/
 #company_right{
@@ -74,6 +75,10 @@ body {
 	font-weight:normal;
 	color:#3E3E3E;
 	display:inline;
+}
+
+#company_view ul a{
+	color:#3E3E3E;
 }
 /*---分类导览结束---*/
 /*---本月热门与最新家电厂商开始---*/

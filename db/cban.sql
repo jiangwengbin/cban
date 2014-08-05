@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 -- 
 -- 主机: localhost
--- 生成日期: 2014 年 08 月 04 日 08:59
+-- 生成日期: 2014 年 08 月 05 日 03:33
 -- 服务器版本: 5.0.51
 -- PHP 版本: 5.2.6
 
@@ -24,7 +24,7 @@ START TRANSACTION;
 -- 表的结构 `cban_admin`
 -- 
 -- 创建时间: 2014 年 08 月 04 日 08:57
--- 最后更新时间: 2014 年 08 月 04 日 15:53
+-- 最后更新时间: 2014 年 08 月 05 日 09:30
 -- 
 
 DROP TABLE IF EXISTS `cban_admin`;
@@ -49,7 +49,7 @@ CREATE TABLE IF NOT EXISTS `cban_admin` (
 -- 
 
 INSERT DELAYED IGNORE INTO `cban_admin` (`userid`, `username`, `password`, `roleid`, `encrypt`, `lastloginip`, `lastlogintime`, `email`, `realname`, `card`, `lang`) VALUES 
-(1, 'admin', '9e4f7c2cb05d56ed0d33889e6dd8f216', 1, 'tMXppt', '127.0.0.1', 1407138679, '1@qq.com', '', '', '');
+(1, 'admin', '9e4f7c2cb05d56ed0d33889e6dd8f216', 1, 'tMXppt', '127.0.0.1', 1407201722, '1@qq.com', '', '', '');
 
 -- --------------------------------------------------------
 
@@ -171,7 +171,7 @@ CREATE TABLE IF NOT EXISTS `cban_announce` (
 -- 表的结构 `cban_attachment`
 -- 
 -- 创建时间: 2014 年 08 月 04 日 08:57
--- 最后更新时间: 2014 年 08 月 04 日 09:55
+-- 最后更新时间: 2014 年 08 月 05 日 11:00
 -- 
 
 DROP TABLE IF EXISTS `cban_attachment`;
@@ -194,14 +194,16 @@ CREATE TABLE IF NOT EXISTS `cban_attachment` (
   `siteid` smallint(5) unsigned NOT NULL default '0',
   PRIMARY KEY  (`aid`),
   KEY `authcode` (`authcode`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=16 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=18 ;
 
 -- 
 -- 导出表中的数据 `cban_attachment`
 -- 
 
 INSERT DELAYED IGNORE INTO `cban_attachment` (`aid`, `module`, `catid`, `filename`, `filepath`, `filesize`, `fileext`, `isimage`, `isthumb`, `downloads`, `userid`, `uploadtime`, `uploadip`, `status`, `authcode`, `siteid`) VALUES 
-(15, 'supply_infor', 0, ']1F]~55~8JI0R1C(5VP_%L2.jpg', '2014/0804/20140804095425390.jpg', 29230, 'jpg', 1, 0, 0, 1, 1407117265, '127.0.0.1', 1, 'e98f877c9e4b8cc02f01eea6adf50936', 1);
+(15, 'supply_infor', 0, ']1F]~55~8JI0R1C(5VP_%L2.jpg', '2014/0804/20140804095425390.jpg', 29230, 'jpg', 1, 0, 0, 1, 1407117265, '127.0.0.1', 1, 'e98f877c9e4b8cc02f01eea6adf50936', 1),
+(16, 'content', 10, 'psb.jpg', '2014/0805/20140805100108135.jpg', 77361, 'jpg', 1, 0, 0, 1, 1407204068, '127.0.0.1', 1, '400c21ff2321f59bb9249d2017319502', 1),
+(17, 'content', 10, 'logo_haier.gif', '2014/0805/20140805101359656.gif', 2565, 'gif', 1, 0, 0, 1, 1407204839, '127.0.0.1', 1, '3b7155da15d23927e27b74e01ab42ef0', 1);
 
 -- --------------------------------------------------------
 
@@ -209,7 +211,7 @@ INSERT DELAYED IGNORE INTO `cban_attachment` (`aid`, `module`, `catid`, `filenam
 -- 表的结构 `cban_attachment_index`
 -- 
 -- 创建时间: 2014 年 08 月 04 日 08:57
--- 最后更新时间: 2014 年 08 月 04 日 08:57
+-- 最后更新时间: 2014 年 08 月 05 日 10:14
 -- 
 
 DROP TABLE IF EXISTS `cban_attachment_index`;
@@ -224,6 +226,10 @@ CREATE TABLE IF NOT EXISTS `cban_attachment_index` (
 -- 导出表中的数据 `cban_attachment_index`
 -- 
 
+INSERT DELAYED IGNORE INTO `cban_attachment_index` (`keyid`, `aid`) VALUES 
+('c-10-2', '16'),
+('c-10-2', '17'),
+('c-10-2', '15');
 
 -- --------------------------------------------------------
 
@@ -338,7 +344,7 @@ CREATE TABLE IF NOT EXISTS `cban_block_priv` (
 -- 表的结构 `cban_cache`
 -- 
 -- 创建时间: 2014 年 08 月 04 日 08:57
--- 最后更新时间: 2014 年 08 月 04 日 16:12
+-- 最后更新时间: 2014 年 08 月 05 日 11:30
 -- 
 
 DROP TABLE IF EXISTS `cban_cache`;
@@ -355,14 +361,14 @@ CREATE TABLE IF NOT EXISTS `cban_cache` (
 
 INSERT DELAYED IGNORE INTO `cban_cache` (`filename`, `path`, `data`) VALUES 
 ('mood_program.cache.php', 'caches_commons/caches_data/', '<?php\nreturn array (\n  1 => \n  array (\n    1 => \n    array (\n      ''use'' => ''1'',\n      ''name'' => ''震惊'',\n      ''pic'' => ''mood/a1.gif'',\n    ),\n    2 => \n    array (\n      ''use'' => ''1'',\n      ''name'' => ''不解'',\n      ''pic'' => ''mood/a2.gif'',\n    ),\n    3 => \n    array (\n      ''use'' => ''1'',\n      ''name'' => ''愤怒'',\n      ''pic'' => ''mood/a3.gif'',\n    ),\n    4 => \n    array (\n      ''use'' => ''1'',\n      ''name'' => ''杯具'',\n      ''pic'' => ''mood/a4.gif'',\n    ),\n    5 => \n    array (\n      ''use'' => ''1'',\n      ''name'' => ''无聊'',\n      ''pic'' => ''mood/a5.gif'',\n    ),\n    6 => \n    array (\n      ''use'' => ''1'',\n      ''name'' => ''高兴'',\n      ''pic'' => ''mood/a6.gif'',\n    ),\n    7 => \n    array (\n      ''use'' => ''1'',\n      ''name'' => ''支持'',\n      ''pic'' => ''mood/a7.gif'',\n    ),\n    8 => \n    array (\n      ''use'' => ''1'',\n      ''name'' => ''超赞'',\n      ''pic'' => ''mood/a8.gif'',\n    ),\n    9 => \n    array (\n      ''use'' => NULL,\n      ''name'' => '''',\n      ''pic'' => '''',\n    ),\n    10 => \n    array (\n      ''use'' => NULL,\n      ''name'' => '''',\n      ''pic'' => '''',\n    ),\n  ),\n);\n?>'),
-('category_content.cache.php', 'caches_commons/caches_data/', '<?php\nreturn array (\n  41 => ''1'',\n  11 => ''1'',\n  12 => ''1'',\n  9 => ''1'',\n  10 => ''1'',\n  42 => ''1'',\n  43 => ''1'',\n);\n?>'),
-('category_content_1.cache.php', 'caches_commons/caches_data/', '<?php\nreturn array (\n  41 => \n  array (\n    ''catid'' => ''41'',\n    ''siteid'' => ''1'',\n    ''type'' => ''0'',\n    ''modelid'' => ''1'',\n    ''parentid'' => ''0'',\n    ''arrparentid'' => ''0'',\n    ''child'' => ''1'',\n    ''arrchildid'' => ''41,43,42'',\n    ''catname'' => ''行业资讯'',\n    ''style'' => '''',\n    ''image'' => '''',\n    ''description'' => '''',\n    ''parentdir'' => '''',\n    ''catdir'' => ''hyzx'',\n    ''url'' => ''http://127.0.0.1:8080/cban/index.php?m=content&c=index&a=lists&catid=41'',\n    ''items'' => ''0'',\n    ''hits'' => ''0'',\n    ''setting'' => ''array (\n  \\''workflowid\\'' => \\''\\'',\n  \\''ishtml\\'' => \\''0\\'',\n  \\''content_ishtml\\'' => \\''0\\'',\n  \\''create_to_html_root\\'' => \\''0\\'',\n  \\''template_list\\'' => \\''cban\\'',\n  \\''category_template\\'' => \\''category\\'',\n  \\''list_template\\'' => \\''list\\'',\n  \\''show_template\\'' => \\''show\\'',\n  \\''meta_title\\'' => \\''\\'',\n  \\''meta_keywords\\'' => \\''\\'',\n  \\''meta_description\\'' => \\''\\'',\n  \\''presentpoint\\'' => \\''1\\'',\n  \\''defaultchargepoint\\'' => \\''0\\'',\n  \\''paytype\\'' => \\''0\\'',\n  \\''repeatchargedays\\'' => \\''1\\'',\n  \\''category_ruleid\\'' => \\''6\\'',\n  \\''show_ruleid\\'' => \\''16\\'',\n)'',\n    ''listorder'' => ''1'',\n    ''ismenu'' => ''1'',\n    ''sethtml'' => ''0'',\n    ''letter'' => ''xingyezixun'',\n    ''usable_type'' => '''',\n    ''create_to_html_root'' => ''0'',\n    ''ishtml'' => ''0'',\n    ''content_ishtml'' => ''0'',\n    ''category_ruleid'' => ''6'',\n    ''show_ruleid'' => ''16'',\n    ''workflowid'' => '''',\n    ''isdomain'' => ''0'',\n  ),\n  11 => \n  array (\n    ''catid'' => ''11'',\n    ''siteid'' => ''1'',\n    ''type'' => ''2'',\n    ''modelid'' => ''0'',\n    ''parentid'' => ''0'',\n    ''arrparentid'' => '''',\n    ''child'' => ''0'',\n    ''arrchildid'' => '''',\n    ''catname'' => ''千县万店'',\n    ''style'' => '''',\n    ''image'' => '''',\n    ''description'' => '''',\n    ''parentdir'' => '''',\n    ''catdir'' => '''',\n    ''url'' => ''http://127.0.0.1:8080/cban/index.php?m=cban&c=index&a=qxwd'',\n    ''items'' => ''0'',\n    ''hits'' => ''0'',\n    ''setting'' => ''array (\n  \\''show_ruleid\\'' => \\''\\'',\n  \\''repeatchargedays\\'' => \\''1\\'',\n)'',\n    ''listorder'' => ''4'',\n    ''ismenu'' => ''1'',\n    ''sethtml'' => ''0'',\n    ''letter'' => '''',\n    ''usable_type'' => '''',\n    ''create_to_html_root'' => NULL,\n    ''ishtml'' => NULL,\n    ''content_ishtml'' => NULL,\n    ''category_ruleid'' => NULL,\n    ''show_ruleid'' => '''',\n    ''workflowid'' => NULL,\n    ''isdomain'' => ''0'',\n  ),\n  12 => \n  array (\n    ''catid'' => ''12'',\n    ''siteid'' => ''1'',\n    ''type'' => ''2'',\n    ''modelid'' => ''0'',\n    ''parentid'' => ''0'',\n    ''arrparentid'' => '''',\n    ''child'' => ''0'',\n    ''arrchildid'' => '''',\n    ''catname'' => ''家电名企'',\n    ''style'' => '''',\n    ''image'' => '''',\n    ''description'' => '''',\n    ''parentdir'' => '''',\n    ''catdir'' => '''',\n    ''url'' => ''http://127.0.0.1:8080/cban/index.php?m=cban&c=index&a=jdmq'',\n    ''items'' => ''0'',\n    ''hits'' => ''0'',\n    ''setting'' => ''array (\n  \\''show_ruleid\\'' => \\''\\'',\n  \\''repeatchargedays\\'' => \\''1\\'',\n)'',\n    ''listorder'' => ''6'',\n    ''ismenu'' => ''1'',\n    ''sethtml'' => ''0'',\n    ''letter'' => '''',\n    ''usable_type'' => '''',\n    ''create_to_html_root'' => NULL,\n    ''ishtml'' => NULL,\n    ''content_ishtml'' => NULL,\n    ''category_ruleid'' => NULL,\n    ''show_ruleid'' => '''',\n    ''workflowid'' => NULL,\n    ''isdomain'' => ''0'',\n  ),\n  9 => \n  array (\n    ''catid'' => ''9'',\n    ''siteid'' => ''1'',\n    ''type'' => ''0'',\n    ''modelid'' => ''15'',\n    ''parentid'' => ''0'',\n    ''arrparentid'' => ''0'',\n    ''child'' => ''0'',\n    ''arrchildid'' => ''9'',\n    ''catname'' => ''门店信息发布'',\n    ''style'' => '''',\n    ''image'' => '''',\n    ''description'' => '''',\n    ''parentdir'' => '''',\n    ''catdir'' => ''mdxxfb'',\n    ''url'' => ''http://127.0.0.1:8080/cban/index.php?m=content&c=index&a=lists&catid=9'',\n    ''items'' => ''1'',\n    ''hits'' => ''0'',\n    ''setting'' => ''array (\n  \\''workflowid\\'' => \\''1\\'',\n  \\''ishtml\\'' => \\''0\\'',\n  \\''content_ishtml\\'' => \\''0\\'',\n  \\''create_to_html_root\\'' => \\''0\\'',\n  \\''template_list\\'' => \\''cban\\'',\n  \\''category_template\\'' => \\''category\\'',\n  \\''list_template\\'' => \\''list\\'',\n  \\''show_template\\'' => \\''show\\'',\n  \\''meta_title\\'' => \\''\\'',\n  \\''meta_keywords\\'' => \\''\\'',\n  \\''meta_description\\'' => \\''\\'',\n  \\''presentpoint\\'' => \\''1\\'',\n  \\''defaultchargepoint\\'' => \\''0\\'',\n  \\''paytype\\'' => \\''0\\'',\n  \\''repeatchargedays\\'' => \\''1\\'',\n  \\''category_ruleid\\'' => \\''6\\'',\n  \\''show_ruleid\\'' => \\''16\\'',\n)'',\n    ''listorder'' => ''19'',\n    ''ismenu'' => ''0'',\n    ''sethtml'' => ''0'',\n    ''letter'' => ''mendianxinxifabu'',\n    ''usable_type'' => '''',\n    ''create_to_html_root'' => ''0'',\n    ''ishtml'' => ''0'',\n    ''content_ishtml'' => ''0'',\n    ''category_ruleid'' => ''6'',\n    ''show_ruleid'' => ''16'',\n    ''workflowid'' => ''1'',\n    ''isdomain'' => ''0'',\n  ),\n  10 => \n  array (\n    ''catid'' => ''10'',\n    ''siteid'' => ''1'',\n    ''type'' => ''0'',\n    ''modelid'' => ''16'',\n    ''parentid'' => ''0'',\n    ''arrparentid'' => ''0'',\n    ''child'' => ''0'',\n    ''arrchildid'' => ''10'',\n    ''catname'' => ''企业信息发布'',\n    ''style'' => '''',\n    ''image'' => '''',\n    ''description'' => '''',\n    ''parentdir'' => '''',\n    ''catdir'' => ''qyxxfb'',\n    ''url'' => ''http://127.0.0.1:8080/cban/index.php?m=content&c=index&a=lists&catid=10'',\n    ''items'' => ''1'',\n    ''hits'' => ''0'',\n    ''setting'' => ''array (\n  \\''workflowid\\'' => \\''1\\'',\n  \\''ishtml\\'' => \\''0\\'',\n  \\''content_ishtml\\'' => \\''0\\'',\n  \\''create_to_html_root\\'' => \\''0\\'',\n  \\''template_list\\'' => \\''cban\\'',\n  \\''category_template\\'' => \\''category\\'',\n  \\''list_template\\'' => \\''list\\'',\n  \\''show_template\\'' => \\''show\\'',\n  \\''meta_title\\'' => \\''\\'',\n  \\''meta_keywords\\'' => \\''\\'',\n  \\''meta_description\\'' => \\''\\'',\n  \\''presentpoint\\'' => \\''1\\'',\n  \\''defaultchargepoint\\'' => \\''0\\'',\n  \\''paytype\\'' => \\''0\\'',\n  \\''repeatchargedays\\'' => \\''1\\'',\n  \\''category_ruleid\\'' => \\''6\\'',\n  \\''show_ruleid\\'' => \\''16\\'',\n)'',\n    ''listorder'' => ''20'',\n    ''ismenu'' => ''0'',\n    ''sethtml'' => ''0'',\n    ''letter'' => ''qiyexinxifabu'',\n    ''usable_type'' => '''',\n    ''create_to_html_root'' => ''0'',\n    ''ishtml'' => ''0'',\n    ''content_ishtml'' => ''0'',\n    ''category_ruleid'' => ''6'',\n    ''show_ruleid'' => ''16'',\n    ''workflowid'' => ''1'',\n    ''isdomain'' => ''0'',\n  ),\n  42 => \n  array (\n    ''catid'' => ''42'',\n    ''siteid'' => ''1'',\n    ''type'' => ''0'',\n    ''modelid'' => ''1'',\n    ''parentid'' => ''41'',\n    ''arrparentid'' => ''0,41'',\n    ''child'' => ''0'',\n    ''arrchildid'' => ''42'',\n    ''catname'' => ''家电新闻'',\n    ''style'' => '''',\n    ''image'' => '''',\n    ''description'' => '''',\n    ''parentdir'' => ''hyzx/'',\n    ''catdir'' => ''jdxw'',\n    ''url'' => ''http://127.0.0.1:8080/cban/index.php?m=content&c=index&a=lists&catid=42'',\n    ''items'' => ''0'',\n    ''hits'' => ''0'',\n    ''setting'' => ''array (\n  \\''workflowid\\'' => \\''\\'',\n  \\''ishtml\\'' => \\''0\\'',\n  \\''content_ishtml\\'' => \\''0\\'',\n  \\''create_to_html_root\\'' => \\''0\\'',\n  \\''template_list\\'' => \\''cban\\'',\n  \\''category_template\\'' => \\''category\\'',\n  \\''list_template\\'' => \\''list\\'',\n  \\''show_template\\'' => \\''show\\'',\n  \\''meta_title\\'' => \\''\\'',\n  \\''meta_keywords\\'' => \\''\\'',\n  \\''meta_description\\'' => \\''\\'',\n  \\''presentpoint\\'' => \\''1\\'',\n  \\''defaultchargepoint\\'' => \\''0\\'',\n  \\''paytype\\'' => \\''0\\'',\n  \\''repeatchargedays\\'' => \\''1\\'',\n  \\''category_ruleid\\'' => \\''6\\'',\n  \\''show_ruleid\\'' => \\''16\\'',\n)'',\n    ''listorder'' => ''42'',\n    ''ismenu'' => ''1'',\n    ''sethtml'' => ''0'',\n    ''letter'' => ''jiadianxinwen'',\n    ''usable_type'' => '''',\n    ''create_to_html_root'' => ''0'',\n    ''ishtml'' => ''0'',\n    ''content_ishtml'' => ''0'',\n    ''category_ruleid'' => ''6'',\n    ''show_ruleid'' => ''16'',\n    ''workflowid'' => '''',\n    ''isdomain'' => ''0'',\n  ),\n  43 => \n  array (\n    ''catid'' => ''43'',\n    ''siteid'' => ''1'',\n    ''type'' => ''0'',\n    ''modelid'' => ''1'',\n    ''parentid'' => ''41'',\n    ''arrparentid'' => ''0,41'',\n    ''child'' => ''0'',\n    ''arrchildid'' => ''43'',\n    ''catname'' => ''近期热点'',\n    ''style'' => '''',\n    ''image'' => '''',\n    ''description'' => '''',\n    ''parentdir'' => ''/'',\n    ''catdir'' => ''jqrd'',\n    ''url'' => ''http://127.0.0.1:8080/cban/index.php?m=content&c=index&a=lists&catid=43'',\n    ''items'' => ''0'',\n    ''hits'' => ''0'',\n    ''setting'' => ''array (\n  \\''workflowid\\'' => \\''\\'',\n  \\''ishtml\\'' => \\''0\\'',\n  \\''content_ishtml\\'' => \\''0\\'',\n  \\''create_to_html_root\\'' => \\''0\\'',\n  \\''template_list\\'' => \\''cban\\'',\n  \\''category_template\\'' => \\''category\\'',\n  \\''list_template\\'' => \\''list\\'',\n  \\''show_template\\'' => \\''show\\'',\n  \\''meta_title\\'' => \\''\\'',\n  \\''meta_keywords\\'' => \\''\\'',\n  \\''meta_description\\'' => \\''\\'',\n  \\''presentpoint\\'' => \\''1\\'',\n  \\''defaultchargepoint\\'' => \\''0\\'',\n  \\''paytype\\'' => \\''0\\'',\n  \\''repeatchargedays\\'' => \\''1\\'',\n  \\''category_ruleid\\'' => \\''6\\'',\n  \\''show_ruleid\\'' => \\''16\\'',\n)'',\n    ''listorder'' => ''43'',\n    ''ismenu'' => ''1'',\n    ''sethtml'' => ''0'',\n    ''letter'' => ''jinqiredian'',\n    ''usable_type'' => '''',\n    ''create_to_html_root'' => ''0'',\n    ''ishtml'' => ''0'',\n    ''content_ishtml'' => ''0'',\n    ''category_ruleid'' => ''6'',\n    ''show_ruleid'' => ''16'',\n    ''workflowid'' => '''',\n    ''isdomain'' => ''0'',\n  ),\n);\n?>'),
+('category_content.cache.php', 'caches_commons/caches_data/', '<?php\nreturn array (\n  41 => ''1'',\n  11 => ''1'',\n  12 => ''1'',\n  9 => ''1'',\n  10 => ''1'',\n  42 => ''1'',\n);\n?>'),
+('category_content_1.cache.php', 'caches_commons/caches_data/', '<?php\nreturn array (\n  41 => \n  array (\n    ''catid'' => ''41'',\n    ''siteid'' => ''1'',\n    ''type'' => ''0'',\n    ''modelid'' => ''1'',\n    ''parentid'' => ''0'',\n    ''arrparentid'' => ''0'',\n    ''child'' => ''1'',\n    ''arrchildid'' => ''41,42'',\n    ''catname'' => ''行业资讯'',\n    ''style'' => '''',\n    ''image'' => '''',\n    ''description'' => '''',\n    ''parentdir'' => '''',\n    ''catdir'' => ''hyzx'',\n    ''url'' => ''http://127.0.0.1:8080/cban/index.php?m=content&c=index&a=lists&catid=41'',\n    ''items'' => ''0'',\n    ''hits'' => ''0'',\n    ''setting'' => ''array (\n  \\''workflowid\\'' => \\''\\'',\n  \\''ishtml\\'' => \\''0\\'',\n  \\''content_ishtml\\'' => \\''0\\'',\n  \\''create_to_html_root\\'' => \\''0\\'',\n  \\''template_list\\'' => \\''cban\\'',\n  \\''category_template\\'' => \\''category\\'',\n  \\''list_template\\'' => \\''list_hyzx\\'',\n  \\''show_template\\'' => \\''show\\'',\n  \\''meta_title\\'' => \\''\\'',\n  \\''meta_keywords\\'' => \\''\\'',\n  \\''meta_description\\'' => \\''\\'',\n  \\''presentpoint\\'' => \\''1\\'',\n  \\''defaultchargepoint\\'' => \\''0\\'',\n  \\''paytype\\'' => \\''0\\'',\n  \\''repeatchargedays\\'' => \\''1\\'',\n  \\''category_ruleid\\'' => \\''6\\'',\n  \\''show_ruleid\\'' => \\''16\\'',\n)'',\n    ''listorder'' => ''1'',\n    ''ismenu'' => ''1'',\n    ''sethtml'' => ''0'',\n    ''letter'' => ''xingyezixun'',\n    ''usable_type'' => '''',\n    ''create_to_html_root'' => ''0'',\n    ''ishtml'' => ''0'',\n    ''content_ishtml'' => ''0'',\n    ''category_ruleid'' => ''6'',\n    ''show_ruleid'' => ''16'',\n    ''workflowid'' => '''',\n    ''isdomain'' => ''0'',\n  ),\n  11 => \n  array (\n    ''catid'' => ''11'',\n    ''siteid'' => ''1'',\n    ''type'' => ''2'',\n    ''modelid'' => ''0'',\n    ''parentid'' => ''0'',\n    ''arrparentid'' => '''',\n    ''child'' => ''0'',\n    ''arrchildid'' => '''',\n    ''catname'' => ''千县万店'',\n    ''style'' => '''',\n    ''image'' => '''',\n    ''description'' => '''',\n    ''parentdir'' => '''',\n    ''catdir'' => '''',\n    ''url'' => ''http://127.0.0.1:8080/cban/index.php?m=cban&c=index&a=qxwd'',\n    ''items'' => ''0'',\n    ''hits'' => ''0'',\n    ''setting'' => ''array (\n  \\''show_ruleid\\'' => \\''\\'',\n  \\''repeatchargedays\\'' => \\''1\\'',\n)'',\n    ''listorder'' => ''4'',\n    ''ismenu'' => ''1'',\n    ''sethtml'' => ''0'',\n    ''letter'' => '''',\n    ''usable_type'' => '''',\n    ''create_to_html_root'' => NULL,\n    ''ishtml'' => NULL,\n    ''content_ishtml'' => NULL,\n    ''category_ruleid'' => NULL,\n    ''show_ruleid'' => '''',\n    ''workflowid'' => NULL,\n    ''isdomain'' => ''0'',\n  ),\n  12 => \n  array (\n    ''catid'' => ''12'',\n    ''siteid'' => ''1'',\n    ''type'' => ''2'',\n    ''modelid'' => ''0'',\n    ''parentid'' => ''0'',\n    ''arrparentid'' => '''',\n    ''child'' => ''0'',\n    ''arrchildid'' => '''',\n    ''catname'' => ''家电名企'',\n    ''style'' => '''',\n    ''image'' => '''',\n    ''description'' => '''',\n    ''parentdir'' => '''',\n    ''catdir'' => '''',\n    ''url'' => ''http://127.0.0.1:8080/cban/index.php?m=cban&c=index&a=jdmq'',\n    ''items'' => ''0'',\n    ''hits'' => ''0'',\n    ''setting'' => ''array (\n  \\''show_ruleid\\'' => \\''\\'',\n  \\''repeatchargedays\\'' => \\''1\\'',\n)'',\n    ''listorder'' => ''6'',\n    ''ismenu'' => ''1'',\n    ''sethtml'' => ''0'',\n    ''letter'' => '''',\n    ''usable_type'' => '''',\n    ''create_to_html_root'' => NULL,\n    ''ishtml'' => NULL,\n    ''content_ishtml'' => NULL,\n    ''category_ruleid'' => NULL,\n    ''show_ruleid'' => '''',\n    ''workflowid'' => NULL,\n    ''isdomain'' => ''0'',\n  ),\n  9 => \n  array (\n    ''catid'' => ''9'',\n    ''siteid'' => ''1'',\n    ''type'' => ''0'',\n    ''modelid'' => ''15'',\n    ''parentid'' => ''0'',\n    ''arrparentid'' => ''0'',\n    ''child'' => ''0'',\n    ''arrchildid'' => ''9'',\n    ''catname'' => ''门店信息发布'',\n    ''style'' => '''',\n    ''image'' => '''',\n    ''description'' => '''',\n    ''parentdir'' => '''',\n    ''catdir'' => ''mdxxfb'',\n    ''url'' => ''http://127.0.0.1:8080/cban/index.php?m=content&c=index&a=lists&catid=9'',\n    ''items'' => ''1'',\n    ''hits'' => ''0'',\n    ''setting'' => ''array (\n  \\''workflowid\\'' => \\''1\\'',\n  \\''ishtml\\'' => \\''0\\'',\n  \\''content_ishtml\\'' => \\''0\\'',\n  \\''create_to_html_root\\'' => \\''0\\'',\n  \\''template_list\\'' => \\''cban\\'',\n  \\''category_template\\'' => \\''category\\'',\n  \\''list_template\\'' => \\''list\\'',\n  \\''show_template\\'' => \\''show\\'',\n  \\''meta_title\\'' => \\''\\'',\n  \\''meta_keywords\\'' => \\''\\'',\n  \\''meta_description\\'' => \\''\\'',\n  \\''presentpoint\\'' => \\''1\\'',\n  \\''defaultchargepoint\\'' => \\''0\\'',\n  \\''paytype\\'' => \\''0\\'',\n  \\''repeatchargedays\\'' => \\''1\\'',\n  \\''category_ruleid\\'' => \\''6\\'',\n  \\''show_ruleid\\'' => \\''16\\'',\n)'',\n    ''listorder'' => ''19'',\n    ''ismenu'' => ''0'',\n    ''sethtml'' => ''0'',\n    ''letter'' => ''mendianxinxifabu'',\n    ''usable_type'' => '''',\n    ''create_to_html_root'' => ''0'',\n    ''ishtml'' => ''0'',\n    ''content_ishtml'' => ''0'',\n    ''category_ruleid'' => ''6'',\n    ''show_ruleid'' => ''16'',\n    ''workflowid'' => ''1'',\n    ''isdomain'' => ''0'',\n  ),\n  10 => \n  array (\n    ''catid'' => ''10'',\n    ''siteid'' => ''1'',\n    ''type'' => ''0'',\n    ''modelid'' => ''16'',\n    ''parentid'' => ''0'',\n    ''arrparentid'' => ''0'',\n    ''child'' => ''0'',\n    ''arrchildid'' => ''10'',\n    ''catname'' => ''企业信息发布'',\n    ''style'' => '''',\n    ''image'' => '''',\n    ''description'' => '''',\n    ''parentdir'' => '''',\n    ''catdir'' => ''qyxxfb'',\n    ''url'' => ''http://127.0.0.1:8080/cban/index.php?m=content&c=index&a=lists&catid=10'',\n    ''items'' => ''1'',\n    ''hits'' => ''0'',\n    ''setting'' => ''array (\n  \\''workflowid\\'' => \\''1\\'',\n  \\''ishtml\\'' => \\''0\\'',\n  \\''content_ishtml\\'' => \\''0\\'',\n  \\''create_to_html_root\\'' => \\''0\\'',\n  \\''template_list\\'' => \\''cban\\'',\n  \\''category_template\\'' => \\''category\\'',\n  \\''list_template\\'' => \\''list\\'',\n  \\''show_template\\'' => \\''show\\'',\n  \\''meta_title\\'' => \\''\\'',\n  \\''meta_keywords\\'' => \\''\\'',\n  \\''meta_description\\'' => \\''\\'',\n  \\''presentpoint\\'' => \\''1\\'',\n  \\''defaultchargepoint\\'' => \\''0\\'',\n  \\''paytype\\'' => \\''0\\'',\n  \\''repeatchargedays\\'' => \\''1\\'',\n  \\''category_ruleid\\'' => \\''6\\'',\n  \\''show_ruleid\\'' => \\''16\\'',\n)'',\n    ''listorder'' => ''20'',\n    ''ismenu'' => ''0'',\n    ''sethtml'' => ''0'',\n    ''letter'' => ''qiyexinxifabu'',\n    ''usable_type'' => '''',\n    ''create_to_html_root'' => ''0'',\n    ''ishtml'' => ''0'',\n    ''content_ishtml'' => ''0'',\n    ''category_ruleid'' => ''6'',\n    ''show_ruleid'' => ''16'',\n    ''workflowid'' => ''1'',\n    ''isdomain'' => ''0'',\n  ),\n  42 => \n  array (\n    ''catid'' => ''42'',\n    ''siteid'' => ''1'',\n    ''type'' => ''0'',\n    ''modelid'' => ''1'',\n    ''parentid'' => ''41'',\n    ''arrparentid'' => ''0,41'',\n    ''child'' => ''0'',\n    ''arrchildid'' => ''42'',\n    ''catname'' => ''家电新闻'',\n    ''style'' => '''',\n    ''image'' => '''',\n    ''description'' => '''',\n    ''parentdir'' => ''hyzx/'',\n    ''catdir'' => ''jdxw'',\n    ''url'' => ''http://127.0.0.1:8080/cban/index.php?m=content&c=index&a=lists&catid=42'',\n    ''items'' => ''0'',\n    ''hits'' => ''0'',\n    ''setting'' => ''array (\n  \\''workflowid\\'' => \\''\\'',\n  \\''ishtml\\'' => \\''0\\'',\n  \\''content_ishtml\\'' => \\''0\\'',\n  \\''create_to_html_root\\'' => \\''0\\'',\n  \\''template_list\\'' => \\''cban\\'',\n  \\''category_template\\'' => \\''category\\'',\n  \\''list_template\\'' => \\''list_hyzx\\'',\n  \\''show_template\\'' => \\''show\\'',\n  \\''meta_title\\'' => \\''\\'',\n  \\''meta_keywords\\'' => \\''\\'',\n  \\''meta_description\\'' => \\''\\'',\n  \\''presentpoint\\'' => \\''1\\'',\n  \\''defaultchargepoint\\'' => \\''0\\'',\n  \\''paytype\\'' => \\''0\\'',\n  \\''repeatchargedays\\'' => \\''1\\'',\n  \\''category_ruleid\\'' => \\''6\\'',\n  \\''show_ruleid\\'' => \\''16\\'',\n)'',\n    ''listorder'' => ''42'',\n    ''ismenu'' => ''1'',\n    ''sethtml'' => ''0'',\n    ''letter'' => ''jiadianxinwen'',\n    ''usable_type'' => '''',\n    ''create_to_html_root'' => ''0'',\n    ''ishtml'' => ''0'',\n    ''content_ishtml'' => ''0'',\n    ''category_ruleid'' => ''6'',\n    ''show_ruleid'' => ''16'',\n    ''workflowid'' => '''',\n    ''isdomain'' => ''0'',\n  ),\n);\n?>'),
 ('sitelist.cache.php', 'caches_commons/caches_data/', '<?php\nreturn array (\n  1 => \n  array (\n    ''siteid'' => ''1'',\n    ''name'' => ''默认站点'',\n    ''dirname'' => '''',\n    ''domain'' => ''http://127.0.0.1:8080/cban/'',\n    ''site_title'' => ''CBAN中国家电品牌门户网站'',\n    ''keywords'' => ''中国家电品牌,家电门户网站,各种家电'',\n    ''description'' => ''CBAN是中国第一家家电品牌门户网站，其中包含各种品牌家电，维修，销售等'',\n    ''release_point'' => '''',\n    ''default_style'' => ''cban'',\n    ''template'' => ''cban'',\n    ''setting'' => ''array (\n  \\''upload_maxsize\\'' => \\''2048\\'',\n  \\''upload_allowext\\'' => \\''jpg|jpeg|gif|bmp|png|doc|docx|xls|xlsx|ppt|pptx|pdf|txt|rar|zip|swf\\'',\n  \\''watermark_enable\\'' => \\''1\\'',\n  \\''watermark_minwidth\\'' => \\''300\\'',\n  \\''watermark_minheight\\'' => \\''300\\'',\n  \\''watermark_img\\'' => \\''statics/images/water//mark.png\\'',\n  \\''watermark_pct\\'' => \\''85\\'',\n  \\''watermark_quality\\'' => \\''80\\'',\n  \\''watermark_pos\\'' => \\''9\\'',\n)'',\n    ''uuid'' => ''66e1d6e9-6219-1032-ab4c-ef7167b14131'',\n    ''url'' => ''http://127.0.0.1:8080/cban/'',\n  ),\n);\n?>'),
 ('downservers.cache.php', 'caches_commons/caches_data/', '<?php\nreturn NULL;\n?>'),
 ('badword.cache.php', 'caches_commons/caches_data/', '<?php\nreturn array (\n);\n?>'),
 ('ipbanned.cache.php', 'caches_commons/caches_data/', '<?php\nreturn array (\n);\n?>'),
 ('keylink.cache.php', 'caches_commons/caches_data/', '<?php\nreturn array (\n);\n?>'),
-('position.cache.php', 'caches_commons/caches_data/', '<?php\nreturn array (\n  2 => \n  array (\n    ''posid'' => ''2'',\n    ''modelid'' => ''0'',\n    ''catid'' => ''0'',\n    ''name'' => ''首页头条推荐'',\n    ''maxnum'' => ''20'',\n    ''extention'' => NULL,\n    ''listorder'' => ''4'',\n    ''siteid'' => ''1'',\n    ''thumb'' => '''',\n  ),\n  1 => \n  array (\n    ''posid'' => ''1'',\n    ''modelid'' => ''0'',\n    ''catid'' => ''0'',\n    ''name'' => ''首页焦点图推荐'',\n    ''maxnum'' => ''20'',\n    ''extention'' => NULL,\n    ''listorder'' => ''1'',\n    ''siteid'' => ''1'',\n    ''thumb'' => '''',\n  ),\n  16 => \n  array (\n    ''posid'' => ''16'',\n    ''modelid'' => ''0'',\n    ''catid'' => ''0'',\n    ''name'' => ''视频首页每日热点'',\n    ''maxnum'' => ''20'',\n    ''extention'' => '''',\n    ''listorder'' => ''0'',\n    ''siteid'' => ''1'',\n    ''thumb'' => '''',\n  ),\n  15 => \n  array (\n    ''posid'' => ''15'',\n    ''modelid'' => ''0'',\n    ''catid'' => ''0'',\n    ''name'' => ''视频首页头条推荐'',\n    ''maxnum'' => ''20'',\n    ''extention'' => '''',\n    ''listorder'' => ''0'',\n    ''siteid'' => ''1'',\n    ''thumb'' => '''',\n  ),\n  14 => \n  array (\n    ''posid'' => ''14'',\n    ''modelid'' => ''0'',\n    ''catid'' => ''0'',\n    ''name'' => ''视频首页焦点图'',\n    ''maxnum'' => ''20'',\n    ''extention'' => '''',\n    ''listorder'' => ''0'',\n    ''siteid'' => ''1'',\n    ''thumb'' => '''',\n  ),\n  12 => \n  array (\n    ''posid'' => ''12'',\n    ''modelid'' => ''0'',\n    ''catid'' => ''0'',\n    ''name'' => ''首页图片推荐'',\n    ''maxnum'' => ''20'',\n    ''extention'' => NULL,\n    ''listorder'' => ''0'',\n    ''siteid'' => ''1'',\n    ''thumb'' => '''',\n  ),\n  10 => \n  array (\n    ''posid'' => ''10'',\n    ''modelid'' => ''0'',\n    ''catid'' => ''0'',\n    ''name'' => ''栏目首页推荐'',\n    ''maxnum'' => ''20'',\n    ''extention'' => NULL,\n    ''listorder'' => ''0'',\n    ''siteid'' => ''1'',\n    ''thumb'' => '''',\n  ),\n  9 => \n  array (\n    ''posid'' => ''9'',\n    ''modelid'' => ''0'',\n    ''catid'' => ''0'',\n    ''name'' => ''网站顶部推荐'',\n    ''maxnum'' => ''20'',\n    ''extention'' => NULL,\n    ''listorder'' => ''0'',\n    ''siteid'' => ''1'',\n    ''thumb'' => '''',\n  ),\n  8 => \n  array (\n    ''posid'' => ''8'',\n    ''modelid'' => ''30'',\n    ''catid'' => ''54'',\n    ''name'' => ''图片频道首页焦点图'',\n    ''maxnum'' => ''20'',\n    ''extention'' => NULL,\n    ''listorder'' => ''0'',\n    ''siteid'' => ''1'',\n    ''thumb'' => '''',\n  ),\n  5 => \n  array (\n    ''posid'' => ''5'',\n    ''modelid'' => ''69'',\n    ''catid'' => ''0'',\n    ''name'' => ''推荐下载'',\n    ''maxnum'' => ''20'',\n    ''extention'' => NULL,\n    ''listorder'' => ''0'',\n    ''siteid'' => ''1'',\n    ''thumb'' => '''',\n  ),\n  13 => \n  array (\n    ''posid'' => ''13'',\n    ''modelid'' => ''82'',\n    ''catid'' => ''0'',\n    ''name'' => ''栏目页焦点图'',\n    ''maxnum'' => ''20'',\n    ''extention'' => NULL,\n    ''listorder'' => ''0'',\n    ''siteid'' => ''1'',\n    ''thumb'' => '''',\n  ),\n  17 => \n  array (\n    ''posid'' => ''17'',\n    ''modelid'' => ''0'',\n    ''catid'' => ''0'',\n    ''name'' => ''视频栏目精彩推荐'',\n    ''maxnum'' => ''20'',\n    ''extention'' => '''',\n    ''listorder'' => ''0'',\n    ''siteid'' => ''1'',\n    ''thumb'' => '''',\n  ),\n);\n?>'),
+('position.cache.php', 'caches_commons/caches_data/', '<?php\nreturn array (\n  1 => \n  array (\n    ''posid'' => ''1'',\n    ''modelid'' => ''0'',\n    ''catid'' => ''0'',\n    ''name'' => ''首页焦点图推荐'',\n    ''maxnum'' => ''20'',\n    ''extention'' => NULL,\n    ''listorder'' => ''99'',\n    ''siteid'' => ''1'',\n    ''thumb'' => '''',\n  ),\n  16 => \n  array (\n    ''posid'' => ''16'',\n    ''modelid'' => ''0'',\n    ''catid'' => ''0'',\n    ''name'' => ''视频首页每日热点'',\n    ''maxnum'' => ''20'',\n    ''extention'' => '''',\n    ''listorder'' => ''99'',\n    ''siteid'' => ''1'',\n    ''thumb'' => '''',\n  ),\n  15 => \n  array (\n    ''posid'' => ''15'',\n    ''modelid'' => ''0'',\n    ''catid'' => ''0'',\n    ''name'' => ''视频首页头条推荐'',\n    ''maxnum'' => ''20'',\n    ''extention'' => '''',\n    ''listorder'' => ''99'',\n    ''siteid'' => ''1'',\n    ''thumb'' => '''',\n  ),\n  14 => \n  array (\n    ''posid'' => ''14'',\n    ''modelid'' => ''0'',\n    ''catid'' => ''0'',\n    ''name'' => ''视频首页焦点图'',\n    ''maxnum'' => ''20'',\n    ''extention'' => '''',\n    ''listorder'' => ''99'',\n    ''siteid'' => ''1'',\n    ''thumb'' => '''',\n  ),\n  12 => \n  array (\n    ''posid'' => ''12'',\n    ''modelid'' => ''0'',\n    ''catid'' => ''0'',\n    ''name'' => ''首页图片推荐'',\n    ''maxnum'' => ''20'',\n    ''extention'' => NULL,\n    ''listorder'' => ''99'',\n    ''siteid'' => ''1'',\n    ''thumb'' => '''',\n  ),\n  10 => \n  array (\n    ''posid'' => ''10'',\n    ''modelid'' => ''0'',\n    ''catid'' => ''0'',\n    ''name'' => ''栏目首页推荐'',\n    ''maxnum'' => ''20'',\n    ''extention'' => NULL,\n    ''listorder'' => ''99'',\n    ''siteid'' => ''1'',\n    ''thumb'' => '''',\n  ),\n  9 => \n  array (\n    ''posid'' => ''9'',\n    ''modelid'' => ''0'',\n    ''catid'' => ''0'',\n    ''name'' => ''网站顶部推荐'',\n    ''maxnum'' => ''20'',\n    ''extention'' => NULL,\n    ''listorder'' => ''99'',\n    ''siteid'' => ''1'',\n    ''thumb'' => '''',\n  ),\n  8 => \n  array (\n    ''posid'' => ''8'',\n    ''modelid'' => ''30'',\n    ''catid'' => ''54'',\n    ''name'' => ''图片频道首页焦点图'',\n    ''maxnum'' => ''20'',\n    ''extention'' => NULL,\n    ''listorder'' => ''99'',\n    ''siteid'' => ''1'',\n    ''thumb'' => '''',\n  ),\n  5 => \n  array (\n    ''posid'' => ''5'',\n    ''modelid'' => ''69'',\n    ''catid'' => ''0'',\n    ''name'' => ''推荐下载'',\n    ''maxnum'' => ''20'',\n    ''extention'' => NULL,\n    ''listorder'' => ''99'',\n    ''siteid'' => ''1'',\n    ''thumb'' => '''',\n  ),\n  13 => \n  array (\n    ''posid'' => ''13'',\n    ''modelid'' => ''82'',\n    ''catid'' => ''0'',\n    ''name'' => ''栏目页焦点图'',\n    ''maxnum'' => ''20'',\n    ''extention'' => NULL,\n    ''listorder'' => ''99'',\n    ''siteid'' => ''1'',\n    ''thumb'' => '''',\n  ),\n  2 => \n  array (\n    ''posid'' => ''2'',\n    ''modelid'' => ''0'',\n    ''catid'' => ''0'',\n    ''name'' => ''首页头条推荐'',\n    ''maxnum'' => ''20'',\n    ''extention'' => NULL,\n    ''listorder'' => ''99'',\n    ''siteid'' => ''1'',\n    ''thumb'' => '''',\n  ),\n  17 => \n  array (\n    ''posid'' => ''17'',\n    ''modelid'' => ''0'',\n    ''catid'' => ''0'',\n    ''name'' => ''视频栏目精彩推荐'',\n    ''maxnum'' => ''20'',\n    ''extention'' => '''',\n    ''listorder'' => ''99'',\n    ''siteid'' => ''1'',\n    ''thumb'' => '''',\n  ),\n);\n?>'),
 ('role_siteid.cache.php', 'caches_commons/caches_data/', '<?php\nreturn array (\n);\n?>'),
 ('role.cache.php', 'caches_commons/caches_data/', '<?php\nreturn array (\n  1 => ''超级管理员'',\n  2 => ''站点管理员'',\n  3 => ''运营总监'',\n  4 => ''总编'',\n  5 => ''编辑'',\n  7 => ''发布人员'',\n);\n?>'),
 ('urlrules_detail.cache.php', 'caches_commons/caches_data/', '<?php\nreturn array (\n  1 => \n  array (\n    ''urlruleid'' => ''1'',\n    ''module'' => ''content'',\n    ''file'' => ''category'',\n    ''ishtml'' => ''1'',\n    ''urlrule'' => ''{$categorydir}{$catdir}/index.html|{$categorydir}{$catdir}/{$page}.html'',\n    ''example'' => ''news/china/1000.html'',\n  ),\n  6 => \n  array (\n    ''urlruleid'' => ''6'',\n    ''module'' => ''content'',\n    ''file'' => ''category'',\n    ''ishtml'' => ''0'',\n    ''urlrule'' => ''index.php?m=content&c=index&a=lists&catid={$catid}|index.php?m=content&c=index&a=lists&catid={$catid}&page={$page}'',\n    ''example'' => ''index.php?m=content&c=index&a=lists&catid=1&page=1'',\n  ),\n  11 => \n  array (\n    ''urlruleid'' => ''11'',\n    ''module'' => ''content'',\n    ''file'' => ''show'',\n    ''ishtml'' => ''1'',\n    ''urlrule'' => ''{$year}/{$catdir}_{$month}{$day}/{$id}.html|{$year}/{$catdir}_{$month}{$day}/{$id}_{$page}.html'',\n    ''example'' => ''2010/catdir_0720/1_2.html'',\n  ),\n  12 => \n  array (\n    ''urlruleid'' => ''12'',\n    ''module'' => ''content'',\n    ''file'' => ''show'',\n    ''ishtml'' => ''1'',\n    ''urlrule'' => ''{$categorydir}{$catdir}/{$year}/{$month}{$day}/{$id}.html|{$categorydir}{$catdir}/{$year}/{$month}{$day}/{$id}_{$page}.html'',\n    ''example'' => ''it/product/2010/0720/1_2.html'',\n  ),\n  16 => \n  array (\n    ''urlruleid'' => ''16'',\n    ''module'' => ''content'',\n    ''file'' => ''show'',\n    ''ishtml'' => ''0'',\n    ''urlrule'' => ''index.php?m=content&c=index&a=show&catid={$catid}&id={$id}|index.php?m=content&c=index&a=show&catid={$catid}&id={$id}&page={$page}'',\n    ''example'' => ''index.php?m=content&c=index&a=show&catid=1&id=1'',\n  ),\n  17 => \n  array (\n    ''urlruleid'' => ''17'',\n    ''module'' => ''content'',\n    ''file'' => ''show'',\n    ''ishtml'' => ''0'',\n    ''urlrule'' => ''show-{$catid}-{$id}-{$page}.html'',\n    ''example'' => ''show-1-2-1.html'',\n  ),\n  18 => \n  array (\n    ''urlruleid'' => ''18'',\n    ''module'' => ''content'',\n    ''file'' => ''show'',\n    ''ishtml'' => ''0'',\n    ''urlrule'' => ''content-{$catid}-{$id}-{$page}.html'',\n    ''example'' => ''content-1-2-1.html'',\n  ),\n  30 => \n  array (\n    ''urlruleid'' => ''30'',\n    ''module'' => ''content'',\n    ''file'' => ''category'',\n    ''ishtml'' => ''0'',\n    ''urlrule'' => ''list-{$catid}-{$page}.html'',\n    ''example'' => ''list-1-1.html'',\n  ),\n);\n?>'),
@@ -373,7 +379,7 @@ INSERT DELAYED IGNORE INTO `cban_cache` (`filename`, `path`, `data`) VALUES
 ('member_model.cache.php', 'caches_commons/caches_data/', '<?php\nreturn array (\n  10 => \n  array (\n    ''modelid'' => ''10'',\n    ''siteid'' => ''1'',\n    ''name'' => ''普通会员'',\n    ''description'' => ''普通会员'',\n    ''tablename'' => ''member_detail'',\n    ''setting'' => '''',\n    ''addtime'' => ''0'',\n    ''items'' => ''0'',\n    ''enablesearch'' => ''1'',\n    ''disabled'' => ''0'',\n    ''default_style'' => '''',\n    ''category_template'' => '''',\n    ''list_template'' => '''',\n    ''show_template'' => '''',\n    ''js_template'' => '''',\n    ''admin_list_template'' => '''',\n    ''member_add_template'' => '''',\n    ''member_list_template'' => '''',\n    ''sort'' => ''1'',\n    ''type'' => ''2'',\n  ),\n  12 => \n  array (\n    ''modelid'' => ''12'',\n    ''siteid'' => ''1'',\n    ''name'' => ''门店会员'',\n    ''description'' => ''门店会员'',\n    ''tablename'' => ''member_md'',\n    ''setting'' => '''',\n    ''addtime'' => ''0'',\n    ''items'' => ''0'',\n    ''enablesearch'' => ''1'',\n    ''disabled'' => ''0'',\n    ''default_style'' => '''',\n    ''category_template'' => '''',\n    ''list_template'' => '''',\n    ''show_template'' => '''',\n    ''js_template'' => '''',\n    ''admin_list_template'' => '''',\n    ''member_add_template'' => '''',\n    ''member_list_template'' => '''',\n    ''sort'' => ''2'',\n    ''type'' => ''2'',\n  ),\n  13 => \n  array (\n    ''modelid'' => ''13'',\n    ''siteid'' => ''1'',\n    ''name'' => ''企业会员'',\n    ''description'' => ''企业会员'',\n    ''tablename'' => ''member_qy'',\n    ''setting'' => '''',\n    ''addtime'' => ''0'',\n    ''items'' => ''0'',\n    ''enablesearch'' => ''1'',\n    ''disabled'' => ''0'',\n    ''default_style'' => '''',\n    ''category_template'' => '''',\n    ''list_template'' => '''',\n    ''show_template'' => '''',\n    ''js_template'' => '''',\n    ''admin_list_template'' => '''',\n    ''member_add_template'' => '''',\n    ''member_list_template'' => '''',\n    ''sort'' => ''3'',\n    ''type'' => ''2'',\n  ),\n);\n?>'),
 ('special.cache.php', 'caches_commons/caches_data/', '<?php\nreturn array (\n);\n?>'),
 ('common.cache.php', 'caches_commons/caches_data/', '<?php\nreturn array (\n  ''admin_email'' => ''phpcms@phpcms.cn'',\n  ''adminaccessip'' => ''0'',\n  ''maxloginfailedtimes'' => ''8'',\n  ''maxiplockedtime'' => ''15'',\n  ''minrefreshtime'' => ''2'',\n  ''mail_type'' => ''1'',\n  ''mail_server'' => ''smtp.qq.com'',\n  ''mail_port'' => ''25'',\n  ''mail_user'' => ''phpcms.cn@foxmail.com'',\n  ''mail_auth'' => ''1'',\n  ''mail_from'' => ''phpcms.cn@foxmail.com'',\n  ''mail_password'' => '''',\n  ''errorlog_size'' => ''20'',\n);\n?>'),
-('category_items_1.cache.php', 'caches_commons/caches_data/', '<?php\nreturn array (\n  41 => ''0'',\n  42 => ''0'',\n  43 => ''0'',\n);\n?>'),
+('category_items_1.cache.php', 'caches_commons/caches_data/', '<?php\nreturn array (\n  41 => ''0'',\n  42 => ''0'',\n);\n?>'),
 ('category_items_2.cache.php', 'caches_commons/caches_data/', '<?php\nreturn array (\n);\n?>'),
 ('category_items_3.cache.php', 'caches_commons/caches_data/', '<?php\nreturn array (\n);\n?>'),
 ('category_items_11.cache.php', 'caches_commons/caches_data/', '<?php\nreturn array (\n);\n?>'),
@@ -391,7 +397,7 @@ INSERT DELAYED IGNORE INTO `cban_cache` (`filename`, `path`, `data`) VALUES
 -- 表的结构 `cban_category`
 -- 
 -- 创建时间: 2014 年 08 月 04 日 08:57
--- 最后更新时间: 2014 年 08 月 04 日 16:12
+-- 最后更新时间: 2014 年 08 月 05 日 09:30
 -- 
 
 DROP TABLE IF EXISTS `cban_category`;
@@ -430,9 +436,8 @@ CREATE TABLE IF NOT EXISTS `cban_category` (
 -- 
 
 INSERT DELAYED IGNORE INTO `cban_category` (`catid`, `siteid`, `module`, `type`, `modelid`, `parentid`, `arrparentid`, `child`, `arrchildid`, `catname`, `style`, `image`, `description`, `parentdir`, `catdir`, `url`, `items`, `hits`, `setting`, `listorder`, `ismenu`, `sethtml`, `letter`, `usable_type`) VALUES 
-(41, 1, 'content', 0, 1, 0, '0', 1, '41,43,42', '行业资讯', '', '', '', '', 'hyzx', 'http://127.0.0.1:8080/cban/index.php?m=content&c=index&a=lists&catid=41', 0, 0, 'array (\n  ''workflowid'' => '''',\n  ''ishtml'' => ''0'',\n  ''content_ishtml'' => ''0'',\n  ''create_to_html_root'' => ''0'',\n  ''template_list'' => ''cban'',\n  ''category_template'' => ''category'',\n  ''list_template'' => ''list'',\n  ''show_template'' => ''show'',\n  ''meta_title'' => '''',\n  ''meta_keywords'' => '''',\n  ''meta_description'' => '''',\n  ''presentpoint'' => ''1'',\n  ''defaultchargepoint'' => ''0'',\n  ''paytype'' => ''0'',\n  ''repeatchargedays'' => ''1'',\n  ''category_ruleid'' => ''6'',\n  ''show_ruleid'' => ''16'',\n)', 1, 1, 0, 'xingyezixun', ''),
-(42, 1, 'content', 0, 1, 41, '0,41', 0, '42', '家电新闻', '', '', '', 'hyzx/', 'jdxw', 'http://127.0.0.1:8080/cban/index.php?m=content&c=index&a=lists&catid=42', 0, 0, 'array (\n  ''workflowid'' => '''',\n  ''ishtml'' => ''0'',\n  ''content_ishtml'' => ''0'',\n  ''create_to_html_root'' => ''0'',\n  ''template_list'' => ''cban'',\n  ''category_template'' => ''category'',\n  ''list_template'' => ''list'',\n  ''show_template'' => ''show'',\n  ''meta_title'' => '''',\n  ''meta_keywords'' => '''',\n  ''meta_description'' => '''',\n  ''presentpoint'' => ''1'',\n  ''defaultchargepoint'' => ''0'',\n  ''paytype'' => ''0'',\n  ''repeatchargedays'' => ''1'',\n  ''category_ruleid'' => ''6'',\n  ''show_ruleid'' => ''16'',\n)', 42, 1, 0, 'jiadianxinwen', ''),
-(43, 1, 'content', 0, 1, 41, '0,41', 0, '43', '近期热点', '', '', '', '/', 'jqrd', 'http://127.0.0.1:8080/cban/index.php?m=content&c=index&a=lists&catid=43', 0, 0, 'array (\n  ''workflowid'' => '''',\n  ''ishtml'' => ''0'',\n  ''content_ishtml'' => ''0'',\n  ''create_to_html_root'' => ''0'',\n  ''template_list'' => ''cban'',\n  ''category_template'' => ''category'',\n  ''list_template'' => ''list'',\n  ''show_template'' => ''show'',\n  ''meta_title'' => '''',\n  ''meta_keywords'' => '''',\n  ''meta_description'' => '''',\n  ''presentpoint'' => ''1'',\n  ''defaultchargepoint'' => ''0'',\n  ''paytype'' => ''0'',\n  ''repeatchargedays'' => ''1'',\n  ''category_ruleid'' => ''6'',\n  ''show_ruleid'' => ''16'',\n)', 43, 1, 0, 'jinqiredian', ''),
+(41, 1, 'content', 0, 1, 0, '0', 1, '41,42', '行业资讯', '', '', '', '', 'hyzx', 'http://127.0.0.1:8080/cban/index.php?m=content&c=index&a=lists&catid=41', 0, 0, 'array (\n  ''workflowid'' => '''',\n  ''ishtml'' => ''0'',\n  ''content_ishtml'' => ''0'',\n  ''create_to_html_root'' => ''0'',\n  ''template_list'' => ''cban'',\n  ''category_template'' => ''category'',\n  ''list_template'' => ''list_hyzx'',\n  ''show_template'' => ''show'',\n  ''meta_title'' => '''',\n  ''meta_keywords'' => '''',\n  ''meta_description'' => '''',\n  ''presentpoint'' => ''1'',\n  ''defaultchargepoint'' => ''0'',\n  ''paytype'' => ''0'',\n  ''repeatchargedays'' => ''1'',\n  ''category_ruleid'' => ''6'',\n  ''show_ruleid'' => ''16'',\n)', 1, 1, 0, 'xingyezixun', ''),
+(42, 1, 'content', 0, 1, 41, '0,41', 0, '42', '家电新闻', '', '', '', 'hyzx/', 'jdxw', 'http://127.0.0.1:8080/cban/index.php?m=content&c=index&a=lists&catid=42', 0, 0, 'array (\n  ''workflowid'' => '''',\n  ''ishtml'' => ''0'',\n  ''content_ishtml'' => ''0'',\n  ''create_to_html_root'' => ''0'',\n  ''template_list'' => ''cban'',\n  ''category_template'' => ''category'',\n  ''list_template'' => ''list_hyzx'',\n  ''show_template'' => ''show'',\n  ''meta_title'' => '''',\n  ''meta_keywords'' => '''',\n  ''meta_description'' => '''',\n  ''presentpoint'' => ''1'',\n  ''defaultchargepoint'' => ''0'',\n  ''paytype'' => ''0'',\n  ''repeatchargedays'' => ''1'',\n  ''category_ruleid'' => ''6'',\n  ''show_ruleid'' => ''16'',\n)', 42, 1, 0, 'jiadianxinwen', ''),
 (9, 1, 'content', 0, 15, 0, '0', 0, '9', '门店信息发布', '', '', '', '', 'mdxxfb', 'http://127.0.0.1:8080/cban/index.php?m=content&c=index&a=lists&catid=9', 1, 0, 'array (\n  ''workflowid'' => ''1'',\n  ''ishtml'' => ''0'',\n  ''content_ishtml'' => ''0'',\n  ''create_to_html_root'' => ''0'',\n  ''template_list'' => ''cban'',\n  ''category_template'' => ''category'',\n  ''list_template'' => ''list'',\n  ''show_template'' => ''show'',\n  ''meta_title'' => '''',\n  ''meta_keywords'' => '''',\n  ''meta_description'' => '''',\n  ''presentpoint'' => ''1'',\n  ''defaultchargepoint'' => ''0'',\n  ''paytype'' => ''0'',\n  ''repeatchargedays'' => ''1'',\n  ''category_ruleid'' => ''6'',\n  ''show_ruleid'' => ''16'',\n)', 19, 0, 0, 'mendianxinxifabu', ''),
 (10, 1, 'content', 0, 16, 0, '0', 0, '10', '企业信息发布', '', '', '', '', 'qyxxfb', 'http://127.0.0.1:8080/cban/index.php?m=content&c=index&a=lists&catid=10', 1, 0, 'array (\n  ''workflowid'' => ''1'',\n  ''ishtml'' => ''0'',\n  ''content_ishtml'' => ''0'',\n  ''create_to_html_root'' => ''0'',\n  ''template_list'' => ''cban'',\n  ''category_template'' => ''category'',\n  ''list_template'' => ''list'',\n  ''show_template'' => ''show'',\n  ''meta_title'' => '''',\n  ''meta_keywords'' => '''',\n  ''meta_description'' => '''',\n  ''presentpoint'' => ''1'',\n  ''defaultchargepoint'' => ''0'',\n  ''paytype'' => ''0'',\n  ''repeatchargedays'' => ''1'',\n  ''category_ruleid'' => ''6'',\n  ''show_ruleid'' => ''16'',\n)', 20, 0, 0, 'qiyexinxifabu', ''),
 (11, 1, 'content', 2, 0, 0, '', 0, '', '千县万店', '', '', '', '', '', '/index.php?m=cban&c=index&a=qxwd', 0, 0, 'array (\n  ''show_ruleid'' => '''',\n  ''repeatchargedays'' => ''1'',\n)', 4, 1, 0, '', ''),
@@ -749,7 +754,7 @@ INSERT DELAYED IGNORE INTO `cban_comment_table` (`tableid`, `total`, `creat_at`)
 -- 表的结构 `cban_content_check`
 -- 
 -- 创建时间: 2014 年 08 月 04 日 08:57
--- 最后更新时间: 2014 年 08 月 04 日 09:25
+-- 最后更新时间: 2014 年 08 月 05 日 11:30
 -- 
 
 DROP TABLE IF EXISTS `cban_content_check`;
@@ -772,7 +777,7 @@ CREATE TABLE IF NOT EXISTS `cban_content_check` (
 
 INSERT DELAYED IGNORE INTO `cban_content_check` (`checkid`, `catid`, `siteid`, `title`, `username`, `inputtime`, `status`) VALUES 
 ('c-1-15', 9, 1, '1234567', 'nima', 1406033659, 1),
-('c-2-16', 10, 1, '企业信息发布111', 'hehe', 1406106315, 1);
+('c-2-16', 10, 1, '企业信息发布111', 'hehe', 1406106315, 99);
 
 -- --------------------------------------------------------
 
@@ -1088,7 +1093,7 @@ CREATE TABLE IF NOT EXISTS `cban_keylink` (
 -- 表的结构 `cban_keyword`
 -- 
 -- 创建时间: 2014 年 08 月 04 日 08:57
--- 最后更新时间: 2014 年 08 月 04 日 09:25
+-- 最后更新时间: 2014 年 08 月 05 日 11:30
 -- 
 
 DROP TABLE IF EXISTS `cban_keyword`;
@@ -1110,7 +1115,7 @@ CREATE TABLE IF NOT EXISTS `cban_keyword` (
 INSERT DELAYED IGNORE INTO `cban_keyword` (`id`, `siteid`, `keyword`, `pinyin`, `videonum`, `searchnums`) VALUES 
 (1, 1, 'dfsadfasdf', 'dfsadfasdf', 14, 0),
 (2, 1, '1234567', '1234567', 6, 0),
-(3, 1, '企业信息发布', 'qiyexinxifabu', 5, 0);
+(3, 1, '企业信息发布', 'qiyexinxifabu', 14, 0);
 
 -- --------------------------------------------------------
 
@@ -4534,7 +4539,7 @@ INSERT DELAYED IGNORE INTO `cban_linkage` (`linkageid`, `name`, `style`, `parent
 -- 表的结构 `cban_log`
 -- 
 -- 创建时间: 2014 年 08 月 04 日 08:57
--- 最后更新时间: 2014 年 08 月 04 日 16:12
+-- 最后更新时间: 2014 年 08 月 05 日 11:14
 -- 
 
 DROP TABLE IF EXISTS `cban_log`;
@@ -4554,7 +4559,7 @@ CREATE TABLE IF NOT EXISTS `cban_log` (
   PRIMARY KEY  (`logid`),
   KEY `module` (`module`,`file`,`action`),
   KEY `username` (`username`,`action`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=658 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=719 ;
 
 -- 
 -- 导出表中的数据 `cban_log`
@@ -5218,7 +5223,68 @@ INSERT DELAYED IGNORE INTO `cban_log` (`logid`, `field`, `value`, `module`, `fil
 (654, '', 0, 'admin', '', 'category', '?m=admin&c=category&a=add', '', 1, 'admin', '127.0.0.1', '2014-08-04 16:10:55'),
 (655, '', 0, 'admin', '', 'category', '?m=admin&c=category&a=add', '', 1, 'admin', '127.0.0.1', '2014-08-04 16:11:21'),
 (656, '', 0, 'admin', '', 'category', '?m=admin&c=category&a=add', '', 1, 'admin', '127.0.0.1', '2014-08-04 16:11:27'),
-(657, '', 0, 'admin', '', 'category', '?m=admin&c=category&a=add', '', 1, 'admin', '127.0.0.1', '2014-08-04 16:12:03');
+(657, '', 0, 'admin', '', 'category', '?m=admin&c=category&a=add', '', 1, 'admin', '127.0.0.1', '2014-08-04 16:12:03'),
+(658, '', 0, 'admin', '', 'index', '?m=admin&c=index&a=login', '', 0, '', '127.0.0.1', '2014-08-05 09:21:54'),
+(659, '', 0, 'admin', '', 'index', '?m=admin&c=index&a=login', '', 0, '', '127.0.0.1', '2014-08-05 09:22:02'),
+(660, '', 0, 'admin', '', 'category', '?m=admin&c=category&a=delete', '', 1, 'admin', '127.0.0.1', '2014-08-05 09:22:42'),
+(661, '', 0, 'admin', '', 'category', '?m=admin&c=category&a=edit', '', 1, 'admin', '127.0.0.1', '2014-08-05 09:22:47'),
+(662, '', 0, 'admin', '', 'category', '?m=admin&c=category&a=edit', '', 1, 'admin', '127.0.0.1', '2014-08-05 09:23:42'),
+(663, '', 0, 'admin', '', 'category', '?m=admin&c=category&a=edit', '', 1, 'admin', '127.0.0.1', '2014-08-05 09:25:32'),
+(664, '', 0, 'admin', '', 'category', '?m=admin&c=category&a=edit', '', 1, 'admin', '127.0.0.1', '2014-08-05 09:26:05'),
+(665, '', 0, 'admin', '', 'category', '?m=admin&c=category&a=edit', '', 1, 'admin', '127.0.0.1', '2014-08-05 09:26:14'),
+(666, '', 0, 'admin', '', 'category', '?m=admin&c=category&a=edit', '', 1, 'admin', '127.0.0.1', '2014-08-05 09:26:48'),
+(667, '', 0, 'admin', '', 'category', '?m=admin&c=category&a=edit', '', 1, 'admin', '127.0.0.1', '2014-08-05 09:26:53'),
+(668, '', 0, 'admin', '', 'category', '?m=admin&c=category&a=edit', '', 1, 'admin', '127.0.0.1', '2014-08-05 09:27:10'),
+(669, '', 0, 'admin', '', 'category', '?m=admin&c=category&a=edit', '', 1, 'admin', '127.0.0.1', '2014-08-05 09:27:18'),
+(670, '', 0, 'admin', '', 'category', '?m=admin&c=category&a=edit', '', 1, 'admin', '127.0.0.1', '2014-08-05 09:27:29'),
+(671, '', 0, 'admin', '', 'category', '?m=admin&c=category&a=edit', '', 1, 'admin', '127.0.0.1', '2014-08-05 09:27:35'),
+(672, '', 0, 'content', '', 'content', '?m=content&c=content&a=edit', '', 1, 'admin', '127.0.0.1', '2014-08-05 09:46:59'),
+(673, '', 0, 'content', '', 'content', '?m=content&c=content&a=edit', '', 1, 'admin', '127.0.0.1', '2014-08-05 09:47:16'),
+(674, '', 0, 'admin', '', 'position', '?m=admin&c=position&a=add', '', 1, 'admin', '127.0.0.1', '2014-08-05 09:48:43'),
+(675, '', 0, 'admin', '', 'position', '?m=admin&c=position&a=add', '', 1, 'admin', '127.0.0.1', '2014-08-05 09:51:49'),
+(676, '', 0, 'admin', '', 'position', '?m=admin&c=position&a=listorder', '', 1, 'admin', '127.0.0.1', '2014-08-05 09:52:22'),
+(677, '', 0, 'content', '', 'sitemodel_field', '?m=content&c=sitemodel_field&a=edit', '', 1, 'admin', '127.0.0.1', '2014-08-05 09:59:23'),
+(678, '', 0, 'content', '', 'sitemodel_field', '?m=content&c=sitemodel_field&a=edit', '', 1, 'admin', '127.0.0.1', '2014-08-05 10:00:01'),
+(679, '', 0, 'content', '', 'sitemodel_field', '?m=content&c=sitemodel_field&a=edit', '', 1, 'admin', '127.0.0.1', '2014-08-05 10:00:24'),
+(680, '', 0, 'content', '', 'sitemodel_field', '?m=content&c=sitemodel_field&a=disabled', '', 1, 'admin', '127.0.0.1', '2014-08-05 10:00:35'),
+(681, '', 0, 'content', '', 'sitemodel_field', '?m=content&c=sitemodel_field&a=disabled', '', 1, 'admin', '127.0.0.1', '2014-08-05 10:00:47'),
+(682, '', 0, 'content', '', 'sitemodel_field', '?m=content&c=sitemodel_field&a=edit', '', 1, 'admin', '127.0.0.1', '2014-08-05 10:04:05'),
+(683, '', 0, 'content', '', 'sitemodel_field', '?m=content&c=sitemodel_field&a=edit', '', 1, 'admin', '127.0.0.1', '2014-08-05 10:07:42'),
+(684, '', 0, 'content', '', 'sitemodel_field', '?m=content&c=sitemodel_field&a=edit', '', 1, 'admin', '127.0.0.1', '2014-08-05 10:07:47'),
+(685, '', 0, 'admin', '', 'category', '?m=admin&c=category&a=add', '', 1, 'admin', '127.0.0.1', '2014-08-05 10:08:05'),
+(686, '', 0, 'content', '', 'sitemodel_field', '?m=content&c=sitemodel_field&a=disabled', '', 1, 'admin', '127.0.0.1', '2014-08-05 10:08:54'),
+(687, '', 0, 'content', '', 'sitemodel_field', '?m=content&c=sitemodel_field&a=disabled', '', 1, 'admin', '127.0.0.1', '2014-08-05 10:09:12'),
+(688, '', 0, 'content', '', 'sitemodel_field', '?m=content&c=sitemodel_field&a=edit', '', 1, 'admin', '127.0.0.1', '2014-08-05 10:09:17'),
+(689, '', 0, 'content', '', 'sitemodel_field', '?m=content&c=sitemodel_field&a=edit', '', 1, 'admin', '127.0.0.1', '2014-08-05 10:09:34'),
+(690, '', 0, 'content', '', 'sitemodel_field', '?m=content&c=sitemodel_field&a=edit', '', 1, 'admin', '127.0.0.1', '2014-08-05 10:09:42'),
+(691, '', 0, 'content', '', 'sitemodel_field', '?m=content&c=sitemodel_field&a=edit', '', 1, 'admin', '127.0.0.1', '2014-08-05 10:10:07'),
+(692, '', 0, 'content', '', 'sitemodel_field', '?m=content&c=sitemodel_field&a=delete', '', 1, 'admin', '127.0.0.1', '2014-08-05 10:10:36'),
+(693, '', 0, 'content', '', 'sitemodel_field', '?m=content&c=sitemodel_field&a=add', '', 1, 'admin', '127.0.0.1', '2014-08-05 10:10:39'),
+(694, '', 0, 'content', '', 'sitemodel_field', '?m=content&c=sitemodel_field&a=add', '', 1, 'admin', '127.0.0.1', '2014-08-05 10:11:18'),
+(695, '', 0, 'content', '', 'sitemodel_field', '?m=content&c=sitemodel_field&a=edit', '', 1, 'admin', '127.0.0.1', '2014-08-05 10:11:41'),
+(696, '', 0, 'content', '', 'sitemodel_field', '?m=content&c=sitemodel_field&a=edit', '', 1, 'admin', '127.0.0.1', '2014-08-05 10:11:46'),
+(697, '', 0, 'content', '', 'sitemodel_field', '?m=content&c=sitemodel_field&a=edit', '', 1, 'admin', '127.0.0.1', '2014-08-05 10:12:00'),
+(698, '', 0, 'content', '', 'sitemodel_field', '?m=content&c=sitemodel_field&a=edit', '', 1, 'admin', '127.0.0.1', '2014-08-05 10:12:39'),
+(699, '', 0, 'content', '', 'sitemodel_field', '?m=content&c=sitemodel_field&a=listorder', '', 1, 'admin', '127.0.0.1', '2014-08-05 10:12:44'),
+(700, '', 0, 'content', '', 'content', '?m=content&c=content&a=edit', '', 1, 'admin', '127.0.0.1', '2014-08-05 10:16:04'),
+(701, '', 0, 'content', '', 'sitemodel_field', '?m=content&c=sitemodel_field&a=add', '', 1, 'admin', '127.0.0.1', '2014-08-05 10:31:20'),
+(702, '', 0, 'content', '', 'sitemodel_field', '?m=content&c=sitemodel_field&a=add', '', 1, 'admin', '127.0.0.1', '2014-08-05 10:32:13'),
+(703, '', 0, 'content', '', 'sitemodel_field', '?m=content&c=sitemodel_field&a=listorder', '', 1, 'admin', '127.0.0.1', '2014-08-05 10:32:20'),
+(704, '', 0, 'content', '', 'sitemodel_field', '?m=content&c=sitemodel_field&a=edit', '', 1, 'admin', '127.0.0.1', '2014-08-05 10:40:22'),
+(705, '', 0, 'content', '', 'sitemodel_field', '?m=content&c=sitemodel_field&a=edit', '', 1, 'admin', '127.0.0.1', '2014-08-05 10:40:30'),
+(706, '', 0, 'content', '', 'sitemodel_field', '?m=content&c=sitemodel_field&a=edit', '', 1, 'admin', '127.0.0.1', '2014-08-05 10:40:44'),
+(707, '', 0, 'content', '', 'sitemodel_field', '?m=content&c=sitemodel_field&a=edit', '', 1, 'admin', '127.0.0.1', '2014-08-05 10:40:54'),
+(708, '', 0, 'content', '', 'sitemodel_field', '?m=content&c=sitemodel_field&a=edit', '', 1, 'admin', '127.0.0.1', '2014-08-05 10:40:59'),
+(709, '', 0, 'content', '', 'sitemodel_field', '?m=content&c=sitemodel_field&a=edit', '', 1, 'admin', '127.0.0.1', '2014-08-05 10:43:09'),
+(710, '', 0, 'content', '', 'create_html', '?m=content&c=create_html&a=show', '', 1, 'admin', '127.0.0.1', '2014-08-05 10:45:55'),
+(711, '', 0, 'content', '', 'create_html', '?m=content&c=create_html&a=show', '', 1, 'admin', '127.0.0.1', '2014-08-05 10:46:01'),
+(712, '', 0, 'content', '', 'create_html', '?m=content&c=create_html&a=show', '', 1, 'admin', '127.0.0.1', '2014-08-05 10:46:04'),
+(713, '', 0, 'content', '', 'create_html', '?m=content&c=create_html&a=show', '', 1, 'admin', '127.0.0.1', '2014-08-05 10:46:05'),
+(714, '', 0, 'content', '', 'content', '?m=content&c=content&a=edit', '', 1, 'admin', '127.0.0.1', '2014-08-05 11:13:38'),
+(715, '', 0, 'content', '', 'content', '?m=content&c=content&a=edit', '', 1, 'admin', '127.0.0.1', '2014-08-05 11:13:47'),
+(716, '', 0, 'admin', '', 'position', '?m=admin&c=position&a=delete', '', 1, 'admin', '127.0.0.1', '2014-08-05 11:13:58'),
+(717, '', 0, 'content', '', 'content', '?m=content&c=content&a=edit', '', 1, 'admin', '127.0.0.1', '2014-08-05 11:14:14'),
+(718, '', 0, 'content', '', 'content', '?m=content&c=content&a=pass', '', 1, 'admin', '127.0.0.1', '2014-08-05 11:14:23');
 
 -- --------------------------------------------------------
 
@@ -5226,7 +5292,7 @@ INSERT DELAYED IGNORE INTO `cban_log` (`logid`, `field`, `value`, `module`, `fil
 -- 表的结构 `cban_member`
 -- 
 -- 创建时间: 2014 年 08 月 04 日 08:57
--- 最后更新时间: 2014 年 08 月 04 日 09:55
+-- 最后更新时间: 2014 年 08 月 05 日 11:30
 -- 
 
 DROP TABLE IF EXISTS `cban_member`;
@@ -5268,7 +5334,7 @@ CREATE TABLE IF NOT EXISTS `cban_member` (
 
 INSERT DELAYED IGNORE INTO `cban_member` (`userid`, `phpssouid`, `username`, `password`, `encrypt`, `nickname`, `regdate`, `lastdate`, `regip`, `lastip`, `loginnum`, `email`, `groupid`, `areaid`, `amount`, `point`, `modelid`, `message`, `islock`, `vip`, `overduedate`, `siteid`, `connectid`, `from`, `mobile`) VALUES 
 (1, 1, 'nima', 'e3cdebc9a303d1e78b623146821d6192', 'D8IK1j', 'nima', 1406013245, 1407116558, '127.0.0.1', '127.0.0.1', 0, 'nima@qq.com', 2, 0, 0.00, 4, 12, 0, 0, 0, 0, 1, '', '', ''),
-(2, 2, 'hehe', '7f30f0b731b883d2aae66a4d4dddc366', '4sGUlJ', 'hehe', 1406013385, 1406790472, '127.0.0.1', '127.0.0.1', 0, 'hehe@qq.com', 2, 0, 0.00, 0, 13, 0, 0, 0, 0, 1, '', '', '');
+(2, 2, 'hehe', '7f30f0b731b883d2aae66a4d4dddc366', '4sGUlJ', 'hehe', 1406013385, 1407203879, '127.0.0.1', '127.0.0.1', 0, 'hehe@qq.com', 2, 0, 0.00, 1, 13, 0, 0, 0, 0, 1, '', '', '');
 
 -- --------------------------------------------------------
 
@@ -6004,7 +6070,7 @@ INSERT DELAYED IGNORE INTO `cban_model` (`modelid`, `siteid`, `name`, `descripti
 -- 表的结构 `cban_model_field`
 -- 
 -- 创建时间: 2014 年 08 月 04 日 08:57
--- 最后更新时间: 2014 年 08 月 04 日 08:57
+-- 最后更新时间: 2014 年 08 月 05 日 10:41
 -- 最后检查时间: 2014 年 08 月 04 日 08:57
 -- 
 
@@ -6040,7 +6106,7 @@ CREATE TABLE IF NOT EXISTS `cban_model_field` (
   PRIMARY KEY  (`fieldid`),
   KEY `modelid` (`modelid`,`disabled`),
   KEY `field` (`field`,`modelid`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=197 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=199 ;
 
 -- 
 -- 导出表中的数据 `cban_model_field`
@@ -6211,7 +6277,8 @@ INSERT DELAYED IGNORE INTO `cban_model_field` (`fieldid`, `modelid`, `siteid`, `
 (193, 16, 1, 'weixin', '微信', '', '', 0, 25, '', '', 'text', 'array (\n  ''size'' => ''25'',\n  ''defaultvalue'' => '''',\n  ''ispassword'' => ''0'',\n)', '', '', '', 0, 1, 0, 1, 0, 1, 1, 0, 13, 0, 0),
 (194, 16, 1, 'tel', '联系人手机', '', '', 0, 11, '', '', 'text', 'array (\n  ''size'' => ''25'',\n  ''defaultvalue'' => '''',\n  ''ispassword'' => ''0'',\n)', '', '', '', 0, 1, 0, 1, 0, 1, 1, 0, 10, 0, 0),
 (195, 16, 1, 'pinpai', '品牌LOGO', '最多只能发布10个品牌，请在后面的输入框中输入品牌名称<br />双击第一个输入框可以预览图片<br />', '', 0, 0, '', '', 'images', 'array (\n  ''upload_allowext'' => ''gif|jpg|jpeg|png|bmp'',\n  ''isselectimage'' => ''0'',\n  ''upload_number'' => ''10'',\n)', '', '', '', 0, 0, 0, 1, 0, 1, 0, 0, 14, 0, 0),
-(196, 16, 1, 'logo', '企业LOGO', '', '', 0, 0, '', '', 'image', 'array (\n  ''size'' => '''',\n  ''defaultvalue'' => '''',\n  ''show_type'' => ''0'',\n  ''upload_maxsize'' => '''',\n  ''upload_allowext'' => ''gif|jpg|jpeg|png|bmp'',\n  ''watermark'' => ''0'',\n  ''isselectimage'' => ''0'',\n  ''images_width'' => '''',\n  ''images_height'' => '''',\n)', '', '', '', 0, 1, 0, 1, 0, 1, 0, 0, 15, 0, 0);
+(198, 16, 1, 'cptype', '产品类型', '', '', 0, 50, '', '', 'text', 'array (\n  ''size'' => ''50'',\n  ''defaultvalue'' => '''',\n  ''ispassword'' => ''0'',\n)', '', '', '', 0, 1, 0, 1, 0, 1, 1, 1, 16, 0, 0),
+(197, 16, 1, 'qylogo', '企业LOGO', '', '', 0, 100, '', '', 'image', 'array (\n  ''size'' => ''50'',\n  ''defaultvalue'' => '''',\n  ''show_type'' => ''1'',\n  ''upload_maxsize'' => '''',\n  ''upload_allowext'' => ''gif|jpg|jpeg|png|bmp'',\n  ''watermark'' => ''0'',\n  ''isselectimage'' => ''1'',\n  ''images_width'' => '''',\n  ''images_height'' => '''',\n)', '', '', '', 0, 1, 0, 1, 0, 1, 0, 1, 15, 0, 0);
 
 -- --------------------------------------------------------
 
@@ -6465,8 +6532,8 @@ INSERT DELAYED IGNORE INTO `cban_news_md_data` (`id`, `content`, `readpoint`, `g
 -- 
 -- 表的结构 `cban_news_qy`
 -- 
--- 创建时间: 2014 年 08 月 04 日 08:57
--- 最后更新时间: 2014 年 08 月 04 日 08:57
+-- 创建时间: 2014 年 08 月 05 日 10:40
+-- 最后更新时间: 2014 年 08 月 05 日 11:14
 -- 
 
 DROP TABLE IF EXISTS `cban_news_qy`;
@@ -6496,7 +6563,8 @@ CREATE TABLE IF NOT EXISTS `cban_news_qy` (
   `qq` varchar(15) NOT NULL default '',
   `weixin` varchar(25) NOT NULL default '',
   `tel` varchar(11) NOT NULL default '',
-  `logo` varchar(255) NOT NULL default '',
+  `qylogo` varchar(100) NOT NULL default '',
+  `cptype` varchar(50) NOT NULL default '',
   PRIMARY KEY  (`id`),
   KEY `status` (`status`,`listorder`,`id`),
   KEY `listorder` (`catid`,`status`,`listorder`,`id`),
@@ -6507,8 +6575,8 @@ CREATE TABLE IF NOT EXISTS `cban_news_qy` (
 -- 导出表中的数据 `cban_news_qy`
 -- 
 
-INSERT DELAYED IGNORE INTO `cban_news_qy` (`id`, `catid`, `typeid`, `title`, `style`, `thumb`, `keywords`, `description`, `posids`, `url`, `listorder`, `status`, `sysadd`, `islink`, `username`, `inputtime`, `updatetime`, `diqu`, `add`, `lxr`, `dianhua`, `fax`, `qq`, `weixin`, `tel`, `logo`) VALUES 
-(2, 10, 0, '企业信息发布111', '', '', '企业信息发布', '企业信息发布', 0, 'http://127.0.0.1:8080/cban/index.php?m=content&c=index&a=show&catid=10&id=2', 0, 1, 0, 0, 'hehe', 1406793669, 1406793669, 281, '111111111111111111111111111111111111111111111111111111111', '1111', '11111111', '', '', '', '', '');
+INSERT DELAYED IGNORE INTO `cban_news_qy` (`id`, `catid`, `typeid`, `title`, `style`, `thumb`, `keywords`, `description`, `posids`, `url`, `listorder`, `status`, `sysadd`, `islink`, `username`, `inputtime`, `updatetime`, `diqu`, `add`, `lxr`, `dianhua`, `fax`, `qq`, `weixin`, `tel`, `qylogo`, `cptype`) VALUES 
+(2, 10, 0, '企业信息发布111', '', 'http://127.0.0.1:8080/cban/uploadfile/2014/0804/20140804095425390.jpg', '企业信息发布', '一个国家经济的崛起有赖于一批民族企业的壮大。  "诞生  "于改革开放之初的TCL，现已成长为有抱负的  "青年  "。作为率先国际化的中国企业，TCL没有任何可以借鉴的蓝本', 1, 'http://127.0.0.1:8080/cban/index.php?m=content&c=index&a=show&catid=10&id=2', 0, 99, 0, 0, 'hehe', 1407207124, 1407208427, 241, '111111111111111111111111111111111111111111111111111111111', '1111', '11111111', '', '', '', '', 'http://127.0.0.1:8080/cban/uploadfile/2014/0805/20140805101359656.gif', '电视、空调、洗衣机');
 
 -- --------------------------------------------------------
 
@@ -6516,7 +6584,7 @@ INSERT DELAYED IGNORE INTO `cban_news_qy` (`id`, `catid`, `typeid`, `title`, `st
 -- 表的结构 `cban_news_qy_data`
 -- 
 -- 创建时间: 2014 年 08 月 04 日 08:57
--- 最后更新时间: 2014 年 08 月 04 日 08:57
+-- 最后更新时间: 2014 年 08 月 05 日 10:51
 -- 
 
 DROP TABLE IF EXISTS `cban_news_qy_data`;
@@ -6540,7 +6608,7 @@ CREATE TABLE IF NOT EXISTS `cban_news_qy_data` (
 -- 
 
 INSERT DELAYED IGNORE INTO `cban_news_qy_data` (`id`, `content`, `readpoint`, `groupids_view`, `paginationtype`, `maxcharperpage`, `template`, `paytype`, `allow_comment`, `relation`, `pinpai`) VALUES 
-(2, '企业信息发布', 0, '', 0, 0, '', 0, 1, '', 'array (\n)');
+(2, '<img src="http://127.0.0.1:8080/cban/uploadfile/2014/0804/20140804095425390.jpg" /><br />\r\n一个国家经济的崛起有赖于一批民族企业的壮大。&quot;诞生&quot;于改革开放之初的TCL，现已成长为有抱负的&quot;青年&quot;。作为率先国际化的中国企业，TCL没有任何可以借鉴的蓝本，在全球范围内探索着一条中国品牌从未走过的道路。经过国际化的严峻考验和不懈探索，我们在国际化道路上的步伐更加坚定。', 0, '', 0, 0, '', 0, 1, '', 'array (\n)');
 
 -- --------------------------------------------------------
 
@@ -6574,7 +6642,7 @@ CREATE TABLE IF NOT EXISTS `cban_page` (
 -- 表的结构 `cban_pay_account`
 -- 
 -- 创建时间: 2014 年 08 月 04 日 08:57
--- 最后更新时间: 2014 年 08 月 04 日 08:57
+-- 最后更新时间: 2014 年 08 月 05 日 11:14
 -- 
 
 DROP TABLE IF EXISTS `cban_pay_account`;
@@ -6603,7 +6671,7 @@ CREATE TABLE IF NOT EXISTS `cban_pay_account` (
   KEY `status` (`status`),
   KEY `userid` (`userid`),
   KEY `trade_sn` (`trade_sn`,`money`,`status`,`id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=5 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=6 ;
 
 -- 
 -- 导出表中的数据 `cban_pay_account`
@@ -6613,7 +6681,8 @@ INSERT DELAYED IGNORE INTO `cban_pay_account` (`id`, `trade_sn`, `userid`, `user
 (1, '9_1', 1, 'nima', '', '', '', 0.00, '1', 1, 1406037766, 0, '', 0, 'selfincome', '投稿奖励', 2, '127.0.0.1', 'succ', 'admin'),
 (2, '9_1', 1, 'nima', '', '', '', 0.00, '1', 1, 1406038057, 0, '', 0, 'selfincome', '投稿奖励', 2, '127.0.0.1', 'succ', 'admin'),
 (3, '9_1', 1, 'nima', '', '', '', 0.00, '1', 1, 1406038086, 0, '', 0, 'selfincome', '投稿奖励', 2, '127.0.0.1', 'succ', 'admin'),
-(4, '9_1', 1, 'nima', '', '', '', 0.00, '1', 1, 1406122917, 0, '', 0, 'selfincome', '投稿奖励', 2, '127.0.0.1', 'succ', 'admin');
+(4, '9_1', 1, 'nima', '', '', '', 0.00, '1', 1, 1406122917, 0, '', 0, 'selfincome', '投稿奖励', 2, '127.0.0.1', 'succ', 'admin'),
+(5, '10_2', 2, 'hehe', '', '', '', 0.00, '1', 1, 1407208463, 0, '', 0, 'selfincome', '投稿奖励', 2, '127.0.0.1', 'succ', 'admin');
 
 -- --------------------------------------------------------
 
@@ -6759,7 +6828,7 @@ CREATE TABLE IF NOT EXISTS `cban_picture_data` (
 -- 表的结构 `cban_position`
 -- 
 -- 创建时间: 2014 年 08 月 04 日 08:57
--- 最后更新时间: 2014 年 08 月 04 日 08:57
+-- 最后更新时间: 2014 年 08 月 05 日 11:30
 -- 
 
 DROP TABLE IF EXISTS `cban_position`;
@@ -6774,25 +6843,25 @@ CREATE TABLE IF NOT EXISTS `cban_position` (
   `siteid` smallint(5) unsigned NOT NULL default '0',
   `thumb` varchar(150) NOT NULL default '',
   PRIMARY KEY  (`posid`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=18 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=19 ;
 
 -- 
 -- 导出表中的数据 `cban_position`
 -- 
 
 INSERT DELAYED IGNORE INTO `cban_position` (`posid`, `modelid`, `catid`, `name`, `maxnum`, `extention`, `listorder`, `siteid`, `thumb`) VALUES 
-(1, 0, 0, '首页焦点图推荐', 20, NULL, 1, 1, ''),
-(2, 0, 0, '首页头条推荐', 20, NULL, 4, 1, ''),
-(13, 82, 0, '栏目页焦点图', 20, NULL, 0, 1, ''),
-(5, 69, 0, '推荐下载', 20, NULL, 0, 1, ''),
-(8, 30, 54, '图片频道首页焦点图', 20, NULL, 0, 1, ''),
-(9, 0, 0, '网站顶部推荐', 20, NULL, 0, 1, ''),
-(10, 0, 0, '栏目首页推荐', 20, NULL, 0, 1, ''),
-(12, 0, 0, '首页图片推荐', 20, NULL, 0, 1, ''),
-(14, 0, 0, '视频首页焦点图', 20, '', 0, 1, ''),
-(15, 0, 0, '视频首页头条推荐', 20, '', 0, 1, ''),
-(16, 0, 0, '视频首页每日热点', 20, '', 0, 1, ''),
-(17, 0, 0, '视频栏目精彩推荐', 20, '', 0, 1, '');
+(1, 0, 0, '首页焦点图推荐', 20, NULL, 99, 1, ''),
+(2, 0, 0, '首页头条推荐', 20, NULL, 99, 1, ''),
+(13, 82, 0, '栏目页焦点图', 20, NULL, 99, 1, ''),
+(5, 69, 0, '推荐下载', 20, NULL, 99, 1, ''),
+(8, 30, 54, '图片频道首页焦点图', 20, NULL, 99, 1, ''),
+(9, 0, 0, '网站顶部推荐', 20, NULL, 99, 1, ''),
+(10, 0, 0, '栏目首页推荐', 20, NULL, 99, 1, ''),
+(12, 0, 0, '首页图片推荐', 20, NULL, 99, 1, ''),
+(14, 0, 0, '视频首页焦点图', 20, '', 99, 1, ''),
+(15, 0, 0, '视频首页头条推荐', 20, '', 99, 1, ''),
+(16, 0, 0, '视频首页每日热点', 20, '', 99, 1, ''),
+(17, 0, 0, '视频栏目精彩推荐', 20, '', 99, 1, '');
 
 -- --------------------------------------------------------
 
@@ -6800,7 +6869,7 @@ INSERT DELAYED IGNORE INTO `cban_position` (`posid`, `modelid`, `catid`, `name`,
 -- 表的结构 `cban_position_data`
 -- 
 -- 创建时间: 2014 年 08 月 04 日 08:57
--- 最后更新时间: 2014 年 08 月 04 日 08:57
+-- 最后更新时间: 2014 年 08 月 05 日 11:30
 -- 
 
 DROP TABLE IF EXISTS `cban_position_data`;
@@ -6825,6 +6894,8 @@ CREATE TABLE IF NOT EXISTS `cban_position_data` (
 -- 导出表中的数据 `cban_position_data`
 -- 
 
+INSERT DELAYED IGNORE INTO `cban_position_data` (`id`, `catid`, `posid`, `module`, `modelid`, `thumb`, `data`, `siteid`, `listorder`, `expiration`, `extention`, `synedit`) VALUES 
+(2, 10, 18, 'content', 16, 0, 'array (\n  ''title'' => ''企业信息发布111'',\n  ''description'' => ''一个国家经济的崛起有赖于一批民族企业的壮大。 "诞生 "于改革开放之初的TCL，现已成长为有抱负的 "青年 "。作为率先国际化的中国企业，TCL没有任何可以借鉴的蓝本'',\n  ''qylogo'' => ''http://127.0.0.1:8080/cban/uploadfile/2014/0805/20140805101359656.gif'',\n  ''cptype'' => ''电视、空调、洗衣机'',\n  ''inputtime'' => ''1407207124'',\n  ''style'' => '''',\n)', 1, 2, 0, NULL, 0);
 
 -- --------------------------------------------------------
 
@@ -7036,7 +7107,7 @@ CREATE TABLE IF NOT EXISTS `cban_release_point` (
 -- 表的结构 `cban_search`
 -- 
 -- 创建时间: 2014 年 08 月 04 日 08:57
--- 最后更新时间: 2014 年 08 月 04 日 08:57
+-- 最后更新时间: 2014 年 08 月 05 日 11:13
 -- 
 
 DROP TABLE IF EXISTS `cban_search`;
@@ -7059,7 +7130,7 @@ CREATE TABLE IF NOT EXISTS `cban_search` (
 
 INSERT DELAYED IGNORE INTO `cban_search` (`searchid`, `typeid`, `id`, `adddate`, `data`, `siteid`) VALUES 
 (1, 54, 1, 0, '1234567 1234567 ', 1),
-(2, 55, 2, 0, '企业信息发布111 企业信息发布 发布', 1);
+(2, 55, 2, 1407207124, '企业信息发布111 企业信息发布 国际化 青年 率先 作为 中国企业 任何 探索 道路 借鉴 没有 可以 崛起 发布 一个 经济的 成长 民族 改革开放 企业 诞生 壮大 现已 经过 严峻 更加 走过 坚定 步伐 我们 不懈 考验 洗衣机 空调 电视 品牌 全球范围内 从未', 1);
 
 -- --------------------------------------------------------
 
@@ -7113,7 +7184,7 @@ CREATE TABLE IF NOT EXISTS `cban_session` (
 -- 
 
 INSERT DELAYED IGNORE INTO `cban_session` (`sessionid`, `userid`, `ip`, `lastvisit`, `roleid`, `groupid`, `m`, `c`, `a`, `data`) VALUES 
-('e72667de6f5caf6d11829c5fd7ec05b7', 1, '127.0.0.1', 1407142695, 1, 0, 'admin', 'linkage', 'public_manage_submen', 'code|s:4:"uuuh";userid|s:1:"1";roleid|s:1:"1";pc_hash|s:6:"8U7G3n";lock_screen|i:0;');
+('a59f3ba2a5595897b6c8ede767612d1e', 1, '127.0.0.1', 1407209631, 1, 0, 'admin', 'index', 'public_session_life', 'code|s:5:"pcpe8";userid|s:1:"1";roleid|s:1:"1";pc_hash|s:6:"RGgrAA";lock_screen|i:0;');
 
 -- --------------------------------------------------------
 
@@ -7376,7 +7447,7 @@ INSERT DELAYED IGNORE INTO `cban_sso_applications` (`appid`, `type`, `name`, `ur
 -- 表的结构 `cban_sso_members`
 -- 
 -- 创建时间: 2014 年 08 月 04 日 08:57
--- 最后更新时间: 2014 年 08 月 04 日 09:55
+-- 最后更新时间: 2014 年 08 月 05 日 10:00
 -- 
 
 DROP TABLE IF EXISTS `cban_sso_members`;
@@ -7406,7 +7477,7 @@ CREATE TABLE IF NOT EXISTS `cban_sso_members` (
 
 INSERT DELAYED IGNORE INTO `cban_sso_members` (`uid`, `username`, `password`, `random`, `email`, `regip`, `regdate`, `lastip`, `lastdate`, `appname`, `type`, `avatar`, `ucuserid`) VALUES 
 (1, 'nima', 'e3cdebc9a303d1e78b623146821d6192', 'D8IK1j', 'nima@qq.com', '127.0.0.1', 1406013245, '127.0.0.1', 1407116559, 'phpcms v9', 'app', 0, 0),
-(2, 'hehe', '7f30f0b731b883d2aae66a4d4dddc366', '4sGUlJ', 'hehe@qq.com', '127.0.0.1', 1406014825, '127.0.0.1', 1406790472, 'phpcms v9', 'app', 0, 0);
+(2, 'hehe', '7f30f0b731b883d2aae66a4d4dddc366', '4sGUlJ', 'hehe@qq.com', '127.0.0.1', 1406014825, '127.0.0.1', 1407203879, 'phpcms v9', 'app', 0, 0);
 
 -- --------------------------------------------------------
 
