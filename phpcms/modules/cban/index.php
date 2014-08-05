@@ -99,18 +99,36 @@ class index {
 	
 	public function jdmq(){
 		$siteid = $GLOBALS['siteid'] = max($siteid,1);
-		
 		//SEO
 		$SEO = seo($siteid);
-		
-// 		$CATEGORYS = getcache('category_content_'.$siteid,'commons');
-//  	print_r($CATEGORYS);
-		$thisdb = get_cbandb('cban_news_qy');
-		//status 99通过 1审核中 0退稿
-		$qy = $thisdb->cban_listinfo('status=99', 'id desc',$_GET['page'], '20');
-		$pages = $thisdb->pages;
-		
-		include template('content','jdmq');
+		$qyid = addslashes($_GET['qyid']);
+		if($qyid){
+			$thisdb = get_cbandb('cban_news_qy');
+			$qy = $thisdb->get_one('id='.$qyid);
+			if(!$qy)showmessage('参数错误！',HTTP_REFERER);
+			if($qy[status]!=99)showmessage('企业信息暂未发布！',HTTP_REFERER);
+			
+// 			print_r($qy);
+			
+			include template('content','jdmq_show');
+		}
+		else{
+			
+			$keywords = addslashes($_GET['keywords']);
+			$where = '';
+			if($keywords){
+				$where .= $where ? ' and cptype like \'%'.$keywords.'%\'' : ' cptype like \'%'.$keywords.'%\'';
+			}
+			
+			$where .= $where ? ' and status=99 ' : ' status=99 ';
+	
+			$thisdb = get_cbandb('cban_news_qy');
+			//status 99通过 1审核中 0退稿
+			$qy = $thisdb->cban_listinfo($where, 'id desc',$_GET['page'], '20');
+			$pages = $thisdb->pages;
+			
+			include template('content','jdmq');
+		}
 	}
 }
 ?>

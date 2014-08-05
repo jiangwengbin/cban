@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 -- 
 -- 主机: localhost
--- 生成日期: 2014 年 08 月 05 日 07:51
+-- 生成日期: 2014 年 08 月 05 日 09:15
 -- 服务器版本: 5.0.51
 -- PHP 版本: 5.2.6
 
@@ -756,7 +756,7 @@ INSERT DELAYED IGNORE INTO `cban_comment_table` (`tableid`, `total`, `creat_at`)
 -- 表的结构 `cban_content_check`
 -- 
 -- 创建时间: 2014 年 08 月 04 日 08:57
--- 最后更新时间: 2014 年 08 月 05 日 14:59
+-- 最后更新时间: 2014 年 08 月 05 日 16:00
 -- 
 
 DROP TABLE IF EXISTS `cban_content_check`;
@@ -1097,7 +1097,7 @@ CREATE TABLE IF NOT EXISTS `cban_keylink` (
 -- 表的结构 `cban_keyword`
 -- 
 -- 创建时间: 2014 年 08 月 04 日 08:57
--- 最后更新时间: 2014 年 08 月 05 日 14:59
+-- 最后更新时间: 2014 年 08 月 05 日 16:00
 -- 
 
 DROP TABLE IF EXISTS `cban_keyword`;
@@ -1120,7 +1120,7 @@ INSERT DELAYED IGNORE INTO `cban_keyword` (`id`, `siteid`, `keyword`, `pinyin`, 
 (1, 1, 'dfsadfasdf', 'dfsadfasdf', 14, 0),
 (2, 1, '1234567', '1234567', 6, 0),
 (3, 1, '企业信息发布', 'qiyexinxifabu', 14, 0),
-(4, 1, '哈哈哈集团', 'hahahajituan', 2, 0);
+(4, 1, '哈哈哈集团', 'hahahajituan', 3, 0);
 
 -- --------------------------------------------------------
 
@@ -4545,7 +4545,7 @@ INSERT DELAYED IGNORE INTO `cban_linkage` (`linkageid`, `name`, `style`, `parent
 -- 表的结构 `cban_log`
 -- 
 -- 创建时间: 2014 年 08 月 04 日 08:57
--- 最后更新时间: 2014 年 08 月 05 日 15:07
+-- 最后更新时间: 2014 年 08 月 05 日 15:59
 -- 
 
 DROP TABLE IF EXISTS `cban_log`;
@@ -4565,7 +4565,7 @@ CREATE TABLE IF NOT EXISTS `cban_log` (
   PRIMARY KEY  (`logid`),
   KEY `module` (`module`,`file`,`action`),
   KEY `username` (`username`,`action`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=736 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=737 ;
 
 -- 
 -- 导出表中的数据 `cban_log`
@@ -5307,7 +5307,8 @@ INSERT DELAYED IGNORE INTO `cban_log` (`logid`, `field`, `value`, `module`, `fil
 (732, '', 0, 'content', '', 'sitemodel_field', '?m=content&c=sitemodel_field&a=edit', '', 1, 'admin', '127.0.0.1', '2014-08-05 14:58:02'),
 (733, '', 0, 'attachment', '', 'manage', '?m=attachment&c=manage&a=delete', '', 1, 'admin', '127.0.0.1', '2014-08-05 14:58:59'),
 (734, '', 0, 'content', '', 'content', '?m=content&c=content&a=pass', '', 1, 'admin', '127.0.0.1', '2014-08-05 14:59:50'),
-(735, '', 0, 'admin', '', 'position', '?m=admin&c=position&a=add', '', 1, 'admin', '127.0.0.1', '2014-08-05 15:07:26');
+(735, '', 0, 'admin', '', 'position', '?m=admin&c=position&a=add', '', 1, 'admin', '127.0.0.1', '2014-08-05 15:07:26'),
+(736, '', 0, 'content', '', 'content', '?m=content&c=content&a=pass', '', 1, 'admin', '127.0.0.1', '2014-08-05 15:59:49');
 
 -- --------------------------------------------------------
 
@@ -5315,7 +5316,7 @@ INSERT DELAYED IGNORE INTO `cban_log` (`logid`, `field`, `value`, `module`, `fil
 -- 表的结构 `cban_member`
 -- 
 -- 创建时间: 2014 年 08 月 04 日 08:57
--- 最后更新时间: 2014 年 08 月 05 日 14:59
+-- 最后更新时间: 2014 年 08 月 05 日 16:00
 -- 
 
 DROP TABLE IF EXISTS `cban_member`;
@@ -5358,7 +5359,7 @@ CREATE TABLE IF NOT EXISTS `cban_member` (
 INSERT DELAYED IGNORE INTO `cban_member` (`userid`, `phpssouid`, `username`, `password`, `encrypt`, `nickname`, `regdate`, `lastdate`, `regip`, `lastip`, `loginnum`, `email`, `groupid`, `areaid`, `amount`, `point`, `modelid`, `message`, `islock`, `vip`, `overduedate`, `siteid`, `connectid`, `from`, `mobile`) VALUES 
 (1, 1, 'nima', 'e3cdebc9a303d1e78b623146821d6192', 'D8IK1j', 'nima', 1406013245, 1407116558, '127.0.0.1', '127.0.0.1', 0, 'nima@qq.com', 2, 0, 0.00, 4, 12, 0, 0, 0, 0, 1, '', '', ''),
 (2, 2, 'hehe', '7f30f0b731b883d2aae66a4d4dddc366', '4sGUlJ', 'hehe', 1406013385, 1407203879, '127.0.0.1', '127.0.0.1', 0, 'hehe@qq.com', 2, 0, 0.00, 1, 13, 0, 0, 0, 0, 1, '', '', ''),
-(3, 3, 'haha', 'e7ab8954a1db823c792e28ff228ec5a5', 'WwKE4R', 'haha', 1407221679, 1407221711, '127.0.0.1', '127.0.0.1', 0, 'haha@qq.com', 2, 0, 0.00, 2, 13, 0, 0, 0, 0, 1, '', '', '');
+(3, 3, 'haha', 'e7ab8954a1db823c792e28ff228ec5a5', 'WwKE4R', 'haha', 1407221679, 1407221711, '127.0.0.1', '127.0.0.1', 0, 'haha@qq.com', 2, 0, 0.00, 3, 13, 0, 0, 0, 0, 1, '', '', '');
 
 -- --------------------------------------------------------
 
@@ -6559,7 +6560,7 @@ INSERT DELAYED IGNORE INTO `cban_news_md_data` (`id`, `content`, `readpoint`, `g
 -- 表的结构 `cban_news_qy`
 -- 
 -- 创建时间: 2014 年 08 月 05 日 10:40
--- 最后更新时间: 2014 年 08 月 05 日 15:00
+-- 最后更新时间: 2014 年 08 月 05 日 15:59
 -- 
 
 DROP TABLE IF EXISTS `cban_news_qy`;
@@ -6603,7 +6604,7 @@ CREATE TABLE IF NOT EXISTS `cban_news_qy` (
 
 INSERT DELAYED IGNORE INTO `cban_news_qy` (`id`, `catid`, `typeid`, `title`, `style`, `thumb`, `keywords`, `description`, `posids`, `url`, `listorder`, `status`, `sysadd`, `islink`, `username`, `inputtime`, `updatetime`, `diqu`, `add`, `lxr`, `dianhua`, `fax`, `qq`, `weixin`, `tel`, `qylogo`, `cptype`) VALUES 
 (2, 10, 0, '企业信息发布111', '', 'http://127.0.0.1:8080/cban/uploadfile/2014/0804/20140804095425390.jpg', '企业信息发布', '一个国家经济的崛起有赖于一批民族企业的壮大。  "诞生  "于改革开放之初的TCL，现已成长为有抱负的  "青年  "。作为率先国际化的中国企业，TCL没有任何可以借鉴的蓝本', 1, 'http://127.0.0.1:8080/cban/index.php?m=content&c=index&a=show&catid=10&id=2', 0, 99, 0, 0, 'hehe', 1407207124, 1407208427, 241, '111111111111111111111111111111111111111111111111111111111', '1111', '11111111', '', '', '', '', 'http://127.0.0.1:8080/cban/uploadfile/2014/0805/20140805101359656.gif', '电视、空调、洗衣机'),
-(3, 10, 0, 'haha家电集团', '', '', '哈哈哈集团', '哈哈哈集团哈哈哈集团哈哈哈集团哈哈哈集团哈哈哈集团', 1, 'http://127.0.0.1:8080/cban/index.php?m=content&c=index&a=show&catid=10&id=3', 0, 99, 0, 0, 'haha', 1407221971, 1407221971, 241, '1111111111111111111111', '11111111111111', '11111111', '', '', '', '', 'http://127.0.0.1:8080/cban/uploadfile/2014/0805/20140805025927232.gif', '');
+(3, 10, 0, 'haha家电集团', '', '', '哈哈哈集团', '哈哈哈集团哈哈哈集团哈哈哈集团哈哈哈集团哈哈哈集团', 1, 'http://127.0.0.1:8080/cban/index.php?m=content&c=index&a=show&catid=10&id=3', 0, 99, 0, 0, 'haha', 1407225564, 1407225564, 241, '1111111111111111111111', '11111111111111', '11111111', '', '', '', '', 'http://127.0.0.1:8080/cban/uploadfile/2014/0805/20140805025927232.gif', '抽油烟机 电饭煲 豆浆机 榨汁机');
 
 -- --------------------------------------------------------
 
@@ -6670,7 +6671,7 @@ CREATE TABLE IF NOT EXISTS `cban_page` (
 -- 表的结构 `cban_pay_account`
 -- 
 -- 创建时间: 2014 年 08 月 04 日 08:57
--- 最后更新时间: 2014 年 08 月 05 日 14:59
+-- 最后更新时间: 2014 年 08 月 05 日 15:59
 -- 
 
 DROP TABLE IF EXISTS `cban_pay_account`;
@@ -6699,7 +6700,7 @@ CREATE TABLE IF NOT EXISTS `cban_pay_account` (
   KEY `status` (`status`),
   KEY `userid` (`userid`),
   KEY `trade_sn` (`trade_sn`,`money`,`status`,`id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=8 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=9 ;
 
 -- 
 -- 导出表中的数据 `cban_pay_account`
@@ -6712,7 +6713,8 @@ INSERT DELAYED IGNORE INTO `cban_pay_account` (`id`, `trade_sn`, `userid`, `user
 (4, '9_1', 1, 'nima', '', '', '', 0.00, '1', 1, 1406122917, 0, '', 0, 'selfincome', '投稿奖励', 2, '127.0.0.1', 'succ', 'admin'),
 (5, '10_2', 2, 'hehe', '', '', '', 0.00, '1', 1, 1407208463, 0, '', 0, 'selfincome', '投稿奖励', 2, '127.0.0.1', 'succ', 'admin'),
 (6, '10_3', 3, 'haha', '', '', '', 0.00, '1', 1, 1407221833, 0, '', 0, 'selfincome', '投稿奖励', 2, '127.0.0.1', 'succ', 'admin'),
-(7, '10_3', 3, 'haha', '', '', '', 0.00, '1', 1, 1407221990, 0, '', 0, 'selfincome', '投稿奖励', 2, '127.0.0.1', 'succ', 'admin');
+(7, '10_3', 3, 'haha', '', '', '', 0.00, '1', 1, 1407221990, 0, '', 0, 'selfincome', '投稿奖励', 2, '127.0.0.1', 'succ', 'admin'),
+(8, '10_3', 3, 'haha', '', '', '', 0.00, '1', 1, 1407225589, 0, '', 0, 'selfincome', '投稿奖励', 2, '127.0.0.1', 'succ', 'admin');
 
 -- --------------------------------------------------------
 
@@ -7142,7 +7144,7 @@ CREATE TABLE IF NOT EXISTS `cban_release_point` (
 -- 表的结构 `cban_search`
 -- 
 -- 创建时间: 2014 年 08 月 04 日 08:57
--- 最后更新时间: 2014 年 08 月 05 日 14:59
+-- 最后更新时间: 2014 年 08 月 05 日 16:00
 -- 
 
 DROP TABLE IF EXISTS `cban_search`;
@@ -7166,7 +7168,7 @@ CREATE TABLE IF NOT EXISTS `cban_search` (
 INSERT DELAYED IGNORE INTO `cban_search` (`searchid`, `typeid`, `id`, `adddate`, `data`, `siteid`) VALUES 
 (1, 54, 1, 0, '1234567 1234567 ', 1),
 (2, 55, 2, 1407207124, '企业信息发布111 企业信息发布 国际化 青年 率先 作为 中国企业 任何 探索 道路 借鉴 没有 可以 崛起 发布 一个 经济的 成长 民族 改革开放 企业 诞生 壮大 现已 经过 严峻 更加 走过 坚定 步伐 我们 不懈 考验 洗衣机 空调 电视 品牌 全球范围内 从未', 1),
-(3, 55, 3, 1407221971, 'haha家电集团 哈哈哈集团 集团 哈哈 家电', 1);
+(3, 55, 3, 1407225564, 'haha家电集团 哈哈哈集团 集团 哈哈 家电', 1);
 
 -- --------------------------------------------------------
 
@@ -7220,7 +7222,7 @@ CREATE TABLE IF NOT EXISTS `cban_session` (
 -- 
 
 INSERT DELAYED IGNORE INTO `cban_session` (`sessionid`, `userid`, `ip`, `lastvisit`, `roleid`, `groupid`, `m`, `c`, `a`, `data`) VALUES 
-('a59f3ba2a5595897b6c8ede767612d1e', 1, '127.0.0.1', 1407224919, 1, 0, 'admin', 'index', 'public_session_life', 'code|s:5:"zwufb";userid|s:1:"1";roleid|s:1:"1";pc_hash|s:6:"RGgrAA";lock_screen|i:0;');
+('a59f3ba2a5595897b6c8ede767612d1e', 1, '127.0.0.1', 1407230039, 1, 0, 'admin', 'index', 'public_session_life', 'code|s:5:"zwufb";userid|s:1:"1";roleid|s:1:"1";pc_hash|s:6:"RGgrAA";lock_screen|i:0;');
 
 -- --------------------------------------------------------
 

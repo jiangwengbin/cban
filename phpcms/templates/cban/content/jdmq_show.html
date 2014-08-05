@@ -1,0 +1,98 @@
+{template "content","header"}
+
+<div id="companylist_body">
+	<!--路径开始-->
+	<div id="title_blueline"><span style="float:left; margin-right:350px;">中国家电品牌网 >家电名企</span><span id="title_blueline_atpresent">全部</span><span id="title_blueline_nopresent">大陆企业</span><span id="title_blueline_nopresent">港台企业</span><span id="title_blueline_nopresent">国外企业</span></div>
+	<!--路径结束、家电名企业主要内容开始-->
+	
+    <div class="companycontent">
+    	<div class="title_grayline_1px_bottom">{$qy[title]}</div>
+        <div class="companycontent_info">会员：{$qy[username]}<span style="padding-left:20px;">{date("Y-m-d H:i:s",$qy[inputtime])}</span><span style="padding-left:150px;">分享到：</span><img src="{CBAN_PATH}img/icon_qq.gif" width="16" height="16" /><img src="{CBAN_PATH}img/icon_sina.gif" width="16" height="16" /><img src="{CBAN_PATH}img/icon_tx.gif" width="16" height="16" /><img src="{CBAN_PATH}img/icon_rr.gif" width="16" height="16" /><img src="{CBAN_PATH}img/icon_add.gif" width="16" height="16" /></div>
+        <div id="companycontent_table">
+        	<div id="companycontent_table_title">企业信息</div>
+        	<div id="companycontent_table_l">
+            	<ul>
+                	<li>企业名称</li>
+                    <li>地理位置</li>
+                    <li>地址</li>
+                    <li>联系人</li>
+                    <li>联系人手机</li>
+                    <li>固定电话</li>
+                    <li>传真</li>
+                    <li>EMAIL</li>
+                    <li>产品类型</li>
+                    <li style="height:52px; line-height:52px;">旗下品牌</li>
+                    <li style="height:78px; line-height:78px;">LOGO</li>
+                </ul>
+            </div>
+            <div id="companycontent_table_r">
+            	<ul>
+                    <li>{$qy[title]}</li>
+                    <li>{get_linkage($qy[diqu],1,' - ')}</li>
+                    <li>{$qy[add]}</li>
+                    <li>{$qy[lxr]}</li>
+                    <li>{$qy[tel]}</li>
+                    <li>{$qy[dianhua]}</li>
+                    <li>{$qy[fax]}</li>
+                    <li>{$qy[email]}</li>
+                    <li>{$qy[cptype]}</li>
+                    <li>ABC、XXXX、暮云春树、股份制、森林木、ABC、XXXX、暮云春树、股份制、森林木</li>
+                    <li style="height:78px; line-height:78px;"><img src="{CBAN_PATH}image/logo_gree.gif" width="85" height="36" /><img src="{CBAN_PATH}image/logo_haier.gif" width="85" height="36" /><img src="{CBAN_PATH}image/logo_tcl.gif" width="85" height="36" /></li>
+                </ul>
+            </div>        
+        </div>
+        <div id="companycontent_artical">
+        {$qy[content]}
+        </div>
+  </div>
+    
+	<!--家电名企业主要内容结束、分类导览-->
+    <div id="company_right">
+        <div id="company_view">
+            <div class="title_blueline_1px_bottom" style="width:70px;">分类导览</div><div class="title_blackline_1px_bottom" style="width:76%;"></div>
+           
+            
+            {pc:get sql="SELECT linkageid,name FROM cban_linkage WHERE keyid='3360' and parentid='0' and child='1' ORDER BY listorder ASC" return="data"}
+            {loop $data $r}
+            	<ul>{$r[name]}<br />
+            		{pc:get sql="SELECT linkageid,name FROM cban_linkage WHERE keyid='3360' and parentid='$r[linkageid]' ORDER BY listorder ASC" return="data"}
+                    
+                    {loop $data $r}
+                    	<li> <a href="index.php?m=cban&c=index&a=jdmq&keywords={$r[name]}">{$r[name]}</a> </li>
+                    {/loop} 
+           			{/pc}
+               </ul>
+            {/loop} 
+            {/pc}
+            
+        </div>
+        <!--分类导览结束、本月热门家电厂商开始-->
+        <div id="company_hot_new">
+            <div class="title_blueline_1px_bottom" style="width:124px;">本月热门家电厂商</div><div class="title_blackline_1px_bottom" style="width:58%;"></div>
+            <ul>
+              
+              {pc:content  action="position" posid="19" order="listorder asc" num="10"}
+              {loop $data $r}
+              <li><a href="#"><img src="{CBAN_PATH}img/no_{$r['listorder']}.gif" width="15" height="15" />{$r['title']}</a></li>
+              {/loop}
+              {/pc}
+            </ul>
+        </div>
+        <!--本月热门家电厂商结束、最新加入厂家开始-->
+            <div id="company_hot_new">
+            <div class="title_blueline_1px_bottom" style="width:124px;">最新入驻家电企业</div><div class="title_blackline_1px_bottom" style="width:58%;"></div>
+            <ul>
+              {pc:content  action="position" posid="20" order="listorder asc" num="10"}
+              {loop $data $r}
+              <li><a href="#"><img src="{CBAN_PATH}img/no_{$r['listorder']}.gif" width="15" height="15" />{$r['title']}</a></li>
+              {/loop}
+              {/pc}
+            </ul>
+        </div>
+    </div>
+    <!--最新加入厂家结束-->
+</div>
+
+<!--页底开始-->{template "content","footer2"}
+</body>
+</html>

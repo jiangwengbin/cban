@@ -11,7 +11,7 @@
            		<li>
             	<div class="companylist_tap">
            		<div class="companylist_tap_img"><img src="{$r[qylogo]}" width="85" height="36" /></div>
-           		<span><p>企业名称：{$r[title]}</p>
+           		<span><p>企业名称：<a href="index.php?m=cban&c=index&a=jdmq&qyid={$r[id]}" target="_blank">{$r[title]}</a></p>
     				  <p>产品类型：{$r[cptype]}</p>
 					  <p>企业描述：{$r[description]}</p>
            		</span>
@@ -19,19 +19,19 @@
             	</li>
             {/loop} 	
         </ul>
-<style>
-#page li{
-	float:left;
-	padding:10px;
-	margin-top:10px;
-	border:#C6C6C6 solid 1px;
-	margin-left:10px;
-}
-#page li a{
-	color:#333;
-}
-</style>
-<div id="page">{$pages}</div>
+		<style>
+        #page li{
+            float:left;
+            padding:10px;
+            margin-top:10px;
+            border:#C6C6C6 solid 1px;
+            margin-left:10px;
+        }
+        #page li a{
+            color:#333;
+        }
+        </style>
+        <div id="page">{$pages}</div>
     </div>
 	<!--家电名企业主要内容结束、分类导览-->
     <div id="company_right">
@@ -45,7 +45,7 @@
             		{pc:get sql="SELECT linkageid,name FROM cban_linkage WHERE keyid='3360' and parentid='$r[linkageid]' ORDER BY listorder ASC" return="data"}
                     
                     {loop $data $r}
-                    	<li> <a href="#">{$r[name]}</a> </li>
+                    	<li> <a href="index.php?m=cban&c=index&a=jdmq&keywords={$r[name]}">{$r[name]}</a> </li>
                     {/loop} 
            			{/pc}
                </ul>
@@ -60,7 +60,7 @@
               
               {pc:content  action="position" posid="19" order="listorder asc" num="10"}
               {loop $data $r}
-              <li><a href="#"><img src="{CBAN_PATH}img/no_{$r['listorder']}.gif" width="15" height="15" />{$r['title']}</a></li>
+              <li><a href="index.php?m=cban&c=index&a=jdmq&qyid={$r[id]}" target="_blank"><img src="{CBAN_PATH}img/no_{$r['listorder']}.gif" width="15" height="15" />{$r['title']}</a></li>
               {/loop}
               {/pc}
             </ul>
@@ -71,7 +71,7 @@
             <ul>
               {pc:content  action="position" posid="20" order="listorder asc" num="10"}
               {loop $data $r}
-              <li><a href="#"><img src="{CBAN_PATH}img/no_{$r['listorder']}.gif" width="15" height="15" />{$r['title']}</a></li>
+              <li><a href="index.php?m=cban&c=index&a=jdmq&qyid={$r[id]}" target="_blank"><img src="{CBAN_PATH}img/no_{$r['listorder']}.gif" width="15" height="15" />{$r['title']}</a></li>
               {/loop}
               {/pc}
             </ul>
