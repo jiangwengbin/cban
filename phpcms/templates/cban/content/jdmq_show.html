@@ -21,8 +21,7 @@
                     <li>传真</li>
                     <li>EMAIL</li>
                     <li>产品类型</li>
-                    <li style="height:52px; line-height:52px;">旗下品牌</li>
-                    <li style="height:78px; line-height:78px;">LOGO</li>
+                    <li style="height:78px; line-height:78px;">旗下品牌</li>
                 </ul>
             </div>
             <div id="companycontent_table_r">
@@ -36,8 +35,12 @@
                     <li>{$qy[fax]}</li>
                     <li>{$qy[email]}</li>
                     <li>{$qy[cptype]}</li>
-                    <li>ABC、XXXX、暮云春树、股份制、森林木、ABC、XXXX、暮云春树、股份制、森林木</li>
-                    <li style="height:78px; line-height:78px;"><img src="{CBAN_PATH}image/logo_gree.gif" width="85" height="36" /><img src="{CBAN_PATH}image/logo_haier.gif" width="85" height="36" /><img src="{CBAN_PATH}image/logo_tcl.gif" width="85" height="36" /></li>
+                    
+                    <li style="height:78px; line-height:78px;">
+                    	{loop $pinpai $r}
+                        	<img src="{$r[url]}" width="85" height="36" alt="{$r[alt]}" title="{$r[alt]}" />
+                        {/loop}
+                    </li>
                 </ul>
             </div>        
         </div>

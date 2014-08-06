@@ -6,7 +6,14 @@
 	<!--路径结束、家电名企业主要内容开始-->
 	<div class="companylist">
         <ul>
-        	
+        	{if !$qy}
+            	<li>
+            	<div class="companylist_tap">
+           		<span><p>暂时没有查到数据</p>
+           		</span>
+            	</div>
+            	</li>
+            {/if}
             {loop $qy $r}
            		<li>
             	<div class="companylist_tap">

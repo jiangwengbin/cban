@@ -108,7 +108,11 @@ class index {
 			if(!$qy)showmessage('参数错误！',HTTP_REFERER);
 			if($qy[status]!=99)showmessage('企业信息暂未发布！',HTTP_REFERER);
 			
-// 			print_r($qy);
+			$qydatadb = get_cbandb('cban_news_qy_data');
+			$pinpai = $qydatadb->get_one('id='.$qyid,"pinpai");
+			$pinpai = string2array($pinpai['pinpai']);
+			
+			//print_r($pinpai);
 			
 			include template('content','jdmq_show');
 		}
