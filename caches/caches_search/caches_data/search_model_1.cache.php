@@ -12,6 +12,12 @@ return array (
     'name' => '企业信息模型',
     'sort' => '0',
   ),
+  17 => 
+  array (
+    'typeid' => '56',
+    'name' => '展会信息模型',
+    'sort' => '0',
+  ),
   1 => 
   array (
     'typeid' => '1',

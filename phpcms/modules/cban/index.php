@@ -109,9 +109,9 @@ class index {
 			if($qy[status]!=99)showmessage('企业信息暂未发布！',HTTP_REFERER);
 			
 			$qydatadb = get_cbandb('cban_news_qy_data');
-			$pinpai = $qydatadb->get_one('id='.$qyid,"pinpai");
-			$pinpai = string2array($pinpai['pinpai']);
-			
+			$qydata = $qydatadb->get_one('id='.$qyid,"content,pinpai");
+			$pinpai = string2array($qydata['pinpai']);
+			$content = $qydata['content'];
 			//print_r($pinpai);
 			
 			include template('content','jdmq_show');
@@ -133,6 +133,11 @@ class index {
 			
 			include template('content','jdmq');
 		}
+	}
+	
+	public function zhxx(){
+		$data='';
+		include template('content','list_zhxx');
 	}
 }
 ?>

@@ -4,78 +4,19 @@
 <center>
         <div id="content">
         	<div class="main_link">
-            	<h4 class="title title_br"><span>中国家电品牌网</span>><span>白县千店</span>><span>门店一览表</span></h4>
+            	<h4 class="title title_br"><span>中国家电品牌网</span>><span>展会信息</span></h4>
                 <div class="a_link2">
                	  <div class="medium_win">
-                    	<div class="conunt">
-                            共计: <span>{$count}个门店</span>
-                        </div>
-                        <div class="all">
-                            省份: <span>全部</span>
-                        </div>
-                        
-                    <ul>
-                    	{loop $date_linkage $r}
-                            <li>
-                                <div><a href="{siteurl($siteid)}/index.php?m=cban&c=index&a=qxwd&id={$r[linkageid]}">{$r[name]}</a></div>
-                            </li>
-                        {/loop} 
-                      </ul>
-                        
-                    
-          <?php      
-               if($mendian){
-           ?>
-                      <table class="list" cellspacing="0">
-                          <tr>
-                              <th width="60">
-                                  地理位置
-                              </th>
-                              <th width="100">
-                                  门店名称
-                              </th>
-                              <th width="150">
-                                  地址
-                              </th>
-                              <th width="90">
-                                  资讯电话
-                              </th>
-                          </tr>
-                          
-                 {loop $mendian $k $r}         
-                          <tr>
-                           	  <td class="in">
-                           	  	 {$r[diquname]}
-                              </td>
-                              <td class="out">
-                               	  {$r[title]}
-                              </td>
-                              <td class="in">
-                               	  {$r[add]}
-                              </td>
-                              <td class="out">
-                               	  {$r[dianhua]}
-                              </td>
-                          </tr>
-                {/loop}   
-               
-                          <tr>
-                           	  <td colspan="4">
-                              	<ul class="page_gu">
-                              		 {$pages}
-                                	
-                                </ul>
-                              </td>
-                          </tr>                            
-                      </table>
-                      
-           <?php      
-               }
-           ?>            
+                  	 <div class="title_grayline_1px_bottom">{$title}</div>
+                     <div class="companycontent_info">会员：管理员<span style="padding-left:20px;">{$inputtime}</span><span style="padding-left:150px;">分享到：</span><img src="{CBAN_PATH}img/icon_qq.gif" width="16" height="16" /><img src="{CBAN_PATH}img/icon_sina.gif" width="16" height="16" /><img src="{CBAN_PATH}img/icon_tx.gif" width="16" height="16" /><img src="{CBAN_PATH}img/icon_rr.gif" width="16" height="16" /><img src="{CBAN_PATH}img/icon_add.gif" width="16" height="16" /></div>
+                     <div id="companycontent_artical">
+                    {$content}
                     </div>
+                                
+                  </div>
                     
                     <div class="mini_win">
-                    	<h4 class="title title_br">门店检索</h4>
+                    	<h4 class="title title_br">展会检索</h4>
                         <div class="left_border"></div>
                         <div class="right_border"></div>
                         
@@ -84,7 +25,7 @@
 						  <tr>
 						    <th width="20%" height="30" align="left">省市：</th>
 						    <td width="80%" height="30" align="left">{menu_linkage(1,'L_1')}</td>
-						    </tr>
+					      </tr>
 						  <tr>
 						    <th width="46" height="30" align="left">类型：</th>
 						    <td style="padding-top:10px;">
@@ -171,8 +112,8 @@
             <!--页底开始-->
 			{template "content","footer"}
 			
-
-</center>   
+</center>
+    
 </div>
 
 </body>
