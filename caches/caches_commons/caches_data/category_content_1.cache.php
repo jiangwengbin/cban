@@ -200,7 +200,7 @@ return array (
   \'create_to_html_root\' => \'0\',
   \'template_list\' => \'cban\',
   \'category_template\' => \'category\',
-  \'list_template\' => \'list\',
+  \'list_template\' => \'\',
   \'show_template\' => \'show\',
   \'meta_title\' => \'\',
   \'meta_keywords\' => \'\',

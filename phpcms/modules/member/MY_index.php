@@ -445,7 +445,7 @@ class MY_index extends index{
 					}else{
 						$db_linkage = pc_base::load_model('linkage_model');
 						$date_linkage = $db_linkage -> select(array('parentid'=>addslashes(trim($_GET['L_1-1']))),'linkageid');
-						// 						echo implode(',',$date_linkage);
+						//echo implode(',',$date_linkage);
 						$arr = array();
 						foreach ($date_linkage as $k=>$v){
 							$arr[$k] = $v[linkageid];

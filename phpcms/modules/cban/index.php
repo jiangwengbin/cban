@@ -136,8 +136,40 @@ class index {
 	}
 	
 	public function zhxx(){
-		$data='';
-		include template('content','list_zhxx');
+		
+		$where = '';
+		
+		if(trim($_GET['keywords'])){
+			$keywords = addslashes(trim($_GET['keywords']));
+			$where .= $where ? ' and title like \'%'.$keywords.'%\'' : ' title like \'%'.$keywords.'%\'';
+			$where .= $where ? ' or description like \'%'.$keywords.'%\'' : ' description like \'%'.$keywords.'%\'';
+			$where .= $where ? ' or address like \'%'.$keywords.'%\'' : ' address like \'%'.$keywords.'%\'';
+			$where .= $where ? ' or cptype like \'%'.$keywords.'%\'' : ' cptype like \'%'.$keywords.'%\'';
+		}
+		
+		
+		if(trim($_GET['L_1-1'])){
+			
+			if(trim($_GET['L_1-2']) && intval($_GET['L_1-2'])!=0){
+				
+				$where .= $where ? ' and diqu =\''.addslashes(trim($_GET['L_1-2'])).'\'' : ' diqu =\''.addslashes(trim($_GET['L_1-2'])).'\'';
+			}else{
+				$db_linkage = pc_base::load_model('linkage_model');
+				$date_linkage = $db_linkage -> select(array('parentid'=>addslashes(trim($_GET['L_1-1']))),'linkageid');
+				//echo implode(',',$date_linkage);
+				$arr = array();
+				foreach ($date_linkage as $k=>$v){
+					$arr[$k] = $v[linkageid];
+				}
+				$where .= $where ? ' and diqu in ('.implode(',',$arr).')' : ' diqu in ('.implode(',',$arr).')' ;
+			}
+		}
+		//print_r($_GET[info][L_1]);
+		$zhxxdb = get_cbandb('cban_news_zhxx');
+		$zhxx = $zhxxdb->listinfo($where, 'listorder desc',$_GET['page'], '20');
+		$pages = $zhxxdb->pages;
+		
+		include template('content','list_zhxx_ser');
 	}
 }
 ?>

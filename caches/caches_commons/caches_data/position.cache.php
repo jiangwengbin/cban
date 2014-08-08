@@ -144,24 +144,24 @@ return array (
     'siteid' => '1',
     'thumb' => '',
   ),
-  19 => 
-  array (
-    'posid' => '19',
-    'modelid' => '16',
-    'catid' => '10',
-    'name' => '家电名企_本月热门家电厂商',
-    'maxnum' => '20',
-    'extention' => '',
-    'listorder' => '2',
-    'siteid' => '1',
-    'thumb' => '',
-  ),
   20 => 
   array (
     'posid' => '20',
     'modelid' => '16',
     'catid' => '10',
     'name' => '家电名企_最新入驻家电企业',
+    'maxnum' => '20',
+    'extention' => '',
+    'listorder' => '2',
+    'siteid' => '1',
+    'thumb' => '',
+  ),
+  19 => 
+  array (
+    'posid' => '19',
+    'modelid' => '16',
+    'catid' => '10',
+    'name' => '家电名企_本月热门家电厂商',
     'maxnum' => '20',
     'extention' => '',
     'listorder' => '1',

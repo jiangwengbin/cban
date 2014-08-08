@@ -7,12 +7,56 @@
             	<h4 class="title title_br"><span>中国家电品牌网</span>><span>展会信息</span></h4>
                 <div class="a_link2">
                	  <div class="medium_win">
-                  	 <div class="title_grayline_1px_bottom">{$title}</div>
-                     <div class="companycontent_info">会员：管理员<span style="padding-left:20px;">{$inputtime}</span><span style="padding-left:150px;">分享到：</span><img src="{CBAN_PATH}img/icon_qq.gif" width="16" height="16" /><img src="{CBAN_PATH}img/icon_sina.gif" width="16" height="16" /><img src="{CBAN_PATH}img/icon_tx.gif" width="16" height="16" /><img src="{CBAN_PATH}img/icon_rr.gif" width="16" height="16" /><img src="{CBAN_PATH}img/icon_add.gif" width="16" height="16" /></div>
-                     <div id="companycontent_artical">
-                    {$content}
-                    </div>
-                                
+                    
+                    <table width="570" border="0" cellspacing="" cellpadding="" style="border-bottom:#CCC solid 1px;word-break: break-all;">
+                      
+                      {if !$zhxx}
+                      		<p>暂时没有查到数据</p>
+                      {/if}
+                      {loop $zhxx $r} 
+                          <tr>
+                            <td colspan="2" height="40" style="font-size:16px;"><strong><a href="{$r['url']}" target="_blank">{$r['title']}</a></strong></td>
+                          </tr>
+                          <tr>
+                            <td width="173" rowspan="5" valign="top" style="border-bottom:#CCC solid 1px;"> <img src="{CBAN_PATH}images/tmp4.jpg" height="115" width="155" /></td>
+                            <td width="397" height="25" valign="top">开展时间：{$r['start_time']} - {$r['end_time']}</td>
+                          </tr>
+                          <tr>
+                            <td height="25" valign="top">开展地点：{get_linkage($r[diqu],1,' ')}&nbsp;{$r[add]}</td>
+                          </tr>
+                          <tr>
+                            <td height="25" valign="top">面积：{$r[area]}m&sup2 &nbsp; 展品类型：{$r[cptype]}</td>
+                          </tr>
+                          <tr>
+                            <td valign="top">展会描述：{$r[description]}</td>
+                          </tr>
+                          <tr>
+                            <td height="42" align="right" valign="bottom" style="border-bottom:#CCC solid 1px;">
+                             分享到:
+                                            <img src="{CBAN_PATH}img/01.jpg" height="16" width="16" />
+                                            <img src="{CBAN_PATH}img/02.jpg" height="16" width="16" />
+                                            <img src="{CBAN_PATH}img/03.jpg" height="16" width="16" />
+                                            <img src="{CBAN_PATH}img/04.jpg" height="16" width="16" />
+                                            <img src="{CBAN_PATH}img/05.jpg" height="16" width="16" />
+                            </td>
+                      </tr>
+                      {/loop}
+                      
+                    </table>
+                    <style>
+					#page a,#page span{
+						float:left;
+						padding:10px;
+						margin-top:10px;
+						border:#C6C6C6 solid 1px;
+						margin-left:10px;
+						color:#333;
+					}
+					#page span{
+						background-color:#0695cd;}
+					</style>
+					<div id="page">{$pages}</div>
+                                 
                   </div>
                     
                     <div class="mini_win">
@@ -107,10 +151,10 @@
                         </div>
                 	</div>
                 </div>
-            </div>
+            </div>			
+
             <!--页底开始-->
 			{template "content","footer"}
-			
 </center>
     
 </div>
