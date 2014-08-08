@@ -1,0 +1,105 @@
+{template "content","header"}
+
+<div id="companylist_body">
+	<!--路径开始-->
+	<div id="title_blueline"><span style="float:left; margin-right:350px;">中国家电品牌网 >商机资讯</span></div>
+	<!--路径结束、家电名企业主要内容开始-->
+	<div class="companylist">
+       <table width="570" border="0" cellspacing="" cellpadding="" style="word-break: break-all;">
+                      
+                     
+                      {if !$supply}
+               		  <p>暂时没有查到数据</p>
+                      {/if}
+                      {loop $supply $r} 
+                     
+                          <tr>
+                            <td colspan="2" height="40" style="font-size:16px;"><strong><a href="{$r['url']}" target="_blank">{$r['title']}</a></strong></td>
+                          </tr>
+                          <tr>
+                            <td width="173" rowspan="5" valign="top" style="border-bottom:#CCC solid 1px;">
+                            <img src="{UPLOAD_URL}{php $arr = string2array($r[img]);echo $arr[0][0];}" height="115" width="155" />
+                            </td>
+                            <td width="397" height="25" valign="top">发布时间：{date('Y-m-d',$r['time'])}</td>
+                          </tr>
+                          <tr>
+                            <td height="25" valign="top">地区：{get_linkage($r[diqu],1,' ')}</td>
+                          </tr>
+                          <tr>
+                            <td height="25" valign="top">联系人：{$r[lxr]} &nbsp; 联系方式：{$r[tel]}</td>
+                          </tr>
+                          <tr>
+                            <td height="25" valign="top">数量：{$r[num]}</td>
+         </tr>
+                          <tr>
+                            <td height="25" valign="top" style="border-bottom:#CCC solid 1px;">信息描述：{$r[describe]}</td>
+         </tr>
+                      {/loop}
+
+      </table>
+		<style>
+        #page li{
+            float:left;
+            padding:10px;
+            margin-top:10px;
+            border:#C6C6C6 solid 1px;
+            margin-left:10px;
+        }
+        #page li a{
+            color:#333;
+        }
+        </style>
+        <div id="page">{$pages}</div>
+  </div>
+	<!--家电名企业主要内容结束、分类导览-->
+    <div id="company_right">
+        <div id="company_view">
+            <div class="title_blueline_1px_bottom" style="width:70px;">分类检索</div><div class="title_blackline_1px_bottom" style="width:76%;"></div>
+           
+            
+            {pc:get sql="SELECT linkageid,name FROM cban_linkage WHERE keyid='3360' and parentid='0' and child='1' ORDER BY listorder ASC" return="data"}
+            {loop $data $r}
+            	<ul>{$r[name]}<br />
+            		{pc:get sql="SELECT linkageid,name FROM cban_linkage WHERE keyid='3360' and parentid='$r[linkageid]' ORDER BY listorder ASC" return="data"}
+                    
+                    {loop $data $r}
+                    	<li> <a href="index.php?m=cban&c=index&a=supply&keywords={$r[name]}">{$r[name]}</a> </li>
+                    {/loop} 
+           			{/pc}
+               </ul>
+            {/loop} 
+            {/pc}
+            
+        </div>
+        
+        
+        
+        <!--分类导览结束、本月热门家电厂商开始-->
+        <div id="company_hot_new">
+            <div class="title_blueline_1px_bottom" style="width:124px;">商机信息检索</div><div class="title_blackline_1px_bottom" style="width:58%;"></div>
+            <form name="" action="" method="get">
+                        <input type="hidden" value="cban" name="m">
+                        <input type="hidden" value="index" name="c">
+                        <input type="hidden" value="zhxx" name="a">
+						<table width="300" border="0" cellspacing="0" cellpadding="0">
+						  <tr>
+						    <th width="20%" height="30" align="left" valign="bottom">省市：</th>
+						    <td width="80%" height="30" align="left" valign="bottom">{menu_linkage(1,'L_1',$_GET[info][L_1])}</td>
+					      </tr>
+                          <tr>
+						    <th width="20%" height="30" align="left" valign="bottom">关键字：</th>
+						    <td width="80%" height="30" align="left" valign="bottom"><input type="text" name="keywords" value="{$_GET[keywords]}" /></td>
+					      </tr>
+						</table>
+						<input style="margin-left:260px;" type="image" src="{CBAN_PATH}img/se_form.jpg" />
+		  </form>
+        </div>
+        <!--本月热门家电厂商结束、最新加入厂家开始-->
+            
+    </div>
+    <!--最新加入厂家结束-->
+</div>
+
+<!--页底开始-->{template "content","footer2"}
+</body>
+</html>

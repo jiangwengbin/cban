@@ -171,5 +171,20 @@ class index {
 		
 		include template('content','list_zhxx_ser');
 	}
+	
+	public function supply(){
+		$siteid = $GLOBALS['siteid'] = max($siteid,1);
+		//SEO
+		$SEO = seo($siteid);
+		$where = 'status=2';
+		
+			$thisdb = get_cbandb('cban_supply');
+			//status 99通过 1审核中 0退稿
+			$supply = $thisdb->cban_listinfo($where, 'id desc',$_GET['page'], '20');
+			$pages = $thisdb->pages;
+			
+		include template('content','supply');
+	}
+	
 }
 ?>

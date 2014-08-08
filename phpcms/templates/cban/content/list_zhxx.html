@@ -82,72 +82,40 @@
 						<input style="margin-left:260px;" type="image" src="{CBAN_PATH}img/se_form.jpg" />
 						</form>
                         
-                        <h4 class="title title_br">新家门店</h4>
+                        <h4 class="title title_br">热点展会排行</h4>
                         <div class="left_border"></div>
                         <div class="right_border"></div>
                         
                         <div class="win_dir win_dir_lift" style="width:100%;">
                         	<ul class="win_dir_lift">
-                                <li>
-                                    <span>1</span>
-                                    <a href="javascript:;">商品1sadasdasd</a>
-                                </li>
-                                <li>
-                                    <span>2</span>
-                                    <a href="javascript:;">商品2</a>
-                                </li>
-                                <li>
-                                    <span>3</span>
-                                    <a href="javascript:;">商品2</a>
-                                </li>
-                                <li>
-                                    <span class="color">4</span>
-                                    <a href="javascript:;">商品2</a>
-                                </li>
-                                <li>
-                                    <span class="color">5</span>
-                                    <a href="javascript:;">商品2</a>
-                                </li>
+                                {pc:content action="position" posid="21" order="listorder asc" num="10"}
+                                {loop $data $r}
+                                     <li>
+                                    <span>{$r[listorder]}</span>
+                                    <a href="{$r[url]}">{$r[title]}</a>
+                                	</li>
+                                {/loop}
+                                {/pc}
                             </ul>                            
                         </div>
                         
                         
-                        <h4 class="title title_br">门店图片</h4>
+                        <h4 class="title title_br">展会图片资讯</h4>
                         <div class="left_border"></div>
                         <div class="right_border"></div>
                         
                         <div class="win_dir">
                         	<ul class="win_dir_lift_img">
-                                <li>
-                                	<a href="javascript:;">
-                                        <img src="images/tmp3.jpg" width="150" height="120" />
-                                        <div>说明说明说明说明说明说明说明说明明说明</div>
+                                {pc:content action="position" posid="22" order="listorder asc" num="4"}
+                                {loop $data $r}
+                                     <li>
+                                	<a href="{$r[url]}">
+                                        <img src="{$r[image]}" width="150" height="120" />
+                                        <div>{$r[title]}</div>
                                     </a>
-                                </li>
-                                <li>
-                                	<a href="javascript:;">
-                                        <img src="images/tmp3.jpg" width="150" height="120" />
-                                        <div>说明说明说明说明说明说明说明说明明说明</div>
-                                    </a>
-                                </li>
-                                <li>
-                                	<a href="javascript:;">
-                                        <img src="images/tmp3.jpg" width="150" height="120" />
-                                        <div>说明说明说明说明说明说明说明说明明说明</div>
-                                    </a>
-                                </li>
-                                <li>
-                                	<a href="javascript:;">
-                                        <img src="images/tmp3.jpg" width="150" height="120" />
-                                        <div>说明说明说明说明说明说明说明说明明说明</div>
-                                    </a>
-                                </li>
-                                <li>
-                                	<a href="javascript:;">
-                                        <img src="images/tmp3.jpg" width="150" height="120" />
-                                        <div>说明说明说明说明说明说明说明说明明说明</div>
-                                    </a>
-                                </li>
+                                	</li>
+                                {/loop}
+                                {/pc}
                             </ul>                            
                         </div>
                 	</div>
