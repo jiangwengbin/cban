@@ -46,6 +46,8 @@ class index {
 
 			}
 		}
+		
+		
 // 		$CATEGORYS = getcache('category_content_'.$siteid,'commons');
 // 		print_r($CATEGORYS);
 		include template('content','qxwd');
@@ -53,16 +55,20 @@ class index {
 
 	/*门店搜索*/
 	public function serMendian() {
-
+		
+		$siteid = $GLOBALS['siteid'] = max($siteid,1);
+		//SEO
+		$SEO = seo($siteid);
+		
 		$db_linkage = pc_base::load_model('linkage_model');
 		$date_linkage = $db_linkage -> select(array('parentid'=>'0','child'=>'1','keyid'=>'1'),'linkageid,name','');
 
 		$where = "";
 
 		/*只有省份*/
-		if($_POST['L_1-1'] && !$_POST['L_1-2'])
+		if($_GET['L_1-1'] && !$_GET['L_1-2'])
 		{
-			$city_date = $db_linkage -> select(array('parentid'=>$_POST['L_1-1']),'linkageid,name');
+			$city_date = $db_linkage -> select(array('parentid'=>$_GET['L_1-1']),'linkageid,name');
 
 			foreach ($city_date as $val) {
 				$where .= $where ? " or `diqu` = '$val[linkageid]' " : " `diqu` = '$val[linkageid]'";
@@ -70,12 +76,12 @@ class index {
 
 			//print_r($mendian);
 		}
-		if($_POST['L_1-2'])
+		if($_GET['L_1-2'])
 		{
-			$where .= $where ? " or `diqu` = '".$_POST['L_1-2']."'" : " `diqu` = '".$_POST['L_1-2']."'";
+			$where .= $where ? " or `diqu` = '".$_GET['L_1-2']."'" : " `diqu` = '".$_GET['L_1-2']."'";
 
 		}
-		if($_POST['type']){$where .= " and service=".$_POST['type'];}
+		if($_GET['type']){$where .= " and service=".$_GET['type'];}
 
 		if($where!="")
 		{
@@ -177,6 +183,35 @@ class index {
 		//SEO
 		$SEO = seo($siteid);
 		$where = 'status=2';
+		
+		if(trim($_GET['keyword'])){
+			$keyword = addslashes(trim($_GET['keyword']));
+			$where .= $where ? ' and goods like \'%'.$keyword.'%\'' : ' goods like \'%'.$keyword.'%\'';
+		}
+		
+		if(trim($_GET['keywords'])){
+			$keywords = addslashes(trim($_GET['keywords']));
+			$where .= $where ? ' and title like \'%'.$keywords.'%\'' : ' title like \'%'.$keywords.'%\'';
+			$where .= $where ? ' or goods like \'%'.$keywords.'%\'' : ' goods like \'%'.$keywords.'%\'';
+			$where .= $where ? ' or description like \'%'.$keywords.'%\'' : ' description like \'%'.$keywords.'%\'';
+		}
+		
+		if(trim($_GET['L_1-1'])){
+				
+			if(trim($_GET['L_1-2']) && intval($_GET['L_1-2'])!=0){
+		
+				$where .= $where ? ' and diqu =\''.addslashes(trim($_GET['L_1-2'])).'\'' : ' diqu =\''.addslashes(trim($_GET['L_1-2'])).'\'';
+			}else{
+				$db_linkage = pc_base::load_model('linkage_model');
+				$date_linkage = $db_linkage -> select(array('parentid'=>addslashes(trim($_GET['L_1-1']))),'linkageid');
+				//echo implode(',',$date_linkage);
+				$arr = array();
+				foreach ($date_linkage as $k=>$v){
+					$arr[$k] = $v[linkageid];
+				}
+				$where .= $where ? ' and diqu in ('.implode(',',$arr).')' : ' diqu in ('.implode(',',$arr).')' ;
+			}
+		}
 		
 			$thisdb = get_cbandb('cban_supply');
 			//status 99通过 1审核中 0退稿

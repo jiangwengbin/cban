@@ -375,7 +375,7 @@ class MY_index extends index{
 				$date['userid'] = param::get_cookie('_userid');
 				$date['username'] = param::get_cookie('_username');
 				$date['goods'] = addslashes(trim($_POST['info']['goods']));
-				$date['describe'] = $_POST['info']['describe'] ? addslashes($_POST['info']['describe']) : '';
+				$date['description'] = $_POST['info']['description'] ? addslashes($_POST['info']['description']) : '';
 				$date['type'] = $_POST['info']['type'];
 				$date['num'] = $_POST['info']['num'];
 				$date['diqu'] = $_POST['L_1-2'];

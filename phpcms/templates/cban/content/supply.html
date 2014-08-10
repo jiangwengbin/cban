@@ -14,7 +14,7 @@
                       {loop $supply $r} 
                      
                           <tr>
-                            <td colspan="2" height="40" style="font-size:16px;"><strong><a href="{$r['url']}" target="_blank">{$r['title']}</a></strong></td>
+                            <td colspan="2" height="40" style="font-size:16px;"><strong>{$r['title']}</strong></td>
                           </tr>
                           <tr>
                             <td width="173" rowspan="5" valign="top" style="border-bottom:#CCC solid 1px;">
@@ -29,11 +29,11 @@
                             <td height="25" valign="top">联系人：{$r[lxr]} &nbsp; 联系方式：{$r[tel]}</td>
                           </tr>
                           <tr>
-                            <td height="25" valign="top">数量：{$r[num]}</td>
-         </tr>
+                            <td height="25" valign="top">商品类型：{$r[goods]} &nbsp; 数量：{$r[num]}  &nbsp;  商机类型：{php if($r[type]==1) echo '出售';else echo '求购';}</td>
+                          </tr>
                           <tr>
-                            <td height="25" valign="top" style="border-bottom:#CCC solid 1px;">信息描述：{$r[describe]}</td>
-         </tr>
+                            <td height="25" valign="top" style="border-bottom:#CCC solid 1px;">信息描述：{$r[description]}</td>
+                          </tr>
                       {/loop}
 
       </table>
@@ -63,7 +63,7 @@
             		{pc:get sql="SELECT linkageid,name FROM cban_linkage WHERE keyid='3360' and parentid='$r[linkageid]' ORDER BY listorder ASC" return="data"}
                     
                     {loop $data $r}
-                    	<li> <a href="index.php?m=cban&c=index&a=supply&keywords={$r[name]}">{$r[name]}</a> </li>
+                    	<li> <a href="index.php?m=cban&c=index&a=supply&keyword={$r[name]}">{$r[name]}</a> </li>
                     {/loop} 
            			{/pc}
                </ul>
@@ -77,18 +77,21 @@
         <!--分类导览结束、本月热门家电厂商开始-->
         <div id="company_hot_new">
             <div class="title_blueline_1px_bottom" style="width:124px;">商机信息检索</div><div class="title_blackline_1px_bottom" style="width:58%;"></div>
-            <form name="" action="" method="get">
-                        <input type="hidden" value="cban" name="m">
-                        <input type="hidden" value="index" name="c">
-                        <input type="hidden" value="zhxx" name="a">
-						<table width="300" border="0" cellspacing="0" cellpadding="0">
+            
+           <form name="" action="" method="get">
+          	 	<input type="hidden" value="cban" name="m">
+                <input type="hidden" value="index" name="c">
+                <input type="hidden" value="supply" name="a">
+						<table width="100%" border="0" cellspacing="0" cellpadding="0">
 						  <tr>
-						    <th width="20%" height="30" align="left" valign="bottom">省市：</th>
-						    <td width="80%" height="30" align="left" valign="bottom">{menu_linkage(1,'L_1',$_GET[info][L_1])}</td>
-					      </tr>
-                          <tr>
-						    <th width="20%" height="30" align="left" valign="bottom">关键字：</th>
-						    <td width="80%" height="30" align="left" valign="bottom"><input type="text" name="keywords" value="{$_GET[keywords]}" /></td>
+						    <th height="30" align="left" valign="bottom">省市：</th>
+						    <td height="30" align="left" valign="bottom">{menu_linkage(1,'L_1',$_GET[info][L_1])}</td>
+						    </tr>
+						  <tr>
+						    <th width="46" height="30" align="left" valign="bottom">类型：</th>
+						    <td align="left" valign="bottom" style="padding-top:10px;">
+                            	<input type="text" name="keywords" value="{$_GET[keywords]}" style=" width:90%;border-bottom:1px solid #e5e5e5;" />
+                            </td>
 					      </tr>
 						</table>
 						<input style="margin-left:260px;" type="image" src="{CBAN_PATH}img/se_form.jpg" />

@@ -157,8 +157,6 @@ body {
 	border-left-color: #C6C6C6;
 }
 #companycontent_table_l{
-	width:112px;
-	float:left;
 	background-color:#F4F4F4;
 	border-top-style: none;
 	border-right-style: solid;
@@ -188,8 +186,6 @@ body {
 	padding-top:20px;
 }
 #companycontent_table_r{
-	width:326px;
-	float:left;
 	border-top-style: none;
 	border-right-style: solid;
 	border-bottom-style: none;

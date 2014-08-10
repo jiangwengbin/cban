@@ -9,40 +9,61 @@
     	<div class="title_grayline_1px_bottom">{$qy[title]}</div>
         <div class="companycontent_info">会员：{$qy[username]}<span style="padding-left:20px;">{date("Y-m-d H:i:s",$qy[inputtime])}</span><span style="padding-left:150px;">分享到：</span><img src="{CBAN_PATH}img/icon_qq.gif" width="16" height="16" /><img src="{CBAN_PATH}img/icon_sina.gif" width="16" height="16" /><img src="{CBAN_PATH}img/icon_tx.gif" width="16" height="16" /><img src="{CBAN_PATH}img/icon_rr.gif" width="16" height="16" /><img src="{CBAN_PATH}img/icon_add.gif" width="16" height="16" /></div>
         <div id="companycontent_table">
+        	<!--
         	<div id="companycontent_table_title">企业信息</div>
-        	<div id="companycontent_table_l">
-            	<ul>
-                	<li>企业名称</li>
-                    <li>地理位置</li>
-                    <li>地址</li>
-                    <li>联系人</li>
-                    <li>联系人手机</li>
-                    <li>固定电话</li>
-                    <li>传真</li>
-                    <li>EMAIL</li>
-                    <li>产品类型</li>
-                    <li style="height:78px; line-height:78px;">旗下品牌</li>
-                </ul>
-            </div>
-            <div id="companycontent_table_r">
-            	<ul>
-                    <li>{$qy[title]}</li>
-                    <li>{get_linkage($qy[diqu],1,' - ')}</li>
-                    <li>{$qy[add]}</li>
-                    <li>{$qy[lxr]}</li>
-                    <li>{$qy[tel]}</li>
-                    <li>{$qy[dianhua]}</li>
-                    <li>{$qy[fax]}</li>
-                    <li>{$qy[email]}</li>
-                    <li>{$qy[cptype]}</li>
-                    
-                    <li style="height:78px; line-height:78px;">
-                    	{loop $pinpai $r}
+        	<div id="companycontent_table_l"></div>
+            <div id="companycontent_table_r"></div>
+            -->
+    <table width="440" border="0" cellspacing="0" cellpadding="0" style="border:#CCC solid 1px;">
+                  <tr>
+                    <td colspan="2" align="center" id="companycontent_table_title">企业信息</td>
+                  </tr>
+                  <tr>
+                    <td width="100" height="30" id="companycontent_table_l">企业名称</td>
+                    <td width="340" id="companycontent_table_r">{$qy[title]}</td>
+        </tr>
+                  <tr>
+                    <td height="30" id="companycontent_table_l">地理位置</td>
+                    <td id="companycontent_table_r">{get_linkage($qy[diqu],1,' - ')}</td>
+                  </tr>
+                  <tr>
+                    <td height="30" id="companycontent_table_l">地址</td>
+                    <td id="companycontent_table_r">{$qy[add]}</td>
+                  </tr>
+                  <tr>
+                    <td height="30" id="companycontent_table_l">联系人</td>
+                    <td id="companycontent_table_r">{$qy[lxr]}</td>
+                  </tr>
+                  <tr>
+                    <td height="30" id="companycontent_table_l">联系人手机</td>
+                    <td id="companycontent_table_r">{$qy[tel]}</td>
+                  </tr>
+                  <tr>
+                    <td height="30" id="companycontent_table_l">固定电话</td>
+                    <td id="companycontent_table_r">{$qy[dianhua]}</td>
+                  </tr>
+                  <tr>
+                    <td height="30" id="companycontent_table_l">传真</td>
+                    <td id="companycontent_table_r">{$qy[fax]}</td>
+                  </tr>
+                  <tr>
+                    <td height="30" id="companycontent_table_l">EMAIL</td>
+                    <td id="companycontent_table_r">{$qy[email]}</td>
+                  </tr>
+                  <tr>
+                    <td height="30" id="companycontent_table_l">产品类型</td>
+                    <td id="companycontent_table_r">{$qy[cptype]}</td>
+                  </tr>
+                  <tr>
+                    <td id="companycontent_table_l">旗下品牌</td>
+                    <td id="companycontent_table_r" style="table-layout:fixed;">
+                    {loop $pinpai $r}
                         	<img src="{$r[url]}" width="85" height="36" alt="{$r[alt]}" title="{$r[alt]}" />
-                        {/loop}
-                    </li>
-                </ul>
-            </div>        
+                    {/loop}
+                    </td>
+                  </tr>
+                </table>
+     
         </div>
         <div id="companycontent_artical">
         {$content}

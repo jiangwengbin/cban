@@ -48,6 +48,30 @@ return array (
     'siteid' => '1',
     'thumb' => '',
   ),
+  24 => 
+  array (
+    'posid' => '24',
+    'modelid' => '15',
+    'catid' => '9',
+    'name' => '千县万店_门店图片',
+    'maxnum' => '20',
+    'extention' => '',
+    'listorder' => '6',
+    'siteid' => '1',
+    'thumb' => '',
+  ),
+  23 => 
+  array (
+    'posid' => '23',
+    'modelid' => '15',
+    'catid' => '9',
+    'name' => '千县万店_新加门店',
+    'maxnum' => '20',
+    'extention' => '',
+    'listorder' => '5',
+    'siteid' => '1',
+    'thumb' => '',
+  ),
   22 => 
   array (
     'posid' => '22',
