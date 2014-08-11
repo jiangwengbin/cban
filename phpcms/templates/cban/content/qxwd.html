@@ -7,21 +7,161 @@
             	<h4 class="title title_br"><span>中国家电品牌网</span>><span>千县万店</span>><span>门店一览表</span></h4>
                 <div class="a_link2">
                	  <div class="medium_win">
-                    	<div class="conunt">
-                            共计: <span>{$count}个门店</span>
+                 <style>
+                 #map{
+						width:555px;
+						height:450px;
+						background-image:url({CBAN_PATH}/img/map.gif);
+						background-repeat: no-repeat;
+						background-position: center center;
+					}
+					#map span{
+						display:block;
+						color:#A71C1C;
+						font-size:12px;
+						position:absolute;
+					}
+					#map a{
+						color:#A71C1C;
+					}
+					#hlj{
+					 padding-left:495px; padding-top:72px;
+					}
+					#jl{
+					 padding-left:425px; padding-top:112px;
+					}
+					#xj{
+					 padding-left:152px; padding-top:157px;
+					}
+					#nmg{
+					 padding-left:290px; padding-top:165px;
+					}
+					#bj{
+					 padding-left:413px; padding-top:155px;
+					}
+					#ln{
+					 padding-left:490px; padding-top:145px;
+					}
+					#nx{
+					 padding-left:265px; padding-top:196px;
+					}
+					#qh{
+					 padding-left:200px; padding-top:218px;
+					}
+					#gs{
+					 padding-left:265px; padding-top:234px;
+					}
+					#sx{
+					 padding-left:353px; padding-top:222px;
+					}
+					#sanx{
+					 padding-left:338px; padding-top:189px;
+					}
+					#tj{
+					 padding-left:440px; padding-top:176px;
+					}
+					#hb{
+					 padding-left:433px; padding-top:193px;
+					}
+					#sd{
+					 padding-left:453px; padding-top:211px;
+					}
+					#xz{
+					 padding-left:158px; padding-top:259px;
+					}
+					#hen{
+					 padding-left:350px; padding-top:253px;
+					}
+					#ah{
+					 padding-left:430px; padding-top:258px;
+					}
+					#js{
+					 padding-left:474px; padding-top:244px;
+					}
+					#sh{
+					 padding-left:491px; padding-top:265px;
+					}
+					#sc{
+					 padding-left:235px; padding-top:283px;
+					}
+					#cq{
+					 padding-left:300px; padding-top:286px;
+					}
+					#hub{
+					 padding-left:400px; padding-top:278px;
+					}
+					#zj{
+					 padding-left:452px; padding-top:292px;
+					}
+					#fj{
+					 padding-left:452px; padding-top:322px;
+					}
+					#jx{
+					 padding-left:420px; padding-top:309px;
+					}
+					#gz{
+					 padding-left:280px; padding-top:332px;
+					}
+					#hun{
+					 padding-left:337px; padding-top:323px;
+					}
+					#yn{
+					 padding-left:237px; padding-top:357px;
+					}
+					#gx{
+					 padding-left:367px; padding-top:361px;
+					}
+					#gd{
+					 padding-left:401px; padding-top:347px;
+					}
+					#tw{
+					 padding-left:501px; padding-top:353px;
+					}#am{
+					 padding-left:350px; padding-top:383px;
+					}#hk{
+					 padding-left:430px; padding-top:379px;
+					}#hain{
+					 padding-left:397px; padding-top:417px;
+					}
+					/*---地图内容---*/
+                 </style>
+                    	<div id="map">
+                            <span id="hlj"><a href="index.php?m=cban&c=index&a=qxwd&id=11">{get_mendian_total(11)}</a></span>
+                            <span id="jl"><a href="index.php?m=cban&c=index&a=qxwd&id=10">{get_mendian_total(10)}</a></span>
+                            <span id="xj"><a href="index.php?m=cban&c=index&a=qxwd&id=32">{get_mendian_total(32)}</a></span>
+                            <span id="nmg"><a href="index.php?m=cban&c=index&a=qxwd&id=8">{get_mendian_total(8)}</a></span>
+                            <span id="bj"><a href="index.php?m=cban&c=index&a=qxwd&id=2">{get_mendian_total(2)}</a></span>
+                            <span id="ln"><a href="index.php?m=cban&c=index&a=qxwd&id=9">{get_mendian_total(9)}</a></span>
+                            <span id="nx"><a href="index.php?m=cban&c=index&a=qxwd&id=31">{get_mendian_total(31)}</a></span>
+                            <span id="qh"><a href="index.php?m=cban&c=index&a=qxwd&id=30">{get_mendian_total(30)}</a></span>
+                            <span id="gs"><a href="index.php?m=cban&c=index&a=qxwd&id=29">{get_mendian_total(29)}</a></span>
+                            <span id="sx"><a href="index.php?m=cban&c=index&a=qxwd&id=28">{get_mendian_total(28)}</a></span>
+                            <span id="sanx"><a href="index.php?m=cban&c=index&a=qxwd&id=7">{get_mendian_total(7)}</a></span>
+                            <span id="tj"><a href="index.php?m=cban&c=index&a=qxwd&id=4">{get_mendian_total(4)}</a></span>
+                            <span id="hb"><a href="index.php?m=cban&c=index&a=qxwd&id=6">{get_mendian_total(6)}</a></span>
+                            <span id="sd"><a href="index.php?m=cban&c=index&a=qxwd&id=17">{get_mendian_total(17)}</a></span>
+                            <span id="xz"><a href="index.php?m=cban&c=index&a=qxwd&id=27">{get_mendian_total(27)}</a></span>
+                            <span id="hun"><a href="index.php?m=cban&c=index&a=qxwd&id=20">{get_mendian_total(20)}</a></span>
+                            <span id="ah"><a href="index.php?m=cban&c=index&a=qxwd&id=14">{get_mendian_total(14)}</a></span>
+                            <span id="js"><a href="index.php?m=cban&c=index&a=qxwd&id=12">{get_mendian_total(12)}</a></span>
+                            <span id="sh"><a href="index.php?m=cban&c=index&a=qxwd&id=3">{get_mendian_total(3)}</a></span>
+                            <span id="sc"><a href="index.php?m=cban&c=index&a=qxwd&id=24">{get_mendian_total(24)}</a></span>
+                            <span id="cq"><a href="index.php?m=cban&c=index&a=qxwd&id=5">{get_mendian_total(5)}</a></span>
+                            <span id="hub"><a href="index.php?m=cban&c=index&a=qxwd&id=19">{get_mendian_total(19)}</a></span>
+                            <span id="zj"><a href="index.php?m=cban&c=index&a=qxwd&id=13">{get_mendian_total(13)}</a></span>
+                            <span id="fj"><a href="index.php?m=cban&c=index&a=qxwd&id=15">{get_mendian_total(15)}</a></span>
+                            <span id="jx"><a href="index.php?m=cban&c=index&a=qxwd&id=16">{get_mendian_total(16)}</a></span>
+                            <span id="gz"><a href="index.php?m=cban&c=index&a=qxwd&id=25">{get_mendian_total(25)}</a></span>
+                            <span id="hen"><a href="index.php?m=cban&c=index&a=qxwd&id=18">{get_mendian_total(18)}</a></span>
+                            <span id="yn"><a href="index.php?m=cban&c=index&a=qxwd&id=26">{get_mendian_total(26)}</a></span>
+                            <span id="gx"><a href="index.php?m=cban&c=index&a=qxwd&id=22">{get_mendian_total(22)}</a></span>
+                            <span id="gd"><a href="index.php?m=cban&c=index&a=qxwd&id=21">{get_mendian_total(21)}</a></span>
+                            <span id="tw"><a href="index.php?m=cban&c=index&a=qxwd&id=33">{get_mendian_total(33)}</a></span>
+                            <span id="am"><a href="index.php?m=cban&c=index&a=qxwd&id=35">{get_mendian_total(35)}</a></span>
+                            <span id="hk"><a href="index.php?m=cban&c=index&a=qxwd&id=34">{get_mendian_total(34)}</a></span>
+                            <span id="hain"><a href="index.php?m=cban&c=index&a=qxwd&id=23">{get_mendian_total(23)}</a></span>
                         </div>
-                        <div class="all">
-                            省份: <span>全部</span>
-                        </div>
-                        
-                    <ul>
-                    	{loop $date_linkage $r}
-                            <li>
-                                <div><a href="{siteurl($siteid)}/index.php?m=cban&c=index&a=qxwd&id={$r[linkageid]}">{$r[name]}</a></div>
-                            </li>
-                        {/loop} 
-                      </ul>
-                        
+                                            
                     
           <?php      
                if($mendian){

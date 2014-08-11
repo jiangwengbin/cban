@@ -258,4 +258,21 @@ function get_content_status($modelid,$username){
 	}
 	return "(未发布)";
 }
+
+/**
+ *根据省份id，返回该省份共有几家门店 
+ */
+function get_mendian_total($id){
+	$db_linkage = pc_base::load_model('linkage_model');
+	$date_linkage = $db_linkage -> select(array('parentid'=>'0','child'=>'1','keyid'=>'1'),'linkageid,name','');
+	$city_date = $db_linkage -> select(array('parentid'=>$id),'linkageid');
+	
+	$where = '';
+	foreach ($city_date as $val) {
+		$where .= $where ? " or `diqu` = '$val[linkageid]' " : " `diqu` = '$val[linkageid]'";
+	}
+	$thisdb = get_cbandb('cban_news_md');
+	echo $thisdb->count($where);
+
+}
 ?>
