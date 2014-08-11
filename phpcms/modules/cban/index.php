@@ -52,7 +52,24 @@ class index {
 // 		print_r($CATEGORYS);
 		include template('content','qxwd');
 	}
-
+	
+	/*门店内容页*/
+	function  showmd(){
+		$siteid = $GLOBALS['siteid'] = max($siteid,1);
+		//SEO
+		$SEO = seo($siteid);
+		if(trim($_GET['mdid']) && intval($_GET['mdid'])!=0){
+			$id = $_GET['mdid'];
+			$thisdb = get_cbandb('cban_news_md');
+			$a = $thisdb -> get_one('id='.$id);
+			$thisdb = get_cbandb('cban_news_md_data');
+			$b = $thisdb -> get_one('id='.$id);
+			//print_r(array_merge($a,$b));
+			extract(array_merge($a,$b));
+			include template('content','qxwd_show');
+		}
+	}
+	
 	/*门店搜索*/
 	public function serMendian() {
 		
@@ -81,6 +98,12 @@ class index {
 			$where .= $where ? " or `diqu` = '".$_GET['L_1-2']."'" : " `diqu` = '".$_GET['L_1-2']."'";
 
 		}
+		
+		if(trim($_GET['keywords'])){
+			$keywords = addslashes(trim($_GET['keywords']));
+			$where .= $where ? ' and title like \'%'.$keywords.'%\'' : ' title like \'%'.$keywords.'%\'';
+		}
+		
 		if($_GET['type']){$where .= " and service=".$_GET['type'];}
 
 		if($where!="")
