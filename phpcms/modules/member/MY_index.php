@@ -78,6 +78,7 @@ class MY_index extends index{
 	}
 	
 	public function register() {
+
 		$this->_session_start();
 		//获取用户siteid
 		$siteid = isset($_REQUEST['siteid']) && trim($_REQUEST['siteid']) ? intval($_REQUEST['siteid']) : 1;
@@ -105,8 +106,9 @@ class MY_index extends index{
 				}
 			}
 				
-			if(!trim($_POST['info']['license']) && !trim($_POST['info']['orgcode'])){
+			if(!trim($_POST['info']['license']) && !trim($_POST['info']['orgcode']) && $_POST['modelid']!=10){
 				showmessage('营业执照和组织机构代码至少填一项');
+				
 			}
 				
 			$userinfo = array();

@@ -97,7 +97,7 @@
               
               {pc:content  action="position" posid="19" order="listorder asc" num="10"}
               {loop $data $r}
-              <li><a href="#"><img src="{CBAN_PATH}img/no_{$r['listorder']}.gif" width="15" height="15" />{$r['title']}</a></li>
+              <li><a href="index.php?m=cban&c=index&a=jdmq&qyid={$r[id]}" target="_blank"><img src="{CBAN_PATH}img/no_{$r['listorder']}.gif" width="15" height="15" />{$r['title']}</a></li>
               {/loop}
               {/pc}
             </ul>
@@ -108,7 +108,7 @@
             <ul>
               {pc:content  action="position" posid="20" order="listorder asc" num="10"}
               {loop $data $r}
-              <li><a href="#"><img src="{CBAN_PATH}img/no_{$r['listorder']}.gif" width="15" height="15" />{$r['title']}</a></li>
+              <li><a href="index.php?m=cban&c=index&a=jdmq&qyid={$r[id]}" target="_blank"><img src="{CBAN_PATH}img/no_{$r['listorder']}.gif" width="15" height="15" />{$r['title']}</a></li>
               {/loop}
               {/pc}
             </ul>

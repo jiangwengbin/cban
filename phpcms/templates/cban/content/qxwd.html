@@ -245,7 +245,7 @@
                                 {loop $data $r}
                                      <li>
                                     <span>{$r[listorder]}</span>
-                                    <a href="{$r[url]}">{$r[title]}</a>
+                                    <a href="index.php?m=cban&c=index&a=showmd&mdid={$r[id]}" target="_blank">{$r[title]}</a>
                                 	</li>
                                 {/loop}
                                 {/pc}
@@ -263,7 +263,7 @@
                                 {pc:content action="position" posid="24" order="listorder asc" num="4"}
                                 {loop $data $r}
                                      <li>
-                                	<a href="{$r[url]}">
+                                	<a href="index.php?m=cban&c=index&a=showmd&mdid={$r[id]}" target="_blank">
                                         <img src="{$r[image]}" width="150" height="120" />
                                         <div>{$r[title]}</div>
                                     </a>
