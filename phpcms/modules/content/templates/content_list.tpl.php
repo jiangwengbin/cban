@@ -50,6 +50,13 @@ include $this->admin_tpl('header','admin');?>
 				</select>
 				
 				<input name="keyword" type="text" value="<?php if(isset($keyword)) echo $keyword;?>" class="input-text" />
+				
+				<?php
+					if($_GET['catid']==9){
+				?>
+					 销售类型<input type="radio" name="service" value="1" <?php if($_GET['service']==1) echo 'checked';?> />
+					 维修类型<input type="radio" name="service" value="2" <?php if($_GET['service']==2) echo 'checked';?> />
+				<?php } ?>
 				<input type="submit" name="search" class="button" value="<?php echo L('search');?>" />
 	</div>
 		</td>

@@ -260,17 +260,20 @@ function get_content_status($modelid,$username){
 }
 
 /**
- *根据省份id，返回该省份共有几家门店 
+ *根据省份id，服务类型，返回该省份共有几家门店 
  */
-function get_mendian_total($id){
+function get_mendian_total($id , $service){
 	$db_linkage = pc_base::load_model('linkage_model');
 	$date_linkage = $db_linkage -> select(array('parentid'=>'0','child'=>'1','keyid'=>'1'),'linkageid,name','');
 	$city_date = $db_linkage -> select(array('parentid'=>$id),'linkageid');
 	
 	$where = '';
 	foreach ($city_date as $val) {
-		$where .= $where ? " or `diqu` = '$val[linkageid]' " : " `diqu` = '$val[linkageid]'";
+			$arr[] = $val[linkageid];
 	}
+	$where .= $where ? ' or diqu in('.implode(',',$arr).')' : ' diqu in('.implode(',',$arr).')';
+	$where .= " and service ='$service' ";
+
 	$thisdb = get_cbandb('cban_news_md');
 	echo $thisdb->count($where);
 

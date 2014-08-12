@@ -48,6 +48,30 @@ return array (
     'siteid' => '1',
     'thumb' => '',
   ),
+  26 => 
+  array (
+    'posid' => '26',
+    'modelid' => '15',
+    'catid' => '0',
+    'name' => '家电维修_维修网点图片',
+    'maxnum' => '20',
+    'extention' => '',
+    'listorder' => '8',
+    'siteid' => '1',
+    'thumb' => '',
+  ),
+  25 => 
+  array (
+    'posid' => '25',
+    'modelid' => '15',
+    'catid' => '0',
+    'name' => '家电维修_新加维修网点',
+    'maxnum' => '20',
+    'extention' => '',
+    'listorder' => '7',
+    'siteid' => '1',
+    'thumb' => '',
+  ),
   24 => 
   array (
     'posid' => '24',

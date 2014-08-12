@@ -4,7 +4,7 @@
 <center>
         <div id="content">
         	<div class="main_link">
-            	<h4 class="title title_br"><span>中国家电品牌网</span>><span>千县万店</span>><span>门店信息</span></h4>
+            	<h4 class="title title_br"><span>中国家电品牌网</span>><span>家电维修</span>><span>维修网点信息</span></h4>
                 <div class="a_link2">
                	  <div class="medium_win">
                   	 <div class="title_grayline_1px_bottom">{$title}</div>
@@ -16,14 +16,14 @@
                   </div>
                     
                     <div class="mini_win">
-                    	<h4 class="title title_br">门店检索</h4>
+                    	<h4 class="title title_br">维修网点检索</h4>
                         <div class="left_border"></div>
                         <div class="right_border"></div>
                         
 						<form name="" action="" method="get">
                         	<input type="hidden" value="cban" name="m">
                             <input type="hidden" value="index" name="c">
-                            <input type="hidden" value="serMendian" name="a">
+                            <input type="hidden" value="serJDWX" name="a">
 						<table width="300" border="0" cellspacing="0" cellpadding="0">
 						  <tr>
 						    <th width="20%" height="30" align="left" valign="bottom">省市：</th>
@@ -37,13 +37,13 @@
 						<input style="margin-left:260px;" type="image" src="{CBAN_PATH}img/se_form.jpg" />
 						</form>
                         
-                        <h4 class="title title_br">新加门店</h4>
+                        <h4 class="title title_br">新加维修网点</h4>
                         <div class="left_border"></div>
                         <div class="right_border"></div>
                         
                         <div class="win_dir win_dir_lift" style="width:100%;">
                         	<ul class="win_dir_lift">
-                                {pc:content action="position" posid="23" order="listorder asc" num="10"}
+                                {pc:content action="position" posid="25" order="listorder asc" num="10"}
                                 {loop $data $r}
                                      <li>
                                     <span>{$r[listorder]}</span>
@@ -55,13 +55,13 @@
                         </div>
                         
                         
-                        <h4 class="title title_br">门店图片</h4>
+                        <h4 class="title title_br">维修网点图片</h4>
                         <div class="left_border"></div>
                         <div class="right_border"></div>
                         
                         <div class="win_dir">
                         	<ul class="win_dir_lift_img">
-                            	 {pc:content action="position" posid="24" order="listorder asc" num="4"}
+                            	 {pc:content action="position" posid="26" order="listorder asc" num="4"}
                                 {loop $data $r}
                                      <li>
                                 	<a href="{$r[url]}">

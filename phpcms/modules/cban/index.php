@@ -5,7 +5,7 @@ define('CACHE_MODEL_PATH',CACHE_PATH.'caches_model'.DIRECTORY_SEPARATOR.'caches_
 pc_base::load_app_func('util','cban');
 class index {
 
-	//百县千店页面
+	//千县万店页面
 	public function qxwd() {
 
 		if(isset($_GET['siteid'])) {
@@ -31,11 +31,14 @@ class index {
 
 			$city_date = $db_linkage -> select(array('parentid'=>$_GET['id']),'linkageid,name');
 
-			$where = '';
+			$where = "";
+ 			
 			foreach ($city_date as $val) {
-				$where .= $where ? " or `diqu` = '$val[linkageid]' " : " `diqu` = '$val[linkageid]'";
+				$arr[] = $val[linkageid];
 			}
-
+			$where .= $where ? ' or diqu in('.implode(',',$arr).')' : ' diqu in('.implode(',',$arr).')';
+			$where .= " and service ='1' ";
+			
 			$mendian = $thisdb->cban_listinfo($where, 'id desc',$_GET['page'], '20');
 			$pages = $thisdb->pages;
 
@@ -88,9 +91,10 @@ class index {
 			$city_date = $db_linkage -> select(array('parentid'=>$_GET['L_1-1']),'linkageid,name');
 
 			foreach ($city_date as $val) {
-				$where .= $where ? " or `diqu` = '$val[linkageid]' " : " `diqu` = '$val[linkageid]'";
+				$arr[] = $val[linkageid];
 			}
-
+			$where .= $where ? ' or diqu in('.implode(',',$arr).')' : ' diqu in('.implode(',',$arr).')';
+			
 			//print_r($mendian);
 		}
 		if($_GET['L_1-2'])
@@ -104,11 +108,9 @@ class index {
 			$where .= $where ? ' and title like \'%'.$keywords.'%\'' : ' title like \'%'.$keywords.'%\'';
 		}
 		
-		if($_GET['type']){$where .= " and service=".$_GET['type'];}
-
 		if($where!="")
 		{
-
+			$where .= " and service ='1' ";
 			$thisdb = get_cbandb('cban_news_md');
 
 			$mendian = $thisdb->cban_listinfo($where, 'id desc',$_GET['page'], '20');
@@ -125,7 +127,7 @@ class index {
 		include template('content','qxwd');
 	}
 	
-	
+	//家电名企
 	public function jdmq(){
 		$siteid = $GLOBALS['siteid'] = max($siteid,1);
 		//SEO
@@ -164,6 +166,7 @@ class index {
 		}
 	}
 	
+	//展会信息
 	public function zhxx(){
 		
 		$where = '';
@@ -201,6 +204,7 @@ class index {
 		include template('content','list_zhxx_ser');
 	}
 	
+	//商机信息
 	public function supply(){
 		$siteid = $GLOBALS['siteid'] = max($siteid,1);
 		//SEO
@@ -244,5 +248,114 @@ class index {
 		include template('content','supply');
 	}
 	
+	//家电维修
+	public function jdwx() {
+		$siteid = $GLOBALS['siteid'] = max($siteid,1);
+		//SEO
+		$SEO = seo($siteid);
+		
+		$thisdb = get_cbandb('cban_news_md');
+		// 		$count = $this->db->count('userid');
+		
+		$db_linkage = pc_base::load_model('linkage_model');
+		$date_linkage = $db_linkage -> select(array('parentid'=>'0','child'=>'1','keyid'=>'1'),'linkageid,name','');
+		
+		if($_GET['id'])
+		{
+		
+			$city_date = $db_linkage -> select(array('parentid'=>$_GET['id']),'linkageid,name');
+		
+			$where = "";
+			foreach ($city_date as $val) {
+				$arr[] = $val[linkageid];
+			}
+			$where .= $where ? ' or diqu in('.implode(',',$arr).')' : ' diqu in('.implode(',',$arr).')';
+			$where .= " and service ='2' ";
+		
+			$mendian = $thisdb->cban_listinfo($where, 'id desc',$_GET['page'], '20');
+			$pages = $thisdb->pages;
+		
+			foreach ($mendian as $key => $val) {
+		
+				$name = $db_linkage -> get_one(array('linkageid'=>$val[diqu]),'name','');
+				$mendian[$key][diquname] = $name[name];
+		
+			}
+		}
+		
+		//$CATEGORYS = getcache('category_content_'.$siteid,'commons');
+		//print_r($CATEGORYS);
+		include template('content','jdwx');
+	}
+	
+	public function serJDWX() {
+	
+		$siteid = $GLOBALS['siteid'] = max($siteid,1);
+		//SEO
+		$SEO = seo($siteid);
+	
+		$db_linkage = pc_base::load_model('linkage_model');
+		$date_linkage = $db_linkage -> select(array('parentid'=>'0','child'=>'1','keyid'=>'1'),'linkageid,name','');
+	
+		$where = "";
+	
+		/*只有省份*/
+		if($_GET['L_1-1'] && !$_GET['L_1-2'])
+		{
+			$city_date = $db_linkage -> select(array('parentid'=>$_GET['L_1-1']),'linkageid,name');
+	
+			foreach ($city_date as $val) {
+				$arr[] = $val[linkageid];
+			}
+			$where .= $where ? ' or diqu in('.implode(',',$arr).')' : ' diqu in('.implode(',',$arr).')';
+				
+			//print_r($mendian);
+		}
+		if($_GET['L_1-2'])
+		{
+			$where .= $where ? " or `diqu` = '".$_GET['L_1-2']."'" : " `diqu` = '".$_GET['L_1-2']."'";
+	
+		}
+	
+		if(trim($_GET['keywords'])){
+			$keywords = addslashes(trim($_GET['keywords']));
+			$where .= $where ? ' and title like \'%'.$keywords.'%\'' : ' title like \'%'.$keywords.'%\'';
+		}
+	
+		if($where!="")
+		{
+			$where .= " and service ='2' ";
+			$thisdb = get_cbandb('cban_news_md');
+	
+			$mendian = $thisdb->cban_listinfo($where, 'id desc',$_GET['page'], '20');
+			$pages = $thisdb->pages;
+	
+			foreach ($mendian as $key => $val) {
+	
+				$name = $db_linkage -> get_one(array('linkageid'=>$val[diqu]),'name','');
+				$mendian[$key][diquname] = $name[name];
+	
+			}
+	
+		}
+		include template('content','jdwx');
+	}
+	
+	//维修网点内容页
+	function  showJDWX(){
+		$siteid = $GLOBALS['siteid'] = max($siteid,1);
+		//SEO
+		$SEO = seo($siteid);
+		if(trim($_GET['mdid']) && intval($_GET['mdid'])!=0){
+			$id = $_GET['mdid'];
+			$thisdb = get_cbandb('cban_news_md');
+			$a = $thisdb -> get_one('id='.$id);
+			$thisdb = get_cbandb('cban_news_md_data');
+			$b = $thisdb -> get_one('id='.$id);
+			//print_r(array_merge($a,$b));
+			extract(array_merge($a,$b));
+			include template('content','jdwx_show');
+		}
+	}
 }
 ?>

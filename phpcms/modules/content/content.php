@@ -93,6 +93,11 @@ class content extends admin {
 				$where .= " AND `posids` = '$posids'";
 			}
 			
+			if(isset($_GET['service']) && !empty($_GET['service'])) {
+				$service = $_GET['service']==1 ? intval($_GET['service']) : 2;
+				$where .= " AND `service` = '$service'";
+			}
+			
 			$datas = $this->db->listinfo($where,'id desc',$_GET['page']);
 			$pages = $this->db->pages;
 			$pc_hash = $_SESSION['pc_hash'];
