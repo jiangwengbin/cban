@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 -- 
 -- 主机: localhost
--- 生成日期: 2014 年 08 月 12 日 08:01
+-- 生成日期: 2014 年 08 月 12 日 08:47
 -- 服务器版本: 5.0.51
 -- PHP 版本: 5.2.6
 
@@ -7624,7 +7624,7 @@ CREATE TABLE IF NOT EXISTS `cban_session` (
 -- 
 
 INSERT DELAYED IGNORE INTO `cban_session` (`sessionid`, `userid`, `ip`, `lastvisit`, `roleid`, `groupid`, `m`, `c`, `a`, `data`) VALUES 
-('60eb50efc924f4de51e57caf88828b54', 1, '127.0.0.1', 1407830367, 1, 0, 'admin', 'index', 'public_session_life', 'code|s:5:"rdcmd";userid|s:1:"1";roleid|s:1:"1";pc_hash|s:6:"7d7g4U";lock_screen|i:0;');
+('60eb50efc924f4de51e57caf88828b54', 1, '127.0.0.1', 1407833247, 1, 0, 'admin', 'index', 'public_session_life', 'code|s:5:"rdcmd";userid|s:1:"1";roleid|s:1:"1";pc_hash|s:6:"7d7g4U";lock_screen|i:0;');
 
 -- --------------------------------------------------------
 
