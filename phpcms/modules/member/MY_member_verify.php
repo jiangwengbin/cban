@@ -19,10 +19,10 @@ class MY_member_verify extends member_verify {
 			$where = to_sqls($uidarr, '', 'userid');
 			$userarr = $this->db->listinfo($where);
 			$success_uids = $info = array();
-			
+				
 			foreach($userarr as $v) {
-				
-				
+				$status = $this->client->ps_member_register($v['username'], $v['password'], $v['email'], $v['regip'], $v['encrypt']);
+				if ($status > 0) {
 					$info['phpssouid'] = $status;
 					$info['password'] = password($v['password'], $v['encrypt']);
 					$info['regdate'] = $info['lastdate'] = $v['regdate'];
@@ -37,24 +37,22 @@ class MY_member_verify extends member_verify {
 					$info['modelid'] = $v['modelid'] ? $v['modelid'] : 10;
 					if($v['mobile']) $info['mobile'] = $v['mobile'];
 					$userid = $this->member_db->insert($info, 1);
-
-					
+		
 					if($userid) {
 						$success_uids[] = $v['userid'];
-					}					
-				
+					}
+				}
 			}
-			
-			$where = to_sqls($success_uids, '', 'userid');			
+			$where = to_sqls($success_uids, '', 'userid');
 			$this->db->update(array('status'=>1, 'message'=>$_POST['message']), $where);
-			
+				
 			//phpsso注册失败的用户状态直接置为审核期间phpsso已注册该会员
 			$fail_uids = array_diff($uidarr, $success_uids);
 			if (!empty($fail_uids)) {
 				$where = to_sqls($fail_uids, '', 'userid');
 				$this->db->update(array('status'=>5, 'message'=>$_POST['message']), $where);
 			}
-			
+				
 			//发送 email通知
 			if($_POST['sendemail']) {
 				$memberinfo = $this->db->select($where);
@@ -63,7 +61,7 @@ class MY_member_verify extends member_verify {
 					sendmail($v['email'], L('reg_pass'), $_POST['message']);
 				}
 			}
-			
+				
 			showmessage(L('pass').L('operation_success'), HTTP_REFERER);
 		} else {
 			showmessage(L('operation_failure'), HTTP_REFERER);
