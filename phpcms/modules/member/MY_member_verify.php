@@ -21,8 +21,8 @@ class MY_member_verify extends member_verify {
 			$success_uids = $info = array();
 			
 			foreach($userarr as $v) {
-				$status = $this->client->ps_member_register($v['username'], $v['password'], $v['email'], $v['regip'], $v['encrypt']);
-				if ($status > 0) {
+				
+				
 					$info['phpssouid'] = $status;
 					$info['password'] = password($v['password'], $v['encrypt']);
 					$info['regdate'] = $info['lastdate'] = $v['regdate'];
@@ -37,20 +37,14 @@ class MY_member_verify extends member_verify {
 					$info['modelid'] = $v['modelid'] ? $v['modelid'] : 10;
 					if($v['mobile']) $info['mobile'] = $v['mobile'];
 					$userid = $this->member_db->insert($info, 1);
-// 					if($v['modelinfo']) {	//如果数据模型不为空
-// 						//插入会员模型数据
-// 						$user_model_info = string2array($v['modelinfo']);
-// 						$user_model_info['userid'] = $userid;
-// 						$this->member_db->set_model($info['modelid']);
-// 						$this->member_db->insert($user_model_info);
-// 						print_r($userid);
-// 					}
+
 					
 					if($userid) {
 						$success_uids[] = $v['userid'];
-					}
-				}
+					}					
+				
 			}
+			
 			$where = to_sqls($success_uids, '', 'userid');			
 			$this->db->update(array('status'=>1, 'message'=>$_POST['message']), $where);
 			

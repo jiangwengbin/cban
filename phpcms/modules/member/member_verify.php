@@ -91,6 +91,7 @@ class member_verify extends admin {
 					if($v['mobile']) $info['mobile'] = $v['mobile'];
 					$userid = $this->member_db->insert($info, 1);
 
+					/*以下if语句代码会导致插入时数据库报错*/
 					if($v['modelinfo']) {	//如果数据模型不为空
 						//插入会员模型数据
 						$user_model_info = string2array($v['modelinfo']);
