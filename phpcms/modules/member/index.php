@@ -1761,7 +1761,7 @@ class index extends foreground {
 		$code = $_SESSION['emc'] = random(6);
 		$message = '您的验证码为：'.$code;
 
-		sendmail($_SESSION['email'], '邮箱找回密码验证', $message);
+		sendmail($_SESSION['email'], '验证码', $message);
 		echo '1';
 	}
 }
