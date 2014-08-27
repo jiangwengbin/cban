@@ -75,12 +75,14 @@ $(function(){
                  {loop $data $r}
                  	
                     	{pc:content action="category" catid="$r[catid]" num="25" siteid="$siteid" order="listorder ASC"}
-                       		<li><a href="{$r[url]}" target="_blank"><div>{$r[catname]}</div></a></li>
-                        	 <ol class="next_nav">
-                             {loop $data $r}
-                             	<li><a href="{$r[url]}" target="_blank"><div>{$r[catname]}</div></a></li>
-                             {/loop}
-                         	</ol>
+                       		<li>
+                            	<a href="{$r[url]}" target="_blank"><div>{$r[catname]}</div></a>
+                                 <ol class="next_nav">
+                                 {loop $data $r}
+                                    <li><a href="{$r[url]}" target="_blank"><div>{$r[catname]}</div></a></li>
+                                 {/loop}
+                                </ol>
+                            </li>
                          {/pc} 
                          
                  {/loop}

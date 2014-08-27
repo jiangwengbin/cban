@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 -- 
 -- 主机: localhost
--- 生成日期: 2014 年 08 月 24 日 17:20
+-- 生成日期: 2014 年 08 月 27 日 01:20
 -- 服务器版本: 5.0.51
 -- PHP 版本: 5.2.6
 
@@ -23,8 +23,8 @@ START TRANSACTION;
 -- 
 -- 表的结构 `cban_admin`
 -- 
--- 创建时间: 2014 年 08 月 14 日 19:53
--- 最后更新时间: 2014 年 08 月 24 日 15:51
+-- 创建时间: 2014 年 08 月 11 日 09:07
+-- 最后更新时间: 2014 年 08 月 25 日 11:32
 -- 
 
 DROP TABLE IF EXISTS `cban_admin`;
@@ -49,15 +49,15 @@ CREATE TABLE IF NOT EXISTS `cban_admin` (
 -- 
 
 INSERT DELAYED IGNORE INTO `cban_admin` (`userid`, `username`, `password`, `roleid`, `encrypt`, `lastloginip`, `lastlogintime`, `email`, `realname`, `card`, `lang`) VALUES 
-(1, 'admin', '9e4f7c2cb05d56ed0d33889e6dd8f216', 1, 'tMXppt', '127.0.0.1', 1408865648, '1@qq.com', '', '', '');
+(1, 'admin', '9e4f7c2cb05d56ed0d33889e6dd8f216', 1, 'tMXppt', '127.0.0.1', 1408936624, '1@qq.com', '', '', '');
 
 -- --------------------------------------------------------
 
 -- 
 -- 表的结构 `cban_admin_panel`
 -- 
--- 创建时间: 2014 年 08 月 14 日 19:53
--- 最后更新时间: 2014 年 08 月 14 日 19:53
+-- 创建时间: 2014 年 08 月 11 日 09:07
+-- 最后更新时间: 2014 年 08 月 11 日 09:07
 -- 
 
 DROP TABLE IF EXISTS `cban_admin_panel`;
@@ -80,8 +80,8 @@ CREATE TABLE IF NOT EXISTS `cban_admin_panel` (
 -- 
 -- 表的结构 `cban_admin_role`
 -- 
--- 创建时间: 2014 年 08 月 14 日 19:53
--- 最后更新时间: 2014 年 08 月 14 日 19:53
+-- 创建时间: 2014 年 08 月 11 日 09:07
+-- 最后更新时间: 2014 年 08 月 11 日 09:07
 -- 
 
 DROP TABLE IF EXISTS `cban_admin_role`;
@@ -113,8 +113,8 @@ INSERT DELAYED IGNORE INTO `cban_admin_role` (`roleid`, `rolename`, `description
 -- 
 -- 表的结构 `cban_admin_role_priv`
 -- 
--- 创建时间: 2014 年 08 月 14 日 19:53
--- 最后更新时间: 2014 年 08 月 14 日 19:53
+-- 创建时间: 2014 年 08 月 11 日 09:07
+-- 最后更新时间: 2014 年 08 月 11 日 09:07
 -- 
 
 DROP TABLE IF EXISTS `cban_admin_role_priv`;
@@ -138,8 +138,8 @@ CREATE TABLE IF NOT EXISTS `cban_admin_role_priv` (
 -- 
 -- 表的结构 `cban_announce`
 -- 
--- 创建时间: 2014 年 08 月 14 日 19:53
--- 最后更新时间: 2014 年 08 月 14 日 19:53
+-- 创建时间: 2014 年 08 月 11 日 09:07
+-- 最后更新时间: 2014 年 08 月 11 日 09:07
 -- 
 
 DROP TABLE IF EXISTS `cban_announce`;
@@ -170,8 +170,8 @@ CREATE TABLE IF NOT EXISTS `cban_announce` (
 -- 
 -- 表的结构 `cban_attachment`
 -- 
--- 创建时间: 2014 年 08 月 14 日 19:53
--- 最后更新时间: 2014 年 08 月 14 日 20:24
+-- 创建时间: 2014 年 08 月 11 日 09:07
+-- 最后更新时间: 2014 年 08 月 11 日 09:26
 -- 
 
 DROP TABLE IF EXISTS `cban_attachment`;
@@ -214,8 +214,8 @@ INSERT DELAYED IGNORE INTO `cban_attachment` (`aid`, `module`, `catid`, `filenam
 -- 
 -- 表的结构 `cban_attachment_index`
 -- 
--- 创建时间: 2014 年 08 月 14 日 19:53
--- 最后更新时间: 2014 年 08 月 14 日 20:24
+-- 创建时间: 2014 年 08 月 11 日 09:07
+-- 最后更新时间: 2014 年 08 月 11 日 09:26
 -- 
 
 DROP TABLE IF EXISTS `cban_attachment_index`;
@@ -247,8 +247,8 @@ INSERT DELAYED IGNORE INTO `cban_attachment_index` (`keyid`, `aid`) VALUES
 -- 
 -- 表的结构 `cban_badword`
 -- 
--- 创建时间: 2014 年 08 月 14 日 19:53
--- 最后更新时间: 2014 年 08 月 14 日 19:53
+-- 创建时间: 2014 年 08 月 11 日 09:07
+-- 最后更新时间: 2014 年 08 月 11 日 09:07
 -- 
 
 DROP TABLE IF EXISTS `cban_badword`;
@@ -275,8 +275,8 @@ CREATE TABLE IF NOT EXISTS `cban_badword` (
 -- 
 -- 表的结构 `cban_block`
 -- 
--- 创建时间: 2014 年 08 月 14 日 19:53
--- 最后更新时间: 2014 年 08 月 14 日 19:53
+-- 创建时间: 2014 年 08 月 11 日 09:07
+-- 最后更新时间: 2014 年 08 月 11 日 09:07
 -- 
 
 DROP TABLE IF EXISTS `cban_block`;
@@ -304,8 +304,8 @@ CREATE TABLE IF NOT EXISTS `cban_block` (
 -- 
 -- 表的结构 `cban_block_history`
 -- 
--- 创建时间: 2014 年 08 月 14 日 19:53
--- 最后更新时间: 2014 年 08 月 14 日 19:53
+-- 创建时间: 2014 年 08 月 11 日 09:07
+-- 最后更新时间: 2014 年 08 月 11 日 09:07
 -- 
 
 DROP TABLE IF EXISTS `cban_block_history`;
@@ -329,8 +329,8 @@ CREATE TABLE IF NOT EXISTS `cban_block_history` (
 -- 
 -- 表的结构 `cban_block_priv`
 -- 
--- 创建时间: 2014 年 08 月 14 日 19:53
--- 最后更新时间: 2014 年 08 月 14 日 19:53
+-- 创建时间: 2014 年 08 月 11 日 09:07
+-- 最后更新时间: 2014 年 08 月 11 日 09:07
 -- 
 
 DROP TABLE IF EXISTS `cban_block_priv`;
@@ -354,8 +354,8 @@ CREATE TABLE IF NOT EXISTS `cban_block_priv` (
 -- 
 -- 表的结构 `cban_cache`
 -- 
--- 创建时间: 2014 年 08 月 14 日 19:53
--- 最后更新时间: 2014 年 08 月 24 日 12:50
+-- 创建时间: 2014 年 08 月 11 日 09:07
+-- 最后更新时间: 2014 年 08 月 19 日 12:32
 -- 
 
 DROP TABLE IF EXISTS `cban_cache`;
@@ -374,7 +374,7 @@ INSERT DELAYED IGNORE INTO `cban_cache` (`filename`, `path`, `data`) VALUES
 ('mood_program.cache.php', 'caches_commons/caches_data/', '<?php\nreturn array (\n  1 => \n  array (\n    1 => \n    array (\n      ''use'' => ''1'',\n      ''name'' => ''震惊'',\n      ''pic'' => ''mood/a1.gif'',\n    ),\n    2 => \n    array (\n      ''use'' => ''1'',\n      ''name'' => ''不解'',\n      ''pic'' => ''mood/a2.gif'',\n    ),\n    3 => \n    array (\n      ''use'' => ''1'',\n      ''name'' => ''愤怒'',\n      ''pic'' => ''mood/a3.gif'',\n    ),\n    4 => \n    array (\n      ''use'' => ''1'',\n      ''name'' => ''杯具'',\n      ''pic'' => ''mood/a4.gif'',\n    ),\n    5 => \n    array (\n      ''use'' => ''1'',\n      ''name'' => ''无聊'',\n      ''pic'' => ''mood/a5.gif'',\n    ),\n    6 => \n    array (\n      ''use'' => ''1'',\n      ''name'' => ''高兴'',\n      ''pic'' => ''mood/a6.gif'',\n    ),\n    7 => \n    array (\n      ''use'' => ''1'',\n      ''name'' => ''支持'',\n      ''pic'' => ''mood/a7.gif'',\n    ),\n    8 => \n    array (\n      ''use'' => ''1'',\n      ''name'' => ''超赞'',\n      ''pic'' => ''mood/a8.gif'',\n    ),\n    9 => \n    array (\n      ''use'' => NULL,\n      ''name'' => '''',\n      ''pic'' => '''',\n    ),\n    10 => \n    array (\n      ''use'' => NULL,\n      ''name'' => '''',\n      ''pic'' => '''',\n    ),\n  ),\n);\n?>'),
 ('category_content.cache.php', 'caches_commons/caches_data/', '<?php\nreturn array (\n  41 => ''1'',\n  44 => ''1'',\n  11 => ''1'',\n  12 => ''1'',\n  46 => ''1'',\n  47 => ''1'',\n  48 => ''1'',\n  9 => ''1'',\n  10 => ''1'',\n  42 => ''1'',\n);\n?>'),
 ('category_content_1.cache.php', 'caches_commons/caches_data/', '<?php\nreturn array (\n  41 => \n  array (\n    ''catid'' => ''41'',\n    ''siteid'' => ''1'',\n    ''type'' => ''0'',\n    ''modelid'' => ''1'',\n    ''parentid'' => ''0'',\n    ''arrparentid'' => ''0'',\n    ''child'' => ''1'',\n    ''arrchildid'' => ''41,42'',\n    ''catname'' => ''行业资讯'',\n    ''style'' => '''',\n    ''image'' => '''',\n    ''description'' => '''',\n    ''parentdir'' => '''',\n    ''catdir'' => ''hyzx'',\n    ''url'' => ''http://127.0.0.1:8080/cban/index.php?m=content&c=index&a=lists&catid=41'',\n    ''items'' => ''0'',\n    ''hits'' => ''0'',\n    ''setting'' => ''array (\n  \\''workflowid\\'' => \\''\\'',\n  \\''ishtml\\'' => \\''0\\'',\n  \\''content_ishtml\\'' => \\''0\\'',\n  \\''create_to_html_root\\'' => \\''0\\'',\n  \\''template_list\\'' => \\''cban\\'',\n  \\''category_template\\'' => \\''category\\'',\n  \\''list_template\\'' => \\''list_hyzx\\'',\n  \\''show_template\\'' => \\''show\\'',\n  \\''meta_title\\'' => \\''\\'',\n  \\''meta_keywords\\'' => \\''\\'',\n  \\''meta_description\\'' => \\''\\'',\n  \\''presentpoint\\'' => \\''1\\'',\n  \\''defaultchargepoint\\'' => \\''0\\'',\n  \\''paytype\\'' => \\''0\\'',\n  \\''repeatchargedays\\'' => \\''1\\'',\n  \\''category_ruleid\\'' => \\''6\\'',\n  \\''show_ruleid\\'' => \\''16\\'',\n)'',\n    ''listorder'' => ''1'',\n    ''ismenu'' => ''1'',\n    ''sethtml'' => ''0'',\n    ''letter'' => ''xingyezixun'',\n    ''usable_type'' => '''',\n    ''create_to_html_root'' => ''0'',\n    ''ishtml'' => ''0'',\n    ''content_ishtml'' => ''0'',\n    ''category_ruleid'' => ''6'',\n    ''show_ruleid'' => ''16'',\n    ''workflowid'' => '''',\n    ''isdomain'' => ''0'',\n  ),\n  44 => \n  array (\n    ''catid'' => ''44'',\n    ''siteid'' => ''1'',\n    ''type'' => ''0'',\n    ''modelid'' => ''17'',\n    ''parentid'' => ''0'',\n    ''arrparentid'' => ''0'',\n    ''child'' => ''0'',\n    ''arrchildid'' => ''44'',\n    ''catname'' => ''展会信息'',\n    ''style'' => '''',\n    ''image'' => '''',\n    ''description'' => '''',\n    ''parentdir'' => '''',\n    ''catdir'' => ''zhxx'',\n    ''url'' => ''http://127.0.0.1:8080/cban/index.php?m=content&c=index&a=lists&catid=44'',\n    ''items'' => ''3'',\n    ''hits'' => ''0'',\n    ''setting'' => ''array (\n  \\''workflowid\\'' => \\''1\\'',\n  \\''ishtml\\'' => \\''0\\'',\n  \\''content_ishtml\\'' => \\''0\\'',\n  \\''create_to_html_root\\'' => \\''0\\'',\n  \\''template_list\\'' => \\''cban\\'',\n  \\''category_template\\'' => \\''category\\'',\n  \\''list_template\\'' => \\''list_zhxx\\'',\n  \\''show_template\\'' => \\''show_zhxx\\'',\n  \\''meta_title\\'' => \\''\\'',\n  \\''meta_keywords\\'' => \\''\\'',\n  \\''meta_description\\'' => \\''\\'',\n  \\''presentpoint\\'' => \\''1\\'',\n  \\''defaultchargepoint\\'' => \\''0\\'',\n  \\''paytype\\'' => \\''0\\'',\n  \\''repeatchargedays\\'' => \\''1\\'',\n  \\''category_ruleid\\'' => \\''6\\'',\n  \\''show_ruleid\\'' => \\''16\\'',\n)'',\n    ''listorder'' => ''2'',\n    ''ismenu'' => ''1'',\n    ''sethtml'' => ''0'',\n    ''letter'' => ''zhanhuixinxi'',\n    ''usable_type'' => '''',\n    ''create_to_html_root'' => ''0'',\n    ''ishtml'' => ''0'',\n    ''content_ishtml'' => ''0'',\n    ''category_ruleid'' => ''6'',\n    ''show_ruleid'' => ''16'',\n    ''workflowid'' => ''1'',\n    ''isdomain'' => ''0'',\n  ),\n  11 => \n  array (\n    ''catid'' => ''11'',\n    ''siteid'' => ''1'',\n    ''type'' => ''2'',\n    ''modelid'' => ''0'',\n    ''parentid'' => ''0'',\n    ''arrparentid'' => '''',\n    ''child'' => ''0'',\n    ''arrchildid'' => '''',\n    ''catname'' => ''千县万店'',\n    ''style'' => '''',\n    ''image'' => '''',\n    ''description'' => '''',\n    ''parentdir'' => '''',\n    ''catdir'' => '''',\n    ''url'' => ''http://127.0.0.1:8080/cban/index.php?m=cban&c=index&a=qxwd'',\n    ''items'' => ''0'',\n    ''hits'' => ''0'',\n    ''setting'' => ''array (\n  \\''show_ruleid\\'' => \\''\\'',\n  \\''repeatchargedays\\'' => \\''1\\'',\n)'',\n    ''listorder'' => ''4'',\n    ''ismenu'' => ''1'',\n    ''sethtml'' => ''0'',\n    ''letter'' => '''',\n    ''usable_type'' => '''',\n    ''create_to_html_root'' => NULL,\n    ''ishtml'' => NULL,\n    ''content_ishtml'' => NULL,\n    ''category_ruleid'' => NULL,\n    ''show_ruleid'' => '''',\n    ''workflowid'' => NULL,\n    ''isdomain'' => ''0'',\n  ),\n  12 => \n  array (\n    ''catid'' => ''12'',\n    ''siteid'' => ''1'',\n    ''type'' => ''2'',\n    ''modelid'' => ''0'',\n    ''parentid'' => ''0'',\n    ''arrparentid'' => '''',\n    ''child'' => ''0'',\n    ''arrchildid'' => '''',\n    ''catname'' => ''家电名企'',\n    ''style'' => '''',\n    ''image'' => '''',\n    ''description'' => '''',\n    ''parentdir'' => '''',\n    ''catdir'' => '''',\n    ''url'' => ''http://127.0.0.1:8080/cban/index.php?m=cban&c=index&a=jdmq'',\n    ''items'' => ''0'',\n    ''hits'' => ''0'',\n    ''setting'' => ''array (\n  \\''show_ruleid\\'' => \\''\\'',\n  \\''repeatchargedays\\'' => \\''1\\'',\n)'',\n    ''listorder'' => ''6'',\n    ''ismenu'' => ''1'',\n    ''sethtml'' => ''0'',\n    ''letter'' => '''',\n    ''usable_type'' => '''',\n    ''create_to_html_root'' => NULL,\n    ''ishtml'' => NULL,\n    ''content_ishtml'' => NULL,\n    ''category_ruleid'' => NULL,\n    ''show_ruleid'' => '''',\n    ''workflowid'' => NULL,\n    ''isdomain'' => ''0'',\n  ),\n  46 => \n  array (\n    ''catid'' => ''46'',\n    ''siteid'' => ''1'',\n    ''type'' => ''2'',\n    ''modelid'' => ''0'',\n    ''parentid'' => ''0'',\n    ''arrparentid'' => '''',\n    ''child'' => ''0'',\n    ''arrchildid'' => '''',\n    ''catname'' => ''商机资讯'',\n    ''style'' => '''',\n    ''image'' => '''',\n    ''description'' => '''',\n    ''parentdir'' => '''',\n    ''catdir'' => '''',\n    ''url'' => ''http://127.0.0.1:8080/cban/index.php?m=cban&c=index&a=supply'',\n    ''items'' => ''0'',\n    ''hits'' => ''0'',\n    ''setting'' => ''array (\n  \\''show_ruleid\\'' => \\''\\'',\n  \\''repeatchargedays\\'' => \\''1\\'',\n)'',\n    ''listorder'' => ''7'',\n    ''ismenu'' => ''1'',\n    ''sethtml'' => ''0'',\n    ''letter'' => '''',\n    ''usable_type'' => '''',\n    ''create_to_html_root'' => NULL,\n    ''ishtml'' => NULL,\n    ''content_ishtml'' => NULL,\n    ''category_ruleid'' => NULL,\n    ''show_ruleid'' => '''',\n    ''workflowid'' => NULL,\n    ''isdomain'' => ''0'',\n  ),\n  47 => \n  array (\n    ''catid'' => ''47'',\n    ''siteid'' => ''1'',\n    ''type'' => ''2'',\n    ''modelid'' => ''0'',\n    ''parentid'' => ''0'',\n    ''arrparentid'' => '''',\n    ''child'' => ''0'',\n    ''arrchildid'' => '''',\n    ''catname'' => ''家电维修'',\n    ''style'' => '''',\n    ''image'' => '''',\n    ''description'' => '''',\n    ''parentdir'' => '''',\n    ''catdir'' => '''',\n    ''url'' => ''http://127.0.0.1:8080/cban/index.php?m=cban&c=index&a=jdwx'',\n    ''items'' => ''0'',\n    ''hits'' => ''0'',\n    ''setting'' => ''array (\n  \\''show_ruleid\\'' => \\''\\'',\n  \\''repeatchargedays\\'' => \\''1\\'',\n)'',\n    ''listorder'' => ''8'',\n    ''ismenu'' => ''1'',\n    ''sethtml'' => ''0'',\n    ''letter'' => '''',\n    ''usable_type'' => '''',\n    ''create_to_html_root'' => NULL,\n    ''ishtml'' => NULL,\n    ''content_ishtml'' => NULL,\n    ''category_ruleid'' => NULL,\n    ''show_ruleid'' => '''',\n    ''workflowid'' => NULL,\n    ''isdomain'' => ''0'',\n  ),\n  48 => \n  array (\n    ''catid'' => ''48'',\n    ''siteid'' => ''1'',\n    ''type'' => ''2'',\n    ''modelid'' => ''0'',\n    ''parentid'' => ''0'',\n    ''arrparentid'' => '''',\n    ''child'' => ''0'',\n    ''arrchildid'' => '''',\n    ''catname'' => ''会员中心'',\n    ''style'' => '''',\n    ''image'' => '''',\n    ''description'' => '''',\n    ''parentdir'' => '''',\n    ''catdir'' => '''',\n    ''url'' => ''http://127.0.0.1:8080/cban/index.php?m=member&c=index'',\n    ''items'' => ''0'',\n    ''hits'' => ''0'',\n    ''setting'' => ''array (\n  \\''show_ruleid\\'' => \\''\\'',\n  \\''repeatchargedays\\'' => \\''1\\'',\n)'',\n    ''listorder'' => ''10'',\n    ''ismenu'' => ''1'',\n    ''sethtml'' => ''0'',\n    ''letter'' => '''',\n    ''usable_type'' => '''',\n    ''create_to_html_root'' => NULL,\n    ''ishtml'' => NULL,\n    ''content_ishtml'' => NULL,\n    ''category_ruleid'' => NULL,\n    ''show_ruleid'' => '''',\n    ''workflowid'' => NULL,\n    ''isdomain'' => ''0'',\n  ),\n  9 => \n  array (\n    ''catid'' => ''9'',\n    ''siteid'' => ''1'',\n    ''type'' => ''0'',\n    ''modelid'' => ''15'',\n    ''parentid'' => ''0'',\n    ''arrparentid'' => ''0'',\n    ''child'' => ''0'',\n    ''arrchildid'' => ''9'',\n    ''catname'' => ''门店信息发布'',\n    ''style'' => '''',\n    ''image'' => '''',\n    ''description'' => '''',\n    ''parentdir'' => '''',\n    ''catdir'' => ''mdxxfb'',\n    ''url'' => ''http://127.0.0.1:8080/cban/index.php?m=content&c=index&a=lists&catid=9'',\n    ''items'' => ''1'',\n    ''hits'' => ''0'',\n    ''setting'' => ''array (\n  \\''workflowid\\'' => \\''1\\'',\n  \\''ishtml\\'' => \\''0\\'',\n  \\''content_ishtml\\'' => \\''0\\'',\n  \\''create_to_html_root\\'' => \\''0\\'',\n  \\''template_list\\'' => \\''cban\\'',\n  \\''category_template\\'' => \\''category\\'',\n  \\''list_template\\'' => \\''\\'',\n  \\''show_template\\'' => \\''show\\'',\n  \\''meta_title\\'' => \\''\\'',\n  \\''meta_keywords\\'' => \\''\\'',\n  \\''meta_description\\'' => \\''\\'',\n  \\''presentpoint\\'' => \\''1\\'',\n  \\''defaultchargepoint\\'' => \\''0\\'',\n  \\''paytype\\'' => \\''0\\'',\n  \\''repeatchargedays\\'' => \\''1\\'',\n  \\''category_ruleid\\'' => \\''6\\'',\n  \\''show_ruleid\\'' => \\''16\\'',\n)'',\n    ''listorder'' => ''19'',\n    ''ismenu'' => ''0'',\n    ''sethtml'' => ''0'',\n    ''letter'' => ''mendianxinxifabu'',\n    ''usable_type'' => '''',\n    ''create_to_html_root'' => ''0'',\n    ''ishtml'' => ''0'',\n    ''content_ishtml'' => ''0'',\n    ''category_ruleid'' => ''6'',\n    ''show_ruleid'' => ''16'',\n    ''workflowid'' => ''1'',\n    ''isdomain'' => ''0'',\n  ),\n  10 => \n  array (\n    ''catid'' => ''10'',\n    ''siteid'' => ''1'',\n    ''type'' => ''0'',\n    ''modelid'' => ''16'',\n    ''parentid'' => ''0'',\n    ''arrparentid'' => ''0'',\n    ''child'' => ''0'',\n    ''arrchildid'' => ''10'',\n    ''catname'' => ''企业信息发布'',\n    ''style'' => '''',\n    ''image'' => '''',\n    ''description'' => '''',\n    ''parentdir'' => '''',\n    ''catdir'' => ''qyxxfb'',\n    ''url'' => ''http://127.0.0.1:8080/cban/index.php?m=content&c=index&a=lists&catid=10'',\n    ''items'' => ''2'',\n    ''hits'' => ''0'',\n    ''setting'' => ''array (\n  \\''workflowid\\'' => \\''1\\'',\n  \\''ishtml\\'' => \\''0\\'',\n  \\''content_ishtml\\'' => \\''0\\'',\n  \\''create_to_html_root\\'' => \\''0\\'',\n  \\''template_list\\'' => \\''cban\\'',\n  \\''category_template\\'' => \\''category\\'',\n  \\''list_template\\'' => \\''list\\'',\n  \\''show_template\\'' => \\''show\\'',\n  \\''meta_title\\'' => \\''\\'',\n  \\''meta_keywords\\'' => \\''\\'',\n  \\''meta_description\\'' => \\''\\'',\n  \\''presentpoint\\'' => \\''1\\'',\n  \\''defaultchargepoint\\'' => \\''0\\'',\n  \\''paytype\\'' => \\''0\\'',\n  \\''repeatchargedays\\'' => \\''1\\'',\n  \\''category_ruleid\\'' => \\''6\\'',\n  \\''show_ruleid\\'' => \\''16\\'',\n)'',\n    ''listorder'' => ''20'',\n    ''ismenu'' => ''0'',\n    ''sethtml'' => ''0'',\n    ''letter'' => ''qiyexinxifabu'',\n    ''usable_type'' => '''',\n    ''create_to_html_root'' => ''0'',\n    ''ishtml'' => ''0'',\n    ''content_ishtml'' => ''0'',\n    ''category_ruleid'' => ''6'',\n    ''show_ruleid'' => ''16'',\n    ''workflowid'' => ''1'',\n    ''isdomain'' => ''0'',\n  ),\n  42 => \n  array (\n    ''catid'' => ''42'',\n    ''siteid'' => ''1'',\n    ''type'' => ''0'',\n    ''modelid'' => ''1'',\n    ''parentid'' => ''41'',\n    ''arrparentid'' => ''0,41'',\n    ''child'' => ''0'',\n    ''arrchildid'' => ''42'',\n    ''catname'' => ''家电新闻'',\n    ''style'' => '''',\n    ''image'' => '''',\n    ''description'' => '''',\n    ''parentdir'' => ''hyzx/'',\n    ''catdir'' => ''jdxw'',\n    ''url'' => ''http://127.0.0.1:8080/cban/index.php?m=content&c=index&a=lists&catid=42'',\n    ''items'' => ''0'',\n    ''hits'' => ''0'',\n    ''setting'' => ''array (\n  \\''workflowid\\'' => \\''\\'',\n  \\''ishtml\\'' => \\''0\\'',\n  \\''content_ishtml\\'' => \\''0\\'',\n  \\''create_to_html_root\\'' => \\''0\\'',\n  \\''template_list\\'' => \\''cban\\'',\n  \\''category_template\\'' => \\''category\\'',\n  \\''list_template\\'' => \\''list_hyzx\\'',\n  \\''show_template\\'' => \\''show\\'',\n  \\''meta_title\\'' => \\''\\'',\n  \\''meta_keywords\\'' => \\''\\'',\n  \\''meta_description\\'' => \\''\\'',\n  \\''presentpoint\\'' => \\''1\\'',\n  \\''defaultchargepoint\\'' => \\''0\\'',\n  \\''paytype\\'' => \\''0\\'',\n  \\''repeatchargedays\\'' => \\''1\\'',\n  \\''category_ruleid\\'' => \\''6\\'',\n  \\''show_ruleid\\'' => \\''16\\'',\n)'',\n    ''listorder'' => ''42'',\n    ''ismenu'' => ''1'',\n    ''sethtml'' => ''0'',\n    ''letter'' => ''jiadianxinwen'',\n    ''usable_type'' => '''',\n    ''create_to_html_root'' => ''0'',\n    ''ishtml'' => ''0'',\n    ''content_ishtml'' => ''0'',\n    ''category_ruleid'' => ''6'',\n    ''show_ruleid'' => ''16'',\n    ''workflowid'' => '''',\n    ''isdomain'' => ''0'',\n  ),\n);\n?>'),
-('sitelist.cache.php', 'caches_commons/caches_data/', '<?php\nreturn array (\n  1 => \n  array (\n    ''siteid'' => ''1'',\n    ''name'' => ''CBAN中国家电品牌门户网'',\n    ''dirname'' => '''',\n    ''domain'' => ''http://127.0.0.1:8080/cban/'',\n    ''site_title'' => ''CBAN中国家电品牌门户网站'',\n    ''keywords'' => ''中国家电品牌,家电门户网站,各种家电'',\n    ''description'' => ''CBAN是中国第一家家电品牌门户网站，其中包含各种品牌家电，维修，销售等'',\n    ''release_point'' => '''',\n    ''default_style'' => ''cban'',\n    ''template'' => ''cban'',\n    ''setting'' => ''array (\n  \\''upload_maxsize\\'' => \\''2048\\'',\n  \\''upload_allowext\\'' => \\''jpg|jpeg|gif|bmp|png|doc|docx|xls|xlsx|ppt|pptx|pdf|txt|rar|zip|swf\\'',\n  \\''watermark_enable\\'' => \\''1\\'',\n  \\''watermark_minwidth\\'' => \\''300\\'',\n  \\''watermark_minheight\\'' => \\''300\\'',\n  \\''watermark_img\\'' => \\''statics/images/water//mark.png\\'',\n  \\''watermark_pct\\'' => \\''85\\'',\n  \\''watermark_quality\\'' => \\''80\\'',\n  \\''watermark_pos\\'' => \\''9\\'',\n)'',\n    ''uuid'' => ''66e1d6e9-6219-1032-ab4c-ef7167b14131'',\n    ''url'' => ''http://127.0.0.1:8080/cban/'',\n  ),\n);\n?>'),
+('sitelist.cache.php', 'caches_commons/caches_data/', '<?php\nreturn array (\n  1 => \n  array (\n    ''siteid'' => ''1'',\n    ''name'' => ''默认站点'',\n    ''dirname'' => '''',\n    ''domain'' => ''http://127.0.0.1:8080/cban/'',\n    ''site_title'' => ''CBAN中国家电品牌门户网站'',\n    ''keywords'' => ''中国家电品牌,家电门户网站,各种家电'',\n    ''description'' => ''CBAN是中国第一家家电品牌门户网站，其中包含各种品牌家电，维修，销售等'',\n    ''release_point'' => '''',\n    ''default_style'' => ''cban'',\n    ''template'' => ''cban'',\n    ''setting'' => ''array (\n  \\''upload_maxsize\\'' => \\''2048\\'',\n  \\''upload_allowext\\'' => \\''jpg|jpeg|gif|bmp|png|doc|docx|xls|xlsx|ppt|pptx|pdf|txt|rar|zip|swf\\'',\n  \\''watermark_enable\\'' => \\''1\\'',\n  \\''watermark_minwidth\\'' => \\''300\\'',\n  \\''watermark_minheight\\'' => \\''300\\'',\n  \\''watermark_img\\'' => \\''statics/images/water//mark.png\\'',\n  \\''watermark_pct\\'' => \\''85\\'',\n  \\''watermark_quality\\'' => \\''80\\'',\n  \\''watermark_pos\\'' => \\''9\\'',\n)'',\n    ''uuid'' => ''66e1d6e9-6219-1032-ab4c-ef7167b14131'',\n    ''url'' => ''http://127.0.0.1:8080/cban/'',\n  ),\n);\n?>'),
 ('downservers.cache.php', 'caches_commons/caches_data/', '<?php\nreturn NULL;\n?>'),
 ('badword.cache.php', 'caches_commons/caches_data/', '<?php\nreturn array (\n);\n?>'),
 ('ipbanned.cache.php', 'caches_commons/caches_data/', '<?php\nreturn array (\n);\n?>'),
@@ -384,13 +384,13 @@ INSERT DELAYED IGNORE INTO `cban_cache` (`filename`, `path`, `data`) VALUES
 ('role.cache.php', 'caches_commons/caches_data/', '<?php\nreturn array (\n  1 => ''超级管理员'',\n  2 => ''站点管理员'',\n  3 => ''运营总监'',\n  4 => ''总编'',\n  5 => ''编辑'',\n  7 => ''发布人员'',\n);\n?>'),
 ('urlrules_detail.cache.php', 'caches_commons/caches_data/', '<?php\nreturn array (\n  1 => \n  array (\n    ''urlruleid'' => ''1'',\n    ''module'' => ''content'',\n    ''file'' => ''category'',\n    ''ishtml'' => ''1'',\n    ''urlrule'' => ''{$categorydir}{$catdir}/index.html|{$categorydir}{$catdir}/{$page}.html'',\n    ''example'' => ''news/china/1000.html'',\n  ),\n  6 => \n  array (\n    ''urlruleid'' => ''6'',\n    ''module'' => ''content'',\n    ''file'' => ''category'',\n    ''ishtml'' => ''0'',\n    ''urlrule'' => ''index.php?m=content&c=index&a=lists&catid={$catid}|index.php?m=content&c=index&a=lists&catid={$catid}&page={$page}'',\n    ''example'' => ''index.php?m=content&c=index&a=lists&catid=1&page=1'',\n  ),\n  11 => \n  array (\n    ''urlruleid'' => ''11'',\n    ''module'' => ''content'',\n    ''file'' => ''show'',\n    ''ishtml'' => ''1'',\n    ''urlrule'' => ''{$year}/{$catdir}_{$month}{$day}/{$id}.html|{$year}/{$catdir}_{$month}{$day}/{$id}_{$page}.html'',\n    ''example'' => ''2010/catdir_0720/1_2.html'',\n  ),\n  12 => \n  array (\n    ''urlruleid'' => ''12'',\n    ''module'' => ''content'',\n    ''file'' => ''show'',\n    ''ishtml'' => ''1'',\n    ''urlrule'' => ''{$categorydir}{$catdir}/{$year}/{$month}{$day}/{$id}.html|{$categorydir}{$catdir}/{$year}/{$month}{$day}/{$id}_{$page}.html'',\n    ''example'' => ''it/product/2010/0720/1_2.html'',\n  ),\n  16 => \n  array (\n    ''urlruleid'' => ''16'',\n    ''module'' => ''content'',\n    ''file'' => ''show'',\n    ''ishtml'' => ''0'',\n    ''urlrule'' => ''index.php?m=content&c=index&a=show&catid={$catid}&id={$id}|index.php?m=content&c=index&a=show&catid={$catid}&id={$id}&page={$page}'',\n    ''example'' => ''index.php?m=content&c=index&a=show&catid=1&id=1'',\n  ),\n  17 => \n  array (\n    ''urlruleid'' => ''17'',\n    ''module'' => ''content'',\n    ''file'' => ''show'',\n    ''ishtml'' => ''0'',\n    ''urlrule'' => ''show-{$catid}-{$id}-{$page}.html'',\n    ''example'' => ''show-1-2-1.html'',\n  ),\n  18 => \n  array (\n    ''urlruleid'' => ''18'',\n    ''module'' => ''content'',\n    ''file'' => ''show'',\n    ''ishtml'' => ''0'',\n    ''urlrule'' => ''content-{$catid}-{$id}-{$page}.html'',\n    ''example'' => ''content-1-2-1.html'',\n  ),\n  30 => \n  array (\n    ''urlruleid'' => ''30'',\n    ''module'' => ''content'',\n    ''file'' => ''category'',\n    ''ishtml'' => ''0'',\n    ''urlrule'' => ''list-{$catid}-{$page}.html'',\n    ''example'' => ''list-1-1.html'',\n  ),\n);\n?>'),
 ('urlrules.cache.php', 'caches_commons/caches_data/', '<?php\nreturn array (\n  1 => ''{$categorydir}{$catdir}/index.html|{$categorydir}{$catdir}/{$page}.html'',\n  6 => ''index.php?m=content&c=index&a=lists&catid={$catid}|index.php?m=content&c=index&a=lists&catid={$catid}&page={$page}'',\n  11 => ''{$year}/{$catdir}_{$month}{$day}/{$id}.html|{$year}/{$catdir}_{$month}{$day}/{$id}_{$page}.html'',\n  12 => ''{$categorydir}{$catdir}/{$year}/{$month}{$day}/{$id}.html|{$categorydir}{$catdir}/{$year}/{$month}{$day}/{$id}_{$page}.html'',\n  16 => ''index.php?m=content&c=index&a=show&catid={$catid}&id={$id}|index.php?m=content&c=index&a=show&catid={$catid}&id={$id}&page={$page}'',\n  17 => ''show-{$catid}-{$id}-{$page}.html'',\n  18 => ''content-{$catid}-{$id}-{$page}.html'',\n  30 => ''list-{$catid}-{$page}.html'',\n);\n?>'),
-('modules.cache.php', 'caches_commons/caches_data/', '<?php\nreturn array (\n  ''admin'' => \n  array (\n    ''module'' => ''admin'',\n    ''name'' => ''admin'',\n    ''url'' => '''',\n    ''iscore'' => ''1'',\n    ''version'' => ''1.0'',\n    ''description'' => '''',\n    ''setting'' => ''array (\n  \\''admin_email\\'' => \\''phpcms@phpcms.cn\\'',\n  \\''adminaccessip\\'' => \\''0\\'',\n  \\''maxloginfailedtimes\\'' => \\''8\\'',\n  \\''maxiplockedtime\\'' => \\''15\\'',\n  \\''minrefreshtime\\'' => \\''2\\'',\n  \\''mail_type\\'' => \\''1\\'',\n  \\''mail_server\\'' => \\''smtp.qq.com\\'',\n  \\''mail_port\\'' => \\''25\\'',\n  \\''mail_user\\'' => \\''phpcms.cn@foxmail.com\\'',\n  \\''mail_auth\\'' => \\''1\\'',\n  \\''mail_from\\'' => \\''phpcms.cn@foxmail.com\\'',\n  \\''mail_password\\'' => \\''\\'',\n  \\''errorlog_size\\'' => \\''20\\'',\n)'',\n    ''listorder'' => ''0'',\n    ''disabled'' => ''0'',\n    ''installdate'' => ''2010-10-18'',\n    ''updatedate'' => ''2010-10-18'',\n  ),\n  ''member'' => \n  array (\n    ''module'' => ''member'',\n    ''name'' => ''会员'',\n    ''url'' => '''',\n    ''iscore'' => ''1'',\n    ''version'' => ''1.0'',\n    ''description'' => '''',\n    ''setting'' => ''array (\n  \\''allowregister\\'' => \\''1\\'',\n  \\''choosemodel\\'' => \\''1\\'',\n  \\''enablemailcheck\\'' => \\''0\\'',\n  \\''enablcodecheck\\'' => \\''0\\'',\n  \\''mobile_checktype\\'' => \\''0\\'',\n  \\''user_sendsms_title\\'' => \\''\\'',\n  \\''registerverify\\'' => \\''1\\'',\n  \\''showapppoint\\'' => \\''0\\'',\n  \\''rmb_point_rate\\'' => \\''10\\'',\n  \\''defualtpoint\\'' => \\''0\\'',\n  \\''defualtamount\\'' => \\''0\\'',\n  \\''showregprotocol\\'' => \\''0\\'',\n  \\''regprotocol\\'' => \\''		 欢迎您注册成为phpcms用户\r\n请仔细阅读下面的协议，只有接受协议才能继续进行注册。 \r\n1．服务条款的确认和接纳\r\n　　phpcms用户服务的所有权和运作权归phpcms拥有。phpcms所提供的服务将按照有关章程、服务条款和操作规则严格执行。用户通过注册程序点击“我同意” 按钮，即表示用户与phpcms达成协议并接受所有的服务条款。\r\n2． phpcms服务简介\r\n　　phpcms通过国际互联网为用户提供新闻及文章浏览、图片浏览、软件下载、网上留言和BBS论坛等服务。\r\n　　用户必须： \r\n　　1)购置设备，包括个人电脑一台、调制解调器一个及配备上网装置。 \r\n　　2)个人上网和支付与此服务有关的电话费用、网络费用。\r\n　　用户同意： \r\n　　1)提供及时、详尽及准确的个人资料。 \r\n　　2)不断更新注册资料，符合及时、详尽、准确的要求。所有原始键入的资料将引用为注册资料。 \r\n　　3)用户同意遵守《中华人民共和国保守国家秘密法》、《中华人民共和国计算机信息系统安全保护条例》、《计算机软件保护条例》等有关计算机及互联网规定的法律和法规、实施办法。在任何情况下，phpcms合理地认为用户的行为可能违反上述法律、法规，phpcms可以在任何时候，不经事先通知终止向该用户提供服务。用户应了解国际互联网的无国界性，应特别注意遵守当地所有有关的法律和法规。\r\n3． 服务条款的修改\r\n　　phpcms会不定时地修改服务条款，服务条款一旦发生变动，将会在相关页面上提示修改内容。如果您同意改动，则再一次点击“我同意”按钮。 如果您不接受，则及时取消您的用户使用服务资格。\r\n4． 服务修订\r\n　　phpcms保留随时修改或中断服务而不需知照用户的权利。phpcms行使修改或中断服务的权利，不需对用户或第三方负责。\r\n5． 用户隐私制度\r\n　　尊重用户个人隐私是phpcms的 基本政策。phpcms不会公开、编辑或透露用户的注册信息，除非有法律许可要求，或phpcms在诚信的基础上认为透露这些信息在以下三种情况是必要的： \r\n　　1)遵守有关法律规定，遵从合法服务程序。 \r\n　　2)保持维护phpcms的商标所有权。 \r\n　　3)在紧急情况下竭力维护用户个人和社会大众的隐私安全。 \r\n　　4)符合其他相关的要求。 \r\n6．用户的帐号，密码和安全性\r\n　　一旦注册成功成为phpcms用户，您将得到一个密码和帐号。如果您不保管好自己的帐号和密码安全，将对因此产生的后果负全部责任。另外，每个用户都要对其帐户中的所有活动和事件负全责。您可随时根据指示改变您的密码，也可以结束旧的帐户重开一个新帐户。用户同意若发现任何非法使用用户帐号或安全漏洞的情况，立即通知phpcms。\r\n7． 免责条款\r\n　　用户明确同意网站服务的使用由用户个人承担风险。 　　 \r\n　　phpcms不作任何类型的担保，不担保服务一定能满足用户的要求，也不担保服务不会受中断，对服务的及时性，安全性，出错发生都不作担保。用户理解并接受：任何通过phpcms服务取得的信息资料的可靠性取决于用户自己，用户自己承担所有风险和责任。 \r\n8．有限责任\r\n　　phpcms对任何直接、间接、偶然、特殊及继起的损害不负责任。\r\n9． 不提供零售和商业性服务 \r\n　　用户使用网站服务的权利是个人的。用户只能是一个单独的个体而不能是一个公司或实体商业性组织。用户承诺不经phpcms同意，不能利用网站服务进行销售或其他商业用途。\r\n10．用户责任 \r\n　　用户单独承担传输内容的责任。用户必须遵循： \r\n　　1)从中国境内向外传输技术性资料时必须符合中国有关法规。 \r\n　　2)使用网站服务不作非法用途。 \r\n　　3)不干扰或混乱网络服务。 \r\n　　4)不在论坛BBS或留言簿发表任何与政治相关的信息。 \r\n　　5)遵守所有使用网站服务的网络协议、规定、程序和惯例。\r\n　　6)不得利用本站危害国家安全、泄露国家秘密，不得侵犯国家社会集体的和公民的合法权益。\r\n　　7)不得利用本站制作、复制和传播下列信息： \r\n　　　1、煽动抗拒、破坏宪法和法律、行政法规实施的；\r\n　　　2、煽动颠覆国家政权，推翻社会主义制度的；\r\n　　　3、煽动分裂国家、破坏国家统一的；\r\n　　　4、煽动民族仇恨、民族歧视，破坏民族团结的；\r\n　　　5、捏造或者歪曲事实，散布谣言，扰乱社会秩序的；\r\n　　　6、宣扬封建迷信、淫秽、色情、赌博、暴力、凶杀、恐怖、教唆犯罪的；\r\n　　　7、公然侮辱他人或者捏造事实诽谤他人的，或者进行其他恶意攻击的；\r\n　　　8、损害国家机关信誉的；\r\n　　　9、其他违反宪法和法律行政法规的；\r\n　　　10、进行商业广告行为的。\r\n　　用户不能传输任何教唆他人构成犯罪行为的资料；不能传输长国内不利条件和涉及国家安全的资料；不能传输任何不符合当地法规、国家法律和国际法 律的资料。未经许可而非法进入其它电脑系统是禁止的。若用户的行为不符合以上的条款，phpcms将取消用户服务帐号。\r\n11．网站内容的所有权\r\n　　phpcms定义的内容包括：文字、软件、声音、相片、录象、图表；在广告中全部内容；电子邮件的全部内容；phpcms为用户提供的商业信息。所有这些内容受版权、商标、标签和其它财产所有权法律的保护。所以，用户只能在phpcms和广告商授权下才能使用这些内容，而不能擅自复制、篡改这些内容、或创造与内容有关的派生产品。\r\n12．附加信息服务\r\n　　用户在享用phpcms提供的免费服务的同时，同意接受phpcms提供的各类附加信息服务。\r\n13．解释权\r\n　　本注册协议的解释权归phpcms所有。如果其中有任何条款与国家的有关法律相抵触，则以国家法律的明文规定为准。 \\'',\n  \\''registerverifymessage\\'' => \\'' 欢迎您注册成为phpcms用户，您的账号需要邮箱认证，点击下面链接进行认证：{click}\r\n或者将网址复制到浏览器：{url}\\'',\n  \\''forgetpassword\\'' => \\'' phpcms密码找回，请在一小时内点击下面链接进行操作：{click}\r\n或者将网址复制到浏览器：{url}\\'',\n)'',\n    ''listorder'' => ''0'',\n    ''disabled'' => ''0'',\n    ''installdate'' => ''2010-09-06'',\n    ''updatedate'' => ''2010-09-06'',\n  ),\n  ''pay'' => \n  array (\n    ''module'' => ''pay'',\n    ''name'' => ''支付'',\n    ''url'' => '''',\n    ''iscore'' => ''1'',\n    ''version'' => ''1.0'',\n    ''description'' => '''',\n    ''setting'' => '''',\n    ''listorder'' => ''0'',\n    ''disabled'' => ''0'',\n    ''installdate'' => ''2010-09-06'',\n    ''updatedate'' => ''2010-09-06'',\n  ),\n  ''digg'' => \n  array (\n    ''module'' => ''digg'',\n    ''name'' => ''顶一下'',\n    ''url'' => '''',\n    ''iscore'' => ''0'',\n    ''version'' => ''1.0'',\n    ''description'' => '''',\n    ''setting'' => '''',\n    ''listorder'' => ''0'',\n    ''disabled'' => ''0'',\n    ''installdate'' => ''2010-09-06'',\n    ''updatedate'' => ''2010-09-06'',\n  ),\n  ''special'' => \n  array (\n    ''module'' => ''special'',\n    ''name'' => ''专题'',\n    ''url'' => '''',\n    ''iscore'' => ''0'',\n    ''version'' => ''1.0'',\n    ''description'' => '''',\n    ''setting'' => '''',\n    ''listorder'' => ''0'',\n    ''disabled'' => ''0'',\n    ''installdate'' => ''2010-09-06'',\n    ''updatedate'' => ''2010-09-06'',\n  ),\n  ''content'' => \n  array (\n    ''module'' => ''content'',\n    ''name'' => ''内容模块'',\n    ''url'' => '''',\n    ''iscore'' => ''1'',\n    ''version'' => ''1.0'',\n    ''description'' => '''',\n    ''setting'' => '''',\n    ''listorder'' => ''0'',\n    ''disabled'' => ''0'',\n    ''installdate'' => ''2010-09-06'',\n    ''updatedate'' => ''2010-09-06'',\n  ),\n  ''search'' => \n  array (\n    ''module'' => ''search'',\n    ''name'' => ''全站搜索'',\n    ''url'' => '''',\n    ''iscore'' => ''0'',\n    ''version'' => ''1.0'',\n    ''description'' => '''',\n    ''setting'' => ''array (\n  \\''fulltextenble\\'' => \\''1\\'',\n  \\''relationenble\\'' => \\''1\\'',\n  \\''suggestenable\\'' => \\''1\\'',\n  \\''sphinxenable\\'' => \\''0\\'',\n  \\''sphinxhost\\'' => \\''10.228.134.102\\'',\n  \\''sphinxport\\'' => \\''9312\\'',\n)'',\n    ''listorder'' => ''0'',\n    ''disabled'' => ''0'',\n    ''installdate'' => ''2010-09-06'',\n    ''updatedate'' => ''2010-09-06'',\n  ),\n  ''scan'' => \n  array (\n    ''module'' => ''scan'',\n    ''name'' => ''木马扫描'',\n    ''url'' => ''scan'',\n    ''iscore'' => ''0'',\n    ''version'' => ''1.0'',\n    ''description'' => '''',\n    ''setting'' => '''',\n    ''listorder'' => ''0'',\n    ''disabled'' => ''0'',\n    ''installdate'' => ''2010-09-01'',\n    ''updatedate'' => ''2010-09-06'',\n  ),\n  ''attachment'' => \n  array (\n    ''module'' => ''attachment'',\n    ''name'' => ''附件'',\n    ''url'' => ''attachment'',\n    ''iscore'' => ''1'',\n    ''version'' => ''1.0'',\n    ''description'' => '''',\n    ''setting'' => '''',\n    ''listorder'' => ''0'',\n    ''disabled'' => ''0'',\n    ''installdate'' => ''2010-09-01'',\n    ''updatedate'' => ''2010-09-06'',\n  ),\n  ''block'' => \n  array (\n    ''module'' => ''block'',\n    ''name'' => ''碎片'',\n    ''url'' => '''',\n    ''iscore'' => ''1'',\n    ''version'' => ''1.0'',\n    ''description'' => '''',\n    ''setting'' => '''',\n    ''listorder'' => ''0'',\n    ''disabled'' => ''0'',\n    ''installdate'' => ''2010-09-01'',\n    ''updatedate'' => ''2010-09-06'',\n  ),\n  ''collection'' => \n  array (\n    ''module'' => ''collection'',\n    ''name'' => ''采集模块'',\n    ''url'' => ''collection'',\n    ''iscore'' => ''1'',\n    ''version'' => ''1.0'',\n    ''description'' => '''',\n    ''setting'' => '''',\n    ''listorder'' => ''0'',\n    ''disabled'' => ''0'',\n    ''installdate'' => ''2010-09-01'',\n    ''updatedate'' => ''2010-09-06'',\n  ),\n  ''dbsource'' => \n  array (\n    ''module'' => ''dbsource'',\n    ''name'' => ''数据源'',\n    ''url'' => '''',\n    ''iscore'' => ''1'',\n    ''version'' => '''',\n    ''description'' => '''',\n    ''setting'' => '''',\n    ''listorder'' => ''0'',\n    ''disabled'' => ''0'',\n    ''installdate'' => ''2010-09-01'',\n    ''updatedate'' => ''2010-09-06'',\n  ),\n  ''template'' => \n  array (\n    ''module'' => ''template'',\n    ''name'' => ''模板风格'',\n    ''url'' => '''',\n    ''iscore'' => ''1'',\n    ''version'' => ''1.0'',\n    ''description'' => '''',\n    ''setting'' => '''',\n    ''listorder'' => ''0'',\n    ''disabled'' => ''0'',\n    ''installdate'' => ''2010-09-01'',\n    ''updatedate'' => ''2010-09-06'',\n  ),\n  ''release'' => \n  array (\n    ''module'' => ''release'',\n    ''name'' => ''发布点'',\n    ''url'' => '''',\n    ''iscore'' => ''1'',\n    ''version'' => ''1.0'',\n    ''description'' => '''',\n    ''setting'' => '''',\n    ''listorder'' => ''0'',\n    ''disabled'' => ''0'',\n    ''installdate'' => ''2010-09-01'',\n    ''updatedate'' => ''2010-09-06'',\n  ),\n  ''video'' => \n  array (\n    ''module'' => ''video'',\n    ''name'' => ''视频库'',\n    ''url'' => '''',\n    ''iscore'' => ''0'',\n    ''version'' => ''1.0'',\n    ''description'' => '''',\n    ''setting'' => '''',\n    ''listorder'' => ''0'',\n    ''disabled'' => ''0'',\n    ''installdate'' => ''2012-09-28'',\n    ''updatedate'' => ''2012-09-28'',\n  ),\n  ''announce'' => \n  array (\n    ''module'' => ''announce'',\n    ''name'' => ''公告'',\n    ''url'' => ''announce/'',\n    ''iscore'' => ''0'',\n    ''version'' => ''1.0'',\n    ''description'' => ''公告'',\n    ''setting'' => '''',\n    ''listorder'' => ''0'',\n    ''disabled'' => ''0'',\n    ''installdate'' => ''2014-07-21'',\n    ''updatedate'' => ''2014-07-21'',\n  ),\n  ''comment'' => \n  array (\n    ''module'' => ''comment'',\n    ''name'' => ''评论'',\n    ''url'' => ''comment/'',\n    ''iscore'' => ''0'',\n    ''version'' => ''1.0'',\n    ''description'' => ''评论'',\n    ''setting'' => '''',\n    ''listorder'' => ''0'',\n    ''disabled'' => ''0'',\n    ''installdate'' => ''2014-07-21'',\n    ''updatedate'' => ''2014-07-21'',\n  ),\n  ''link'' => \n  array (\n    ''module'' => ''link'',\n    ''name'' => ''友情链接'',\n    ''url'' => '''',\n    ''iscore'' => ''0'',\n    ''version'' => ''1.0'',\n    ''description'' => '''',\n    ''setting'' => ''array (\n  1 => \n  array (\n    \\''is_post\\'' => \\''1\\'',\n    \\''enablecheckcode\\'' => \\''0\\'',\n  ),\n)'',\n    ''listorder'' => ''0'',\n    ''disabled'' => ''0'',\n    ''installdate'' => ''2010-09-06'',\n    ''updatedate'' => ''2010-09-06'',\n  ),\n  ''vote'' => \n  array (\n    ''module'' => ''vote'',\n    ''name'' => ''投票'',\n    ''url'' => '''',\n    ''iscore'' => ''0'',\n    ''version'' => ''1.0'',\n    ''description'' => '''',\n    ''setting'' => ''array (\r\n  1 => \r\n  array (\r\n    \\''default_style\\'' => \\''default\\'',\r\n    \\''vote_tp_template\\'' => \\''vote_tp\\'',\r\n    \\''allowguest\\'' => \\''1\\'',\r\n    \\''enabled\\'' => \\''1\\'',\r\n    \\''interval\\'' => \\''1\\'',\r\n    \\''credit\\'' => \\''1\\'',\r\n  ),\r\n)'',\n    ''listorder'' => ''0'',\n    ''disabled'' => ''0'',\n    ''installdate'' => ''2010-09-06'',\n    ''updatedate'' => ''2010-09-06'',\n  ),\n  ''message'' => \n  array (\n    ''module'' => ''message'',\n    ''name'' => ''短消息'',\n    ''url'' => '''',\n    ''iscore'' => ''0'',\n    ''version'' => ''1.0'',\n    ''description'' => '''',\n    ''setting'' => '''',\n    ''listorder'' => ''0'',\n    ''disabled'' => ''0'',\n    ''installdate'' => ''2010-09-06'',\n    ''updatedate'' => ''2010-09-06'',\n  ),\n  ''mood'' => \n  array (\n    ''module'' => ''mood'',\n    ''name'' => ''新闻心情'',\n    ''url'' => ''mood/'',\n    ''iscore'' => ''0'',\n    ''version'' => ''1.0'',\n    ''description'' => ''新闻心情'',\n    ''setting'' => '''',\n    ''listorder'' => ''0'',\n    ''disabled'' => ''0'',\n    ''installdate'' => ''2014-07-21'',\n    ''updatedate'' => ''2014-07-21'',\n  ),\n  ''poster'' => \n  array (\n    ''module'' => ''poster'',\n    ''name'' => ''广告模块'',\n    ''url'' => ''poster/'',\n    ''iscore'' => ''0'',\n    ''version'' => ''1.0'',\n    ''description'' => ''广告模块'',\n    ''setting'' => '''',\n    ''listorder'' => ''0'',\n    ''disabled'' => ''0'',\n    ''installdate'' => ''2014-07-21'',\n    ''updatedate'' => ''2014-07-21'',\n  ),\n  ''formguide'' => \n  array (\n    ''module'' => ''formguide'',\n    ''name'' => ''表单向导'',\n    ''url'' => ''formguide/'',\n    ''iscore'' => ''0'',\n    ''version'' => ''1.0'',\n    ''description'' => ''formguide'',\n    ''setting'' => ''array (\n  \\''allowmultisubmit\\'' => \\''1\\'',\n  \\''interval\\'' => \\''30\\'',\n  \\''allowunreg\\'' => \\''0\\'',\n  \\''mailmessage\\'' => \\''用户向我们提交了表单数据，赶快去看看吧。\\'',\n)'',\n    ''listorder'' => ''0'',\n    ''disabled'' => ''0'',\n    ''installdate'' => ''2010-10-20'',\n    ''updatedate'' => ''2010-10-20'',\n  ),\n  ''wap'' => \n  array (\n    ''module'' => ''wap'',\n    ''name'' => ''手机门户'',\n    ''url'' => ''wap/'',\n    ''iscore'' => ''0'',\n    ''version'' => ''1.0'',\n    ''description'' => ''手机门户'',\n    ''setting'' => '''',\n    ''listorder'' => ''0'',\n    ''disabled'' => ''0'',\n    ''installdate'' => ''2014-07-21'',\n    ''updatedate'' => ''2014-07-21'',\n  ),\n  ''upgrade'' => \n  array (\n    ''module'' => ''upgrade'',\n    ''name'' => ''在线升级'',\n    ''url'' => '''',\n    ''iscore'' => ''0'',\n    ''version'' => ''1.0'',\n    ''description'' => '''',\n    ''setting'' => '''',\n    ''listorder'' => ''0'',\n    ''disabled'' => ''0'',\n    ''installdate'' => ''2011-05-18'',\n    ''updatedate'' => ''2011-05-18'',\n  ),\n  ''tag'' => \n  array (\n    ''module'' => ''tag'',\n    ''name'' => ''标签向导'',\n    ''url'' => ''tag/'',\n    ''iscore'' => ''0'',\n    ''version'' => ''1.0'',\n    ''description'' => ''标签向导'',\n    ''setting'' => '''',\n    ''listorder'' => ''0'',\n    ''disabled'' => ''0'',\n    ''installdate'' => ''2014-07-21'',\n    ''updatedate'' => ''2014-07-21'',\n  ),\n  ''sms'' => \n  array (\n    ''module'' => ''sms'',\n    ''name'' => ''短信平台'',\n    ''url'' => ''sms/'',\n    ''iscore'' => ''0'',\n    ''version'' => ''1.0'',\n    ''description'' => ''短信平台'',\n    ''setting'' => '''',\n    ''listorder'' => ''0'',\n    ''disabled'' => ''0'',\n    ''installdate'' => ''2011-09-02'',\n    ''updatedate'' => ''2011-09-02'',\n  ),\n  ''supply_infor'' => \n  array (\n    ''module'' => ''supply_infor'',\n    ''name'' => ''商机信息'',\n    ''url'' => '''',\n    ''iscore'' => ''0'',\n    ''version'' => ''1.0'',\n    ''description'' => '''',\n    ''setting'' => '''',\n    ''listorder'' => ''1'',\n    ''disabled'' => ''0'',\n    ''installdate'' => ''2014-07-29'',\n    ''updatedate'' => ''2014-07-29'',\n  ),\n);\n?>'),
+('modules.cache.php', 'caches_commons/caches_data/', '<?php\nreturn array (\n  ''admin'' => \n  array (\n    ''module'' => ''admin'',\n    ''name'' => ''admin'',\n    ''url'' => '''',\n    ''iscore'' => ''1'',\n    ''version'' => ''1.0'',\n    ''description'' => '''',\n    ''setting'' => ''array (\n  \\''admin_email\\'' => \\''phpcms@phpcms.cn\\'',\n  \\''maxloginfailedtimes\\'' => \\''8\\'',\n  \\''minrefreshtime\\'' => \\''2\\'',\n  \\''mail_type\\'' => \\''1\\'',\n  \\''mail_server\\'' => \\''smtp.qq.com\\'',\n  \\''mail_port\\'' => \\''25\\'',\n  \\''category_ajax\\'' => \\''0\\'',\n  \\''mail_user\\'' => \\''phpcms.cn@foxmail.com\\'',\n  \\''mail_auth\\'' => \\''1\\'',\n  \\''mail_from\\'' => \\''phpcms.cn@foxmail.com\\'',\n  \\''mail_password\\'' => \\''123456\\'',\n  \\''errorlog_size\\'' => \\''20\\'',\n)'',\n    ''listorder'' => ''0'',\n    ''disabled'' => ''0'',\n    ''installdate'' => ''2010-10-18'',\n    ''updatedate'' => ''2010-10-18'',\n  ),\n  ''member'' => \n  array (\n    ''module'' => ''member'',\n    ''name'' => ''会员'',\n    ''url'' => '''',\n    ''iscore'' => ''1'',\n    ''version'' => ''1.0'',\n    ''description'' => '''',\n    ''setting'' => ''array (\n  \\''allowregister\\'' => \\''1\\'',\n  \\''choosemodel\\'' => \\''1\\'',\n  \\''enablemailcheck\\'' => \\''0\\'',\n  \\''enablcodecheck\\'' => \\''0\\'',\n  \\''mobile_checktype\\'' => \\''0\\'',\n  \\''user_sendsms_title\\'' => \\''\\'',\n  \\''registerverify\\'' => \\''1\\'',\n  \\''showapppoint\\'' => \\''0\\'',\n  \\''rmb_point_rate\\'' => \\''10\\'',\n  \\''defualtpoint\\'' => \\''0\\'',\n  \\''defualtamount\\'' => \\''0\\'',\n  \\''showregprotocol\\'' => \\''0\\'',\n  \\''regprotocol\\'' => \\''		 欢迎您注册成为phpcms用户\r\n请仔细阅读下面的协议，只有接受协议才能继续进行注册。 \r\n1．服务条款的确认和接纳\r\n　　phpcms用户服务的所有权和运作权归phpcms拥有。phpcms所提供的服务将按照有关章程、服务条款和操作规则严格执行。用户通过注册程序点击“我同意” 按钮，即表示用户与phpcms达成协议并接受所有的服务条款。\r\n2． phpcms服务简介\r\n　　phpcms通过国际互联网为用户提供新闻及文章浏览、图片浏览、软件下载、网上留言和BBS论坛等服务。\r\n　　用户必须： \r\n　　1)购置设备，包括个人电脑一台、调制解调器一个及配备上网装置。 \r\n　　2)个人上网和支付与此服务有关的电话费用、网络费用。\r\n　　用户同意： \r\n　　1)提供及时、详尽及准确的个人资料。 \r\n　　2)不断更新注册资料，符合及时、详尽、准确的要求。所有原始键入的资料将引用为注册资料。 \r\n　　3)用户同意遵守《中华人民共和国保守国家秘密法》、《中华人民共和国计算机信息系统安全保护条例》、《计算机软件保护条例》等有关计算机及互联网规定的法律和法规、实施办法。在任何情况下，phpcms合理地认为用户的行为可能违反上述法律、法规，phpcms可以在任何时候，不经事先通知终止向该用户提供服务。用户应了解国际互联网的无国界性，应特别注意遵守当地所有有关的法律和法规。\r\n3． 服务条款的修改\r\n　　phpcms会不定时地修改服务条款，服务条款一旦发生变动，将会在相关页面上提示修改内容。如果您同意改动，则再一次点击“我同意”按钮。 如果您不接受，则及时取消您的用户使用服务资格。\r\n4． 服务修订\r\n　　phpcms保留随时修改或中断服务而不需知照用户的权利。phpcms行使修改或中断服务的权利，不需对用户或第三方负责。\r\n5． 用户隐私制度\r\n　　尊重用户个人隐私是phpcms的 基本政策。phpcms不会公开、编辑或透露用户的注册信息，除非有法律许可要求，或phpcms在诚信的基础上认为透露这些信息在以下三种情况是必要的： \r\n　　1)遵守有关法律规定，遵从合法服务程序。 \r\n　　2)保持维护phpcms的商标所有权。 \r\n　　3)在紧急情况下竭力维护用户个人和社会大众的隐私安全。 \r\n　　4)符合其他相关的要求。 \r\n6．用户的帐号，密码和安全性\r\n　　一旦注册成功成为phpcms用户，您将得到一个密码和帐号。如果您不保管好自己的帐号和密码安全，将对因此产生的后果负全部责任。另外，每个用户都要对其帐户中的所有活动和事件负全责。您可随时根据指示改变您的密码，也可以结束旧的帐户重开一个新帐户。用户同意若发现任何非法使用用户帐号或安全漏洞的情况，立即通知phpcms。\r\n7． 免责条款\r\n　　用户明确同意网站服务的使用由用户个人承担风险。 　　 \r\n　　phpcms不作任何类型的担保，不担保服务一定能满足用户的要求，也不担保服务不会受中断，对服务的及时性，安全性，出错发生都不作担保。用户理解并接受：任何通过phpcms服务取得的信息资料的可靠性取决于用户自己，用户自己承担所有风险和责任。 \r\n8．有限责任\r\n　　phpcms对任何直接、间接、偶然、特殊及继起的损害不负责任。\r\n9． 不提供零售和商业性服务 \r\n　　用户使用网站服务的权利是个人的。用户只能是一个单独的个体而不能是一个公司或实体商业性组织。用户承诺不经phpcms同意，不能利用网站服务进行销售或其他商业用途。\r\n10．用户责任 \r\n　　用户单独承担传输内容的责任。用户必须遵循： \r\n　　1)从中国境内向外传输技术性资料时必须符合中国有关法规。 \r\n　　2)使用网站服务不作非法用途。 \r\n　　3)不干扰或混乱网络服务。 \r\n　　4)不在论坛BBS或留言簿发表任何与政治相关的信息。 \r\n　　5)遵守所有使用网站服务的网络协议、规定、程序和惯例。\r\n　　6)不得利用本站危害国家安全、泄露国家秘密，不得侵犯国家社会集体的和公民的合法权益。\r\n　　7)不得利用本站制作、复制和传播下列信息： \r\n　　　1、煽动抗拒、破坏宪法和法律、行政法规实施的；\r\n　　　2、煽动颠覆国家政权，推翻社会主义制度的；\r\n　　　3、煽动分裂国家、破坏国家统一的；\r\n　　　4、煽动民族仇恨、民族歧视，破坏民族团结的；\r\n　　　5、捏造或者歪曲事实，散布谣言，扰乱社会秩序的；\r\n　　　6、宣扬封建迷信、淫秽、色情、赌博、暴力、凶杀、恐怖、教唆犯罪的；\r\n　　　7、公然侮辱他人或者捏造事实诽谤他人的，或者进行其他恶意攻击的；\r\n　　　8、损害国家机关信誉的；\r\n　　　9、其他违反宪法和法律行政法规的；\r\n　　　10、进行商业广告行为的。\r\n　　用户不能传输任何教唆他人构成犯罪行为的资料；不能传输长国内不利条件和涉及国家安全的资料；不能传输任何不符合当地法规、国家法律和国际法 律的资料。未经许可而非法进入其它电脑系统是禁止的。若用户的行为不符合以上的条款，phpcms将取消用户服务帐号。\r\n11．网站内容的所有权\r\n　　phpcms定义的内容包括：文字、软件、声音、相片、录象、图表；在广告中全部内容；电子邮件的全部内容；phpcms为用户提供的商业信息。所有这些内容受版权、商标、标签和其它财产所有权法律的保护。所以，用户只能在phpcms和广告商授权下才能使用这些内容，而不能擅自复制、篡改这些内容、或创造与内容有关的派生产品。\r\n12．附加信息服务\r\n　　用户在享用phpcms提供的免费服务的同时，同意接受phpcms提供的各类附加信息服务。\r\n13．解释权\r\n　　本注册协议的解释权归phpcms所有。如果其中有任何条款与国家的有关法律相抵触，则以国家法律的明文规定为准。 \\'',\n  \\''registerverifymessage\\'' => \\'' 欢迎您注册成为phpcms用户，您的账号需要邮箱认证，点击下面链接进行认证：{click}\r\n或者将网址复制到浏览器：{url}\\'',\n  \\''forgetpassword\\'' => \\'' phpcms密码找回，请在一小时内点击下面链接进行操作：{click}\r\n或者将网址复制到浏览器：{url}\\'',\n)'',\n    ''listorder'' => ''0'',\n    ''disabled'' => ''0'',\n    ''installdate'' => ''2010-09-06'',\n    ''updatedate'' => ''2010-09-06'',\n  ),\n  ''pay'' => \n  array (\n    ''module'' => ''pay'',\n    ''name'' => ''支付'',\n    ''url'' => '''',\n    ''iscore'' => ''1'',\n    ''version'' => ''1.0'',\n    ''description'' => '''',\n    ''setting'' => '''',\n    ''listorder'' => ''0'',\n    ''disabled'' => ''0'',\n    ''installdate'' => ''2010-09-06'',\n    ''updatedate'' => ''2010-09-06'',\n  ),\n  ''digg'' => \n  array (\n    ''module'' => ''digg'',\n    ''name'' => ''顶一下'',\n    ''url'' => '''',\n    ''iscore'' => ''0'',\n    ''version'' => ''1.0'',\n    ''description'' => '''',\n    ''setting'' => '''',\n    ''listorder'' => ''0'',\n    ''disabled'' => ''0'',\n    ''installdate'' => ''2010-09-06'',\n    ''updatedate'' => ''2010-09-06'',\n  ),\n  ''special'' => \n  array (\n    ''module'' => ''special'',\n    ''name'' => ''专题'',\n    ''url'' => '''',\n    ''iscore'' => ''0'',\n    ''version'' => ''1.0'',\n    ''description'' => '''',\n    ''setting'' => '''',\n    ''listorder'' => ''0'',\n    ''disabled'' => ''0'',\n    ''installdate'' => ''2010-09-06'',\n    ''updatedate'' => ''2010-09-06'',\n  ),\n  ''content'' => \n  array (\n    ''module'' => ''content'',\n    ''name'' => ''内容模块'',\n    ''url'' => '''',\n    ''iscore'' => ''1'',\n    ''version'' => ''1.0'',\n    ''description'' => '''',\n    ''setting'' => '''',\n    ''listorder'' => ''0'',\n    ''disabled'' => ''0'',\n    ''installdate'' => ''2010-09-06'',\n    ''updatedate'' => ''2010-09-06'',\n  ),\n  ''search'' => \n  array (\n    ''module'' => ''search'',\n    ''name'' => ''全站搜索'',\n    ''url'' => '''',\n    ''iscore'' => ''0'',\n    ''version'' => ''1.0'',\n    ''description'' => '''',\n    ''setting'' => ''array (\n  \\''fulltextenble\\'' => \\''1\\'',\n  \\''relationenble\\'' => \\''1\\'',\n  \\''suggestenable\\'' => \\''1\\'',\n  \\''sphinxenable\\'' => \\''0\\'',\n  \\''sphinxhost\\'' => \\''10.228.134.102\\'',\n  \\''sphinxport\\'' => \\''9312\\'',\n)'',\n    ''listorder'' => ''0'',\n    ''disabled'' => ''0'',\n    ''installdate'' => ''2010-09-06'',\n    ''updatedate'' => ''2010-09-06'',\n  ),\n  ''scan'' => \n  array (\n    ''module'' => ''scan'',\n    ''name'' => ''木马扫描'',\n    ''url'' => ''scan'',\n    ''iscore'' => ''0'',\n    ''version'' => ''1.0'',\n    ''description'' => '''',\n    ''setting'' => '''',\n    ''listorder'' => ''0'',\n    ''disabled'' => ''0'',\n    ''installdate'' => ''2010-09-01'',\n    ''updatedate'' => ''2010-09-06'',\n  ),\n  ''attachment'' => \n  array (\n    ''module'' => ''attachment'',\n    ''name'' => ''附件'',\n    ''url'' => ''attachment'',\n    ''iscore'' => ''1'',\n    ''version'' => ''1.0'',\n    ''description'' => '''',\n    ''setting'' => '''',\n    ''listorder'' => ''0'',\n    ''disabled'' => ''0'',\n    ''installdate'' => ''2010-09-01'',\n    ''updatedate'' => ''2010-09-06'',\n  ),\n  ''block'' => \n  array (\n    ''module'' => ''block'',\n    ''name'' => ''碎片'',\n    ''url'' => '''',\n    ''iscore'' => ''1'',\n    ''version'' => ''1.0'',\n    ''description'' => '''',\n    ''setting'' => '''',\n    ''listorder'' => ''0'',\n    ''disabled'' => ''0'',\n    ''installdate'' => ''2010-09-01'',\n    ''updatedate'' => ''2010-09-06'',\n  ),\n  ''collection'' => \n  array (\n    ''module'' => ''collection'',\n    ''name'' => ''采集模块'',\n    ''url'' => ''collection'',\n    ''iscore'' => ''1'',\n    ''version'' => ''1.0'',\n    ''description'' => '''',\n    ''setting'' => '''',\n    ''listorder'' => ''0'',\n    ''disabled'' => ''0'',\n    ''installdate'' => ''2010-09-01'',\n    ''updatedate'' => ''2010-09-06'',\n  ),\n  ''dbsource'' => \n  array (\n    ''module'' => ''dbsource'',\n    ''name'' => ''数据源'',\n    ''url'' => '''',\n    ''iscore'' => ''1'',\n    ''version'' => '''',\n    ''description'' => '''',\n    ''setting'' => '''',\n    ''listorder'' => ''0'',\n    ''disabled'' => ''0'',\n    ''installdate'' => ''2010-09-01'',\n    ''updatedate'' => ''2010-09-06'',\n  ),\n  ''template'' => \n  array (\n    ''module'' => ''template'',\n    ''name'' => ''模板风格'',\n    ''url'' => '''',\n    ''iscore'' => ''1'',\n    ''version'' => ''1.0'',\n    ''description'' => '''',\n    ''setting'' => '''',\n    ''listorder'' => ''0'',\n    ''disabled'' => ''0'',\n    ''installdate'' => ''2010-09-01'',\n    ''updatedate'' => ''2010-09-06'',\n  ),\n  ''release'' => \n  array (\n    ''module'' => ''release'',\n    ''name'' => ''发布点'',\n    ''url'' => '''',\n    ''iscore'' => ''1'',\n    ''version'' => ''1.0'',\n    ''description'' => '''',\n    ''setting'' => '''',\n    ''listorder'' => ''0'',\n    ''disabled'' => ''0'',\n    ''installdate'' => ''2010-09-01'',\n    ''updatedate'' => ''2010-09-06'',\n  ),\n  ''video'' => \n  array (\n    ''module'' => ''video'',\n    ''name'' => ''视频库'',\n    ''url'' => '''',\n    ''iscore'' => ''0'',\n    ''version'' => ''1.0'',\n    ''description'' => '''',\n    ''setting'' => '''',\n    ''listorder'' => ''0'',\n    ''disabled'' => ''0'',\n    ''installdate'' => ''2012-09-28'',\n    ''updatedate'' => ''2012-09-28'',\n  ),\n  ''announce'' => \n  array (\n    ''module'' => ''announce'',\n    ''name'' => ''公告'',\n    ''url'' => ''announce/'',\n    ''iscore'' => ''0'',\n    ''version'' => ''1.0'',\n    ''description'' => ''公告'',\n    ''setting'' => '''',\n    ''listorder'' => ''0'',\n    ''disabled'' => ''0'',\n    ''installdate'' => ''2014-07-21'',\n    ''updatedate'' => ''2014-07-21'',\n  ),\n  ''comment'' => \n  array (\n    ''module'' => ''comment'',\n    ''name'' => ''评论'',\n    ''url'' => ''comment/'',\n    ''iscore'' => ''0'',\n    ''version'' => ''1.0'',\n    ''description'' => ''评论'',\n    ''setting'' => '''',\n    ''listorder'' => ''0'',\n    ''disabled'' => ''0'',\n    ''installdate'' => ''2014-07-21'',\n    ''updatedate'' => ''2014-07-21'',\n  ),\n  ''link'' => \n  array (\n    ''module'' => ''link'',\n    ''name'' => ''友情链接'',\n    ''url'' => '''',\n    ''iscore'' => ''0'',\n    ''version'' => ''1.0'',\n    ''description'' => '''',\n    ''setting'' => ''array (\n  1 => \n  array (\n    \\''is_post\\'' => \\''1\\'',\n    \\''enablecheckcode\\'' => \\''0\\'',\n  ),\n)'',\n    ''listorder'' => ''0'',\n    ''disabled'' => ''0'',\n    ''installdate'' => ''2010-09-06'',\n    ''updatedate'' => ''2010-09-06'',\n  ),\n  ''vote'' => \n  array (\n    ''module'' => ''vote'',\n    ''name'' => ''投票'',\n    ''url'' => '''',\n    ''iscore'' => ''0'',\n    ''version'' => ''1.0'',\n    ''description'' => '''',\n    ''setting'' => ''array (\r\n  1 => \r\n  array (\r\n    \\''default_style\\'' => \\''default\\'',\r\n    \\''vote_tp_template\\'' => \\''vote_tp\\'',\r\n    \\''allowguest\\'' => \\''1\\'',\r\n    \\''enabled\\'' => \\''1\\'',\r\n    \\''interval\\'' => \\''1\\'',\r\n    \\''credit\\'' => \\''1\\'',\r\n  ),\r\n)'',\n    ''listorder'' => ''0'',\n    ''disabled'' => ''0'',\n    ''installdate'' => ''2010-09-06'',\n    ''updatedate'' => ''2010-09-06'',\n  ),\n  ''message'' => \n  array (\n    ''module'' => ''message'',\n    ''name'' => ''短消息'',\n    ''url'' => '''',\n    ''iscore'' => ''0'',\n    ''version'' => ''1.0'',\n    ''description'' => '''',\n    ''setting'' => '''',\n    ''listorder'' => ''0'',\n    ''disabled'' => ''0'',\n    ''installdate'' => ''2010-09-06'',\n    ''updatedate'' => ''2010-09-06'',\n  ),\n  ''mood'' => \n  array (\n    ''module'' => ''mood'',\n    ''name'' => ''新闻心情'',\n    ''url'' => ''mood/'',\n    ''iscore'' => ''0'',\n    ''version'' => ''1.0'',\n    ''description'' => ''新闻心情'',\n    ''setting'' => '''',\n    ''listorder'' => ''0'',\n    ''disabled'' => ''0'',\n    ''installdate'' => ''2014-07-21'',\n    ''updatedate'' => ''2014-07-21'',\n  ),\n  ''poster'' => \n  array (\n    ''module'' => ''poster'',\n    ''name'' => ''广告模块'',\n    ''url'' => ''poster/'',\n    ''iscore'' => ''0'',\n    ''version'' => ''1.0'',\n    ''description'' => ''广告模块'',\n    ''setting'' => '''',\n    ''listorder'' => ''0'',\n    ''disabled'' => ''0'',\n    ''installdate'' => ''2014-07-21'',\n    ''updatedate'' => ''2014-07-21'',\n  ),\n  ''formguide'' => \n  array (\n    ''module'' => ''formguide'',\n    ''name'' => ''表单向导'',\n    ''url'' => ''formguide/'',\n    ''iscore'' => ''0'',\n    ''version'' => ''1.0'',\n    ''description'' => ''formguide'',\n    ''setting'' => ''array (\n  \\''allowmultisubmit\\'' => \\''1\\'',\n  \\''interval\\'' => \\''30\\'',\n  \\''allowunreg\\'' => \\''0\\'',\n  \\''mailmessage\\'' => \\''用户向我们提交了表单数据，赶快去看看吧。\\'',\n)'',\n    ''listorder'' => ''0'',\n    ''disabled'' => ''0'',\n    ''installdate'' => ''2010-10-20'',\n    ''updatedate'' => ''2010-10-20'',\n  ),\n  ''wap'' => \n  array (\n    ''module'' => ''wap'',\n    ''name'' => ''手机门户'',\n    ''url'' => ''wap/'',\n    ''iscore'' => ''0'',\n    ''version'' => ''1.0'',\n    ''description'' => ''手机门户'',\n    ''setting'' => '''',\n    ''listorder'' => ''0'',\n    ''disabled'' => ''0'',\n    ''installdate'' => ''2014-07-21'',\n    ''updatedate'' => ''2014-07-21'',\n  ),\n  ''upgrade'' => \n  array (\n    ''module'' => ''upgrade'',\n    ''name'' => ''在线升级'',\n    ''url'' => '''',\n    ''iscore'' => ''0'',\n    ''version'' => ''1.0'',\n    ''description'' => '''',\n    ''setting'' => '''',\n    ''listorder'' => ''0'',\n    ''disabled'' => ''0'',\n    ''installdate'' => ''2011-05-18'',\n    ''updatedate'' => ''2011-05-18'',\n  ),\n  ''tag'' => \n  array (\n    ''module'' => ''tag'',\n    ''name'' => ''标签向导'',\n    ''url'' => ''tag/'',\n    ''iscore'' => ''0'',\n    ''version'' => ''1.0'',\n    ''description'' => ''标签向导'',\n    ''setting'' => '''',\n    ''listorder'' => ''0'',\n    ''disabled'' => ''0'',\n    ''installdate'' => ''2014-07-21'',\n    ''updatedate'' => ''2014-07-21'',\n  ),\n  ''sms'' => \n  array (\n    ''module'' => ''sms'',\n    ''name'' => ''短信平台'',\n    ''url'' => ''sms/'',\n    ''iscore'' => ''0'',\n    ''version'' => ''1.0'',\n    ''description'' => ''短信平台'',\n    ''setting'' => '''',\n    ''listorder'' => ''0'',\n    ''disabled'' => ''0'',\n    ''installdate'' => ''2011-09-02'',\n    ''updatedate'' => ''2011-09-02'',\n  ),\n  ''supply_infor'' => \n  array (\n    ''module'' => ''supply_infor'',\n    ''name'' => ''商机信息'',\n    ''url'' => '''',\n    ''iscore'' => ''0'',\n    ''version'' => ''1.0'',\n    ''description'' => '''',\n    ''setting'' => '''',\n    ''listorder'' => ''1'',\n    ''disabled'' => ''0'',\n    ''installdate'' => ''2014-07-29'',\n    ''updatedate'' => ''2014-07-29'',\n  ),\n);\n?>'),
 ('model.cache.php', 'caches_commons/caches_data/', '<?php\nreturn array (\n  1 => \n  array (\n    ''modelid'' => ''1'',\n    ''siteid'' => ''1'',\n    ''name'' => ''文章模型'',\n    ''description'' => '''',\n    ''tablename'' => ''news'',\n    ''setting'' => '''',\n    ''addtime'' => ''0'',\n    ''items'' => ''0'',\n    ''enablesearch'' => ''1'',\n    ''disabled'' => ''0'',\n    ''default_style'' => ''default'',\n    ''category_template'' => ''category'',\n    ''list_template'' => ''list'',\n    ''show_template'' => ''show'',\n    ''js_template'' => '''',\n    ''admin_list_template'' => '''',\n    ''member_add_template'' => '''',\n    ''member_list_template'' => '''',\n    ''sort'' => ''0'',\n    ''type'' => ''0'',\n  ),\n  2 => \n  array (\n    ''modelid'' => ''2'',\n    ''siteid'' => ''1'',\n    ''name'' => ''下载模型'',\n    ''description'' => '''',\n    ''tablename'' => ''download'',\n    ''setting'' => '''',\n    ''addtime'' => ''0'',\n    ''items'' => ''0'',\n    ''enablesearch'' => ''1'',\n    ''disabled'' => ''0'',\n    ''default_style'' => ''default'',\n    ''category_template'' => ''category_download'',\n    ''list_template'' => ''list_download'',\n    ''show_template'' => ''show_download'',\n    ''js_template'' => '''',\n    ''admin_list_template'' => '''',\n    ''member_add_template'' => '''',\n    ''member_list_template'' => '''',\n    ''sort'' => ''0'',\n    ''type'' => ''0'',\n  ),\n  3 => \n  array (\n    ''modelid'' => ''3'',\n    ''siteid'' => ''1'',\n    ''name'' => ''图片模型'',\n    ''description'' => '''',\n    ''tablename'' => ''picture'',\n    ''setting'' => '''',\n    ''addtime'' => ''0'',\n    ''items'' => ''0'',\n    ''enablesearch'' => ''1'',\n    ''disabled'' => ''0'',\n    ''default_style'' => ''default'',\n    ''category_template'' => ''category_picture'',\n    ''list_template'' => ''list_picture'',\n    ''show_template'' => ''show_picture'',\n    ''js_template'' => '''',\n    ''admin_list_template'' => '''',\n    ''member_add_template'' => '''',\n    ''member_list_template'' => '''',\n    ''sort'' => ''0'',\n    ''type'' => ''0'',\n  ),\n  11 => \n  array (\n    ''modelid'' => ''11'',\n    ''siteid'' => ''1'',\n    ''name'' => ''视频模型'',\n    ''description'' => '''',\n    ''tablename'' => ''video'',\n    ''setting'' => '''',\n    ''addtime'' => ''0'',\n    ''items'' => ''0'',\n    ''enablesearch'' => ''1'',\n    ''disabled'' => ''0'',\n    ''default_style'' => ''default'',\n    ''category_template'' => ''category_video'',\n    ''list_template'' => ''list_video'',\n    ''show_template'' => ''show_video'',\n    ''js_template'' => '''',\n    ''admin_list_template'' => '''',\n    ''member_add_template'' => '''',\n    ''member_list_template'' => '''',\n    ''sort'' => ''0'',\n    ''type'' => ''0'',\n  ),\n  15 => \n  array (\n    ''modelid'' => ''15'',\n    ''siteid'' => ''1'',\n    ''name'' => ''门店信息模型'',\n    ''description'' => ''用户发布门店信息'',\n    ''tablename'' => ''news_md'',\n    ''setting'' => '''',\n    ''addtime'' => ''0'',\n    ''items'' => ''0'',\n    ''enablesearch'' => ''1'',\n    ''disabled'' => ''0'',\n    ''default_style'' => ''cban'',\n    ''category_template'' => ''category'',\n    ''list_template'' => ''list'',\n    ''show_template'' => ''show'',\n    ''js_template'' => '''',\n    ''admin_list_template'' => '''',\n    ''member_add_template'' => '''',\n    ''member_list_template'' => '''',\n    ''sort'' => ''0'',\n    ''type'' => ''0'',\n  ),\n  16 => \n  array (\n    ''modelid'' => ''16'',\n    ''siteid'' => ''1'',\n    ''name'' => ''企业信息模型'',\n    ''description'' => ''用户发布企业信息'',\n    ''tablename'' => ''news_qy'',\n    ''setting'' => '''',\n    ''addtime'' => ''0'',\n    ''items'' => ''0'',\n    ''enablesearch'' => ''1'',\n    ''disabled'' => ''0'',\n    ''default_style'' => ''cban'',\n    ''category_template'' => ''category'',\n    ''list_template'' => ''list'',\n    ''show_template'' => ''show'',\n    ''js_template'' => '''',\n    ''admin_list_template'' => '''',\n    ''member_add_template'' => '''',\n    ''member_list_template'' => '''',\n    ''sort'' => ''0'',\n    ''type'' => ''0'',\n  ),\n  17 => \n  array (\n    ''modelid'' => ''17'',\n    ''siteid'' => ''1'',\n    ''name'' => ''展会信息模型'',\n    ''description'' => '''',\n    ''tablename'' => ''news_zhxx'',\n    ''setting'' => '''',\n    ''addtime'' => ''0'',\n    ''items'' => ''0'',\n    ''enablesearch'' => ''1'',\n    ''disabled'' => ''0'',\n    ''default_style'' => '''',\n    ''category_template'' => '''',\n    ''list_template'' => '''',\n    ''show_template'' => '''',\n    ''js_template'' => '''',\n    ''admin_list_template'' => '''',\n    ''member_add_template'' => '''',\n    ''member_list_template'' => '''',\n    ''sort'' => ''0'',\n    ''type'' => ''0'',\n  ),\n);\n?>'),
 ('workflow_1.cache.php', 'caches_commons/caches_data/', '<?php\nreturn array (\n  1 => \n  array (\n    ''workflowid'' => ''1'',\n    ''siteid'' => ''1'',\n    ''steps'' => ''1'',\n    ''workname'' => ''一级审核'',\n    ''description'' => ''审核一次'',\n    ''setting'' => '''',\n    ''flag'' => ''0'',\n  ),\n  2 => \n  array (\n    ''workflowid'' => ''2'',\n    ''siteid'' => ''1'',\n    ''steps'' => ''2'',\n    ''workname'' => ''二级审核'',\n    ''description'' => ''审核两次'',\n    ''setting'' => '''',\n    ''flag'' => ''0'',\n  ),\n  3 => \n  array (\n    ''workflowid'' => ''3'',\n    ''siteid'' => ''1'',\n    ''steps'' => ''3'',\n    ''workname'' => ''三级审核'',\n    ''description'' => ''审核三次'',\n    ''setting'' => '''',\n    ''flag'' => ''0'',\n  ),\n  4 => \n  array (\n    ''workflowid'' => ''4'',\n    ''siteid'' => ''1'',\n    ''steps'' => ''4'',\n    ''workname'' => ''四级审核'',\n    ''description'' => ''四级审核'',\n    ''setting'' => '''',\n    ''flag'' => ''0'',\n  ),\n);\n?>');
 INSERT DELAYED IGNORE INTO `cban_cache` (`filename`, `path`, `data`) VALUES 
 ('member_model.cache.php', 'caches_commons/caches_data/', '<?php\nreturn array (\n  10 => \n  array (\n    ''modelid'' => ''10'',\n    ''siteid'' => ''1'',\n    ''name'' => ''普通会员'',\n    ''description'' => ''普通会员'',\n    ''tablename'' => ''member_detail'',\n    ''setting'' => '''',\n    ''addtime'' => ''0'',\n    ''items'' => ''0'',\n    ''enablesearch'' => ''1'',\n    ''disabled'' => ''0'',\n    ''default_style'' => '''',\n    ''category_template'' => '''',\n    ''list_template'' => '''',\n    ''show_template'' => '''',\n    ''js_template'' => '''',\n    ''admin_list_template'' => '''',\n    ''member_add_template'' => '''',\n    ''member_list_template'' => '''',\n    ''sort'' => ''1'',\n    ''type'' => ''2'',\n  ),\n  12 => \n  array (\n    ''modelid'' => ''12'',\n    ''siteid'' => ''1'',\n    ''name'' => ''门店会员'',\n    ''description'' => ''门店会员'',\n    ''tablename'' => ''member_md'',\n    ''setting'' => '''',\n    ''addtime'' => ''0'',\n    ''items'' => ''0'',\n    ''enablesearch'' => ''1'',\n    ''disabled'' => ''0'',\n    ''default_style'' => '''',\n    ''category_template'' => '''',\n    ''list_template'' => '''',\n    ''show_template'' => '''',\n    ''js_template'' => '''',\n    ''admin_list_template'' => '''',\n    ''member_add_template'' => '''',\n    ''member_list_template'' => '''',\n    ''sort'' => ''2'',\n    ''type'' => ''2'',\n  ),\n  13 => \n  array (\n    ''modelid'' => ''13'',\n    ''siteid'' => ''1'',\n    ''name'' => ''企业会员'',\n    ''description'' => ''企业会员'',\n    ''tablename'' => ''member_qy'',\n    ''setting'' => '''',\n    ''addtime'' => ''0'',\n    ''items'' => ''0'',\n    ''enablesearch'' => ''1'',\n    ''disabled'' => ''0'',\n    ''default_style'' => '''',\n    ''category_template'' => '''',\n    ''list_template'' => '''',\n    ''show_template'' => '''',\n    ''js_template'' => '''',\n    ''admin_list_template'' => '''',\n    ''member_add_template'' => '''',\n    ''member_list_template'' => '''',\n    ''sort'' => ''3'',\n    ''type'' => ''2'',\n  ),\n);\n?>'),
 ('special.cache.php', 'caches_commons/caches_data/', '<?php\nreturn array (\n);\n?>'),
-('common.cache.php', 'caches_commons/caches_data/', '<?php\nreturn array (\n  ''admin_email'' => ''phpcms@phpcms.cn'',\n  ''maxloginfailedtimes'' => ''8'',\n  ''minrefreshtime'' => ''2'',\n  ''mail_type'' => ''1'',\n  ''mail_server'' => ''smtp.163.com'',\n  ''mail_port'' => ''25'',\n  ''category_ajax'' => ''0'',\n  ''mail_user'' => ''cbanadmin@163.com'',\n  ''mail_auth'' => ''1'',\n  ''mail_from'' => ''cbanadmin@163.com'',\n  ''mail_password'' => ''a123456'',\n  ''errorlog_size'' => ''20'',\n);\n?>'),
+('common.cache.php', 'caches_commons/caches_data/', '<?php\nreturn array (\n  ''admin_email'' => ''phpcms@phpcms.cn'',\n  ''maxloginfailedtimes'' => ''8'',\n  ''minrefreshtime'' => ''2'',\n  ''mail_type'' => ''1'',\n  ''mail_server'' => ''smtp.qq.com'',\n  ''mail_port'' => ''25'',\n  ''category_ajax'' => ''0'',\n  ''mail_user'' => ''phpcms.cn@foxmail.com'',\n  ''mail_auth'' => ''1'',\n  ''mail_from'' => ''phpcms.cn@foxmail.com'',\n  ''mail_password'' => ''123456'',\n  ''errorlog_size'' => ''20'',\n);\n?>'),
 ('category_items_1.cache.php', 'caches_commons/caches_data/', '<?php\nreturn array (\n  41 => ''0'',\n  42 => ''0'',\n);\n?>'),
 ('category_items_2.cache.php', 'caches_commons/caches_data/', '<?php\nreturn array (\n);\n?>'),
 ('category_items_3.cache.php', 'caches_commons/caches_data/', '<?php\nreturn array (\n);\n?>'),
@@ -409,8 +409,8 @@ INSERT DELAYED IGNORE INTO `cban_cache` (`filename`, `path`, `data`) VALUES
 -- 
 -- 表的结构 `cban_category`
 -- 
--- 创建时间: 2014 年 08 月 14 日 19:53
--- 最后更新时间: 2014 年 08 月 14 日 20:24
+-- 创建时间: 2014 年 08 月 11 日 09:07
+-- 最后更新时间: 2014 年 08 月 12 日 15:50
 -- 
 
 DROP TABLE IF EXISTS `cban_category`;
@@ -465,8 +465,8 @@ INSERT DELAYED IGNORE INTO `cban_category` (`catid`, `siteid`, `module`, `type`,
 -- 
 -- 表的结构 `cban_category_priv`
 -- 
--- 创建时间: 2014 年 08 月 14 日 19:53
--- 最后更新时间: 2014 年 08 月 14 日 20:24
+-- 创建时间: 2014 年 08 月 11 日 09:07
+-- 最后更新时间: 2014 年 08 月 11 日 09:26
 -- 
 
 DROP TABLE IF EXISTS `cban_category_priv`;
@@ -503,8 +503,8 @@ INSERT DELAYED IGNORE INTO `cban_category_priv` (`catid`, `siteid`, `roleid`, `i
 -- 
 -- 表的结构 `cban_collection_content`
 -- 
--- 创建时间: 2014 年 08 月 14 日 19:53
--- 最后更新时间: 2014 年 08 月 14 日 19:53
+-- 创建时间: 2014 年 08 月 11 日 09:07
+-- 最后更新时间: 2014 年 08 月 11 日 09:07
 -- 
 
 DROP TABLE IF EXISTS `cban_collection_content`;
@@ -531,8 +531,8 @@ CREATE TABLE IF NOT EXISTS `cban_collection_content` (
 -- 
 -- 表的结构 `cban_collection_history`
 -- 
--- 创建时间: 2014 年 08 月 14 日 19:53
--- 最后更新时间: 2014 年 08 月 14 日 19:53
+-- 创建时间: 2014 年 08 月 11 日 09:07
+-- 最后更新时间: 2014 年 08 月 11 日 09:07
 -- 
 
 DROP TABLE IF EXISTS `cban_collection_history`;
@@ -552,8 +552,8 @@ CREATE TABLE IF NOT EXISTS `cban_collection_history` (
 -- 
 -- 表的结构 `cban_collection_node`
 -- 
--- 创建时间: 2014 年 08 月 14 日 19:53
--- 最后更新时间: 2014 年 08 月 14 日 19:53
+-- 创建时间: 2014 年 08 月 11 日 09:07
+-- 最后更新时间: 2014 年 08 月 11 日 09:07
 -- 
 
 DROP TABLE IF EXISTS `cban_collection_node`;
@@ -606,8 +606,8 @@ CREATE TABLE IF NOT EXISTS `cban_collection_node` (
 -- 
 -- 表的结构 `cban_collection_program`
 -- 
--- 创建时间: 2014 年 08 月 14 日 19:53
--- 最后更新时间: 2014 年 08 月 14 日 19:53
+-- 创建时间: 2014 年 08 月 11 日 09:07
+-- 最后更新时间: 2014 年 08 月 11 日 09:07
 -- 
 
 DROP TABLE IF EXISTS `cban_collection_program`;
@@ -633,8 +633,8 @@ CREATE TABLE IF NOT EXISTS `cban_collection_program` (
 -- 
 -- 表的结构 `cban_comment`
 -- 
--- 创建时间: 2014 年 08 月 14 日 19:53
--- 最后更新时间: 2014 年 08 月 14 日 19:53
+-- 创建时间: 2014 年 08 月 11 日 09:07
+-- 最后更新时间: 2014 年 08 月 11 日 09:07
 -- 
 
 DROP TABLE IF EXISTS `cban_comment`;
@@ -665,8 +665,8 @@ CREATE TABLE IF NOT EXISTS `cban_comment` (
 -- 
 -- 表的结构 `cban_comment_check`
 -- 
--- 创建时间: 2014 年 08 月 14 日 19:53
--- 最后更新时间: 2014 年 08 月 14 日 19:53
+-- 创建时间: 2014 年 08 月 11 日 09:07
+-- 最后更新时间: 2014 年 08 月 11 日 09:07
 -- 
 
 DROP TABLE IF EXISTS `cban_comment_check`;
@@ -690,8 +690,8 @@ CREATE TABLE IF NOT EXISTS `cban_comment_check` (
 -- 
 -- 表的结构 `cban_comment_data_1`
 -- 
--- 创建时间: 2014 年 08 月 14 日 19:53
--- 最后更新时间: 2014 年 08 月 14 日 19:53
+-- 创建时间: 2014 年 08 月 11 日 09:07
+-- 最后更新时间: 2014 年 08 月 11 日 09:07
 -- 
 
 DROP TABLE IF EXISTS `cban_comment_data_1`;
@@ -725,8 +725,8 @@ CREATE TABLE IF NOT EXISTS `cban_comment_data_1` (
 -- 
 -- 表的结构 `cban_comment_setting`
 -- 
--- 创建时间: 2014 年 08 月 14 日 19:53
--- 最后更新时间: 2014 年 08 月 14 日 20:24
+-- 创建时间: 2014 年 08 月 11 日 09:07
+-- 最后更新时间: 2014 年 08 月 11 日 09:07
 -- 
 
 DROP TABLE IF EXISTS `cban_comment_setting`;
@@ -752,8 +752,8 @@ INSERT DELAYED IGNORE INTO `cban_comment_setting` (`siteid`, `guest`, `check`, `
 -- 
 -- 表的结构 `cban_comment_table`
 -- 
--- 创建时间: 2014 年 08 月 14 日 19:53
--- 最后更新时间: 2014 年 08 月 14 日 20:24
+-- 创建时间: 2014 年 08 月 11 日 09:07
+-- 最后更新时间: 2014 年 08 月 11 日 09:07
 -- 
 
 DROP TABLE IF EXISTS `cban_comment_table`;
@@ -776,8 +776,8 @@ INSERT DELAYED IGNORE INTO `cban_comment_table` (`tableid`, `total`, `creat_at`)
 -- 
 -- 表的结构 `cban_content_check`
 -- 
--- 创建时间: 2014 年 08 月 14 日 19:53
--- 最后更新时间: 2014 年 08 月 14 日 20:24
+-- 创建时间: 2014 年 08 月 11 日 09:07
+-- 最后更新时间: 2014 年 08 月 11 日 09:26
 -- 
 
 DROP TABLE IF EXISTS `cban_content_check`;
@@ -808,8 +808,8 @@ INSERT DELAYED IGNORE INTO `cban_content_check` (`checkid`, `catid`, `siteid`, `
 -- 
 -- 表的结构 `cban_copyfrom`
 -- 
--- 创建时间: 2014 年 08 月 14 日 19:53
--- 最后更新时间: 2014 年 08 月 14 日 19:53
+-- 创建时间: 2014 年 08 月 11 日 09:07
+-- 最后更新时间: 2014 年 08 月 11 日 09:07
 -- 
 
 DROP TABLE IF EXISTS `cban_copyfrom`;
@@ -833,8 +833,8 @@ CREATE TABLE IF NOT EXISTS `cban_copyfrom` (
 -- 
 -- 表的结构 `cban_datacall`
 -- 
--- 创建时间: 2014 年 08 月 14 日 19:53
--- 最后更新时间: 2014 年 08 月 14 日 19:53
+-- 创建时间: 2014 年 08 月 11 日 09:07
+-- 最后更新时间: 2014 年 08 月 11 日 09:07
 -- 
 
 DROP TABLE IF EXISTS `cban_datacall`;
@@ -863,8 +863,8 @@ CREATE TABLE IF NOT EXISTS `cban_datacall` (
 -- 
 -- 表的结构 `cban_dbsource`
 -- 
--- 创建时间: 2014 年 08 月 14 日 19:53
--- 最后更新时间: 2014 年 08 月 14 日 19:53
+-- 创建时间: 2014 年 08 月 11 日 09:07
+-- 最后更新时间: 2014 年 08 月 11 日 09:07
 -- 
 
 DROP TABLE IF EXISTS `cban_dbsource`;
@@ -893,8 +893,8 @@ CREATE TABLE IF NOT EXISTS `cban_dbsource` (
 -- 
 -- 表的结构 `cban_download`
 -- 
--- 创建时间: 2014 年 08 月 14 日 19:53
--- 最后更新时间: 2014 年 08 月 14 日 19:53
+-- 创建时间: 2014 年 08 月 11 日 09:07
+-- 最后更新时间: 2014 年 08 月 11 日 09:07
 -- 
 
 DROP TABLE IF EXISTS `cban_download`;
@@ -939,8 +939,8 @@ CREATE TABLE IF NOT EXISTS `cban_download` (
 -- 
 -- 表的结构 `cban_download_data`
 -- 
--- 创建时间: 2014 年 08 月 14 日 19:53
--- 最后更新时间: 2014 年 08 月 14 日 19:53
+-- 创建时间: 2014 年 08 月 11 日 09:07
+-- 最后更新时间: 2014 年 08 月 11 日 09:07
 -- 
 
 DROP TABLE IF EXISTS `cban_download_data`;
@@ -970,8 +970,8 @@ CREATE TABLE IF NOT EXISTS `cban_download_data` (
 -- 
 -- 表的结构 `cban_downservers`
 -- 
--- 创建时间: 2014 年 08 月 14 日 19:53
--- 最后更新时间: 2014 年 08 月 14 日 19:53
+-- 创建时间: 2014 年 08 月 11 日 09:07
+-- 最后更新时间: 2014 年 08 月 11 日 09:07
 -- 
 
 DROP TABLE IF EXISTS `cban_downservers`;
@@ -994,8 +994,8 @@ CREATE TABLE IF NOT EXISTS `cban_downservers` (
 -- 
 -- 表的结构 `cban_extend_setting`
 -- 
--- 创建时间: 2014 年 08 月 14 日 19:53
--- 最后更新时间: 2014 年 08 月 14 日 19:53
+-- 创建时间: 2014 年 08 月 11 日 09:07
+-- 最后更新时间: 2014 年 08 月 11 日 09:07
 -- 
 
 DROP TABLE IF EXISTS `cban_extend_setting`;
@@ -1017,8 +1017,8 @@ CREATE TABLE IF NOT EXISTS `cban_extend_setting` (
 -- 
 -- 表的结构 `cban_favorite`
 -- 
--- 创建时间: 2014 年 08 月 14 日 19:53
--- 最后更新时间: 2014 年 08 月 14 日 19:53
+-- 创建时间: 2014 年 08 月 11 日 09:07
+-- 最后更新时间: 2014 年 08 月 11 日 09:07
 -- 
 
 DROP TABLE IF EXISTS `cban_favorite`;
@@ -1042,8 +1042,8 @@ CREATE TABLE IF NOT EXISTS `cban_favorite` (
 -- 
 -- 表的结构 `cban_hits`
 -- 
--- 创建时间: 2014 年 08 月 14 日 19:53
--- 最后更新时间: 2014 年 08 月 19 日 23:05
+-- 创建时间: 2014 年 08 月 11 日 09:07
+-- 最后更新时间: 2014 年 08 月 12 日 15:26
 -- 
 
 DROP TABLE IF EXISTS `cban_hits`;
@@ -1065,8 +1065,8 @@ CREATE TABLE IF NOT EXISTS `cban_hits` (
 
 INSERT DELAYED IGNORE INTO `cban_hits` (`hitsid`, `catid`, `views`, `yesterdayviews`, `dayviews`, `weekviews`, `monthviews`, `updatetime`) VALUES 
 ('c-15-1', 9, 9, 0, 7, 7, 8, 1407826724),
-('c-16-2', 10, 3, 0, 1, 1, 3, 1408441464),
-('c-16-3', 10, 1, 0, 1, 1, 1, 1408205605),
+('c-16-2', 10, 0, 0, 0, 0, 0, 1406106315),
+('c-16-3', 10, 0, 0, 0, 0, 0, 1407221818),
 ('c-17-1', 44, 0, 0, 0, 0, 0, 1407411283),
 ('c-17-2', 44, 0, 0, 0, 0, 0, 1407411838),
 ('c-17-3', 44, 1, 0, 1, 1, 1, 1407417845);
@@ -1076,8 +1076,8 @@ INSERT DELAYED IGNORE INTO `cban_hits` (`hitsid`, `catid`, `views`, `yesterdayvi
 -- 
 -- 表的结构 `cban_ipbanned`
 -- 
--- 创建时间: 2014 年 08 月 14 日 19:53
--- 最后更新时间: 2014 年 08 月 14 日 19:53
+-- 创建时间: 2014 年 08 月 11 日 09:07
+-- 最后更新时间: 2014 年 08 月 11 日 09:07
 -- 
 
 DROP TABLE IF EXISTS `cban_ipbanned`;
@@ -1098,8 +1098,8 @@ CREATE TABLE IF NOT EXISTS `cban_ipbanned` (
 -- 
 -- 表的结构 `cban_keylink`
 -- 
--- 创建时间: 2014 年 08 月 14 日 19:53
--- 最后更新时间: 2014 年 08 月 14 日 19:53
+-- 创建时间: 2014 年 08 月 11 日 09:07
+-- 最后更新时间: 2014 年 08 月 11 日 09:07
 -- 
 
 DROP TABLE IF EXISTS `cban_keylink`;
@@ -1120,8 +1120,8 @@ CREATE TABLE IF NOT EXISTS `cban_keylink` (
 -- 
 -- 表的结构 `cban_keyword`
 -- 
--- 创建时间: 2014 年 08 月 14 日 19:53
--- 最后更新时间: 2014 年 08 月 14 日 20:24
+-- 创建时间: 2014 年 08 月 11 日 09:07
+-- 最后更新时间: 2014 年 08 月 11 日 09:26
 -- 
 
 DROP TABLE IF EXISTS `cban_keyword`;
@@ -1151,8 +1151,8 @@ INSERT DELAYED IGNORE INTO `cban_keyword` (`id`, `siteid`, `keyword`, `pinyin`, 
 -- 
 -- 表的结构 `cban_keyword_data`
 -- 
--- 创建时间: 2014 年 08 月 14 日 19:53
--- 最后更新时间: 2014 年 08 月 14 日 20:24
+-- 创建时间: 2014 年 08 月 11 日 09:07
+-- 最后更新时间: 2014 年 08 月 11 日 09:07
 -- 
 
 DROP TABLE IF EXISTS `cban_keyword_data`;
@@ -1181,8 +1181,8 @@ INSERT DELAYED IGNORE INTO `cban_keyword_data` (`id`, `tagid`, `siteid`, `conten
 -- 
 -- 表的结构 `cban_link`
 -- 
--- 创建时间: 2014 年 08 月 14 日 19:53
--- 最后更新时间: 2014 年 08 月 14 日 20:24
+-- 创建时间: 2014 年 08 月 11 日 09:07
+-- 最后更新时间: 2014 年 08 月 11 日 09:07
 -- 
 
 DROP TABLE IF EXISTS `cban_link`;
@@ -1217,8 +1217,8 @@ INSERT DELAYED IGNORE INTO `cban_link` (`linkid`, `siteid`, `typeid`, `linktype`
 -- 
 -- 表的结构 `cban_linkage`
 -- 
--- 创建时间: 2014 年 08 月 14 日 19:53
--- 最后更新时间: 2014 年 08 月 14 日 20:24
+-- 创建时间: 2014 年 08 月 11 日 09:07
+-- 最后更新时间: 2014 年 08 月 11 日 09:26
 -- 
 
 DROP TABLE IF EXISTS `cban_linkage`;
@@ -4568,8 +4568,8 @@ INSERT DELAYED IGNORE INTO `cban_linkage` (`linkageid`, `name`, `style`, `parent
 -- 
 -- 表的结构 `cban_log`
 -- 
--- 创建时间: 2014 年 08 月 14 日 19:53
--- 最后更新时间: 2014 年 08 月 24 日 15:40
+-- 创建时间: 2014 年 08 月 11 日 09:07
+-- 最后更新时间: 2014 年 08 月 25 日 15:08
 -- 
 
 DROP TABLE IF EXISTS `cban_log`;
@@ -4589,7 +4589,7 @@ CREATE TABLE IF NOT EXISTS `cban_log` (
   PRIMARY KEY  (`logid`),
   KEY `module` (`module`,`file`,`action`),
   KEY `username` (`username`,`action`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1069 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1287 ;
 
 -- 
 -- 导出表中的数据 `cban_log`
@@ -5582,98 +5582,317 @@ INSERT DELAYED IGNORE INTO `cban_log` (`logid`, `field`, `value`, `module`, `fil
 (982, '', 0, 'admin', '', 'category', '?m=admin&c=category&a=listorder', '', 1, 'admin', '127.0.0.1', '2014-08-12 15:49:24'),
 (983, '', 0, 'admin', '', 'category', '?m=admin&c=category&a=edit', '', 1, 'admin', '127.0.0.1', '2014-08-12 15:49:45'),
 (984, '', 0, 'admin', '', 'category', '?m=admin&c=category&a=edit', '', 1, 'admin', '127.0.0.1', '2014-08-12 15:49:51'),
-(985, '', 0, 'admin', '', 'index', '?m=admin&c=index&a=login', '', 0, 'admin', '127.0.0.1', '2014-08-14 22:55:48'),
-(986, '', 0, 'admin', '', 'index', '?m=admin&c=index&a=login', '', 0, '', '127.0.0.1', '2014-08-14 23:32:49'),
-(987, '', 0, 'admin', '', 'index', '?m=admin&c=index&a=login', '', 0, '', '127.0.0.1', '2014-08-15 00:21:14'),
-(988, '', 0, 'admin', '', 'index', '?m=admin&c=index&a=login', '', 0, '', '127.0.0.1', '2014-08-15 00:21:31'),
-(989, '', 0, 'admin', '', 'index', '?m=admin&c=index&a=login', '', 0, '', '127.0.0.1', '2014-08-15 00:24:05'),
-(990, '', 0, 'admin', '', 'index', '?m=admin&c=index&a=login', '', 0, '', '127.0.0.1', '2014-08-15 00:24:06'),
-(991, '', 0, 'admin', '', 'index', '?m=admin&c=index&a=login', '', 0, '', '127.0.0.1', '2014-08-15 00:39:20'),
-(992, '', 0, 'admin', '', 'index', '?m=admin&c=index&a=login', '', 0, '', '127.0.0.1', '2014-08-15 00:39:20'),
-(993, '', 0, 'admin', '', 'index', '?m=admin&c=index&a=login', '', 0, '', '127.0.0.1', '2014-08-15 00:42:08'),
-(994, '', 0, 'admin', '', 'index', '?m=admin&c=index&a=login', '', 0, '', '127.0.0.1', '2014-08-15 00:42:14'),
-(995, '', 0, 'admin', '', 'index', '?m=admin&c=index&a=login', '', 0, '', '127.0.0.1', '2014-08-15 00:42:17'),
-(996, '', 0, 'admin', '', 'index', '?m=admin&c=index&a=login', '', 0, '', '127.0.0.1', '2014-08-15 00:42:57'),
-(997, '', 0, 'admin', '', 'index', '?m=admin&c=index&a=login', '', 0, '', '127.0.0.1', '2014-08-15 19:40:53'),
-(998, '', 0, 'admin', '', 'index', '?m=admin&c=index&a=login', '', 0, '', '127.0.0.1', '2014-08-15 19:40:59'),
-(999, '', 0, 'admin', '', 'index', '?m=admin&c=index&a=login', '', 0, '', '127.0.0.1', '2014-08-15 19:41:20'),
-(1000, '', 0, 'admin', '', 'index', '?m=admin&c=index&a=login', '', 0, '', '127.0.0.1', '2014-08-15 19:53:56'),
-(1001, '', 0, 'admin', '', 'index', '?m=admin&c=index&a=login', '', 0, '', '127.0.0.1', '2014-08-16 17:27:06'),
-(1002, '', 0, 'admin', '', 'index', '?m=admin&c=index&a=login', '', 0, '', '127.0.0.1', '2014-08-16 17:34:34'),
-(1003, '', 0, 'admin', '', 'index', '?m=admin&c=index&a=login', '', 0, '', '127.0.0.1', '2014-08-16 19:53:19'),
-(1004, '', 0, 'admin', '', 'index', '?m=admin&c=index&a=login', '', 0, '', '127.0.0.1', '2014-08-16 19:53:39'),
-(1005, '', 0, 'admin', '', 'index', '?m=admin&c=index&a=login', '', 0, '', '127.0.0.1', '2014-08-16 19:54:00'),
-(1006, '', 0, 'admin', '', 'index', '?m=admin&c=index&a=login', '', 0, '', '127.0.0.1', '2014-08-24 11:03:46'),
-(1007, '', 0, 'admin', '', 'index', '?m=admin&c=index&a=login', '', 0, '', '127.0.0.1', '2014-08-24 11:03:53'),
-(1008, '', 0, 'member', '', 'member', '?m=member&c=member&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-24 11:04:03'),
-(1009, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-24 11:04:04'),
-(1010, '', 0, 'member', '', 'member_setting', '?m=member&c=member_setting&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-24 11:04:07'),
-(1011, '', 0, 'admin', '', 'setting', '?m=admin&c=setting&a=save', '', 1, 'admin', '127.0.0.1', '2014-08-24 11:13:13'),
-(1012, '', 0, 'admin', '', 'setting', '?m=admin&c=setting&a=save', '', 1, 'admin', '127.0.0.1', '2014-08-24 11:20:31'),
-(1013, '', 0, 'admin', '', 'setting', '?m=admin&c=setting&a=save', '', 1, 'admin', '127.0.0.1', '2014-08-24 11:25:46'),
-(1014, '', 0, 'member', '', 'member', '?m=member&c=member&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-24 11:26:54'),
-(1015, '', 0, 'member', '', 'member_setting', '?m=member&c=member_setting&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-24 11:26:57'),
-(1016, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-24 11:26:57'),
-(1017, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=pass', '', 1, 'admin', '127.0.0.1', '2014-08-24 11:27:02'),
-(1018, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=pass', '', 1, 'admin', '127.0.0.1', '2014-08-24 11:27:06'),
-(1019, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-24 11:27:08'),
-(1020, '', 0, 'admin', '', 'index', '?m=admin&c=index&a=login', '', 5, 'admin', '127.0.0.1', '2014-08-24 11:31:00'),
-(1021, '', 0, 'admin', '', 'index', '?m=admin&c=index&a=login', '', 5, 'admin', '127.0.0.1', '2014-08-24 11:31:04'),
-(1022, '', 0, 'admin', '', 'index', '?m=admin&c=index&a=login', '', 5, 'admin', '127.0.0.1', '2014-08-24 12:46:52'),
-(1023, '', 0, 'admin', '', 'index', '?m=admin&c=index&a=login', '', 5, 'admin', '127.0.0.1', '2014-08-24 12:46:52'),
-(1024, '', 0, 'admin', '', 'index', '?m=admin&c=index&a=login', '', 5, 'admin', '127.0.0.1', '2014-08-24 12:47:01'),
-(1025, '', 0, 'member', '', 'member_group', '?m=member&c=member_group&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-24 12:47:07'),
-(1026, '', 0, 'member', '', 'member_setting', '?m=member&c=member_setting&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-24 12:47:09'),
-(1027, '', 0, 'member', '', 'member_setting', '?m=member&c=member_setting&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-24 12:48:03'),
-(1028, '', 0, 'member', '', 'member_setting', '?m=member&c=member_setting&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-24 12:48:04'),
-(1029, '', 0, 'admin', '', 'site', '?m=admin&c=site&a=edit', '', 1, 'admin', '127.0.0.1', '2014-08-24 12:49:41'),
-(1030, '', 0, 'admin', '', 'site', '?m=admin&c=site&a=edit', '', 1, 'admin', '127.0.0.1', '2014-08-24 12:50:01'),
-(1031, '', 0, 'member', '', 'member_group', '?m=member&c=member_group&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-24 12:50:48'),
-(1032, '', 0, 'member', '', 'member_setting', '?m=member&c=member_setting&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-24 12:50:50'),
-(1033, '', 0, 'member', '', 'member', '?m=member&c=member&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-24 12:50:51'),
-(1034, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-24 12:50:52'),
-(1035, '', 0, 'member', '', 'member_group', '?m=member&c=member_group&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-24 12:50:53'),
-(1036, '', 0, 'member', '', 'member_setting', '?m=member&c=member_setting&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-24 12:50:55'),
-(1037, '', 0, 'admin', '', 'index', '?m=admin&c=index&a=login', '', 5, 'admin', '127.0.0.1', '2014-08-24 12:59:36'),
-(1038, '', 0, 'admin', '', 'index', '?m=admin&c=index&a=login', '', 5, 'admin', '127.0.0.1', '2014-08-24 12:59:36'),
-(1039, '', 0, 'admin', '', 'index', '?m=admin&c=index&a=login', '', 5, 'admin', '127.0.0.1', '2014-08-24 13:00:20'),
-(1040, '', 0, 'admin', '', 'index', '?m=admin&c=index&a=login', '', 5, 'admin', '127.0.0.1', '2014-08-24 13:00:21'),
-(1041, '', 0, 'admin', '', 'index', '?m=admin&c=index&a=login', '', 5, 'admin', '127.0.0.1', '2014-08-24 13:00:26'),
-(1042, '', 0, 'member', '', 'member_setting', '?m=member&c=member_setting&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-24 13:00:33'),
-(1043, '', 0, 'member', '', 'member_setting', '?m=member&c=member_setting&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-24 13:01:02'),
-(1044, '', 0, 'member', '', 'member_setting', '?m=member&c=member_setting&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-24 13:01:04'),
-(1045, '', 0, 'admin', '', 'index', '?m=admin&c=index&a=login', '', 5, 'admin', '127.0.0.1', '2014-08-24 15:34:03'),
-(1046, '', 0, 'admin', '', 'index', '?m=admin&c=index&a=login', '', 5, 'admin', '127.0.0.1', '2014-08-24 15:34:03'),
-(1047, '', 0, 'admin', '', 'index', '?m=admin&c=index&a=login', '', 5, 'admin', '127.0.0.1', '2014-08-24 15:34:08'),
-(1048, '', 0, 'member', '', 'member', '?m=member&c=member&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-24 15:34:14'),
-(1049, '', 0, 'member', '', 'member', '?m=member&c=member&a=delete', '', 1, 'admin', '127.0.0.1', '2014-08-24 15:34:18'),
-(1050, '', 0, 'member', '', 'member', '?m=member&c=member&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-24 15:34:20'),
-(1051, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-24 15:34:39'),
-(1052, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-24 15:34:41'),
-(1053, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=delete', '', 1, 'admin', '127.0.0.1', '2014-08-24 15:35:01'),
-(1054, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-24 15:35:02'),
-(1055, '', 0, 'member', '', 'member', '?m=member&c=member&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-24 15:35:06'),
-(1056, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-24 15:35:47'),
-(1057, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=pass', '', 1, 'admin', '127.0.0.1', '2014-08-24 15:35:52'),
-(1058, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-24 15:35:55'),
-(1059, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-24 15:35:56'),
-(1060, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-24 15:35:59'),
-(1061, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-24 15:36:29'),
-(1062, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=reject', '', 1, 'admin', '127.0.0.1', '2014-08-24 15:37:32'),
-(1063, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-24 15:37:36'),
-(1064, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-24 15:38:04'),
-(1065, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=pass', '', 1, 'admin', '127.0.0.1', '2014-08-24 15:38:16'),
-(1066, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-24 15:38:19'),
-(1067, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-24 15:38:56'),
-(1068, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-24 15:40:27');
+(985, '', 0, 'admin', '', 'index', '?m=admin&c=index&a=login', '', 0, 'admin', '127.0.0.1', '2014-08-19 10:55:24'),
+(986, '', 0, 'admin', '', 'index', '?m=admin&c=index&a=login', '', 0, 'admin', '127.0.0.1', '2014-08-19 10:55:24'),
+(987, '', 0, 'admin', '', 'index', '?m=admin&c=index&a=login', '', 0, 'admin', '127.0.0.1', '2014-08-19 10:55:31'),
+(988, '', 0, 'member', '', 'member_group', '?m=member&c=member_group&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-19 10:55:36'),
+(989, '', 0, 'member', '', 'member_setting', '?m=member&c=member_setting&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-19 10:55:36'),
+(990, '', 0, 'member', '', 'member', '?m=member&c=member&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-19 10:55:38'),
+(991, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-19 10:55:40'),
+(992, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=pass', '', 1, 'admin', '127.0.0.1', '2014-08-19 10:55:42'),
+(993, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-19 11:00:26'),
+(994, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-19 11:01:19'),
+(995, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=pass', '', 1, 'admin', '127.0.0.1', '2014-08-19 11:01:29'),
+(996, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-19 11:01:31'),
+(997, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=pass', '', 1, 'admin', '127.0.0.1', '2014-08-19 11:01:36'),
+(998, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-19 11:01:37'),
+(999, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-19 11:01:38'),
+(1000, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-19 11:01:40'),
+(1001, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-19 11:02:42'),
+(1002, '', 0, 'member', '', 'member', '?m=member&c=member&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-19 11:03:37'),
+(1003, '', 0, 'member', '', 'member', '?m=member&c=member&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-19 11:11:50'),
+(1004, '', 0, 'member', '', 'member', '?m=member&c=member&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-19 11:11:52'),
+(1005, '', 0, 'member', '', 'member', '?m=member&c=member&a=search', '', 1, 'admin', '127.0.0.1', '2014-08-19 11:11:55'),
+(1006, '', 0, 'member', '', 'member', '?m=member&c=member&a=search', '', 1, 'admin', '127.0.0.1', '2014-08-19 11:11:58'),
+(1007, '', 0, 'member', '', 'member', '?m=member&c=member&a=search', '', 1, 'admin', '127.0.0.1', '2014-08-19 11:12:07'),
+(1008, '', 0, 'member', '', 'member', '?m=member&c=member&a=search', '', 1, 'admin', '127.0.0.1', '2014-08-19 11:12:10'),
+(1009, '', 0, 'member', '', 'member', '?m=member&c=member&a=search', '', 1, 'admin', '127.0.0.1', '2014-08-19 11:12:14'),
+(1010, '', 0, 'member', '', 'member', '?m=member&c=member&a=search', '', 1, 'admin', '127.0.0.1', '2014-08-19 11:12:17'),
+(1011, '', 0, 'member', '', 'member_setting', '?m=member&c=member_setting&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-19 11:14:13'),
+(1012, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-19 11:14:13'),
+(1013, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-19 11:14:14'),
+(1014, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=pass', '', 1, 'admin', '127.0.0.1', '2014-08-19 11:14:22'),
+(1015, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-19 11:14:23'),
+(1016, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-19 11:15:19'),
+(1017, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-19 11:15:20'),
+(1018, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=pass', '', 1, 'admin', '127.0.0.1', '2014-08-19 11:15:22'),
+(1019, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-19 11:15:23'),
+(1020, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=pass', '', 1, 'admin', '127.0.0.1', '2014-08-19 11:15:26'),
+(1021, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-19 11:15:27'),
+(1022, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-19 11:18:46'),
+(1023, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-19 11:18:49'),
+(1024, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-19 11:18:51'),
+(1025, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-19 11:20:00'),
+(1026, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-19 11:20:18'),
+(1027, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-19 11:20:22'),
+(1028, '', 0, 'member', '', 'member', '?m=member&c=member&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-19 11:20:39'),
+(1029, '', 0, 'member', '', 'member_setting', '?m=member&c=member_setting&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-19 11:20:52'),
+(1030, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-19 11:20:52'),
+(1031, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-19 11:20:53'),
+(1032, '', 0, 'member', '', 'member', '?m=member&c=member&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-19 11:20:56'),
+(1033, '', 0, 'member', '', 'member_setting', '?m=member&c=member_setting&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-19 11:21:00'),
+(1034, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-19 11:21:01'),
+(1035, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-19 11:21:02'),
+(1036, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=pass', '', 1, 'admin', '127.0.0.1', '2014-08-19 11:21:04'),
+(1037, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-19 11:21:04'),
+(1038, '', 0, 'member', '', 'member', '?m=member&c=member&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-19 11:21:07'),
+(1039, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-19 11:21:10'),
+(1040, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-19 11:21:11'),
+(1041, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-19 11:22:24'),
+(1042, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-19 11:22:25'),
+(1043, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-19 11:22:27'),
+(1044, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-19 11:22:34'),
+(1045, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-19 11:23:48'),
+(1046, '', 0, 'member', '', 'member_setting', '?m=member&c=member_setting&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-19 11:23:59'),
+(1047, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-19 11:23:59'),
+(1048, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-19 11:24:17'),
+(1049, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-19 11:24:23'),
+(1050, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-19 11:24:59'),
+(1051, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-19 11:27:56'),
+(1052, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-19 11:32:06'),
+(1053, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-19 11:32:07'),
+(1054, '', 0, 'member', '', 'member_group', '?m=member&c=member_group&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-19 11:52:48'),
+(1055, '', 0, 'member', '', 'member_model', '?m=member&c=member_model&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-19 11:52:49'),
+(1056, '', 0, 'member', '', 'member_modelfield', '?m=member&c=member_modelfield&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-19 11:52:51'),
+(1057, '', 0, 'member', '', 'member_model', '?m=member&c=member_model&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-19 11:52:53'),
+(1058, '', 0, 'member', '', 'member_modelfield', '?m=member&c=member_modelfield&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-19 11:52:55'),
+(1059, '', 0, 'member', '', 'member_model', '?m=member&c=member_model&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-19 11:52:59'),
+(1060, '', 0, 'member', '', 'member_group', '?m=member&c=member_group&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-19 11:53:01'),
+(1061, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-19 12:10:46'),
+(1062, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-19 12:10:56'),
+(1063, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-19 12:10:57'),
+(1064, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-19 12:10:58'),
+(1065, '', 0, 'member', '', 'member', '?m=member&c=member&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-19 12:11:00'),
+(1066, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-19 12:19:59'),
+(1067, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-19 12:21:01'),
+(1068, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-19 12:21:02'),
+(1069, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=pass', '', 1, 'admin', '127.0.0.1', '2014-08-19 12:21:07'),
+(1070, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-19 12:21:08'),
+(1071, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-19 12:21:09'),
+(1072, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=pass', '', 1, 'admin', '127.0.0.1', '2014-08-19 12:23:15'),
+(1073, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-19 12:23:16'),
+(1074, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-19 12:23:18'),
+(1075, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=pass', '', 1, 'admin', '127.0.0.1', '2014-08-19 12:23:24'),
+(1076, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-19 12:23:25'),
+(1077, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-19 12:23:28'),
+(1078, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-19 12:23:29'),
+(1079, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-19 12:23:51'),
+(1080, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-19 12:23:53'),
+(1081, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-19 12:23:55'),
+(1082, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-19 12:23:56'),
+(1083, '', 0, 'member', '', 'member', '?m=member&c=member&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-19 12:23:57'),
+(1084, '', 0, 'member', '', 'member', '?m=member&c=member&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-19 12:24:09'),
+(1085, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-19 12:24:10'),
+(1086, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=pass', '', 1, 'admin', '127.0.0.1', '2014-08-19 12:24:14'),
+(1087, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-19 12:24:21'),
+(1088, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-19 12:24:23'),
+(1089, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=pass', '', 1, 'admin', '127.0.0.1', '2014-08-19 12:24:25'),
+(1090, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-19 12:24:29'),
+(1091, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-19 12:25:10'),
+(1092, '', 0, 'member', '', 'member_setting', '?m=member&c=member_setting&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-19 12:25:22'),
+(1093, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-19 12:25:22'),
+(1094, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=pass', '', 1, 'admin', '127.0.0.1', '2014-08-19 12:25:42'),
+(1095, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-19 12:25:43'),
+(1096, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-19 12:25:43'),
+(1097, '', 0, 'admin', '', 'setting', '?m=admin&c=setting&a=save', '', 1, 'admin', '127.0.0.1', '2014-08-19 12:26:02'),
+(1098, '', 0, 'member', '', 'member_setting', '?m=member&c=member_setting&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-19 12:26:48'),
+(1099, '', 0, 'member', '', 'member_setting', '?m=member&c=member_setting&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-19 12:27:08'),
+(1100, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-19 12:27:08'),
+(1101, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-19 12:27:10'),
+(1102, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-19 12:27:11'),
+(1103, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=pass', '', 1, 'admin', '127.0.0.1', '2014-08-19 12:27:13'),
+(1104, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-19 12:27:23'),
+(1105, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-19 12:27:24'),
+(1106, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-19 12:27:25'),
+(1107, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=pass', '', 1, 'admin', '127.0.0.1', '2014-08-19 12:27:40'),
+(1108, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-19 12:27:41'),
+(1109, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-19 12:27:42'),
+(1110, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-19 12:27:43'),
+(1111, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-19 12:28:11'),
+(1112, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=pass', '', 1, 'admin', '127.0.0.1', '2014-08-19 12:28:29'),
+(1113, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-19 12:29:29'),
+(1114, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-19 12:29:32'),
+(1115, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-19 12:29:35'),
+(1116, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=pass', '', 1, 'admin', '127.0.0.1', '2014-08-19 12:29:38'),
+(1117, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-19 12:29:40'),
+(1118, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-19 12:29:41'),
+(1119, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-19 12:29:44'),
+(1120, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=pass', '', 1, 'admin', '127.0.0.1', '2014-08-19 12:29:45'),
+(1121, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-19 12:29:49'),
+(1122, '', 0, 'admin', '', 'setting', '?m=admin&c=setting&a=save', '', 1, 'admin', '127.0.0.1', '2014-08-19 12:30:59'),
+(1123, '', 0, 'member', '', 'member_setting', '?m=member&c=member_setting&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-19 14:03:32'),
+(1124, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-19 14:03:34'),
+(1125, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-19 14:03:37'),
+(1126, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-19 14:03:41'),
+(1127, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-19 14:03:58'),
+(1128, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-19 14:03:59'),
+(1129, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-19 14:04:02'),
+(1130, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-19 14:13:53'),
+(1131, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=pass', '', 1, 'admin', '127.0.0.1', '2014-08-19 14:13:56'),
+(1132, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-19 14:13:59'),
+(1133, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-19 14:16:03'),
+(1134, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=pass', '', 1, 'admin', '127.0.0.1', '2014-08-19 14:16:06'),
+(1135, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=pass', '', 1, 'admin', '127.0.0.1', '2014-08-19 14:17:33'),
+(1136, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-19 14:17:36'),
+(1137, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-19 14:17:38'),
+(1138, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=pass', '', 1, 'admin', '127.0.0.1', '2014-08-19 14:17:39'),
+(1139, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-19 14:17:44'),
+(1140, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=pass', '', 1, 'admin', '127.0.0.1', '2014-08-19 14:18:00'),
+(1141, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-19 14:18:16'),
+(1142, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-19 14:20:49'),
+(1143, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=pass', '', 1, 'admin', '127.0.0.1', '2014-08-19 14:20:50'),
+(1144, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-19 14:20:54'),
+(1145, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=pass', '', 1, 'admin', '127.0.0.1', '2014-08-19 14:21:33'),
+(1146, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=pass', '', 1, 'admin', '127.0.0.1', '2014-08-19 14:22:08'),
+(1147, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=pass', '', 1, 'admin', '127.0.0.1', '2014-08-19 14:22:57'),
+(1148, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-19 14:29:20'),
+(1149, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-19 14:29:24'),
+(1150, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-19 14:29:26'),
+(1151, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=pass', '', 1, 'admin', '127.0.0.1', '2014-08-19 14:29:30'),
+(1152, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=pass', '', 1, 'admin', '127.0.0.1', '2014-08-19 14:30:26'),
+(1153, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-19 14:30:45'),
+(1154, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=pass', '', 1, 'admin', '127.0.0.1', '2014-08-19 14:30:47'),
+(1155, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-19 14:30:49'),
+(1156, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-19 14:30:51'),
+(1157, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=pass', '', 1, 'admin', '127.0.0.1', '2014-08-19 14:30:52'),
+(1158, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-19 14:30:54'),
+(1159, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=pass', '', 1, 'admin', '127.0.0.1', '2014-08-19 14:30:55'),
+(1160, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-19 14:30:56'),
+(1161, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-19 14:31:54'),
+(1162, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-19 14:32:05'),
+(1163, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=pass', '', 1, 'admin', '127.0.0.1', '2014-08-19 14:32:08'),
+(1164, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-19 14:32:09'),
+(1165, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-19 14:36:05'),
+(1166, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=pass', '', 1, 'admin', '127.0.0.1', '2014-08-19 14:36:07'),
+(1167, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-19 14:36:09');
+INSERT DELAYED IGNORE INTO `cban_log` (`logid`, `field`, `value`, `module`, `file`, `action`, `querystring`, `data`, `userid`, `username`, `ip`, `time`) VALUES 
+(1168, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-19 14:36:11'),
+(1169, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-19 14:36:13'),
+(1170, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-19 14:36:15'),
+(1171, '', 0, 'member', '', 'member', '?m=member&c=member&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-19 14:36:17'),
+(1172, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-19 14:36:19'),
+(1173, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-19 14:36:23'),
+(1174, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-19 14:38:32'),
+(1175, '', 0, 'member', '', 'member', '?m=member&c=member&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-19 14:38:34'),
+(1176, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-19 14:38:36'),
+(1177, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-19 14:38:37'),
+(1178, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-19 14:38:39'),
+(1179, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=pass', '', 1, 'admin', '127.0.0.1', '2014-08-19 14:38:41'),
+(1180, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-19 14:38:44'),
+(1181, '', 0, 'member', '', 'member', '?m=member&c=member&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-19 14:38:45'),
+(1182, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-19 14:38:46'),
+(1183, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-19 14:38:47'),
+(1184, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-19 14:38:49'),
+(1185, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-19 14:40:01'),
+(1186, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=pass', '', 1, 'admin', '127.0.0.1', '2014-08-19 14:40:03'),
+(1187, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-19 14:42:25'),
+(1188, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=pass', '', 1, 'admin', '127.0.0.1', '2014-08-19 14:42:27'),
+(1189, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-19 14:42:29'),
+(1190, '', 0, 'member', '', 'member', '?m=member&c=member&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-19 14:43:26'),
+(1191, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-19 14:43:29'),
+(1192, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=pass', '', 1, 'admin', '127.0.0.1', '2014-08-19 14:44:09'),
+(1193, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-19 14:44:27'),
+(1194, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=pass', '', 1, 'admin', '127.0.0.1', '2014-08-19 14:57:06'),
+(1195, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-19 14:57:07'),
+(1196, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-19 15:04:49'),
+(1197, '', 0, 'member', '', 'member', '?m=member&c=member&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-19 15:04:50'),
+(1198, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-19 15:04:51'),
+(1199, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-19 15:04:52'),
+(1200, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-19 15:04:53'),
+(1201, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=pass', '', 1, 'admin', '127.0.0.1', '2014-08-19 15:04:55'),
+(1202, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-19 15:05:10'),
+(1203, '', 0, 'member', '', 'member', '?m=member&c=member&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-19 15:05:12'),
+(1204, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-19 15:05:16'),
+(1205, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=pass', '', 1, 'admin', '127.0.0.1', '2014-08-19 15:06:18'),
+(1206, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-19 15:06:20'),
+(1207, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-19 15:06:22'),
+(1208, '', 0, 'member', '', 'member', '?m=member&c=member&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-19 15:06:23'),
+(1209, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-19 15:06:24'),
+(1210, '', 0, 'member', '', 'member', '?m=member&c=member&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-19 15:07:42'),
+(1211, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-19 15:07:43'),
+(1212, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=pass', '', 1, 'admin', '127.0.0.1', '2014-08-19 15:07:45'),
+(1213, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-19 15:07:46'),
+(1214, '', 0, 'member', '', 'member', '?m=member&c=member&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-19 15:08:36'),
+(1215, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-19 15:08:37'),
+(1216, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-19 15:08:46'),
+(1217, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=pass', '', 1, 'admin', '127.0.0.1', '2014-08-19 15:08:48'),
+(1218, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-19 15:10:41'),
+(1219, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-19 15:12:59'),
+(1220, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=pass', '', 1, 'admin', '127.0.0.1', '2014-08-19 15:13:02'),
+(1221, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-19 15:13:03'),
+(1222, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-19 15:13:18'),
+(1223, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=pass', '', 1, 'admin', '127.0.0.1', '2014-08-19 15:13:20'),
+(1224, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-19 15:14:28'),
+(1225, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=pass', '', 1, 'admin', '127.0.0.1', '2014-08-19 15:14:53'),
+(1226, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-19 15:15:25'),
+(1227, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-19 15:15:26'),
+(1228, '', 0, 'member', '', 'member', '?m=member&c=member&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-19 15:15:28'),
+(1229, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-19 15:15:30'),
+(1230, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-19 15:16:13'),
+(1231, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=pass', '', 1, 'admin', '127.0.0.1', '2014-08-19 15:16:17'),
+(1232, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-19 15:16:19'),
+(1233, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-19 15:16:21'),
+(1234, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-19 15:16:21'),
+(1235, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-19 15:16:22'),
+(1236, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-19 15:16:22'),
+(1237, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-19 15:20:54'),
+(1238, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-19 15:21:03'),
+(1239, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-19 15:21:05'),
+(1240, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-19 15:26:02'),
+(1241, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-19 15:26:03'),
+(1242, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-19 15:26:24'),
+(1243, '', 0, 'member', '', 'member', '?m=member&c=member&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-19 15:26:30'),
+(1244, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-19 15:26:31'),
+(1245, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=pass', '', 1, 'admin', '127.0.0.1', '2014-08-19 15:26:59'),
+(1246, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-19 15:27:12'),
+(1247, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=pass', '', 1, 'admin', '127.0.0.1', '2014-08-19 15:27:16'),
+(1248, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=pass', '', 1, 'admin', '127.0.0.1', '2014-08-19 15:27:17'),
+(1249, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-19 15:27:19'),
+(1250, '', 0, 'member', '', 'member', '?m=member&c=member&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-19 15:27:20'),
+(1251, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-19 15:27:22'),
+(1252, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-19 15:27:24'),
+(1253, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-19 15:27:29'),
+(1254, '', 0, 'member', '', 'member', '?m=member&c=member&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-19 15:27:31'),
+(1255, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-19 15:27:31'),
+(1256, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-19 15:27:32'),
+(1257, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-19 15:28:42'),
+(1258, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-19 15:28:43'),
+(1259, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-19 15:28:44'),
+(1260, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-19 15:29:00'),
+(1261, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=pass', '', 1, 'admin', '127.0.0.1', '2014-08-19 15:29:18'),
+(1262, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-19 15:29:23'),
+(1263, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=pass', '', 1, 'admin', '127.0.0.1', '2014-08-19 15:29:26'),
+(1264, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-19 15:29:28'),
+(1265, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-19 15:29:30'),
+(1266, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-19 15:29:33'),
+(1267, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-19 15:29:33'),
+(1268, '', 0, 'member', '', 'member', '?m=member&c=member&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-19 15:29:36'),
+(1269, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-19 15:29:38'),
+(1270, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-19 15:29:39'),
+(1271, '', 0, 'member', '', 'member_verify', '?m=member&c=member_verify&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-19 15:29:42'),
+(1272, '', 0, 'member', '', 'member', '?m=member&c=member&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-19 15:40:43'),
+(1273, '', 0, 'member', '', 'member', '?m=member&c=member&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-19 15:40:44'),
+(1274, '', 0, 'member', '', 'member', '?m=member&c=member&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-19 15:44:54'),
+(1275, '', 0, 'member', '', 'member', '?m=member&c=member&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-19 15:44:55'),
+(1276, '', 0, 'member', '', 'member', '?m=member&c=member&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-19 15:45:31'),
+(1277, '', 0, 'member', '', 'member', '?m=member&c=member&a=manage', '', 1, 'admin', '127.0.0.1', '2014-08-19 15:45:32'),
+(1278, '', 0, 'admin', '', 'index', '?m=admin&c=index&a=login', '', 0, 'admin', '127.0.0.1', '2014-08-21 15:49:53'),
+(1279, '', 0, 'admin', '', 'index', '?m=admin&c=index&a=login', '', 0, 'admin', '127.0.0.1', '2014-08-21 15:49:53'),
+(1280, '', 0, 'admin', '', 'index', '?m=admin&c=index&a=login', '', 0, 'admin', '127.0.0.1', '2014-08-21 15:49:57'),
+(1281, '', 0, 'content', '', 'content', '?m=content&c=content&a=add', '', 1, 'admin', '127.0.0.1', '2014-08-21 15:50:56'),
+(1282, '', 0, 'admin', '', 'index', '?m=admin&c=index&a=login', '', 0, 'admin', '127.0.0.1', '2014-08-25 11:16:59'),
+(1283, '', 0, 'admin', '', 'index', '?m=admin&c=index&a=login', '', 0, 'admin', '127.0.0.1', '2014-08-25 11:17:04'),
+(1284, '', 0, 'admin', '', 'category', '?m=admin&c=category&a=edit', '', 1, 'admin', '127.0.0.1', '2014-08-25 11:17:17'),
+(1285, '', 0, 'admin', '', 'category', '?m=admin&c=category&a=edit', '', 1, 'admin', '127.0.0.1', '2014-08-25 11:17:40'),
+(1286, '', 0, 'admin', '', 'index', '?m=admin&c=index&a=login', '', 0, 'admin', '127.0.0.1', '2014-08-25 15:08:50');
 
 -- --------------------------------------------------------
 
 -- 
 -- 表的结构 `cban_member`
 -- 
--- 创建时间: 2014 年 08 月 14 日 19:53
--- 最后更新时间: 2014 年 08 月 24 日 15:51
+-- 创建时间: 2014 年 08 月 19 日 15:27
+-- 最后更新时间: 2014 年 08 月 19 日 15:29
 -- 
 
 DROP TABLE IF EXISTS `cban_member`;
@@ -5707,26 +5926,24 @@ CREATE TABLE IF NOT EXISTS `cban_member` (
   UNIQUE KEY `username` (`username`),
   KEY `email` (`email`(20)),
   KEY `phpssouid` (`phpssouid`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=7 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=4 ;
 
 -- 
 -- 导出表中的数据 `cban_member`
 -- 
 
 INSERT DELAYED IGNORE INTO `cban_member` (`userid`, `phpssouid`, `username`, `password`, `encrypt`, `nickname`, `regdate`, `lastdate`, `regip`, `lastip`, `loginnum`, `email`, `groupid`, `areaid`, `amount`, `point`, `modelid`, `message`, `islock`, `vip`, `overduedate`, `siteid`, `connectid`, `from`, `mobile`) VALUES 
-(1, 1, 'nima', 'e3cdebc9a303d1e78b623146821d6192', 'D8IK1j', 'nima', 1406013245, 1407810570, '127.0.0.1', '127.0.0.1', 0, 'nima@qq.com', 2, 0, 0.00, 5, 12, 0, 0, 0, 0, 1, '', '', ''),
-(2, 2, 'hehe', '7f30f0b731b883d2aae66a4d4dddc366', '4sGUlJ', 'hehe', 1406013385, 1407465295, '127.0.0.1', '127.0.0.1', 0, 'hehe@qq.com', 2, 0, 0.00, 1, 13, 0, 0, 0, 0, 1, '', '', ''),
-(3, 3, 'haha', 'e7ab8954a1db823c792e28ff228ec5a5', 'WwKE4R', 'haha', 1407221679, 1407314316, '127.0.0.1', '127.0.0.1', 0, 'haha@qq.com', 2, 0, 0.00, 5, 13, 0, 0, 0, 0, 1, '', '', ''),
-(4, 4, 'aaa', '591474620785dd8e4ec40e3ab363f02b', 'bDYZjt', 'aaa', 1407828770, 1407828954, '127.0.0.1', '127.0.0.1', 0, 'aaa@qq.com', 2, 0, 0.00, 0, 10, 0, 0, 0, 0, 1, '', '', ''),
-(6, 6, 'jiang', '04a9e7c309c30308d808eb38b878de3b', 'qS6H2T', 'jiang', 1408865741, 1408865741, '127.0.0.1', '', 0, '188513331@qq.com', 2, 0, 0.00, 0, 10, 0, 0, 0, 0, 1, '', '', '');
+(1, 1, 'sadff', 'c57c6183bf39a41f09e42baf5f81f035', 'AjeA6C', 'sadff', 1408416915, 1408416915, '127.0.0.1', '', 0, 'sadff@qq.com', 2, 0, 0.00, 0, 10, 0, 0, 0, 0, 1, '', '', ''),
+(2, 3, 'hehe', '7f30f0b731b883d2aae66a4d4dddc366', '4sGUlJ', 'hehe', 1406013385, 1406013385, '127.0.0.1', '', 0, 'hehe@qq.com', 2, 0, 0.00, 0, 13, 0, 0, 0, 0, 1, '', '', ''),
+(3, 4, 'haha', 'e7ab8954a1db823c792e28ff228ec5a5', 'WwKE4R', 'haha', 1407221679, 1407221679, '127.0.0.1', '', 0, 'haha@qq.com', 2, 0, 0.00, 0, 13, 0, 0, 0, 0, 1, '', '', '');
 
 -- --------------------------------------------------------
 
 -- 
 -- 表的结构 `cban_member_detail`
 -- 
--- 创建时间: 2014 年 08 月 14 日 19:53
--- 最后更新时间: 2014 年 08 月 14 日 20:24
+-- 创建时间: 2014 年 08 月 11 日 09:07
+-- 最后更新时间: 2014 年 08 月 19 日 15:08
 -- 
 
 DROP TABLE IF EXISTS `cban_member_detail`;
@@ -5741,15 +5958,18 @@ CREATE TABLE IF NOT EXISTS `cban_member_detail` (
 -- 
 
 INSERT DELAYED IGNORE INTO `cban_member_detail` (`userid`, `birthday`) VALUES 
-(4, '0000-00-00');
+(4, '0000-00-00'),
+(6, '0000-00-00'),
+(11, '0000-00-00'),
+(1, '0000-00-00');
 
 -- --------------------------------------------------------
 
 -- 
 -- 表的结构 `cban_member_group`
 -- 
--- 创建时间: 2014 年 08 月 14 日 19:53
--- 最后更新时间: 2014 年 08 月 14 日 20:24
+-- 创建时间: 2014 年 08 月 11 日 09:07
+-- 最后更新时间: 2014 年 08 月 11 日 09:26
 -- 
 
 DROP TABLE IF EXISTS `cban_member_group`;
@@ -5799,8 +6019,8 @@ INSERT DELAYED IGNORE INTO `cban_member_group` (`groupid`, `name`, `issystem`, `
 -- 
 -- 表的结构 `cban_member_md`
 -- 
--- 创建时间: 2014 年 08 月 14 日 19:53
--- 最后更新时间: 2014 年 08 月 14 日 20:24
+-- 创建时间: 2014 年 08 月 11 日 09:07
+-- 最后更新时间: 2014 年 08 月 19 日 10:55
 -- 
 
 DROP TABLE IF EXISTS `cban_member_md`;
@@ -5816,15 +6036,16 @@ CREATE TABLE IF NOT EXISTS `cban_member_md` (
 -- 
 
 INSERT DELAYED IGNORE INTO `cban_member_md` (`userid`, `license`, `orgcode`) VALUES 
-(1, '', '22222');
+(1, '', '22222'),
+(5, 'lulu', '');
 
 -- --------------------------------------------------------
 
 -- 
 -- 表的结构 `cban_member_menu`
 -- 
--- 创建时间: 2014 年 08 月 14 日 19:53
--- 最后更新时间: 2014 年 08 月 14 日 19:53
+-- 创建时间: 2014 年 08 月 11 日 09:07
+-- 最后更新时间: 2014 年 08 月 11 日 09:26
 -- 
 
 DROP TABLE IF EXISTS `cban_member_menu`;
@@ -5860,8 +6081,8 @@ INSERT DELAYED IGNORE INTO `cban_member_menu` (`id`, `name`, `parentid`, `m`, `c
 -- 
 -- 表的结构 `cban_member_qy`
 -- 
--- 创建时间: 2014 年 08 月 14 日 19:53
--- 最后更新时间: 2014 年 08 月 14 日 19:53
+-- 创建时间: 2014 年 08 月 11 日 09:07
+-- 最后更新时间: 2014 年 08 月 19 日 14:57
 -- 
 
 DROP TABLE IF EXISTS `cban_member_qy`;
@@ -5878,15 +6099,16 @@ CREATE TABLE IF NOT EXISTS `cban_member_qy` (
 
 INSERT DELAYED IGNORE INTO `cban_member_qy` (`userid`, `license`, `orgcode`) VALUES 
 (2, '111111', ''),
-(3, 'hahaha', '');
+(3, 'hahaha', ''),
+(10, '111111', '');
 
 -- --------------------------------------------------------
 
 -- 
 -- 表的结构 `cban_member_verify`
 -- 
--- 创建时间: 2014 年 08 月 14 日 19:53
--- 最后更新时间: 2014 年 08 月 24 日 15:51
+-- 创建时间: 2014 年 08 月 11 日 09:07
+-- 最后更新时间: 2014 年 08 月 19 日 15:32
 -- 
 
 DROP TABLE IF EXISTS `cban_member_verify`;
@@ -5910,25 +6132,27 @@ CREATE TABLE IF NOT EXISTS `cban_member_verify` (
   PRIMARY KEY  (`userid`),
   UNIQUE KEY `username` (`username`),
   KEY `email` (`email`(20))
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=6 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=7 ;
 
 -- 
 -- 导出表中的数据 `cban_member_verify`
 -- 
 
 INSERT DELAYED IGNORE INTO `cban_member_verify` (`userid`, `username`, `password`, `encrypt`, `nickname`, `regdate`, `regip`, `email`, `modelid`, `point`, `amount`, `modelinfo`, `status`, `siteid`, `message`, `mobile`) VALUES 
-(1, 'hehe', '123456', '4sGUlJ', 'hehe', 1406013385, '127.0.0.1', 'hehe@qq.com', 13, 0, 0.00, 'array (\n  ''license'' => ''111111'',\n  ''orgcode'' => '''',\n)', 5, 1, '', ''),
+(1, 'hehe', '123456', '4sGUlJ', 'hehe', 1406013385, '127.0.0.1', 'hehe@qq.com', 13, 0, 0.00, 'array (\n  ''license'' => ''111111'',\n  ''orgcode'' => '''',\n)', 1, 1, '', ''),
 (2, 'haha', '123456', 'WwKE4R', 'haha', 1407221679, '127.0.0.1', 'haha@qq.com', 13, 0, 0.00, 'array (\n  ''license'' => ''hahaha'',\n  ''orgcode'' => '''',\n)', 1, 1, '', ''),
-(3, 'aaa', '123456', 'bDYZjt', 'aaa', 1407828770, '127.0.0.1', 'aaa@qq.com', 10, 0, 0.00, 'array (\n  ''birthday'' => '''',\n)', 1, 1, '', ''),
-(5, 'jiang', '123456', 'qS6H2T', 'jiang', 1408865741, '127.0.0.1', '188513331@qq.com', 10, 0, 0.00, 'array (\n  ''birthday'' => '''',\n)', 5, 1, '同意通过', '');
+(3, 'aaa', '123456', 'bDYZjt', 'aaa', 1407828770, '127.0.0.1', 'aaa@qq.com', 10, 0, 0.00, 'array (\n  ''birthday'' => '''',\n)', 0, 1, '', ''),
+(4, 'lulu', '123456', 'QTD3fb', 'lulu', 1408416895, '127.0.0.1', 'lulu@qq.com', 12, 0, 0.00, 'array (\n  ''license'' => ''lulu'',\n  ''orgcode'' => '''',\n)', 0, 1, '', ''),
+(5, 'sadff', '123456', 'AjeA6C', 'sadff', 1408416915, '127.0.0.1', 'sadff@qq.com', 10, 0, 0.00, 'array (\n  ''birthday'' => '''',\n)', 0, 1, '', ''),
+(6, 'nimaB', '123456', 'w1FIKE', 'nimaB', 1408430093, '127.0.0.1', 'nimaB@qq.com', 10, 0, 0.00, 'array (\n  ''birthday'' => '''',\n)', 0, 1, '', '');
 
 -- --------------------------------------------------------
 
 -- 
 -- 表的结构 `cban_member_vip`
 -- 
--- 创建时间: 2014 年 08 月 14 日 19:53
--- 最后更新时间: 2014 年 08 月 14 日 19:53
+-- 创建时间: 2014 年 08 月 11 日 09:07
+-- 最后更新时间: 2014 年 08 月 11 日 09:07
 -- 
 
 DROP TABLE IF EXISTS `cban_member_vip`;
@@ -5947,9 +6171,9 @@ CREATE TABLE IF NOT EXISTS `cban_member_vip` (
 -- 
 -- 表的结构 `cban_menu`
 -- 
--- 创建时间: 2014 年 08 月 14 日 19:53
--- 最后更新时间: 2014 年 08 月 14 日 19:53
--- 最后检查时间: 2014 年 08 月 14 日 19:53
+-- 创建时间: 2014 年 08 月 11 日 09:07
+-- 最后更新时间: 2014 年 08 月 11 日 09:07
+-- 最后检查时间: 2014 年 08 月 11 日 09:07
 -- 
 
 DROP TABLE IF EXISTS `cban_menu`;
@@ -6323,8 +6547,8 @@ INSERT DELAYED IGNORE INTO `cban_menu` (`id`, `name`, `parentid`, `m`, `c`, `a`,
 -- 
 -- 表的结构 `cban_message`
 -- 
--- 创建时间: 2014 年 08 月 14 日 19:53
--- 最后更新时间: 2014 年 08 月 14 日 19:53
+-- 创建时间: 2014 年 08 月 11 日 09:07
+-- 最后更新时间: 2014 年 08 月 11 日 09:07
 -- 
 
 DROP TABLE IF EXISTS `cban_message`;
@@ -6369,8 +6593,8 @@ INSERT DELAYED IGNORE INTO `cban_message` (`messageid`, `send_from_id`, `send_to
 -- 
 -- 表的结构 `cban_message_data`
 -- 
--- 创建时间: 2014 年 08 月 14 日 19:53
--- 最后更新时间: 2014 年 08 月 14 日 19:53
+-- 创建时间: 2014 年 08 月 11 日 09:07
+-- 最后更新时间: 2014 年 08 月 11 日 09:07
 -- 
 
 DROP TABLE IF EXISTS `cban_message_data`;
@@ -6392,8 +6616,8 @@ CREATE TABLE IF NOT EXISTS `cban_message_data` (
 -- 
 -- 表的结构 `cban_message_group`
 -- 
--- 创建时间: 2014 年 08 月 14 日 19:53
--- 最后更新时间: 2014 年 08 月 14 日 19:53
+-- 创建时间: 2014 年 08 月 11 日 09:07
+-- 最后更新时间: 2014 年 08 月 11 日 09:07
 -- 
 
 DROP TABLE IF EXISTS `cban_message_group`;
@@ -6418,8 +6642,8 @@ CREATE TABLE IF NOT EXISTS `cban_message_group` (
 -- 
 -- 表的结构 `cban_model`
 -- 
--- 创建时间: 2014 年 08 月 14 日 19:53
--- 最后更新时间: 2014 年 08 月 14 日 19:53
+-- 创建时间: 2014 年 08 月 11 日 09:07
+-- 最后更新时间: 2014 年 08 月 11 日 09:07
 -- 
 
 DROP TABLE IF EXISTS `cban_model`;
@@ -6469,9 +6693,9 @@ INSERT DELAYED IGNORE INTO `cban_model` (`modelid`, `siteid`, `name`, `descripti
 -- 
 -- 表的结构 `cban_model_field`
 -- 
--- 创建时间: 2014 年 08 月 14 日 19:53
--- 最后更新时间: 2014 年 08 月 14 日 19:53
--- 最后检查时间: 2014 年 08 月 14 日 19:53
+-- 创建时间: 2014 年 08 月 11 日 09:07
+-- 最后更新时间: 2014 年 08 月 11 日 09:07
+-- 最后检查时间: 2014 年 08 月 11 日 09:07
 -- 
 
 DROP TABLE IF EXISTS `cban_model_field`;
@@ -6715,8 +6939,8 @@ INSERT DELAYED IGNORE INTO `cban_model_field` (`fieldid`, `modelid`, `siteid`, `
 -- 
 -- 表的结构 `cban_module`
 -- 
--- 创建时间: 2014 年 08 月 14 日 19:53
--- 最后更新时间: 2014 年 08 月 24 日 13:23
+-- 创建时间: 2014 年 08 月 11 日 09:07
+-- 最后更新时间: 2014 年 08 月 19 日 12:32
 -- 
 
 DROP TABLE IF EXISTS `cban_module`;
@@ -6740,8 +6964,8 @@ CREATE TABLE IF NOT EXISTS `cban_module` (
 -- 
 
 INSERT DELAYED IGNORE INTO `cban_module` (`module`, `name`, `url`, `iscore`, `version`, `description`, `setting`, `listorder`, `disabled`, `installdate`, `updatedate`) VALUES 
-('admin', 'admin', '', 1, '1.0', '', 'array (\n  ''admin_email'' => ''phpcms@phpcms.cn'',\n  ''maxloginfailedtimes'' => ''8'',\n  ''minrefreshtime'' => ''2'',\n  ''mail_type'' => ''1'',\n  ''mail_server'' => ''smtp.163.com'',\n  ''mail_port'' => ''25'',\n  ''category_ajax'' => ''0'',\n  ''mail_user'' => ''cbanadmin@163.com'',\n  ''mail_auth'' => ''1'',\n  ''mail_from'' => ''cbanadmin@163.com'',\n  ''mail_password'' => ''a123456'',\n  ''errorlog_size'' => ''20'',\n)', 0, 0, '2010-10-18', '2010-10-18'),
-('member', '会员', '', 1, '1.0', '', 'array (\n  ''allowregister'' => ''1'',\n  ''choosemodel'' => ''1'',\n  ''enablemailcheck'' => ''0'',\n  ''enablcodecheck'' => ''0'',\n  ''mobile_checktype'' => ''0'',\n  ''user_sendsms_title'' => '''',\n  ''registerverify'' => ''1'',\n  ''showapppoint'' => ''0'',\n  ''rmb_point_rate'' => ''10'',\n  ''defualtpoint'' => ''0'',\n  ''defualtamount'' => ''0'',\n  ''showregprotocol'' => ''0'',\n  ''regprotocol'' => ''		 欢迎您注册成为phpcms用户\r\n请仔细阅读下面的协议，只有接受协议才能继续进行注册。 \r\n1．服务条款的确认和接纳\r\n　　phpcms用户服务的所有权和运作权归phpcms拥有。phpcms所提供的服务将按照有关章程、服务条款和操作规则严格执行。用户通过注册程序点击“我同意” 按钮，即表示用户与phpcms达成协议并接受所有的服务条款。\r\n2． phpcms服务简介\r\n　　phpcms通过国际互联网为用户提供新闻及文章浏览、图片浏览、软件下载、网上留言和BBS论坛等服务。\r\n　　用户必须： \r\n　　1)购置设备，包括个人电脑一台、调制解调器一个及配备上网装置。 \r\n　　2)个人上网和支付与此服务有关的电话费用、网络费用。\r\n　　用户同意： \r\n　　1)提供及时、详尽及准确的个人资料。 \r\n　　2)不断更新注册资料，符合及时、详尽、准确的要求。所有原始键入的资料将引用为注册资料。 \r\n　　3)用户同意遵守《中华人民共和国保守国家秘密法》、《中华人民共和国计算机信息系统安全保护条例》、《计算机软件保护条例》等有关计算机及互联网规定的法律和法规、实施办法。在任何情况下，phpcms合理地认为用户的行为可能违反上述法律、法规，phpcms可以在任何时候，不经事先通知终止向该用户提供服务。用户应了解国际互联网的无国界性，应特别注意遵守当地所有有关的法律和法规。\r\n3． 服务条款的修改\r\n　　phpcms会不定时地修改服务条款，服务条款一旦发生变动，将会在相关页面上提示修改内容。如果您同意改动，则再一次点击“我同意”按钮。 如果您不接受，则及时取消您的用户使用服务资格。\r\n4． 服务修订\r\n　　phpcms保留随时修改或中断服务而不需知照用户的权利。phpcms行使修改或中断服务的权利，不需对用户或第三方负责。\r\n5． 用户隐私制度\r\n　　尊重用户个人隐私是phpcms的 基本政策。phpcms不会公开、编辑或透露用户的注册信息，除非有法律许可要求，或phpcms在诚信的基础上认为透露这些信息在以下三种情况是必要的： \r\n　　1)遵守有关法律规定，遵从合法服务程序。 \r\n　　2)保持维护phpcms的商标所有权。 \r\n　　3)在紧急情况下竭力维护用户个人和社会大众的隐私安全。 \r\n　　4)符合其他相关的要求。 \r\n6．用户的帐号，密码和安全性\r\n　　一旦注册成功成为phpcms用户，您将得到一个密码和帐号。如果您不保管好自己的帐号和密码安全，将对因此产生的后果负全部责任。另外，每个用户都要对其帐户中的所有活动和事件负全责。您可随时根据指示改变您的密码，也可以结束旧的帐户重开一个新帐户。用户同意若发现任何非法使用用户帐号或安全漏洞的情况，立即通知phpcms。\r\n7． 免责条款\r\n　　用户明确同意网站服务的使用由用户个人承担风险。 　　 \r\n　　phpcms不作任何类型的担保，不担保服务一定能满足用户的要求，也不担保服务不会受中断，对服务的及时性，安全性，出错发生都不作担保。用户理解并接受：任何通过phpcms服务取得的信息资料的可靠性取决于用户自己，用户自己承担所有风险和责任。 \r\n8．有限责任\r\n　　phpcms对任何直接、间接、偶然、特殊及继起的损害不负责任。\r\n9． 不提供零售和商业性服务 \r\n　　用户使用网站服务的权利是个人的。用户只能是一个单独的个体而不能是一个公司或实体商业性组织。用户承诺不经phpcms同意，不能利用网站服务进行销售或其他商业用途。\r\n10．用户责任 \r\n　　用户单独承担传输内容的责任。用户必须遵循： \r\n　　1)从中国境内向外传输技术性资料时必须符合中国有关法规。 \r\n　　2)使用网站服务不作非法用途。 \r\n　　3)不干扰或混乱网络服务。 \r\n　　4)不在论坛BBS或留言簿发表任何与政治相关的信息。 \r\n　　5)遵守所有使用网站服务的网络协议、规定、程序和惯例。\r\n　　6)不得利用本站危害国家安全、泄露国家秘密，不得侵犯国家社会集体的和公民的合法权益。\r\n　　7)不得利用本站制作、复制和传播下列信息： \r\n　　　1、煽动抗拒、破坏宪法和法律、行政法规实施的；\r\n　　　2、煽动颠覆国家政权，推翻社会主义制度的；\r\n　　　3、煽动分裂国家、破坏国家统一的；\r\n　　　4、煽动民族仇恨、民族歧视，破坏民族团结的；\r\n　　　5、捏造或者歪曲事实，散布谣言，扰乱社会秩序的；\r\n　　　6、宣扬封建迷信、淫秽、色情、赌博、暴力、凶杀、恐怖、教唆犯罪的；\r\n　　　7、公然侮辱他人或者捏造事实诽谤他人的，或者进行其他恶意攻击的；\r\n　　　8、损害国家机关信誉的；\r\n　　　9、其他违反宪法和法律行政法规的；\r\n　　　10、进行商业广告行为的。\r\n　　用户不能传输任何教唆他人构成犯罪行为的资料；不能传输长国内不利条件和涉及国家安全的资料；不能传输任何不符合当地法规、国家法律和国际法 律的资料。未经许可而非法进入其它电脑系统是禁止的。若用户的行为不符合以上的条款，phpcms将取消用户服务帐号。\r\n11．网站内容的所有权\r\n　　phpcms定义的内容包括：文字、软件、声音、相片、录象、图表；在广告中全部内容；电子邮件的全部内容；phpcms为用户提供的商业信息。所有这些内容受版权、商标、标签和其它财产所有权法律的保护。所以，用户只能在phpcms和广告商授权下才能使用这些内容，而不能擅自复制、篡改这些内容、或创造与内容有关的派生产品。\r\n12．附加信息服务\r\n　　用户在享用phpcms提供的免费服务的同时，同意接受phpcms提供的各类附加信息服务。\r\n13．解释权\r\n　　本注册协议的解释权归phpcms所有。如果其中有任何条款与国家的有关法律相抵触，则以国家法律的明文规定为准。 '',\n  ''registerverifymessage'' => '' 欢迎您注册成为phpcms用户，您的账号需要邮箱认证，点击下面链接进行认证：{click}\r\n或者将网址复制到浏览器：{url}'',\n  ''forgetpassword'' => ''密码找回，请在一小时内点击下面链接或者将网址复制到浏览器：<br>{url}'',\n)', 0, 0, '2010-09-06', '2010-09-06'),
+('admin', 'admin', '', 1, '1.0', '', 'array (\n  ''admin_email'' => ''phpcms@phpcms.cn'',\n  ''maxloginfailedtimes'' => ''8'',\n  ''minrefreshtime'' => ''2'',\n  ''mail_type'' => ''1'',\n  ''mail_server'' => ''smtp.qq.com'',\n  ''mail_port'' => ''25'',\n  ''category_ajax'' => ''0'',\n  ''mail_user'' => ''phpcms.cn@foxmail.com'',\n  ''mail_auth'' => ''1'',\n  ''mail_from'' => ''phpcms.cn@foxmail.com'',\n  ''mail_password'' => ''123456'',\n  ''errorlog_size'' => ''20'',\n)', 0, 0, '2010-10-18', '2010-10-18'),
+('member', '会员', '', 1, '1.0', '', 'array (\n  ''allowregister'' => ''1'',\n  ''choosemodel'' => ''1'',\n  ''enablemailcheck'' => ''0'',\n  ''enablcodecheck'' => ''0'',\n  ''mobile_checktype'' => ''0'',\n  ''user_sendsms_title'' => '''',\n  ''registerverify'' => ''1'',\n  ''showapppoint'' => ''0'',\n  ''rmb_point_rate'' => ''10'',\n  ''defualtpoint'' => ''0'',\n  ''defualtamount'' => ''0'',\n  ''showregprotocol'' => ''0'',\n  ''regprotocol'' => ''		 欢迎您注册成为phpcms用户\r\n请仔细阅读下面的协议，只有接受协议才能继续进行注册。 \r\n1．服务条款的确认和接纳\r\n　　phpcms用户服务的所有权和运作权归phpcms拥有。phpcms所提供的服务将按照有关章程、服务条款和操作规则严格执行。用户通过注册程序点击“我同意” 按钮，即表示用户与phpcms达成协议并接受所有的服务条款。\r\n2． phpcms服务简介\r\n　　phpcms通过国际互联网为用户提供新闻及文章浏览、图片浏览、软件下载、网上留言和BBS论坛等服务。\r\n　　用户必须： \r\n　　1)购置设备，包括个人电脑一台、调制解调器一个及配备上网装置。 \r\n　　2)个人上网和支付与此服务有关的电话费用、网络费用。\r\n　　用户同意： \r\n　　1)提供及时、详尽及准确的个人资料。 \r\n　　2)不断更新注册资料，符合及时、详尽、准确的要求。所有原始键入的资料将引用为注册资料。 \r\n　　3)用户同意遵守《中华人民共和国保守国家秘密法》、《中华人民共和国计算机信息系统安全保护条例》、《计算机软件保护条例》等有关计算机及互联网规定的法律和法规、实施办法。在任何情况下，phpcms合理地认为用户的行为可能违反上述法律、法规，phpcms可以在任何时候，不经事先通知终止向该用户提供服务。用户应了解国际互联网的无国界性，应特别注意遵守当地所有有关的法律和法规。\r\n3． 服务条款的修改\r\n　　phpcms会不定时地修改服务条款，服务条款一旦发生变动，将会在相关页面上提示修改内容。如果您同意改动，则再一次点击“我同意”按钮。 如果您不接受，则及时取消您的用户使用服务资格。\r\n4． 服务修订\r\n　　phpcms保留随时修改或中断服务而不需知照用户的权利。phpcms行使修改或中断服务的权利，不需对用户或第三方负责。\r\n5． 用户隐私制度\r\n　　尊重用户个人隐私是phpcms的 基本政策。phpcms不会公开、编辑或透露用户的注册信息，除非有法律许可要求，或phpcms在诚信的基础上认为透露这些信息在以下三种情况是必要的： \r\n　　1)遵守有关法律规定，遵从合法服务程序。 \r\n　　2)保持维护phpcms的商标所有权。 \r\n　　3)在紧急情况下竭力维护用户个人和社会大众的隐私安全。 \r\n　　4)符合其他相关的要求。 \r\n6．用户的帐号，密码和安全性\r\n　　一旦注册成功成为phpcms用户，您将得到一个密码和帐号。如果您不保管好自己的帐号和密码安全，将对因此产生的后果负全部责任。另外，每个用户都要对其帐户中的所有活动和事件负全责。您可随时根据指示改变您的密码，也可以结束旧的帐户重开一个新帐户。用户同意若发现任何非法使用用户帐号或安全漏洞的情况，立即通知phpcms。\r\n7． 免责条款\r\n　　用户明确同意网站服务的使用由用户个人承担风险。 　　 \r\n　　phpcms不作任何类型的担保，不担保服务一定能满足用户的要求，也不担保服务不会受中断，对服务的及时性，安全性，出错发生都不作担保。用户理解并接受：任何通过phpcms服务取得的信息资料的可靠性取决于用户自己，用户自己承担所有风险和责任。 \r\n8．有限责任\r\n　　phpcms对任何直接、间接、偶然、特殊及继起的损害不负责任。\r\n9． 不提供零售和商业性服务 \r\n　　用户使用网站服务的权利是个人的。用户只能是一个单独的个体而不能是一个公司或实体商业性组织。用户承诺不经phpcms同意，不能利用网站服务进行销售或其他商业用途。\r\n10．用户责任 \r\n　　用户单独承担传输内容的责任。用户必须遵循： \r\n　　1)从中国境内向外传输技术性资料时必须符合中国有关法规。 \r\n　　2)使用网站服务不作非法用途。 \r\n　　3)不干扰或混乱网络服务。 \r\n　　4)不在论坛BBS或留言簿发表任何与政治相关的信息。 \r\n　　5)遵守所有使用网站服务的网络协议、规定、程序和惯例。\r\n　　6)不得利用本站危害国家安全、泄露国家秘密，不得侵犯国家社会集体的和公民的合法权益。\r\n　　7)不得利用本站制作、复制和传播下列信息： \r\n　　　1、煽动抗拒、破坏宪法和法律、行政法规实施的；\r\n　　　2、煽动颠覆国家政权，推翻社会主义制度的；\r\n　　　3、煽动分裂国家、破坏国家统一的；\r\n　　　4、煽动民族仇恨、民族歧视，破坏民族团结的；\r\n　　　5、捏造或者歪曲事实，散布谣言，扰乱社会秩序的；\r\n　　　6、宣扬封建迷信、淫秽、色情、赌博、暴力、凶杀、恐怖、教唆犯罪的；\r\n　　　7、公然侮辱他人或者捏造事实诽谤他人的，或者进行其他恶意攻击的；\r\n　　　8、损害国家机关信誉的；\r\n　　　9、其他违反宪法和法律行政法规的；\r\n　　　10、进行商业广告行为的。\r\n　　用户不能传输任何教唆他人构成犯罪行为的资料；不能传输长国内不利条件和涉及国家安全的资料；不能传输任何不符合当地法规、国家法律和国际法 律的资料。未经许可而非法进入其它电脑系统是禁止的。若用户的行为不符合以上的条款，phpcms将取消用户服务帐号。\r\n11．网站内容的所有权\r\n　　phpcms定义的内容包括：文字、软件、声音、相片、录象、图表；在广告中全部内容；电子邮件的全部内容；phpcms为用户提供的商业信息。所有这些内容受版权、商标、标签和其它财产所有权法律的保护。所以，用户只能在phpcms和广告商授权下才能使用这些内容，而不能擅自复制、篡改这些内容、或创造与内容有关的派生产品。\r\n12．附加信息服务\r\n　　用户在享用phpcms提供的免费服务的同时，同意接受phpcms提供的各类附加信息服务。\r\n13．解释权\r\n　　本注册协议的解释权归phpcms所有。如果其中有任何条款与国家的有关法律相抵触，则以国家法律的明文规定为准。 '',\n  ''registerverifymessage'' => '' 欢迎您注册成为phpcms用户，您的账号需要邮箱认证，点击下面链接进行认证：{click}\r\n或者将网址复制到浏览器：{url}'',\n  ''forgetpassword'' => '' phpcms密码找回，请在一小时内点击下面链接进行操作：{click}\r\n或者将网址复制到浏览器：{url}'',\n)', 0, 0, '2010-09-06', '2010-09-06'),
 ('pay', '支付', '', 1, '1.0', '', '', 0, 0, '2010-09-06', '2010-09-06'),
 ('digg', '顶一下', '', 0, '1.0', '', '', 0, 0, '2010-09-06', '2010-09-06'),
 ('special', '专题', '', 0, '1.0', '', '', 0, 0, '2010-09-06', '2010-09-06'),
@@ -6774,8 +6998,8 @@ INSERT DELAYED IGNORE INTO `cban_module` (`module`, `name`, `url`, `iscore`, `ve
 -- 
 -- 表的结构 `cban_mood`
 -- 
--- 创建时间: 2014 年 08 月 14 日 19:53
--- 最后更新时间: 2014 年 08 月 14 日 19:53
+-- 创建时间: 2014 年 08 月 11 日 09:07
+-- 最后更新时间: 2014 年 08 月 11 日 09:07
 -- 
 
 DROP TABLE IF EXISTS `cban_mood`;
@@ -6812,8 +7036,8 @@ CREATE TABLE IF NOT EXISTS `cban_mood` (
 -- 
 -- 表的结构 `cban_news`
 -- 
--- 创建时间: 2014 年 08 月 14 日 19:53
--- 最后更新时间: 2014 年 08 月 14 日 19:53
+-- 创建时间: 2014 年 08 月 11 日 09:07
+-- 最后更新时间: 2014 年 08 月 11 日 09:07
 -- 
 
 DROP TABLE IF EXISTS `cban_news`;
@@ -6851,8 +7075,8 @@ CREATE TABLE IF NOT EXISTS `cban_news` (
 -- 
 -- 表的结构 `cban_news_data`
 -- 
--- 创建时间: 2014 年 08 月 14 日 19:53
--- 最后更新时间: 2014 年 08 月 14 日 19:53
+-- 创建时间: 2014 年 08 月 11 日 09:07
+-- 最后更新时间: 2014 年 08 月 11 日 09:07
 -- 
 
 DROP TABLE IF EXISTS `cban_news_data`;
@@ -6882,8 +7106,8 @@ CREATE TABLE IF NOT EXISTS `cban_news_data` (
 -- 
 -- 表的结构 `cban_news_md`
 -- 
--- 创建时间: 2014 年 08 月 14 日 19:53
--- 最后更新时间: 2014 年 08 月 14 日 19:53
+-- 创建时间: 2014 年 08 月 11 日 09:07
+-- 最后更新时间: 2014 年 08 月 12 日 14:26
 -- 
 
 DROP TABLE IF EXISTS `cban_news_md`;
@@ -6933,8 +7157,8 @@ INSERT DELAYED IGNORE INTO `cban_news_md` (`id`, `catid`, `typeid`, `title`, `st
 -- 
 -- 表的结构 `cban_news_md_data`
 -- 
--- 创建时间: 2014 年 08 月 14 日 19:53
--- 最后更新时间: 2014 年 08 月 14 日 19:53
+-- 创建时间: 2014 年 08 月 11 日 09:07
+-- 最后更新时间: 2014 年 08 月 11 日 09:07
 -- 
 
 DROP TABLE IF EXISTS `cban_news_md_data`;
@@ -6963,8 +7187,8 @@ INSERT DELAYED IGNORE INTO `cban_news_md_data` (`id`, `content`, `readpoint`, `g
 -- 
 -- 表的结构 `cban_news_qy`
 -- 
--- 创建时间: 2014 年 08 月 14 日 19:53
--- 最后更新时间: 2014 年 08 月 14 日 19:53
+-- 创建时间: 2014 年 08 月 11 日 09:07
+-- 最后更新时间: 2014 年 08 月 11 日 09:07
 -- 
 
 DROP TABLE IF EXISTS `cban_news_qy`;
@@ -7015,8 +7239,8 @@ INSERT DELAYED IGNORE INTO `cban_news_qy` (`id`, `catid`, `typeid`, `title`, `st
 -- 
 -- 表的结构 `cban_news_qy_data`
 -- 
--- 创建时间: 2014 年 08 月 14 日 19:53
--- 最后更新时间: 2014 年 08 月 14 日 19:53
+-- 创建时间: 2014 年 08 月 11 日 09:07
+-- 最后更新时间: 2014 年 08 月 11 日 09:07
 -- 
 
 DROP TABLE IF EXISTS `cban_news_qy_data`;
@@ -7048,8 +7272,8 @@ INSERT DELAYED IGNORE INTO `cban_news_qy_data` (`id`, `content`, `readpoint`, `g
 -- 
 -- 表的结构 `cban_news_zhxx`
 -- 
--- 创建时间: 2014 年 08 月 14 日 19:53
--- 最后更新时间: 2014 年 08 月 14 日 19:53
+-- 创建时间: 2014 年 08 月 11 日 09:07
+-- 最后更新时间: 2014 年 08 月 11 日 09:07
 -- 
 
 DROP TABLE IF EXISTS `cban_news_zhxx`;
@@ -7098,8 +7322,8 @@ INSERT DELAYED IGNORE INTO `cban_news_zhxx` (`id`, `catid`, `typeid`, `title`, `
 -- 
 -- 表的结构 `cban_news_zhxx_data`
 -- 
--- 创建时间: 2014 年 08 月 14 日 19:53
--- 最后更新时间: 2014 年 08 月 14 日 19:53
+-- 创建时间: 2014 年 08 月 11 日 09:07
+-- 最后更新时间: 2014 年 08 月 11 日 09:07
 -- 
 
 DROP TABLE IF EXISTS `cban_news_zhxx_data`;
@@ -7131,8 +7355,8 @@ INSERT DELAYED IGNORE INTO `cban_news_zhxx_data` (`id`, `content`, `readpoint`, 
 -- 
 -- 表的结构 `cban_page`
 -- 
--- 创建时间: 2014 年 08 月 14 日 19:53
--- 最后更新时间: 2014 年 08 月 14 日 19:53
+-- 创建时间: 2014 年 08 月 11 日 09:07
+-- 最后更新时间: 2014 年 08 月 11 日 09:07
 -- 
 
 DROP TABLE IF EXISTS `cban_page`;
@@ -7157,8 +7381,8 @@ CREATE TABLE IF NOT EXISTS `cban_page` (
 -- 
 -- 表的结构 `cban_pay_account`
 -- 
--- 创建时间: 2014 年 08 月 14 日 19:53
--- 最后更新时间: 2014 年 08 月 14 日 19:53
+-- 创建时间: 2014 年 08 月 11 日 09:07
+-- 最后更新时间: 2014 年 08 月 11 日 09:07
 -- 
 
 DROP TABLE IF EXISTS `cban_pay_account`;
@@ -7211,8 +7435,8 @@ INSERT DELAYED IGNORE INTO `cban_pay_account` (`id`, `trade_sn`, `userid`, `user
 -- 
 -- 表的结构 `cban_pay_payment`
 -- 
--- 创建时间: 2014 年 08 月 14 日 19:53
--- 最后更新时间: 2014 年 08 月 14 日 19:53
+-- 创建时间: 2014 年 08 月 11 日 09:07
+-- 最后更新时间: 2014 年 08 月 11 日 09:07
 -- 
 
 DROP TABLE IF EXISTS `cban_pay_payment`;
@@ -7246,8 +7470,8 @@ CREATE TABLE IF NOT EXISTS `cban_pay_payment` (
 -- 
 -- 表的结构 `cban_pay_spend`
 -- 
--- 创建时间: 2014 年 08 月 14 日 19:53
--- 最后更新时间: 2014 年 08 月 14 日 19:53
+-- 创建时间: 2014 年 08 月 11 日 09:07
+-- 最后更新时间: 2014 年 08 月 11 日 09:07
 -- 
 
 DROP TABLE IF EXISTS `cban_pay_spend`;
@@ -7279,8 +7503,8 @@ CREATE TABLE IF NOT EXISTS `cban_pay_spend` (
 -- 
 -- 表的结构 `cban_picture`
 -- 
--- 创建时间: 2014 年 08 月 14 日 19:53
--- 最后更新时间: 2014 年 08 月 14 日 19:53
+-- 创建时间: 2014 年 08 月 11 日 09:07
+-- 最后更新时间: 2014 年 08 月 11 日 09:07
 -- 
 
 DROP TABLE IF EXISTS `cban_picture`;
@@ -7318,8 +7542,8 @@ CREATE TABLE IF NOT EXISTS `cban_picture` (
 -- 
 -- 表的结构 `cban_picture_data`
 -- 
--- 创建时间: 2014 年 08 月 14 日 19:53
--- 最后更新时间: 2014 年 08 月 14 日 19:53
+-- 创建时间: 2014 年 08 月 11 日 09:07
+-- 最后更新时间: 2014 年 08 月 11 日 09:07
 -- 
 
 DROP TABLE IF EXISTS `cban_picture_data`;
@@ -7349,8 +7573,8 @@ CREATE TABLE IF NOT EXISTS `cban_picture_data` (
 -- 
 -- 表的结构 `cban_position`
 -- 
--- 创建时间: 2014 年 08 月 14 日 19:53
--- 最后更新时间: 2014 年 08 月 14 日 19:53
+-- 创建时间: 2014 年 08 月 11 日 09:07
+-- 最后更新时间: 2014 年 08 月 12 日 14:33
 -- 
 
 DROP TABLE IF EXISTS `cban_position`;
@@ -7390,8 +7614,8 @@ INSERT DELAYED IGNORE INTO `cban_position` (`posid`, `modelid`, `catid`, `name`,
 -- 
 -- 表的结构 `cban_position_data`
 -- 
--- 创建时间: 2014 年 08 月 14 日 19:53
--- 最后更新时间: 2014 年 08 月 14 日 19:53
+-- 创建时间: 2014 年 08 月 11 日 09:07
+-- 最后更新时间: 2014 年 08 月 11 日 09:07
 -- 
 
 DROP TABLE IF EXISTS `cban_position_data`;
@@ -7434,8 +7658,8 @@ INSERT DELAYED IGNORE INTO `cban_position_data` (`id`, `catid`, `posid`, `module
 -- 
 -- 表的结构 `cban_poster`
 -- 
--- 创建时间: 2014 年 08 月 14 日 19:53
--- 最后更新时间: 2014 年 08 月 14 日 19:53
+-- 创建时间: 2014 年 08 月 11 日 09:07
+-- 最后更新时间: 2014 年 08 月 11 日 09:07
 -- 
 
 DROP TABLE IF EXISTS `cban_poster`;
@@ -7473,8 +7697,8 @@ INSERT DELAYED IGNORE INTO `cban_poster` (`id`, `siteid`, `name`, `spaceid`, `ty
 -- 
 -- 表的结构 `cban_poster_201407`
 -- 
--- 创建时间: 2014 年 08 月 14 日 19:53
--- 最后更新时间: 2014 年 08 月 14 日 19:53
+-- 创建时间: 2014 年 08 月 11 日 09:07
+-- 最后更新时间: 2014 年 08 月 11 日 09:07
 -- 
 
 DROP TABLE IF EXISTS `cban_poster_201407`;
@@ -7503,8 +7727,8 @@ CREATE TABLE IF NOT EXISTS `cban_poster_201407` (
 -- 
 -- 表的结构 `cban_poster_201408`
 -- 
--- 创建时间: 2014 年 08 月 14 日 19:53
--- 最后更新时间: 2014 年 08 月 14 日 19:53
+-- 创建时间: 2014 年 08 月 11 日 09:07
+-- 最后更新时间: 2014 年 08 月 11 日 09:07
 -- 
 
 DROP TABLE IF EXISTS `cban_poster_201408`;
@@ -7533,8 +7757,8 @@ CREATE TABLE IF NOT EXISTS `cban_poster_201408` (
 -- 
 -- 表的结构 `cban_poster_space`
 -- 
--- 创建时间: 2014 年 08 月 14 日 19:53
--- 最后更新时间: 2014 年 08 月 14 日 19:53
+-- 创建时间: 2014 年 08 月 11 日 09:07
+-- 最后更新时间: 2014 年 08 月 11 日 09:07
 -- 
 
 DROP TABLE IF EXISTS `cban_poster_space`;
@@ -7570,8 +7794,8 @@ INSERT DELAYED IGNORE INTO `cban_poster_space` (`spaceid`, `siteid`, `name`, `ty
 -- 
 -- 表的结构 `cban_queue`
 -- 
--- 创建时间: 2014 年 08 月 14 日 19:53
--- 最后更新时间: 2014 年 08 月 14 日 19:53
+-- 创建时间: 2014 年 08 月 11 日 09:07
+-- 最后更新时间: 2014 年 08 月 11 日 09:07
 -- 
 
 DROP TABLE IF EXISTS `cban_queue`;
@@ -7600,8 +7824,8 @@ CREATE TABLE IF NOT EXISTS `cban_queue` (
 -- 
 -- 表的结构 `cban_release_point`
 -- 
--- 创建时间: 2014 年 08 月 14 日 19:53
--- 最后更新时间: 2014 年 08 月 14 日 19:53
+-- 创建时间: 2014 年 08 月 11 日 09:07
+-- 最后更新时间: 2014 年 08 月 11 日 09:07
 -- 
 
 DROP TABLE IF EXISTS `cban_release_point`;
@@ -7628,8 +7852,8 @@ CREATE TABLE IF NOT EXISTS `cban_release_point` (
 -- 
 -- 表的结构 `cban_search`
 -- 
--- 创建时间: 2014 年 08 月 14 日 19:53
--- 最后更新时间: 2014 年 08 月 14 日 19:53
+-- 创建时间: 2014 年 08 月 11 日 09:07
+-- 最后更新时间: 2014 年 08 月 11 日 09:07
 -- 
 
 DROP TABLE IF EXISTS `cban_search`;
@@ -7663,8 +7887,8 @@ INSERT DELAYED IGNORE INTO `cban_search` (`searchid`, `typeid`, `id`, `adddate`,
 -- 
 -- 表的结构 `cban_search_keyword`
 -- 
--- 创建时间: 2014 年 08 月 14 日 19:53
--- 最后更新时间: 2014 年 08 月 14 日 19:53
+-- 创建时间: 2014 年 08 月 11 日 09:07
+-- 最后更新时间: 2014 年 08 月 11 日 09:07
 -- 
 
 DROP TABLE IF EXISTS `cban_search_keyword`;
@@ -7709,16 +7933,14 @@ CREATE TABLE IF NOT EXISTS `cban_session` (
 -- 导出表中的数据 `cban_session`
 -- 
 
-INSERT DELAYED IGNORE INTO `cban_session` (`sessionid`, `userid`, `ip`, `lastvisit`, `roleid`, `groupid`, `m`, `c`, `a`, `data`) VALUES 
-('9295ea7aaa02c96c7c1716bed7b93686', 1, '127.0.0.1', 1408900785, 1, 0, 'admin', 'index', 'public_session_life', 'code|s:4:"fmvf";userid|s:1:"1";roleid|s:1:"1";pc_hash|s:6:"e0T4Pi";lock_screen|i:0;email|s:16:"188513331@qq.com";emc|s:6:"529581";');
 
 -- --------------------------------------------------------
 
 -- 
 -- 表的结构 `cban_site`
 -- 
--- 创建时间: 2014 年 08 月 14 日 19:53
--- 最后更新时间: 2014 年 08 月 24 日 12:50
+-- 创建时间: 2014 年 08 月 11 日 09:07
+-- 最后更新时间: 2014 年 08 月 11 日 09:07
 -- 
 
 DROP TABLE IF EXISTS `cban_site`;
@@ -7743,15 +7965,15 @@ CREATE TABLE IF NOT EXISTS `cban_site` (
 -- 
 
 INSERT DELAYED IGNORE INTO `cban_site` (`siteid`, `name`, `dirname`, `domain`, `site_title`, `keywords`, `description`, `release_point`, `default_style`, `template`, `setting`, `uuid`) VALUES 
-(1, 'CBAN中国家电品牌门户网', '', 'http://127.0.0.1:8080/cban/', 'CBAN中国家电品牌门户网站', '中国家电品牌,家电门户网站,各种家电', 'CBAN是中国第一家家电品牌门户网站，其中包含各种品牌家电，维修，销售等', '', 'cban', 'cban', 'array (\n  ''upload_maxsize'' => ''2048'',\n  ''upload_allowext'' => ''jpg|jpeg|gif|bmp|png|doc|docx|xls|xlsx|ppt|pptx|pdf|txt|rar|zip|swf'',\n  ''watermark_enable'' => ''1'',\n  ''watermark_minwidth'' => ''300'',\n  ''watermark_minheight'' => ''300'',\n  ''watermark_img'' => ''statics/images/water//mark.png'',\n  ''watermark_pct'' => ''85'',\n  ''watermark_quality'' => ''80'',\n  ''watermark_pos'' => ''9'',\n)', '66e1d6e9-6219-1032-ab4c-ef7167b14131');
+(1, '默认站点', '', 'http://127.0.0.1:8080/cban/', 'CBAN中国家电品牌门户网站', '中国家电品牌,家电门户网站,各种家电', 'CBAN是中国第一家家电品牌门户网站，其中包含各种品牌家电，维修，销售等', '', 'cban', 'cban', 'array (\n  ''upload_maxsize'' => ''2048'',\n  ''upload_allowext'' => ''jpg|jpeg|gif|bmp|png|doc|docx|xls|xlsx|ppt|pptx|pdf|txt|rar|zip|swf'',\n  ''watermark_enable'' => ''1'',\n  ''watermark_minwidth'' => ''300'',\n  ''watermark_minheight'' => ''300'',\n  ''watermark_img'' => ''statics/images/water//mark.png'',\n  ''watermark_pct'' => ''85'',\n  ''watermark_quality'' => ''80'',\n  ''watermark_pos'' => ''9'',\n)', '66e1d6e9-6219-1032-ab4c-ef7167b14131');
 
 -- --------------------------------------------------------
 
 -- 
 -- 表的结构 `cban_sms_report`
 -- 
--- 创建时间: 2014 年 08 月 14 日 19:53
--- 最后更新时间: 2014 年 08 月 14 日 19:53
+-- 创建时间: 2014 年 08 月 11 日 09:07
+-- 最后更新时间: 2014 年 08 月 11 日 09:07
 -- 
 
 DROP TABLE IF EXISTS `cban_sms_report`;
@@ -7779,8 +8001,8 @@ CREATE TABLE IF NOT EXISTS `cban_sms_report` (
 -- 
 -- 表的结构 `cban_special`
 -- 
--- 创建时间: 2014 年 08 月 14 日 19:53
--- 最后更新时间: 2014 年 08 月 14 日 19:53
+-- 创建时间: 2014 年 08 月 11 日 09:07
+-- 最后更新时间: 2014 年 08 月 11 日 09:07
 -- 
 
 DROP TABLE IF EXISTS `cban_special`;
@@ -7825,8 +8047,8 @@ CREATE TABLE IF NOT EXISTS `cban_special` (
 -- 
 -- 表的结构 `cban_special_content`
 -- 
--- 创建时间: 2014 年 08 月 14 日 19:53
--- 最后更新时间: 2014 年 08 月 14 日 19:53
+-- 创建时间: 2014 年 08 月 11 日 09:07
+-- 最后更新时间: 2014 年 08 月 11 日 09:07
 -- 
 
 DROP TABLE IF EXISTS `cban_special_content`;
@@ -7865,8 +8087,8 @@ CREATE TABLE IF NOT EXISTS `cban_special_content` (
 -- 
 -- 表的结构 `cban_special_c_data`
 -- 
--- 创建时间: 2014 年 08 月 14 日 19:53
--- 最后更新时间: 2014 年 08 月 14 日 19:53
+-- 创建时间: 2014 年 08 月 11 日 09:07
+-- 最后更新时间: 2014 年 08 月 11 日 09:07
 -- 
 
 DROP TABLE IF EXISTS `cban_special_c_data`;
@@ -7891,8 +8113,8 @@ CREATE TABLE IF NOT EXISTS `cban_special_c_data` (
 -- 
 -- 表的结构 `cban_sphinx_counter`
 -- 
--- 创建时间: 2014 年 08 月 14 日 19:53
--- 最后更新时间: 2014 年 08 月 14 日 19:53
+-- 创建时间: 2014 年 08 月 11 日 09:07
+-- 最后更新时间: 2014 年 08 月 11 日 09:07
 -- 
 
 DROP TABLE IF EXISTS `cban_sphinx_counter`;
@@ -7912,8 +8134,8 @@ CREATE TABLE IF NOT EXISTS `cban_sphinx_counter` (
 -- 
 -- 表的结构 `cban_sso_admin`
 -- 
--- 创建时间: 2014 年 08 月 14 日 19:53
--- 最后更新时间: 2014 年 08 月 14 日 19:53
+-- 创建时间: 2014 年 08 月 11 日 09:07
+-- 最后更新时间: 2014 年 08 月 11 日 09:07
 -- 
 
 DROP TABLE IF EXISTS `cban_sso_admin`;
@@ -7941,8 +8163,8 @@ INSERT DELAYED IGNORE INTO `cban_sso_admin` (`id`, `username`, `password`, `encr
 -- 
 -- 表的结构 `cban_sso_applications`
 -- 
--- 创建时间: 2014 年 08 月 14 日 19:53
--- 最后更新时间: 2014 年 08 月 14 日 19:53
+-- 创建时间: 2014 年 08 月 11 日 09:07
+-- 最后更新时间: 2014 年 08 月 11 日 09:07
 -- 
 
 DROP TABLE IF EXISTS `cban_sso_applications`;
@@ -7972,8 +8194,8 @@ INSERT DELAYED IGNORE INTO `cban_sso_applications` (`appid`, `type`, `name`, `ur
 -- 
 -- 表的结构 `cban_sso_members`
 -- 
--- 创建时间: 2014 年 08 月 14 日 19:53
--- 最后更新时间: 2014 年 08 月 24 日 15:51
+-- 创建时间: 2014 年 08 月 19 日 15:27
+-- 最后更新时间: 2014 年 08 月 19 日 15:29
 -- 
 
 DROP TABLE IF EXISTS `cban_sso_members`;
@@ -7995,26 +8217,25 @@ CREATE TABLE IF NOT EXISTS `cban_sso_members` (
   UNIQUE KEY `username` (`username`),
   KEY `email` (`email`),
   KEY `ucuserid` (`ucuserid`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=7 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=5 ;
 
 -- 
 -- 导出表中的数据 `cban_sso_members`
 -- 
 
 INSERT DELAYED IGNORE INTO `cban_sso_members` (`uid`, `username`, `password`, `random`, `email`, `regip`, `regdate`, `lastip`, `lastdate`, `appname`, `type`, `avatar`, `ucuserid`) VALUES 
-(1, 'nima', 'e3cdebc9a303d1e78b623146821d6192', 'D8IK1j', 'nima@qq.com', '127.0.0.1', 1406013245, '127.0.0.1', 1407810571, 'phpcms v9', 'app', 0, 0),
-(2, 'hehe', '7f30f0b731b883d2aae66a4d4dddc366', '4sGUlJ', 'hehe@qq.com', '127.0.0.1', 1406014825, '127.0.0.1', 1407465296, 'phpcms v9', 'app', 0, 0),
-(3, 'haha', 'e7ab8954a1db823c792e28ff228ec5a5', 'WwKE4R', 'haha@qq.com', '127.0.0.1', 1407221698, '127.0.0.1', 1407314316, 'phpcms v9', 'app', 0, 0),
-(4, 'aaa', '591474620785dd8e4ec40e3ab363f02b', 'bDYZjt', 'aaa@qq.com', '127.0.0.1', 1407828896, '127.0.0.1', 1407828954, 'phpcms v9', 'app', 0, 0),
-(6, 'jiang', '04a9e7c309c30308d808eb38b878de3b', 'qS6H2T', '188513331@qq.com', '127.0.0.1', 1408865752, '0', 1408865752, 'phpcms v9', 'app', 0, 0);
+(1, 'sadff', 'c57c6183bf39a41f09e42baf5f81f035', 'AjeA6C', 'sadff@qq.com', '127.0.0.1', 1408433358, '0', 1408433358, 'phpcms v9', 'app', 0, 0),
+(2, 'nimaB', '4f60db2dba8b4972d7c95cd685d40ca9', 'w1FIKE', 'nimaB@qq.com', '127.0.0.1', 1408433358, '0', 1408433358, 'phpcms v9', 'app', 0, 0),
+(3, 'hehe', '7f30f0b731b883d2aae66a4d4dddc366', '4sGUlJ', 'hehe@qq.com', '127.0.0.1', 1408433366, '0', 1408433366, 'phpcms v9', 'app', 0, 0),
+(4, 'haha', 'e7ab8954a1db823c792e28ff228ec5a5', 'WwKE4R', 'haha@qq.com', '127.0.0.1', 1408433366, '0', 1408433366, 'phpcms v9', 'app', 0, 0);
 
 -- --------------------------------------------------------
 
 -- 
 -- 表的结构 `cban_sso_messagequeue`
 -- 
--- 创建时间: 2014 年 08 月 14 日 19:53
--- 最后更新时间: 2014 年 08 月 24 日 15:35
+-- 创建时间: 2014 年 08 月 11 日 09:07
+-- 最后更新时间: 2014 年 08 月 19 日 15:29
 -- 
 
 DROP TABLE IF EXISTS `cban_sso_messagequeue`;
@@ -8029,7 +8250,7 @@ CREATE TABLE IF NOT EXISTS `cban_sso_messagequeue` (
   PRIMARY KEY  (`id`),
   KEY `dateline` (`dateline`),
   KEY `succeed` (`succeed`,`id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=12 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=39 ;
 
 -- 
 -- 导出表中的数据 `cban_sso_messagequeue`
@@ -8040,13 +8261,40 @@ INSERT DELAYED IGNORE INTO `cban_sso_messagequeue` (`id`, `operation`, `succeed`
 (2, 'member_add', 0, 1, 'array (\n  ''username'' => ''hehe'',\n  ''password'' => ''7f30f0b731b883d2aae66a4d4dddc366'',\n  ''email'' => ''hehe@qq.com'',\n  ''regip'' => ''127.0.0.1'',\n  ''regdate'' => ''1406014825'',\n  ''lastdate'' => ''1406014825'',\n  ''appname'' => ''phpcms v9'',\n  ''type'' => ''app'',\n  ''random'' => ''4sGUlJ'',\n  ''ucuserid'' => ''0'',\n  ''uid'' => ''2'',\n  ''action'' => ''member_add'',\n)', 1406014825, '{"1":1}'),
 (3, 'member_add', 0, 1, 'array (\n  ''username'' => ''haha'',\n  ''password'' => ''e7ab8954a1db823c792e28ff228ec5a5'',\n  ''email'' => ''haha@qq.com'',\n  ''regip'' => ''127.0.0.1'',\n  ''regdate'' => ''1407221698'',\n  ''lastdate'' => ''1407221698'',\n  ''appname'' => ''phpcms v9'',\n  ''type'' => ''app'',\n  ''random'' => ''WwKE4R'',\n  ''ucuserid'' => ''0'',\n  ''uid'' => ''3'',\n  ''action'' => ''member_add'',\n)', 1407221698, '{"1":1}'),
 (4, 'member_add', 0, 1, 'array (\n  ''username'' => ''aaa'',\n  ''password'' => ''591474620785dd8e4ec40e3ab363f02b'',\n  ''email'' => ''aaa@qq.com'',\n  ''regip'' => ''127.0.0.1'',\n  ''regdate'' => ''1407828896'',\n  ''lastdate'' => ''1407828896'',\n  ''appname'' => ''phpcms v9'',\n  ''type'' => ''app'',\n  ''random'' => ''bDYZjt'',\n  ''ucuserid'' => ''0'',\n  ''uid'' => ''4'',\n  ''action'' => ''member_add'',\n)', 1407828896, '{"1":1}'),
-(5, 'member_add', 0, 1, 'array (\n  ''username'' => ''jiang'',\n  ''password'' => ''bbf8831187d58252e1c329896c2d614e'',\n  ''email'' => ''188513331@qq.com'',\n  ''regip'' => ''127.0.0.1'',\n  ''regdate'' => ''1408850822'',\n  ''lastdate'' => ''1408850822'',\n  ''appname'' => ''phpcms v9'',\n  ''type'' => ''app'',\n  ''random'' => ''XKatVU'',\n  ''ucuserid'' => ''0'',\n  ''uid'' => ''5'',\n  ''action'' => ''member_add'',\n)', 1408850822, '{"1":1}'),
-(6, 'member_edit', 0, 1, 'array (\n  ''appname'' => ''phpcms v9'',\n  ''password'' => ''896c78feea15a68d7bc1b5185995652f'',\n  ''random'' => ''XKatVU'',\n  ''uid'' => ''5'',\n  ''action'' => ''member_edit'',\n)', 1408855909, '{"1":1}'),
-(7, 'member_edit', 0, 1, 'array (\n  ''appname'' => ''phpcms v9'',\n  ''password'' => ''4279f075ae43332a0ca43d86832765e8'',\n  ''random'' => ''XKatVU'',\n  ''uid'' => ''5'',\n  ''action'' => ''member_edit'',\n)', 1408855937, '{"1":1}'),
-(8, 'member_edit', 0, 1, 'array (\n  ''appname'' => ''phpcms v9'',\n  ''password'' => ''99df4d0113aa3dfc609e25d27d693bf6'',\n  ''random'' => ''XKatVU'',\n  ''uid'' => ''5'',\n  ''action'' => ''member_edit'',\n)', 1408855949, '{"1":1}'),
-(9, 'member_edit', 0, 1, 'array (\n  ''appname'' => ''phpcms v9'',\n  ''password'' => ''bd12eb61ea21dd00de41f74ab9a308c0'',\n  ''random'' => ''XKatVU'',\n  ''uid'' => ''5'',\n  ''action'' => ''member_edit'',\n)', 1408855979, '{"1":1}'),
-(10, 'member_delete', 0, 1, 'array (\n  ''uids'' => \n  array (\n    0 => ''5'',\n  ),\n  ''action'' => ''member_delete'',\n)', 1408865659, '{"1":1}'),
-(11, 'member_add', 0, 1, 'array (\n  ''username'' => ''jiang'',\n  ''password'' => ''04a9e7c309c30308d808eb38b878de3b'',\n  ''email'' => ''188513331@qq.com'',\n  ''regip'' => ''127.0.0.1'',\n  ''regdate'' => ''1408865752'',\n  ''lastdate'' => ''1408865752'',\n  ''appname'' => ''phpcms v9'',\n  ''type'' => ''app'',\n  ''random'' => ''qS6H2T'',\n  ''ucuserid'' => ''0'',\n  ''uid'' => ''6'',\n  ''action'' => ''member_add'',\n)', 1408865752, '{"1":1}');
+(5, 'member_add', 0, 1, 'array (\n  ''username'' => ''lulu'',\n  ''password'' => ''176d72ebaa6f47bd563cb8b78b1a54ca'',\n  ''email'' => ''lulu@qq.com'',\n  ''regip'' => ''127.0.0.1'',\n  ''regdate'' => ''1408416942'',\n  ''lastdate'' => ''1408416942'',\n  ''appname'' => ''phpcms v9'',\n  ''type'' => ''app'',\n  ''random'' => ''QTD3fb'',\n  ''ucuserid'' => ''0'',\n  ''uid'' => ''5'',\n  ''action'' => ''member_add'',\n)', 1408416942, '{"1":1}'),
+(6, 'member_add', 0, 1, 'array (\n  ''username'' => ''sadff'',\n  ''password'' => ''c57c6183bf39a41f09e42baf5f81f035'',\n  ''email'' => ''sadff@qq.com'',\n  ''regip'' => ''127.0.0.1'',\n  ''regdate'' => ''1408416942'',\n  ''lastdate'' => ''1408416942'',\n  ''appname'' => ''phpcms v9'',\n  ''type'' => ''app'',\n  ''random'' => ''AjeA6C'',\n  ''ucuserid'' => ''0'',\n  ''uid'' => ''6'',\n  ''action'' => ''member_add'',\n)', 1408416942, '{"1":1}'),
+(7, 'member_add', 0, 1, 'array (\n  ''username'' => ''sadff'',\n  ''password'' => ''c57c6183bf39a41f09e42baf5f81f035'',\n  ''email'' => ''sadff@qq.com'',\n  ''regip'' => ''127.0.0.1'',\n  ''regdate'' => ''1408422195'',\n  ''lastdate'' => ''1408422195'',\n  ''appname'' => ''phpcms v9'',\n  ''type'' => ''app'',\n  ''random'' => ''AjeA6C'',\n  ''ucuserid'' => ''0'',\n  ''uid'' => ''7'',\n  ''action'' => ''member_add'',\n)', 1408422195, '{"1":1}'),
+(8, 'member_add', 0, 1, 'array (\n  ''username'' => ''hehe'',\n  ''password'' => ''7f30f0b731b883d2aae66a4d4dddc366'',\n  ''email'' => ''hehe@qq.com'',\n  ''regip'' => ''127.0.0.1'',\n  ''regdate'' => ''1408422255'',\n  ''lastdate'' => ''1408422255'',\n  ''appname'' => ''phpcms v9'',\n  ''type'' => ''app'',\n  ''random'' => ''4sGUlJ'',\n  ''ucuserid'' => ''0'',\n  ''uid'' => ''8'',\n  ''action'' => ''member_add'',\n)', 1408422255, '{"1":1}'),
+(9, 'member_add', 0, 1, 'array (\n  ''username'' => ''haha'',\n  ''password'' => ''e7ab8954a1db823c792e28ff228ec5a5'',\n  ''email'' => ''haha@qq.com'',\n  ''regip'' => ''127.0.0.1'',\n  ''regdate'' => ''1408422265'',\n  ''lastdate'' => ''1408422265'',\n  ''appname'' => ''phpcms v9'',\n  ''type'' => ''app'',\n  ''random'' => ''WwKE4R'',\n  ''ucuserid'' => ''0'',\n  ''uid'' => ''9'',\n  ''action'' => ''member_add'',\n)', 1408422265, '{"1":1}'),
+(10, 'member_add', 0, 1, 'array (\n  ''username'' => ''hehe'',\n  ''password'' => ''7f30f0b731b883d2aae66a4d4dddc366'',\n  ''email'' => ''hehe@qq.com'',\n  ''regip'' => ''127.0.0.1'',\n  ''regdate'' => ''1408422433'',\n  ''lastdate'' => ''1408422433'',\n  ''appname'' => ''phpcms v9'',\n  ''type'' => ''app'',\n  ''random'' => ''4sGUlJ'',\n  ''ucuserid'' => ''0'',\n  ''uid'' => ''10'',\n  ''action'' => ''member_add'',\n)', 1408422433, '{"1":1}'),
+(11, 'member_add', 0, 1, 'array (\n  ''username'' => ''haha'',\n  ''password'' => ''e7ab8954a1db823c792e28ff228ec5a5'',\n  ''email'' => ''haha@qq.com'',\n  ''regip'' => ''127.0.0.1'',\n  ''regdate'' => ''1408422509'',\n  ''lastdate'' => ''1408422509'',\n  ''appname'' => ''phpcms v9'',\n  ''type'' => ''app'',\n  ''random'' => ''WwKE4R'',\n  ''ucuserid'' => ''0'',\n  ''uid'' => ''11'',\n  ''action'' => ''member_add'',\n)', 1408422509, '{"1":1}'),
+(12, 'member_add', 0, 1, 'array (\n  ''username'' => ''aaa'',\n  ''password'' => ''591474620785dd8e4ec40e3ab363f02b'',\n  ''email'' => ''aaa@qq.com'',\n  ''regip'' => ''127.0.0.1'',\n  ''regdate'' => ''1408422585'',\n  ''lastdate'' => ''1408422585'',\n  ''appname'' => ''phpcms v9'',\n  ''type'' => ''app'',\n  ''random'' => ''bDYZjt'',\n  ''ucuserid'' => ''0'',\n  ''uid'' => ''12'',\n  ''action'' => ''member_add'',\n)', 1408422585, '{"1":1}'),
+(13, 'member_add', 0, 1, 'array (\n  ''username'' => ''lulu'',\n  ''password'' => ''176d72ebaa6f47bd563cb8b78b1a54ca'',\n  ''email'' => ''lulu@qq.com'',\n  ''regip'' => ''127.0.0.1'',\n  ''regdate'' => ''1408429770'',\n  ''lastdate'' => ''1408429770'',\n  ''appname'' => ''phpcms v9'',\n  ''type'' => ''app'',\n  ''random'' => ''QTD3fb'',\n  ''ucuserid'' => ''0'',\n  ''uid'' => ''13'',\n  ''action'' => ''member_add'',\n)', 1408429770, '{"1":1}'),
+(14, 'member_add', 0, 1, 'array (\n  ''username'' => ''sadff'',\n  ''password'' => ''c57c6183bf39a41f09e42baf5f81f035'',\n  ''email'' => ''sadff@qq.com'',\n  ''regip'' => ''127.0.0.1'',\n  ''regdate'' => ''1408429826'',\n  ''lastdate'' => ''1408429826'',\n  ''appname'' => ''phpcms v9'',\n  ''type'' => ''app'',\n  ''random'' => ''AjeA6C'',\n  ''ucuserid'' => ''0'',\n  ''uid'' => ''14'',\n  ''action'' => ''member_add'',\n)', 1408429826, '{"1":1}'),
+(15, 'member_add', 0, 1, 'array (\n  ''username'' => ''nimaB'',\n  ''password'' => ''4f60db2dba8b4972d7c95cd685d40ca9'',\n  ''email'' => ''nimaB@qq.com'',\n  ''regip'' => ''127.0.0.1'',\n  ''regdate'' => ''1408430167'',\n  ''lastdate'' => ''1408430167'',\n  ''appname'' => ''phpcms v9'',\n  ''type'' => ''app'',\n  ''random'' => ''w1FIKE'',\n  ''ucuserid'' => ''0'',\n  ''uid'' => ''15'',\n  ''action'' => ''member_add'',\n)', 1408430167, '{"1":1}'),
+(16, 'member_add', 0, 1, 'array (\n  ''username'' => ''nimaB'',\n  ''password'' => ''4f60db2dba8b4972d7c95cd685d40ca9'',\n  ''email'' => ''nimaB@qq.com'',\n  ''regip'' => ''127.0.0.1'',\n  ''regdate'' => ''1408430547'',\n  ''lastdate'' => ''1408430547'',\n  ''appname'' => ''phpcms v9'',\n  ''type'' => ''app'',\n  ''random'' => ''w1FIKE'',\n  ''ucuserid'' => ''0'',\n  ''uid'' => ''16'',\n  ''action'' => ''member_add'',\n)', 1408430547, '{"1":1}'),
+(17, 'member_add', 0, 1, 'array (\n  ''username'' => ''sadff'',\n  ''password'' => ''c57c6183bf39a41f09e42baf5f81f035'',\n  ''email'' => ''sadff@qq.com'',\n  ''regip'' => ''127.0.0.1'',\n  ''regdate'' => ''1408430649'',\n  ''lastdate'' => ''1408430649'',\n  ''appname'' => ''phpcms v9'',\n  ''type'' => ''app'',\n  ''random'' => ''AjeA6C'',\n  ''ucuserid'' => ''0'',\n  ''uid'' => ''17'',\n  ''action'' => ''member_add'',\n)', 1408430649, '{"1":1}'),
+(18, 'member_add', 0, 1, 'array (\n  ''username'' => ''hehe'',\n  ''password'' => ''7f30f0b731b883d2aae66a4d4dddc366'',\n  ''email'' => ''hehe@qq.com'',\n  ''regip'' => ''127.0.0.1'',\n  ''regdate'' => ''1408431426'',\n  ''lastdate'' => ''1408431426'',\n  ''appname'' => ''phpcms v9'',\n  ''type'' => ''app'',\n  ''random'' => ''4sGUlJ'',\n  ''ucuserid'' => ''0'',\n  ''uid'' => ''18'',\n  ''action'' => ''member_add'',\n)', 1408431426, '{"1":1}'),
+(19, 'member_add', 0, 1, 'array (\n  ''username'' => ''sadff'',\n  ''password'' => ''c57c6183bf39a41f09e42baf5f81f035'',\n  ''email'' => ''sadff@qq.com'',\n  ''regip'' => ''127.0.0.1'',\n  ''regdate'' => ''1408431895'',\n  ''lastdate'' => ''1408431895'',\n  ''appname'' => ''phpcms v9'',\n  ''type'' => ''app'',\n  ''random'' => ''AjeA6C'',\n  ''ucuserid'' => ''0'',\n  ''uid'' => ''19'',\n  ''action'' => ''member_add'',\n)', 1408431895, '{"1":1}'),
+(20, 'member_add', 0, 1, 'array (\n  ''username'' => ''nimaB'',\n  ''password'' => ''4f60db2dba8b4972d7c95cd685d40ca9'',\n  ''email'' => ''nimaB@qq.com'',\n  ''regip'' => ''127.0.0.1'',\n  ''regdate'' => ''1408431895'',\n  ''lastdate'' => ''1408431895'',\n  ''appname'' => ''phpcms v9'',\n  ''type'' => ''app'',\n  ''random'' => ''w1FIKE'',\n  ''ucuserid'' => ''0'',\n  ''uid'' => ''20'',\n  ''action'' => ''member_add'',\n)', 1408431895, '{"1":1}'),
+(21, 'member_add', 0, 1, 'array (\n  ''username'' => ''sadff'',\n  ''password'' => ''c57c6183bf39a41f09e42baf5f81f035'',\n  ''email'' => ''sadff@qq.com'',\n  ''regip'' => ''127.0.0.1'',\n  ''regdate'' => ''1408432065'',\n  ''lastdate'' => ''1408432065'',\n  ''appname'' => ''phpcms v9'',\n  ''type'' => ''app'',\n  ''random'' => ''AjeA6C'',\n  ''ucuserid'' => ''0'',\n  ''uid'' => ''21'',\n  ''action'' => ''member_add'',\n)', 1408432065, '{"1":1}'),
+(22, 'member_add', 0, 1, 'array (\n  ''username'' => ''nimaB'',\n  ''password'' => ''4f60db2dba8b4972d7c95cd685d40ca9'',\n  ''email'' => ''nimaB@qq.com'',\n  ''regip'' => ''127.0.0.1'',\n  ''regdate'' => ''1408432065'',\n  ''lastdate'' => ''1408432065'',\n  ''appname'' => ''phpcms v9'',\n  ''type'' => ''app'',\n  ''random'' => ''w1FIKE'',\n  ''ucuserid'' => ''0'',\n  ''uid'' => ''22'',\n  ''action'' => ''member_add'',\n)', 1408432065, '{"1":1}'),
+(23, 'member_add', 0, 1, 'array (\n  ''username'' => ''sadff'',\n  ''password'' => ''c57c6183bf39a41f09e42baf5f81f035'',\n  ''email'' => ''sadff@qq.com'',\n  ''regip'' => ''127.0.0.1'',\n  ''regdate'' => ''1408432128'',\n  ''lastdate'' => ''1408432128'',\n  ''appname'' => ''phpcms v9'',\n  ''type'' => ''app'',\n  ''random'' => ''AjeA6C'',\n  ''ucuserid'' => ''0'',\n  ''uid'' => ''1'',\n  ''action'' => ''member_add'',\n)', 1408432128, '{"1":1}'),
+(24, 'member_add', 0, 1, 'array (\n  ''username'' => ''nimaB'',\n  ''password'' => ''4f60db2dba8b4972d7c95cd685d40ca9'',\n  ''email'' => ''nimaB@qq.com'',\n  ''regip'' => ''127.0.0.1'',\n  ''regdate'' => ''1408432128'',\n  ''lastdate'' => ''1408432128'',\n  ''appname'' => ''phpcms v9'',\n  ''type'' => ''app'',\n  ''random'' => ''w1FIKE'',\n  ''ucuserid'' => ''0'',\n  ''uid'' => ''2'',\n  ''action'' => ''member_add'',\n)', 1408432128, '{"1":1}'),
+(25, 'member_add', 0, 1, 'array (\n  ''username'' => ''sadff'',\n  ''password'' => ''c57c6183bf39a41f09e42baf5f81f035'',\n  ''email'' => ''sadff@qq.com'',\n  ''regip'' => ''127.0.0.1'',\n  ''regdate'' => ''1408432400'',\n  ''lastdate'' => ''1408432400'',\n  ''appname'' => ''phpcms v9'',\n  ''type'' => ''app'',\n  ''random'' => ''AjeA6C'',\n  ''ucuserid'' => ''0'',\n  ''uid'' => ''1'',\n  ''action'' => ''member_add'',\n)', 1408432400, '{"1":1}'),
+(26, 'member_add', 0, 1, 'array (\n  ''username'' => ''nimaB'',\n  ''password'' => ''4f60db2dba8b4972d7c95cd685d40ca9'',\n  ''email'' => ''nimaB@qq.com'',\n  ''regip'' => ''127.0.0.1'',\n  ''regdate'' => ''1408432400'',\n  ''lastdate'' => ''1408432400'',\n  ''appname'' => ''phpcms v9'',\n  ''type'' => ''app'',\n  ''random'' => ''w1FIKE'',\n  ''ucuserid'' => ''0'',\n  ''uid'' => ''2'',\n  ''action'' => ''member_add'',\n)', 1408432400, '{"1":1}'),
+(27, 'member_add', 0, 1, 'array (\n  ''username'' => ''sadff'',\n  ''password'' => ''c57c6183bf39a41f09e42baf5f81f035'',\n  ''email'' => ''sadff@qq.com'',\n  ''regip'' => ''127.0.0.1'',\n  ''regdate'' => ''1408432493'',\n  ''lastdate'' => ''1408432493'',\n  ''appname'' => ''phpcms v9'',\n  ''type'' => ''app'',\n  ''random'' => ''AjeA6C'',\n  ''ucuserid'' => ''0'',\n  ''uid'' => ''1'',\n  ''action'' => ''member_add'',\n)', 1408432493, '{"1":1}'),
+(28, 'member_add', 0, 1, 'array (\n  ''username'' => ''nimaB'',\n  ''password'' => ''4f60db2dba8b4972d7c95cd685d40ca9'',\n  ''email'' => ''nimaB@qq.com'',\n  ''regip'' => ''127.0.0.1'',\n  ''regdate'' => ''1408432493'',\n  ''lastdate'' => ''1408432493'',\n  ''appname'' => ''phpcms v9'',\n  ''type'' => ''app'',\n  ''random'' => ''w1FIKE'',\n  ''ucuserid'' => ''0'',\n  ''uid'' => ''2'',\n  ''action'' => ''member_add'',\n)', 1408432493, '{"1":1}'),
+(29, 'member_add', 0, 1, 'array (\n  ''username'' => ''hehe'',\n  ''password'' => ''7f30f0b731b883d2aae66a4d4dddc366'',\n  ''email'' => ''hehe@qq.com'',\n  ''regip'' => ''127.0.0.1'',\n  ''regdate'' => ''1408432577'',\n  ''lastdate'' => ''1408432577'',\n  ''appname'' => ''phpcms v9'',\n  ''type'' => ''app'',\n  ''random'' => ''4sGUlJ'',\n  ''ucuserid'' => ''0'',\n  ''uid'' => ''3'',\n  ''action'' => ''member_add'',\n)', 1408432577, '{"1":1}'),
+(30, 'member_add', 0, 1, 'array (\n  ''username'' => ''haha'',\n  ''password'' => ''e7ab8954a1db823c792e28ff228ec5a5'',\n  ''email'' => ''haha@qq.com'',\n  ''regip'' => ''127.0.0.1'',\n  ''regdate'' => ''1408432577'',\n  ''lastdate'' => ''1408432577'',\n  ''appname'' => ''phpcms v9'',\n  ''type'' => ''app'',\n  ''random'' => ''WwKE4R'',\n  ''ucuserid'' => ''0'',\n  ''uid'' => ''4'',\n  ''action'' => ''member_add'',\n)', 1408432577, '{"1":1}'),
+(31, 'member_add', 0, 1, 'array (\n  ''username'' => ''aaa'',\n  ''password'' => ''591474620785dd8e4ec40e3ab363f02b'',\n  ''email'' => ''aaa@qq.com'',\n  ''regip'' => ''127.0.0.1'',\n  ''regdate'' => ''1408432577'',\n  ''lastdate'' => ''1408432577'',\n  ''appname'' => ''phpcms v9'',\n  ''type'' => ''app'',\n  ''random'' => ''bDYZjt'',\n  ''ucuserid'' => ''0'',\n  ''uid'' => ''5'',\n  ''action'' => ''member_add'',\n)', 1408432577, '{"1":1}'),
+(32, 'member_add', 0, 1, 'array (\n  ''username'' => ''lulu'',\n  ''password'' => ''176d72ebaa6f47bd563cb8b78b1a54ca'',\n  ''email'' => ''lulu@qq.com'',\n  ''regip'' => ''127.0.0.1'',\n  ''regdate'' => ''1408432577'',\n  ''lastdate'' => ''1408432577'',\n  ''appname'' => ''phpcms v9'',\n  ''type'' => ''app'',\n  ''random'' => ''QTD3fb'',\n  ''ucuserid'' => ''0'',\n  ''uid'' => ''6'',\n  ''action'' => ''member_add'',\n)', 1408432577, '{"1":1}'),
+(33, 'member_add', 0, 1, 'array (\n  ''username'' => ''sadff'',\n  ''password'' => ''c57c6183bf39a41f09e42baf5f81f035'',\n  ''email'' => ''sadff@qq.com'',\n  ''regip'' => ''127.0.0.1'',\n  ''regdate'' => ''1408433219'',\n  ''lastdate'' => ''1408433219'',\n  ''appname'' => ''phpcms v9'',\n  ''type'' => ''app'',\n  ''random'' => ''AjeA6C'',\n  ''ucuserid'' => ''0'',\n  ''uid'' => ''1'',\n  ''action'' => ''member_add'',\n)', 1408433219, '{"1":1}'),
+(34, 'member_add', 0, 1, 'array (\n  ''username'' => ''nimaB'',\n  ''password'' => ''4f60db2dba8b4972d7c95cd685d40ca9'',\n  ''email'' => ''nimaB@qq.com'',\n  ''regip'' => ''127.0.0.1'',\n  ''regdate'' => ''1408433219'',\n  ''lastdate'' => ''1408433219'',\n  ''appname'' => ''phpcms v9'',\n  ''type'' => ''app'',\n  ''random'' => ''w1FIKE'',\n  ''ucuserid'' => ''0'',\n  ''uid'' => ''2'',\n  ''action'' => ''member_add'',\n)', 1408433219, '{"1":1}'),
+(35, 'member_add', 0, 1, 'array (\n  ''username'' => ''sadff'',\n  ''password'' => ''c57c6183bf39a41f09e42baf5f81f035'',\n  ''email'' => ''sadff@qq.com'',\n  ''regip'' => ''127.0.0.1'',\n  ''regdate'' => ''1408433358'',\n  ''lastdate'' => ''1408433358'',\n  ''appname'' => ''phpcms v9'',\n  ''type'' => ''app'',\n  ''random'' => ''AjeA6C'',\n  ''ucuserid'' => ''0'',\n  ''uid'' => ''1'',\n  ''action'' => ''member_add'',\n)', 1408433358, '{"1":1}'),
+(36, 'member_add', 0, 1, 'array (\n  ''username'' => ''nimaB'',\n  ''password'' => ''4f60db2dba8b4972d7c95cd685d40ca9'',\n  ''email'' => ''nimaB@qq.com'',\n  ''regip'' => ''127.0.0.1'',\n  ''regdate'' => ''1408433358'',\n  ''lastdate'' => ''1408433358'',\n  ''appname'' => ''phpcms v9'',\n  ''type'' => ''app'',\n  ''random'' => ''w1FIKE'',\n  ''ucuserid'' => ''0'',\n  ''uid'' => ''2'',\n  ''action'' => ''member_add'',\n)', 1408433358, '{"1":1}'),
+(37, 'member_add', 0, 1, 'array (\n  ''username'' => ''hehe'',\n  ''password'' => ''7f30f0b731b883d2aae66a4d4dddc366'',\n  ''email'' => ''hehe@qq.com'',\n  ''regip'' => ''127.0.0.1'',\n  ''regdate'' => ''1408433366'',\n  ''lastdate'' => ''1408433366'',\n  ''appname'' => ''phpcms v9'',\n  ''type'' => ''app'',\n  ''random'' => ''4sGUlJ'',\n  ''ucuserid'' => ''0'',\n  ''uid'' => ''3'',\n  ''action'' => ''member_add'',\n)', 1408433366, '{"1":1}'),
+(38, 'member_add', 0, 1, 'array (\n  ''username'' => ''haha'',\n  ''password'' => ''e7ab8954a1db823c792e28ff228ec5a5'',\n  ''email'' => ''haha@qq.com'',\n  ''regip'' => ''127.0.0.1'',\n  ''regdate'' => ''1408433366'',\n  ''lastdate'' => ''1408433366'',\n  ''appname'' => ''phpcms v9'',\n  ''type'' => ''app'',\n  ''random'' => ''WwKE4R'',\n  ''ucuserid'' => ''0'',\n  ''uid'' => ''4'',\n  ''action'' => ''member_add'',\n)', 1408433366, '{"1":1}');
 
 -- --------------------------------------------------------
 
@@ -8080,8 +8328,8 @@ CREATE TABLE IF NOT EXISTS `cban_sso_session` (
 -- 
 -- 表的结构 `cban_sso_settings`
 -- 
--- 创建时间: 2014 年 08 月 14 日 19:53
--- 最后更新时间: 2014 年 08 月 14 日 19:53
+-- 创建时间: 2014 年 08 月 11 日 09:07
+-- 最后更新时间: 2014 年 08 月 11 日 09:07
 -- 
 
 DROP TABLE IF EXISTS `cban_sso_settings`;
@@ -8107,8 +8355,8 @@ INSERT DELAYED IGNORE INTO `cban_sso_settings` (`name`, `data`) VALUES
 -- 
 -- 表的结构 `cban_supply`
 -- 
--- 创建时间: 2014 年 08 月 14 日 19:53
--- 最后更新时间: 2014 年 08 月 14 日 19:53
+-- 创建时间: 2014 年 08 月 11 日 09:07
+-- 最后更新时间: 2014 年 08 月 11 日 09:07
 -- 
 
 DROP TABLE IF EXISTS `cban_supply`;
@@ -8143,8 +8391,8 @@ INSERT DELAYED IGNORE INTO `cban_supply` (`id`, `userid`, `username`, `title`, `
 -- 
 -- 表的结构 `cban_tag`
 -- 
--- 创建时间: 2014 年 08 月 14 日 19:53
--- 最后更新时间: 2014 年 08 月 14 日 19:53
+-- 创建时间: 2014 年 08 月 11 日 09:07
+-- 最后更新时间: 2014 年 08 月 11 日 09:07
 -- 
 
 DROP TABLE IF EXISTS `cban_tag`;
@@ -8174,8 +8422,8 @@ CREATE TABLE IF NOT EXISTS `cban_tag` (
 -- 
 -- 表的结构 `cban_template_bak`
 -- 
--- 创建时间: 2014 年 08 月 14 日 19:53
--- 最后更新时间: 2014 年 08 月 14 日 19:53
+-- 创建时间: 2014 年 08 月 11 日 09:07
+-- 最后更新时间: 2014 年 08 月 11 日 09:07
 -- 
 
 DROP TABLE IF EXISTS `cban_template_bak`;
@@ -8221,8 +8469,8 @@ CREATE TABLE IF NOT EXISTS `cban_times` (
 -- 
 -- 表的结构 `cban_type`
 -- 
--- 创建时间: 2014 年 08 月 14 日 19:53
--- 最后更新时间: 2014 年 08 月 14 日 19:53
+-- 创建时间: 2014 年 08 月 11 日 09:07
+-- 最后更新时间: 2014 年 08 月 11 日 09:07
 -- 
 
 DROP TABLE IF EXISTS `cban_type`;
@@ -8260,8 +8508,8 @@ INSERT DELAYED IGNORE INTO `cban_type` (`typeid`, `siteid`, `module`, `modelid`,
 -- 
 -- 表的结构 `cban_urlrule`
 -- 
--- 创建时间: 2014 年 08 月 14 日 19:53
--- 最后更新时间: 2014 年 08 月 14 日 19:53
+-- 创建时间: 2014 年 08 月 11 日 09:07
+-- 最后更新时间: 2014 年 08 月 11 日 09:07
 -- 
 
 DROP TABLE IF EXISTS `cban_urlrule`;
@@ -8294,8 +8542,8 @@ INSERT DELAYED IGNORE INTO `cban_urlrule` (`urlruleid`, `module`, `file`, `ishtm
 -- 
 -- 表的结构 `cban_video`
 -- 
--- 创建时间: 2014 年 08 月 14 日 19:53
--- 最后更新时间: 2014 年 08 月 14 日 19:53
+-- 创建时间: 2014 年 08 月 11 日 09:07
+-- 最后更新时间: 2014 年 08 月 11 日 09:07
 -- 
 
 DROP TABLE IF EXISTS `cban_video`;
@@ -8335,8 +8583,8 @@ CREATE TABLE IF NOT EXISTS `cban_video` (
 -- 
 -- 表的结构 `cban_video_content`
 -- 
--- 创建时间: 2014 年 08 月 14 日 19:53
--- 最后更新时间: 2014 年 08 月 14 日 19:53
+-- 创建时间: 2014 年 08 月 11 日 09:07
+-- 最后更新时间: 2014 年 08 月 11 日 09:07
 -- 
 
 DROP TABLE IF EXISTS `cban_video_content`;
@@ -8358,8 +8606,8 @@ CREATE TABLE IF NOT EXISTS `cban_video_content` (
 -- 
 -- 表的结构 `cban_video_data`
 -- 
--- 创建时间: 2014 年 08 月 14 日 19:53
--- 最后更新时间: 2014 年 08 月 14 日 19:53
+-- 创建时间: 2014 年 08 月 11 日 09:07
+-- 最后更新时间: 2014 年 08 月 11 日 09:07
 -- 
 
 DROP TABLE IF EXISTS `cban_video_data`;
@@ -8388,8 +8636,8 @@ CREATE TABLE IF NOT EXISTS `cban_video_data` (
 -- 
 -- 表的结构 `cban_video_store`
 -- 
--- 创建时间: 2014 年 08 月 14 日 19:53
--- 最后更新时间: 2014 年 08 月 14 日 19:53
+-- 创建时间: 2014 年 08 月 11 日 09:07
+-- 最后更新时间: 2014 年 08 月 11 日 09:07
 -- 
 
 DROP TABLE IF EXISTS `cban_video_store`;
@@ -8422,8 +8670,8 @@ CREATE TABLE IF NOT EXISTS `cban_video_store` (
 -- 
 -- 表的结构 `cban_vote_data`
 -- 
--- 创建时间: 2014 年 08 月 14 日 19:53
--- 最后更新时间: 2014 年 08 月 14 日 19:53
+-- 创建时间: 2014 年 08 月 11 日 09:07
+-- 最后更新时间: 2014 年 08 月 11 日 09:07
 -- 
 
 DROP TABLE IF EXISTS `cban_vote_data`;
@@ -8450,8 +8698,8 @@ CREATE TABLE IF NOT EXISTS `cban_vote_data` (
 -- 
 -- 表的结构 `cban_vote_option`
 -- 
--- 创建时间: 2014 年 08 月 14 日 19:53
--- 最后更新时间: 2014 年 08 月 14 日 19:53
+-- 创建时间: 2014 年 08 月 11 日 09:07
+-- 最后更新时间: 2014 年 08 月 11 日 09:07
 -- 
 
 DROP TABLE IF EXISTS `cban_vote_option`;
@@ -8476,8 +8724,8 @@ CREATE TABLE IF NOT EXISTS `cban_vote_option` (
 -- 
 -- 表的结构 `cban_vote_subject`
 -- 
--- 创建时间: 2014 年 08 月 14 日 19:53
--- 最后更新时间: 2014 年 08 月 14 日 19:53
+-- 创建时间: 2014 年 08 月 11 日 09:07
+-- 最后更新时间: 2014 年 08 月 11 日 09:07
 -- 
 
 DROP TABLE IF EXISTS `cban_vote_subject`;
@@ -8518,8 +8766,8 @@ CREATE TABLE IF NOT EXISTS `cban_vote_subject` (
 -- 
 -- 表的结构 `cban_wap`
 -- 
--- 创建时间: 2014 年 08 月 14 日 19:53
--- 最后更新时间: 2014 年 08 月 14 日 19:53
+-- 创建时间: 2014 年 08 月 11 日 09:07
+-- 最后更新时间: 2014 年 08 月 11 日 09:07
 -- 
 
 DROP TABLE IF EXISTS `cban_wap`;
@@ -8545,8 +8793,8 @@ INSERT DELAYED IGNORE INTO `cban_wap` (`siteid`, `sitename`, `logo`, `domain`, `
 -- 
 -- 表的结构 `cban_wap_type`
 -- 
--- 创建时间: 2014 年 08 月 14 日 19:53
--- 最后更新时间: 2014 年 08 月 14 日 19:53
+-- 创建时间: 2014 年 08 月 11 日 09:07
+-- 最后更新时间: 2014 年 08 月 11 日 09:07
 -- 
 
 DROP TABLE IF EXISTS `cban_wap_type`;
@@ -8570,8 +8818,8 @@ CREATE TABLE IF NOT EXISTS `cban_wap_type` (
 -- 
 -- 表的结构 `cban_workflow`
 -- 
--- 创建时间: 2014 年 08 月 14 日 19:53
--- 最后更新时间: 2014 年 08 月 14 日 19:53
+-- 创建时间: 2014 年 08 月 11 日 09:07
+-- 最后更新时间: 2014 年 08 月 11 日 09:07
 -- 
 
 DROP TABLE IF EXISTS `cban_workflow`;
