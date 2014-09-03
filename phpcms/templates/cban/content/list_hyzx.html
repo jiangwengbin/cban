@@ -9,17 +9,20 @@
                     <div class="medium_win">                    
                         <div class="all">
                         
-                        {pc:content action="lists" catid="41" num="1"  page="$_GET[page]" siteid="$siteid" id="" order="listorder desc"}
+                        {pc:content action="lists" catid="41" num="20"  page="$_GET[page]" siteid="$siteid" id="" order="listorder desc"}
                         {loop $data $r}
                         	<div class="list">
-                                <div class="title"><a href="javascript:;">{$r[title]}</a></div>
+                                <div class="title"><a href="{$r[url]}" target="_blank">{$r[title]}</a></div>
                                 <div class="body_text">
-                                <img src="{CBAN_PATH}images/tmp4.jpg" height="115" width="155" />
+                                {if $r[thumb]}
+                                  <img src="{$r[thumb]}" height="115" width="155" />
+                                 {/if}
+                                
                                     <p style="word-break:break-all;word-wrap:break-word;">{$r[description]}</p>
                                 </div>
                                 <div class="ab_mess">
                                     <span>作者:{$r[username]}</span>
-                                    <span>{$r[inputtime]}</span>
+                                    <span>{date('Y-m-d',$r[inputtime])}</span>
                                 </div>
                                 <div class="mac_bar">
                                     <span>
@@ -62,26 +65,14 @@
                         
                         <div class="win_dir win_dir_lift" style="width:100%;">
                         	<ul class="win_dir_lift">
-                                <li>
-                                    <span>1</span>
-                                    <a href="javascript:;">商品1sadasdasd</a>
-                                </li>
-                                <li>
-                                    <span>2</span>
-                                    <a href="javascript:;">商品2</a>
-                                </li>
-                                <li>
-                                    <span>3</span>
-                                    <a href="javascript:;">商品2</a>
-                                </li>
-                                <li>
-                                    <span class="color">4</span>
-                                    <a href="javascript:;">商品2</a>
-                                </li>
-                                <li>
-                                    <span class="color">5</span>
-                                    <a href="javascript:;">商品2</a>
-                                </li>
+                            	{pc:content action="position" posid="27" order="listorder asc" num="10"}
+                                {loop $data $r}
+                                     <li>
+                                    <span>{$r[listorder]}</span>
+                                    <a href="{$r[url]}" target="_blank">{$r[title]}</a>
+                                	</li>
+                                {/loop}
+                                {/pc}
                             </ul>                            
                         </div>
                         
@@ -91,26 +82,14 @@
                         
                         <div class="win_dir win_dir_lift" style="width:100%;">
                         	<ul class="win_dir_lift">
-                                <li>
-                                    <span>1</span>
-                                    <a href="javascript:;">商品1sadasdasd</a>
-                                </li>
-                                <li>
-                                    <span>2</span>
-                                    <a href="javascript:;">商品2</a>
-                                </li>
-                                <li>
-                                    <span>3</span>
-                                    <a href="javascript:;">商品2</a>
-                                </li>
-                                <li>
-                                    <span class="color">4</span>
-                                    <a href="javascript:;">商品2</a>
-                                </li>
-                                <li>
-                                    <span class="color">5</span>
-                                    <a href="javascript:;">商品2</a>
-                                </li>
+                              {pc:content action="position" posid="28" order="listorder asc" num="10"}
+                                {loop $data $r}
+                                     <li>
+                                    <span>{$r[listorder]}</span>
+                                    <a href="{$r[url]}" target="_blank">{$r[title]}</a>
+                                	</li>
+                                {/loop}
+                                {/pc}
                             </ul>                            
                         </div>
                         
@@ -121,36 +100,16 @@
                         
                         <div class="win_dir">
                         	<ul class="win_dir_lift_img">
-                                <li>
-                                	<a href="javascript:;">
-                                        <img src="{CBAN_PATH}images/tmp3.jpg" width="150" height="120" />
-                                        <div>说明说明说明说明说明说明说明说明明说明</div>
+                            	{pc:content action="position" posid="29" order="listorder asc" num="10"}
+                                {loop $data $r}
+                                    <li>
+                                    <a href="{$r[url]}" target="_blank">
+                                        <img src="{$r[thumb]}" width="150" height="120" />
+                                        <div>{$r[description]}</div>
                                     </a>
-                                </li>
-                                <li>
-                                	<a href="javascript:;">
-                                        <img src="{CBAN_PATH}images/tmp3.jpg" width="150" height="120" />
-                                        <div>说明说明说明说明说明说明说明说明明说明</div>
-                                    </a>
-                                </li>
-                                <li>
-                                	<a href="javascript:;">
-                                        <img src="{CBAN_PATH}images/tmp3.jpg" width="150" height="120" />
-                                        <div>说明说明说明说明说明说明说明说明明说明</div>
-                                    </a>
-                                </li>
-                                <li>
-                                	<a href="javascript:;">
-                                        <img src="{CBAN_PATH}images/tmp3.jpg" width="150" height="120" />
-                                        <div>说明说明说明说明说明说明说明说明明说明</div>
-                                    </a>
-                                </li>
-                                <li>
-                                	<a href="javascript:;">
-                                        <img src="{CBAN_PATH}images/tmp3.jpg" width="150" height="120" />
-                                        <div>说明说明说明说明说明说明说明说明明说明</div>
-                                    </a>
-                                </li>
+                                	</li>
+                                {/loop}
+                                {/pc}
                             </ul>                            
                         </div>
                 	</div>

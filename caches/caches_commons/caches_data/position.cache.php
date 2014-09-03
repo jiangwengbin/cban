@@ -48,6 +48,42 @@ return array (
     'siteid' => '1',
     'thumb' => '',
   ),
+  29 => 
+  array (
+    'posid' => '29',
+    'modelid' => '1',
+    'catid' => '41',
+    'name' => '行业资讯_推荐图片新闻',
+    'maxnum' => '20',
+    'extention' => '',
+    'listorder' => '11',
+    'siteid' => '1',
+    'thumb' => '',
+  ),
+  28 => 
+  array (
+    'posid' => '28',
+    'modelid' => '1',
+    'catid' => '41',
+    'name' => '行业资讯_综合排行',
+    'maxnum' => '20',
+    'extention' => '',
+    'listorder' => '10',
+    'siteid' => '1',
+    'thumb' => '',
+  ),
+  27 => 
+  array (
+    'posid' => '27',
+    'modelid' => '1',
+    'catid' => '41',
+    'name' => '行业资讯_新闻点击排行',
+    'maxnum' => '20',
+    'extention' => '',
+    'listorder' => '9',
+    'siteid' => '1',
+    'thumb' => '',
+  ),
   26 => 
   array (
     'posid' => '26',

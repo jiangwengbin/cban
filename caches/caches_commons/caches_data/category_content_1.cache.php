@@ -17,7 +17,7 @@ return array (
     'parentdir' => '',
     'catdir' => 'hyzx',
     'url' => 'http://127.0.0.1:8080/cban/index.php?m=content&c=index&a=lists&catid=41',
-    'items' => '0',
+    'items' => '3',
     'hits' => '0',
     'setting' => 'array (
   \'workflowid\' => \'\',
