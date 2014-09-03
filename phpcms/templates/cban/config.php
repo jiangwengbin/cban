@@ -12,7 +12,8 @@
       
       'list_hyzx.html' => '行业资讯列表',
 	  'list_zhxx.html' => '展会信息列表',
-	  'show_zhxx.html' => '展会内容显示',
+	  'show_hyzx.html' => '行业资讯内容显示',
+      'show_zhxx.html' => '展会内容显示',
       'page_ab.html' => '关于_单页',
     ),
     'templates|cban|' => 

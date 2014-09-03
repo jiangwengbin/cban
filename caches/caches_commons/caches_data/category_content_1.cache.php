@@ -27,7 +27,7 @@ return array (
   \'template_list\' => \'cban\',
   \'category_template\' => \'category\',
   \'list_template\' => \'list_hyzx\',
-  \'show_template\' => \'show\',
+  \'show_template\' => \'show_hyzx\',
   \'meta_title\' => \'\',
   \'meta_keywords\' => \'\',
   \'meta_description\' => \'\',
