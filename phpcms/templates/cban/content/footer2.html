@@ -8,36 +8,20 @@
     </div>
     <div id="friendlink_body">
     	<ul>
-        	<li> 泡泡网家电 |</li>
-            <li> 泡泡产品库液晶电视 |</li>
-            <li> 苹果园论坛 |</li>
-            <li> 苹果园 |</li>
-            <li> IT方案库 |</li>
-            <li> 百姓家电网 |</li>
-            <li> 合肥装修 |</li>
-            <li> 搜狐家电频道 |</li>
-            <li> it168家电一体机 |</li>
-            <li> 品牌家电网 |</li>
-            <li> 家天下家电 |</li>
-            <li> 中国家电网 |</li>
-            <li> 电子发烧友 |</li>
-            <li> 小熊在线数字家庭 |</li>
-            <li> 搜房家电 |</li>
-            <li> 万维家庭影院 |</li>
-            <li> 中国家电在线 |</li>
-            <li> 家电论坛环球家电网 |</li>
-            <li> 中国电热水器网 |</li>
-            <li> 第一家电网 |</li>
-            <li> 国美论坛 |</li>
-            <li> 海尔官网 |</li>
-            <li> 泡泡图吧</li>
+        	{pc:link  action="type_list" siteid="1" order="listorder DESC" num="20" return="pic_link"}
+             {loop $pic_link $v}
+                    <li>
+                        <a href="{$v['url']}" title="{$v['name']}" target="_blank">{$v[name]}</a>
+                     </li>
+              {/loop}
+             {/pc} 
         </ul>
     </div>
     <!--底部友情链结束、站点引导开始-->
     <div id="title_blueline" style="height:14px; background-color:#FFF;">
     </div>
     <div id="guild_body">
-    <p>关于我们 ‖ 网站合作 ‖ 联系我们 ‖ 广告联系 ‖ 商品资讯 ‖ 各地网点 ‖ 网站地图 ‖ 意见反馈 ‖</p>
+   
     <p> copyright © 2013 cban.com.cn Limited, All Rights Reserved</p>
     <p>中国品牌家电网 版权所有</p>
     <p> 京ICP证********号</p>

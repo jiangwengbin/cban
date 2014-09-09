@@ -2,73 +2,24 @@
             	<h4 class="title title_br">友情连接</h4>
                 <div class="a_link">
                 	<ul>
-                    	<li>
-                        	<div><a href="javascript:;">连接连接连接</a></div>
-                        </li>
-                        <li>
-                        	<div><a href="javascript:;">连接</a></div>
-                        </li>
-                        <li>
-                        	<div><a href="javascript:;">连接</a></div>
-                        </li>
-                        <li>
-                        	<div><a href="javascript:;">连接</a></div>
-                        </li>
-                        <li>
-                        	<div><a href="javascript:;">连接</a></div>
-                        </li>
-                        <li>
-                        	<div><a href="javascript:;">连接连接连接</a></div>
-                        </li>
-                        <li>
-                        	<div><a href="javascript:;">连接</a></div>
-                        </li>
-                        <li>
-                        	<div><a href="javascript:;">连接</a></div>
-                        </li>
-                        <li>
-                        	<div><a href="javascript:;">连接</a></div>
-                        </li>
-                        <li>
-                        	<div><a href="javascript:;">连接</a></div>
-                        </li>
-                        <li>
-                        	<div><a href="javascript:;">连接连接连接</a></div>
-                        </li>
-                        <li>
-                        	<div><a href="javascript:;">连接</a></div>
-                        </li>
-                        <li>
-                        	<div><a href="javascript:;">连接</a></div>
-                        </li>
-                        <li>
-                        	<div><a href="javascript:;">连接</a></div>
-                        </li>
-                        <li>
-                        	<div><a href="javascript:;">连接</a></div>
-                        </li>
+                     	{pc:link  action="type_list" siteid="1" order="listorder DESC" num="20" return="pic_link"}
+                        {loop $pic_link $v}
+                        	<li>
+                            	<div><a href="{$v['url']}" title="{$v['name']}" target="_blank">{$v[name]}</a></div>
+                            </li>
+                        {/loop}
+                        {/pc} 
                     </ul>
                 </div>
             </div>
             
-            
+           
             
             <div class="main_link">
                 <div class="img_link a_link">
-                	<ul>
-                    	<li>
-                        	<div><a href="javascript:;">连接连接</a></div>
-                        </li>
-                        <li>
-                        	<div><a href="javascript:;">连接连接</a></div>
-                        </li>
-                        <li>
-                        	<div><a href="javascript:;">连接连接</a></div>
-                        </li>
-                        <li>
-                        	<div><a href="javascript:;">连接连接</a></div>
-                        </li>
-                    </ul>
+                	<p> copyright © 2013 cban.com.cn Limited, All Rights Reserved</p>
+                    <p>中国品牌家电网 版权所有</p>
+                    <p> 京ICP证********号</p>
                 </div>
             </div>
             
