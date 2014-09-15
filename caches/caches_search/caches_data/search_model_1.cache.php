@@ -18,6 +18,12 @@ return array (
     'name' => '展会信息模型',
     'sort' => '0',
   ),
+  18 => 
+  array (
+    'typeid' => '57',
+    'name' => '畅销单品模型',
+    'sort' => '0',
+  ),
   1 => 
   array (
     'typeid' => '1',

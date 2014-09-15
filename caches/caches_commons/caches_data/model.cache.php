@@ -161,5 +161,28 @@ return array (
     'sort' => '0',
     'type' => '0',
   ),
+  18 => 
+  array (
+    'modelid' => '18',
+    'siteid' => '1',
+    'name' => '畅销单品模型',
+    'description' => '',
+    'tablename' => 'goods',
+    'setting' => '',
+    'addtime' => '0',
+    'items' => '0',
+    'enablesearch' => '1',
+    'disabled' => '0',
+    'default_style' => '',
+    'category_template' => '',
+    'list_template' => '',
+    'show_template' => '',
+    'js_template' => '',
+    'admin_list_template' => '',
+    'member_add_template' => '',
+    'member_list_template' => '',
+    'sort' => '0',
+    'type' => '0',
+  ),
 );
 ?>
