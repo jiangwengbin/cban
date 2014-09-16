@@ -1,0 +1,196 @@
+{template "content","header"}
+
+<div id="content_background">
+	<center>
+<div id="content">
+  <div class="main_1 main_div">
+            	<div class="type_nav div">
+                	<ul>
+                    	<li class="type_name">
+                        	家电分类目录
+                        </li>
+                        {pc:get sql="select * from cban_category where parentid=49" return="data"}
+                       	{loop $data $r}
+                             <li><a href="{$r[url]}"><div>{$r[catname]}</div></a></li>
+                        {/loop}
+                        {/pc} 
+                        
+                       
+						<li class="all_type">
+                        	<a href="#">全类分类目录</a>
+                        </li>
+                    </ul>
+                </div>
+                
+                
+                {pc:get sql="select * from cban_category where parentid=49" return="data"}
+                {loop $data $r}
+                    <div class="show_1 div">
+                         <!--列表类型-->
+                         <h4 class="title title_br">{$r[catname]}</h4>
+                              <div class="left_border"></div>
+                               <div class="right_border"></div>
+                               <div class="link">
+                                   <ul class="link">
+                                    {pc:content action="category" catid="$r[catid]" num="25" siteid="$siteid" order="listorder ASC"}
+                					{loop $data $r}
+                                      <li>
+                                           <a href="{$r[url]}">{$r[catname]}</a>
+                                       </li>
+                                    {/loop}
+             						{/pc}
+                                   </ul>
+                                </div>
+                   </div>
+             {/loop}
+             {/pc}
+   </div>
+            
+  <div class="main_link2">
+            	<h4 class="title title_br">家电排行</h4>
+                <div class="a_link">
+                    <div class="medium_win max_win">
+                    	<div class="win_title">
+                            <ul>
+                                <li class="event group_div" data-class="group_bar" data-type="2" data-id="div_type_a_1">
+                                    <a href="javascript:void(0);">电视</a>
+                                </li>
+                                <li class="group_div" data-class="group_bar" data-type="2" data-id="div_type_a_2">
+                                    <a href="javascript:void(0);">冰箱</a>
+                                </li>
+                                <li class="group_div" data-class="group_bar" data-type="2" data-id="div_type_a_3">
+                                	<a href="javascript:void(0);">洗衣机</a>
+                                </li>
+                                <li class="group_div" data-class="group_bar" data-type="2" data-id="div_type_a_4">
+                                	<a href="javascript:void(0);">空调</a>
+                                </li>
+                                <li class="group_div" data-class="group_bar" data-type="2" data-id="div_type_a_5">
+                                	<a href="javascript:void(0);">热水器</a>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <div class="win_dir group_bar" id="div_type_a_1">
+                        	<ul>
+                            	
+                                {pc:content action="position" posid="32" order="listorder asc" num="10"}
+                                {loop $data $r}
+                                <li>
+                                	<a href="{$r[url]}" target="_blank">
+                                        <img src="{$r[thumb]}" width="150" height="100" /><br />
+                                        {$r[title]}
+                                    </a>
+                                     <div class="pic"><span>参考价格:</span>¥{$r[price]}</div>
+                                </li>
+                                {/loop}
+                                {/pc}
+
+                            </ul>
+                        </div>
+                        
+                        <div class="win_dir group_bar" style="display:none;" id="div_type_a_2">
+                        	<ul>
+                                {pc:content action="position" posid="33" order="listorder asc" num="10"}
+                                {loop $data $r}
+                                <li>
+                                	<a href="{$r[url]}" target="_blank">
+                                        <img src="{$r[thumb]}" width="150" height="100" /><br />
+                                        {$r[title]}
+                                    </a>
+                                     <div class="pic"><span>参考价格:</span>¥{$r[price]}</div>
+                                </li>
+                                {/loop}
+                                {/pc}
+                            </ul>
+                        </div>
+                        
+                        <div class="win_dir group_bar" style="display:none;" id="div_type_a_3">
+                        	<ul>
+                               {pc:content action="position" posid="34" order="listorder asc" num="10"}
+                                {loop $data $r}
+                                <li>
+                                	<a href="{$r[url]}" target="_blank">
+                                        <img src="{$r[thumb]}" width="150" height="100" /><br />
+                                        {$r[title]}
+                                    </a>
+                                     <div class="pic"><span>参考价格:</span>¥{$r[price]}</div>
+                                </li>
+                                {/loop}
+                                {/pc}
+
+                            </ul>
+                        </div>
+                        
+                        <div class="win_dir group_bar" style="display:none;" id="div_type_a_4">
+                        	<ul>
+                                {pc:content action="position" posid="35" order="listorder asc" num="10"}
+                                {loop $data $r}
+                                <li>
+                                	<a href="{$r[url]}" target="_blank">
+                                        <img src="{$r[thumb]}" width="150" height="100" /><br />
+                                        {$r[title]}
+                                    </a>
+                                     <div class="pic"><span>参考价格:</span>¥{$r[price]}</div>
+                                </li>
+                                {/loop}
+                                {/pc}
+                            </ul>
+                        </div>
+                        
+                        <div class="win_dir group_bar" style="display:none;" id="div_type_a_5">
+                        	<ul>
+                                {pc:content action="position" posid="36" order="listorder asc" num="10"}
+                                {loop $data $r}
+                                <li>
+                                	<a href="{$r[url]}" target="_blank">
+                                        <img src="{$r[thumb]}" width="150" height="100" /><br />
+                                        {$r[title]}
+                                    </a>
+                                     <div class="pic"><span>参考价格:</span>¥{$r[price]}</div>
+                                </li>
+                                {/loop}
+                                {/pc}
+                            </ul>
+                        </div>
+
+                    </div>  
+                </div>
+    </div>
+  
+  <!--
+  <div class="main_link2">
+            	<h4 class="title title_br">新品家电排行</h4>
+                <div class="a_link">
+                    <div class="medium_win max_win">
+
+                        <div class="win_dir">
+                        	<ul>
+                             {pc:content action="position" posid="36" order="listorder asc" num="10"}
+                                {loop $data $r}
+                                <li>
+                                	<a href="{$r[url]}" target="_blank">
+                                        <img src="{$r[thumb]}" width="150" height="100" /><br />
+                                        {$r[title]}
+                                    </a>
+                                     <div class="pic"><span>参考价格:</span>¥{$r[price]}</div>
+                                </li>
+                                {/loop}
+                                {/pc}
+                            </ul>
+                        </div>
+                        
+                       
+                    </div>  
+                </div>
+    </div>
+	-->
+
+
+    <!--页底开始-->
+	{template "content","footer"}
+  </center>
+    
+</div>
+
+</body>
+</html>

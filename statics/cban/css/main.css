@@ -411,6 +411,10 @@ div.mini_win div.win_title ul li.event_out{
 	border-bottom:1px #e5e5e5 solid;
 }
 
+.main_link2 a{
+	color:#333;
+}
+
 div.mini_win div.win_dir{
 	width:100%;
 	margin-left:20px;

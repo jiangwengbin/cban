@@ -45,15 +45,19 @@
              {/loop}
              {/pc}
    </div>
-
+  
+ 
+  {pc:content action="category" catid="$catid" num="25" siteid="$siteid" order="listorder ASC"}
+  {loop $data $r}
   <div class="main_link2">
-            	<h4 class="title title_br">{$catname}</h4>
+            	<h4 class="title title_br">{$r[catname]}</h4>
                 <div class="a_link">
                     <div class="medium_win max_win">
-
+                    		
+                        
                         <div class="win_dir">
                         	<ul>
-                            {pc:content action="lists" catid="$catid" num="25" siteid="$siteid" order="listorder ASC"}
+                            {pc:content action="lists" catid="$r[catid]" num="25" siteid="$siteid" order="listorder ASC"}
                             {loop $data $r}
                                 <li>
                                     <a href="{$r[url]}">
@@ -71,7 +75,9 @@
                     </div>  
                 </div>
     </div>
-
+	{/loop}
+    {/pc}
+   
     <!--页底开始-->
 	{template "content","footer"}
   </center>

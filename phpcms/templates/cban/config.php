@@ -10,6 +10,9 @@
     'templates|cban|content' => 
     array (
       
+	  'category_goods_index.html' => '畅销单品首页',
+	  'category_goods.html' => '畅销单品分类首页',
+	  
       'list_hyzx.html' => '行业资讯列表',
 	  'list_zhxx.html' => '展会信息列表',
 	  'list_goods.html' => '畅销单品信息列表',

@@ -167,7 +167,7 @@ return array (
     'siteid' => '1',
     'name' => '畅销单品模型',
     'description' => '',
-    'tablename' => 'goods',
+    'tablename' => 'news_goods',
     'setting' => '',
     'addtime' => '0',
     'items' => '0',
