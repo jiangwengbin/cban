@@ -72,6 +72,7 @@ return array (
 　　本注册协议的解释权归phpcms所有。如果其中有任何条款与国家的有关法律相抵触，则以国家法律的明文规定为准。 ',
   'registerverifymessage' => ' 欢迎您注册成为phpcms用户，您的账号需要邮箱认证，点击下面链接进行认证：{click}
 或者将网址复制到浏览器：{url}',
-  'forgetpassword' => '密码找回，请在一小时内点击下面链接或者将网址复制到浏览器：<br>{url}',
+  'forgetpassword' => ' phpcms密码找回，请在一小时内点击下面链接进行操作：{click}
+或者将网址复制到浏览器：{url}',
 );
 ?>

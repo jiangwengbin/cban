@@ -9,41 +9,15 @@
                     	<li class="type_name">
                         	家电分类目录
                         </li>
-                        <li>
-                        	<a href="#"><div>分类测试,分类测试</div></a>
-                        </li>
-                        <li class="type_one">
-                        	<a href="#"><div>分类测试</div></a>
-                        </li>
-                        <li>
-                        	<a href="#"><div>分类测试</div></a>
-                        </li>
-                        <li class="type_one">
-                        	<a href="#"><div>分类测试</div></a>
-                        </li>
-                        <li>
-                        	<a href="#"><div>分类测试</div></a>
-                        </li>
-                        <li class="type_one">
-                        	<a href="#"><div>分类测试</div></a>
-                        </li>
-                        <li>
-                        	<a href="#"><div>分类测试</div></a>
-                        </li>
-                        <li class="type_one">
-                        	<a href="#"><div>分类测试</div></a>
-                        </li>
-                        <li>
-                        	<a href="#"><div>分类测试</div></a>
-                        </li>
-                        <li class="type_one">
-                        	<a href="#"><div>分类测试</div></a>
-                        </li>
-                        <li>
-                        	<a href="#"><div>分类测试</div></a>
-                        </li>
-                        <li class="all_type">
-                        	<a href="#">全类分类目录</a>
+                        {pc:get sql="select * from cban_category where parentid=49" return="data"}
+                       	{loop $data $r}
+                             <li><a href="{$r[url]}"><div>{$r[catname]}</div></a></li>
+                        {/loop}
+                        {/pc} 
+                        
+                       
+						<li class="all_type">
+                        	<a href="index.php?m=content&c=index&a=lists&catid=49">全部分类目录</a>
                         </li>
                     </ul>
                 </div>
@@ -52,24 +26,13 @@
                 	<!--图片新闻 开始-->
                 	<h4 class="title">图片新闻</h4>
                 	<div id="kinMaxShow">
-                        <div>
-                            <a href="#" target="_blank"><img src="{CBAN_PATH}images/demo_default_images/1.jpg"  /></a>
-                        </div>
-                        <div>
-                            <a href="#" target="_blank"><img src="{CBAN_PATH}images/demo_default_images/2.jpg"  /></a>
-                        </div>
-                        <div>
-                            <a href="#" target="_blank"><img src="{CBAN_PATH}images/demo_default_images/3.jpg"   /></a>
-                        </div>
-                        <div>
-                            <a href="#" target="_blank"><img src="{CBAN_PATH}images/demo_default_images/4.jpg"   /></a>
-                        </div>
-                        <div>
-                            <a href="#" target="_blank"><img src="{CBAN_PATH}images/demo_default_images/5.jpg"   /></a>
-                        </div>
-                        <div>
-                            <a href="#" target="_blank"><img src="{CBAN_PATH}images/demo_default_images/6.jpg"   /></a>
-                        </div>  
+                      		{pc:content action="position" posid="1" order="listorder asc" num="10"}
+                            {loop $data $r}
+                            	<div>
+                                <a href="{$r[url]}" target="_blank"><img src="{$r[thumb]}"  /></a>
+                           		</div>
+                            {/loop}
+                            {/pc}
                     </div>
                     <!--图片轮换结束-->
                     
@@ -77,30 +40,13 @@
                     <h4 class="title title_br">商机资讯</h4>
                     <div class="cont">
                     	<ul class="ul_list">
-                        	<li class="li_list">
-                            	<div class="col_cont">新闻</div><div class="col_blck"><a href="#">新闻标题标题标题标题标题</a></div>
-                            </li>
-                            <li class="li_list">
-                            	<div class="col_cont">新闻</div><div class="col_blck"><a href="#">新闻标题标题标题标题标题</a></div>
-                            </li>
-                            <li class="li_list">
-                            	<div class="col_cont">新闻</div><div class="col_blck"><a href="#">新闻标题标题标题标题标题</a></div>
-                            </li>
-                            <li class="li_list">
-                            	<div class="col_cont">新闻</div><div class="col_blck"><a href="#">新闻标题标题标题标题标题</a></div>
-                            </li>
-                            <li class="li_list">
-                            	<div class="col_cont">新闻</div><div class="col_blck"><a href="#">新闻标题标题标题标题标题</a></div>
-                            </li>
-                            <li class="li_list">
-                            	<div class="col_cont">新闻</div><div class="col_blck"><a href="#">新闻标题标题标题标题标题</a></div>
-                            </li>
-                            <li class="li_list">
-                            	<div class="col_cont">新闻</div><div class="col_blck"><a href="#">新闻标题标题标题标题标题</a></div>
-                            </li>
-                            <li class="li_list">
-                            	<div class="col_cont">新闻</div><div class="col_blck"><a href="#">新闻标题标题标题标题标题</a></div>
-                            </li>
+                            {pc:content action="position" posid="3" order="listorder asc" num="10"}
+                            {loop $data $r}
+                            	<li class="li_list">
+                                  <div class="col_cont">新闻</div><div class="col_blck"><a href="{$r[url]}">{$r[title]}</a></div>
+                           		</li>
+                            {/loop}
+                            {/pc}
                         </ul>
                     </div>
                 </div>
@@ -110,30 +56,13 @@
                     <h4 class="title">行业资讯</h4>
                     <div class="cont">
                     	<ul class="ul_list">
-                        	<li class="li_list">
-                            	<div class="col_cont">新闻</div><div class="col_blck"><a href="#">新闻标题标题标题标题标题标题标题</a></div>
-                            </li>
-                            <li class="li_list">
-                            	<div class="col_cont">新闻</div><div class="col_blck"><a href="#">新闻标题标题标题标题标题</a></div>
-                            </li>
-                            <li class="li_list">
-                            	<div class="col_cont">新闻</div><div class="col_blck"><a href="#">新闻标题标题标题标题标题</a></div>
-                            </li>
-                            <li class="li_list">
-                            	<div class="col_cont">新闻</div><div class="col_blck"><a href="#">新闻标题标题标题标题标题</a></div>
-                            </li>
-                            <li class="li_list">
-                            	<div class="col_cont">新闻</div><div class="col_blck"><a href="#">新闻标题标题标题标题标题</a></div>
-                            </li>
-                            <li class="li_list">
-                            	<div class="col_cont">新闻</div><div class="col_blck"><a href="#">新闻标题标题标题标题标题</a></div>
-                            </li>
-                            <li class="li_list">
-                            	<div class="col_cont">新闻</div><div class="col_blck"><a href="#">新闻标题标题标题标题标题</a></div>
-                            </li>
-                            <li class="li_list">
-                            	<div class="col_cont">新闻</div><div class="col_blck"><a href="#">新闻标题标题标题标题标题</a></div>
-                            </li>
+                        	{pc:content action="position" posid="2" order="listorder asc" num="8"}
+                            {loop $data $r}
+                            	<li class="li_list">
+                                  <div class="col_cont">新闻</div><div class="col_blck"><a href="{$r[url]}">{$r[title]}</a></div>
+                           		</li>
+                            {/loop}
+                            {/pc}
                         </ul>
                     </div>
                     
@@ -141,15 +70,14 @@
                     <h4 class="title title_br">展会信息</h4>
 					<div class="cont">
                     	<ul class="ul_list">
-                        	<li class="li_list">
-                            	<div class="img"><img src="{CBAN_PATH}images/list_img.jpg" width="103" height="66" /></div><div class="col_blck"><a href="#">新闻标题标题</a><div class="col_text"><span>展会地址:</span>地址地址</div><div class="col_text"><span>展会时间:</span>0000年00月00日</div></div>
+                            {pc:content action="position" posid="4" order="listorder asc" num="3"}
+                            {loop $data $r}
+                                <li class="li_list">
+                            	<div class="img"><img src="{$r[thumb]}" width="103" height="66" /></div><div class="col_blck"><a href="{$r[url]}">{$r[title]}</a><div class="col_text"><span>地址:</span>{get_linkage($r[diqu],1,' - ')} {$r[address]}</div><div class="col_text"><span>时间:</span>{$r[start_time]}</div></div>
                             </li>
-                        	<li class="li_list">
-                            	<div class="img"><img src="{CBAN_PATH}images/list_img.jpg" width="103" height="66" /></div><div class="col_blck"><a href="#">新闻标题标题</a><div class="col_text"><span>展会地址:</span>地址地址</div><div class="col_text"><span>展会时间:</span>0000年00月00日</div></div>
-                            </li>
-                        	<li class="li_list">
-                            	<div class="img"><img src="{CBAN_PATH}images/list_img.jpg" width="103" height="66" /></div><div class="col_blck"><a href="#">新闻标题标题</a><div class="col_text"><span>展会地址:</span>地址地址</div><div class="col_text"><span>展会时间:</span>0000年00月00日</div></div>
-                            </li>
+                            {/loop}
+                            {/pc}
+                            
                         </ul>
                     </div>
                 </div>
@@ -159,18 +87,17 @@
             <div class="main_2 main_div">
             	<div class="show_2 div">
                 	<!--图片类型列表-->
-                    <h4 class="title title_br">展会信息</h4>
+                    <h4 class="title title_br">千县万店</h4>
                     <div class="cont">
                         <ul class="ul_list">
-                            <li class="li_list">
-                                <div class="img"><img src="{CBAN_PATH}images/list_img.jpg" width="103" height="66" /></div><div class="col_blck"><a href="#">新闻标题标题</a><div class="col_text_wh col_text">说明说明说明说明说明说明说明说明说明说明</div>
-                            </li>
-                            <li class="li_list">
-                                <div class="img"><img src="{CBAN_PATH}images/list_img.jpg" width="103" height="66" /></div><div class="col_blck"><a href="#">新闻标题标题</a><div class="col_text_wh col_text">说明说明说明说明说明说明说明说明说明说明</div>
-                            </li>
-                            <li class="li_list">
-                                <div class="img"><img src="{CBAN_PATH}images/list_img.jpg" width="103" height="66" /></div><div class="col_blck"><a href="#">新闻标题标题</a><div class="col_text_wh col_text">说明说明说明说明说明说明说明说明说明说明</div>
-                            </li>
+                            
+                            {pc:content action="position" posid="5" order="listorder asc" num="3"}
+                            {loop $data $r}
+                                <li class="li_list">
+                                <div class="img"><img src="{$r[thumb]}" width="103" height="66" /></div><div class="col_blck"><a href="index.php?m=cban&c=index&a=showJDWX&mdid={$r[id]}">{$r[title]}</a><div class="col_text_wh col_text">{$r[description]}</div>
+                            	</li>
+                            {/loop}
+                            {/pc}
                         </ul>
                     </div>
                 </div>
@@ -180,33 +107,31 @@
                     <h4 class="title title_br">&nbsp;</h4>
                     <div class="cont">
                         <ul class="ul_list">
-                            <li class="li_list">
-                                <div class="img"><img src="{CBAN_PATH}images/list_img.jpg" width="103" height="66" /></div><div class="col_blck"><a href="#">新闻标题标题</a><div class="col_text_wh col_text">说明说明说明说明说明说明说明说明说明说明</div>
-                            </li>
-                            <li class="li_list">
-                                <div class="img"><img src="{CBAN_PATH}images/list_img.jpg" width="103" height="66" /></div><div class="col_blck"><a href="#">新闻标题标题</a><div class="col_text_wh col_text">说明说明说明说明说明说明说明说明说明说明</div>
-                            </li>
-                            <li class="li_list">
-                                <div class="img"><img src="{CBAN_PATH}images/list_img.jpg" width="103" height="66" /></div><div class="col_blck"><a href="#">新闻标题标题</a><div class="col_text_wh col_text">说明说明说明说明说明说明说明说明说明说明</div>
-                            </li>
+                            {pc:content action="position" posid="6" order="listorder asc" num="3"}
+                            {loop $data $r}
+                            	
+                                <li class="li_list">
+                                <div class="img"><img src="{$r[thumb]}" width="103" height="66" /></div><div class="col_blck"><a href="index.php?m=cban&c=index&a=showJDWX&mdid={$r[id]}">{$r[title]}</a><div class="col_text_wh col_text">{$r[description]}</div>
+                            	</li>
+                            {/loop}
+                            {/pc}
                         </ul>
                     </div>
                 </div>
                 
                 <div class="show_2 div">
                 	<!--图片类型列表-->
-                    <h4 class="title title_br">展会信息</h4>
+                    <h4 class="title title_br">维修服务</h4>
                     <div class="cont">
                         <ul class="ul_list">
-                            <li class="li_list">
-                                <div class="img"><img src="{CBAN_PATH}images/list_img.jpg" width="103" height="66" /></div><div class="col_blck"><a href="#">新闻标题标题</a><div class="col_text_wh col_text">说明说明说明说明说明说明说明说明说明说明</div>
-                            </li>
-                            <li class="li_list">
-                                <div class="img"><img src="{CBAN_PATH}images/list_img.jpg" width="103" height="66" /></div><div class="col_blck"><a href="#">新闻标题标题</a><div class="col_text_wh col_text">说明说明说明说明说明说明说明说明说明说明</div>
-                            </li>
-                            <li class="li_list">
-                                <div class="img"><img src="{CBAN_PATH}images/list_img.jpg" width="103" height="66" /></div><div class="col_blck"><a href="#">新闻标题标题</a><div class="col_text_wh col_text">说明说明说明说明说明说明说明说明说明说明</div>
-                            </li>
+                            {pc:content action="position" posid="7" order="listorder asc" num="3"}
+                            {loop $data $r}
+                            	
+                                <li class="li_list">
+                                <div class="img"><img src="{$r[thumb]}" width="103" height="66" /></div><div class="col_blck"><a href="index.php?m=cban&c=index&a=showJDWX&mdid={$r[id]}">{$r[title]}</a><div class="col_text_wh col_text">{$r[description]}</div>
+                            	</li>
+                            {/loop}
+                            {/pc}
                         </ul>
                     </div>
                 </div>
@@ -216,51 +141,13 @@
             	<h4 class="title title_br">家电名企</h4>
                 <div class="a_link">
                 	<ul>
-                    	<li>
-                        	<div><a href="javascript:;">连接连接连接</a></div>
-                        </li>
-                        <li>
-                        	<div><a href="javascript:;">连接</a></div>
-                        </li>
-                        <li>
-                        	<div><a href="javascript:;">连接</a></div>
-                        </li>
-                        <li>
-                        	<div><a href="javascript:;">连接</a></div>
-                        </li>
-                        <li>
-                        	<div><a href="javascript:;">连接</a></div>
-                        </li>
-                        <li>
-                        	<div><a href="javascript:;">连接连接连接</a></div>
-                        </li>
-                        <li>
-                        	<div><a href="javascript:;">连接</a></div>
-                        </li>
-                        <li>
-                        	<div><a href="javascript:;">连接</a></div>
-                        </li>
-                        <li>
-                        	<div><a href="javascript:;">连接</a></div>
-                        </li>
-                        <li>
-                        	<div><a href="javascript:;">连接</a></div>
-                        </li>
-                        <li>
-                        	<div><a href="javascript:;">连接连接连接</a></div>
-                        </li>
-                        <li>
-                        	<div><a href="javascript:;">连接</a></div>
-                        </li>
-                        <li>
-                        	<div><a href="javascript:;">连接</a></div>
-                        </li>
-                        <li>
-                        	<div><a href="javascript:;">连接</a></div>
-                        </li>
-                        <li>
-                        	<div><a href="javascript:;">连接</a></div>
-                        </li>
+                    		{pc:content action="position" posid="8" order="listorder asc" num="20"}
+                            {loop $data $r}
+                                <li>
+                                    <div><a href="index.php?m=cban&c=index&a=jdmq&qyid={$r[id]}">{$r[title]}</a></div>
+                                </li>
+                            {/loop}
+                            {/pc}
                     </ul>
                 </div>
             </div>
@@ -279,60 +166,40 @@
                                     data-id="XXX"		:	对应要显示的id名称
                                 -->
                                 <li class="event_in group_div" data-type="1" data-class="group_name" data-id="left_div_1">
-                                    热门
+                                    <a href="javascript:void(0)">热门</a>
                                 </li>
                                 <li class="event_out group_div" data-type="1" data-class="group_name" data-id="left_div_2">
-                                    新品
+                                    <a href="javascript:void(0)">新品</a>
                                 </li>
                             </ul>
                         </div>
                         <div class="win_dir main_win_he">
                             <ul id="left_div_1" class="group_name">
-                                <li>
-                                	<span>1</span>
-                                    <a href="javascript:;">商品1sadasdasd</a><br />
-                                    <img src="{CBAN_PATH}images/tmp.jpg" height="40" />
+                                {pc:content action="position" posid="9" order="listorder asc" num="5"}
+                                {loop $data $r}                                    
+                                    <li>
+                                	<span>{$r[listorder]}</span>
+                                    <a href="{$r[url]}">{$r[title]}</a><br />
+                                    {if $r[listorder]=='1'}
+                                    <img src="{$r[thumb]}" height="40" />
+                                    {/if}
                                 </li>
-                                <li>
-                                	<span>2</span>
-                                    <a href="javascript:;">商品2</a>
-                                </li>
-                                <li>
-                                	<span>3</span>
-                                    <a href="javascript:;">商品2</a>
-                                </li>
-                                <li>
-                                	<span class="color">4</span>
-                                    <a href="javascript:;">商品2</a>
-                        		</li>
-                                <li>
-                                	<span class="color">5</span>
-                                    <a href="javascript:;">商品2</a>
-                        		</li>
+                                {/loop}
+                                {/pc}
                             </ul>
                             
                             <ul id="left_div_2" style="display:none;" class="group_name">
-                                <li>
-                                	<span>1</span>
-                                    <a href="javascript:;">测试1sadasdasd</a><br />
-                                    <img src="{CBAN_PATH}images/tmp.jpg" height="40" />
+                               {pc:content action="position" posid="10" order="listorder asc" num="5"}
+                                {loop $data $r}                                    
+                                    <li>
+                                	<span>{$r[listorder]}</span>
+                                    <a href="{$r[url]}">{$r[title]}</a><br />
+                                    {if $r[listorder]=='1'}
+                                    <img src="{$r[thumb]}" height="40" />
+                                    {/if}
                                 </li>
-                                <li>
-                                	<span>2</span>
-                                    <a href="javascript:;">测试2</a>
-                        		</li>
-                                <li>
-                                	<span>3</span>
-                                    <a href="javascript:;">测试2</a>
-                        		</li>
-                                <li>
-                                	<span class="color">4</span>
-                                    <a href="javascript:;">测试2</a>
-                        		</li>
-                                <li>
-                                	<span class="color">5</span>
-                                    <a href="javascript:;">测试2</a>
-                        		</li>
+                                {/loop}
+                                {/pc}
                             </ul>
                         </div>
                     </div>
@@ -355,128 +222,132 @@
                                     冰箱
                                 </li>
                                 <li class="group_div" data-class="group_bar" data-type="2" data-id="div_type_a_3">
-                                	微波炉
+                                	洗衣机
+                                </li>
+                                <li class="group_div" data-class="group_bar" data-type="2" data-id="div_type_a_4">
+                                    微波炉
+                                </li>
+                                <li class="group_div" data-class="group_bar" data-type="2" data-id="div_type_a_5">
+                                    电磁炉
+                                </li>
+                                <li class="group_div" data-class="group_bar" data-type="2" data-id="div_type_a_6">
+                                	热水器
+                                </li>
+                                <li class="group_div" data-class="group_bar" data-type="2" data-id="div_type_a_7">
+                                	其他
                                 </li>
                             </ul>
                         </div>
                         
                         <div class="win_dir group_bar" id="div_type_a_1">
                         	<ul>
-                                <li>
-                                    <a href="javascript:;">
-                                        <img src="{CBAN_PATH}images/tmp2.jpg" height="100"/>
-                                        电视
+                                {pc:content action="position" posid="11" order="listorder asc" num="20"}
+                                {loop $data $r}
+                                    <li>
+                                    <a href="{$r[url]}">
+                                        <img src="{$r[thumb]}" height="100"/><br />
+                                        {$r[title]}<br />
                                     </a>
-                                    <div class="pic"><span>参考价格:</span>¥12,341</div>
-                                </li>
-                                <li>
-                                    <a href="javascript:;">
-                                        <img src="{CBAN_PATH}images/tmp2.jpg" height="100"/>
-                                        商品商品商品商品商品商品商品商品商品商品商品商品
-                                    </a>
-                                    <div class="pic"><span>参考价格:</span>¥12,341</div>
-                                </li>
-                                <li>
-                                    <a href="javascript:;">
-                                        <img src="{CBAN_PATH}images/tmp2.jpg" height="100"/>
-                                        商品商品商品商品商品商品商品商品商品商品商品商品
-                                    </a>
-                                    <div class="pic"><span>参考价格:</span>¥12,341</div>
-                                </li>
-                                <li>
-                                    <a href="javascript:;">
-                                        <img src="{CBAN_PATH}images/tmp2.jpg" height="100"/>
-                                        商品商品商品商品商品商品商品商品商品商品商品商品
-                                    </a>
-                                    <div class="pic"><span>参考价格:</span>¥12,341</div>
-                                </li>
-                                <li>
-                                    <a href="javascript:;">
-                                        <img src="{CBAN_PATH}images/tmp2.jpg" height="100"/>
-                                        商品商品商品商品商品商品商品商品商品商品商品商品
-                                    </a>
-                                    <div class="pic"><span>参考价格:</span>¥12,341</div>
-                                </li>
+                                    <div class="pic"><span>参考价格:</span>¥{$r[price]}</div>
+                               		</li>
+                                {/loop}
+                                {/pc}
                             </ul>
                         </div>
                         
                         <div class="win_dir group_bar" style="display:none;" id="div_type_a_2">
                         	<ul>
-                                <li>
-                                    <a href="javascript:;">
-                                        <img src="{CBAN_PATH}images/tmp2.jpg" height="100"/>
-                                        冰箱
+                                {pc:content action="position" posid="12" order="listorder asc" num="20"}
+                                {loop $data $r}
+                                    <li>
+                                    <a href="{$r[url]}">
+                                        <img src="{$r[thumb]}" height="100"/><br />
+                                        {$r[title]}<br />
                                     </a>
-                                    <div class="pic"><span>参考价格:</span>¥12,341</div>
-                                </li>
-                                <li>
-                                    <a href="javascript:;">
-                                        <img src="{CBAN_PATH}images/tmp2.jpg" height="100"/>
-                                        商品商品商品商品商品商品商品商品商品商品商品商品
-                                    </a>
-                                    <div class="pic"><span>参考价格:</span>¥12,341</div>
-                                </li>
-                                <li>
-                                    <a href="javascript:;">
-                                        <img src="{CBAN_PATH}images/tmp2.jpg" height="100"/>
-                                        商品商品商品商品商品商品商品商品商品商品商品商品
-                                    </a>
-                                    <div class="pic"><span>参考价格:</span>¥12,341</div>
-                                </li>
-                                <li>
-                                    <a href="javascript:;">
-                                        <img src="{CBAN_PATH}images/tmp2.jpg" height="100"/>
-                                        商品商品商品商品商品商品商品商品商品商品商品商品
-                                    </a>
-                                    <div class="pic"><span>参考价格:</span>¥12,341</div>
-                                </li>
-                                <li>
-                                    <a href="javascript:;">
-                                        <img src="{CBAN_PATH}images/tmp2.jpg" height="100"/>
-                                        商品商品商品商品商品商品商品商品商品商品商品商品
-                                    </a>
-                                    <div class="pic"><span>参考价格:</span>¥12,341</div>
-                                </li>
+                                    <div class="pic"><span>参考价格:</span>¥{$r[price]}</div>
+                               		</li>
+                                {/loop}
+                                {/pc}
                             </ul>
                         </div>
                         
                         <div class="win_dir group_bar" style="display:none;" id="div_type_a_3">
                         	<ul>
-                                <li>
-                                    <a href="javascript:;">
-                                        <img src="{CBAN_PATH}images/tmp2.jpg" height="100"/>
-                                        微波炉
+                               {pc:content action="position" posid="13" order="listorder asc" num="20"}
+                                {loop $data $r}
+                                    <li>
+                                    <a href="{$r[url]}">
+                                        <img src="{$r[thumb]}" height="100"/><br />
+                                        {$r[title]}<br />
                                     </a>
-                                    <div class="pic"><span>参考价格:</span>¥12,341</div>
-                                </li>
-                                <li>
-                                    <a href="javascript:;">
-                                        <img src="{CBAN_PATH}images/tmp2.jpg" height="100"/>
-                                        商品商品商品商品商品商品商品商品商品商品商品商品
+                                    <div class="pic"><span>参考价格:</span>¥{$r[price]}</div>
+                               		</li>
+                                {/loop}
+                                {/pc}
+                            </ul>
+                        </div>
+                        
+                        <div class="win_dir group_bar" style="display:none;" id="div_type_a_4">
+                        	<ul>
+                               {pc:content action="position" posid="14" order="listorder asc" num="20"}
+                                {loop $data $r}
+                                    <li>
+                                    <a href="{$r[url]}">
+                                        <img src="{$r[thumb]}" height="100"/><br />
+                                        {$r[title]}<br />
                                     </a>
-                                    <div class="pic"><span>参考价格:</span>¥12,341</div>
-                                </li>
-                                <li>
-                                    <a href="javascript:;">
-                                        <img src="{CBAN_PATH}images/tmp2.jpg" height="100"/>
-                                        商品商品商品商品商品商品商品商品商品商品商品商品
+                                    <div class="pic"><span>参考价格:</span>¥{$r[price]}</div>
+                               		</li>
+                                {/loop}
+                                {/pc}
+                            </ul>
+                        </div>
+                        
+                        <div class="win_dir group_bar" style="display:none;" id="div_type_a_5">
+                        	<ul>
+                               {pc:content action="position" posid="15" order="listorder asc" num="20"}
+                                {loop $data $r}
+                                    <li>
+                                    <a href="{$r[url]}">
+                                        <img src="{$r[thumb]}" height="100"/><br />
+                                        {$r[title]}<br />
                                     </a>
-                                    <div class="pic"><span>参考价格:</span>¥12,341</div>
-                                </li>
-                                <li>
-                                    <a href="javascript:;">
-                                        <img src="{CBAN_PATH}images/tmp2.jpg" height="100"/>
-                                        商品商品商品商品商品商品商品商品商品商品商品商品
+                                    <div class="pic"><span>参考价格:</span>¥{$r[price]}</div>
+                               		</li>
+                                {/loop}
+                                {/pc}
+                            </ul>
+                        </div>
+                        
+                        <div class="win_dir group_bar" style="display:none;" id="div_type_a_6">
+                        	<ul>
+                               {pc:content action="position" posid="16" order="listorder asc" num="20"}
+                                {loop $data $r}
+                                    <li>
+                                    <a href="{$r[url]}">
+                                        <img src="{$r[thumb]}" height="100"/><br />
+                                        {$r[title]}<br />
                                     </a>
-                                    <div class="pic"><span>参考价格:</span>¥12,341</div>
-                                </li>
-                                <li>
-                                    <a href="javascript:;">
-                                        <img src="{CBAN_PATH}images/tmp2.jpg" height="100"/>
-                                        商品商品商品商品商品商品商品商品商品商品商品商品
+                                    <div class="pic"><span>参考价格:</span>¥{$r[price]}</div>
+                               		</li>
+                                {/loop}
+                                {/pc}
+                            </ul>
+                        </div>
+                        
+                        <div class="win_dir group_bar" style="display:none;" id="div_type_a_7">
+                        	<ul>
+                               {pc:content action="position" posid="17" order="listorder asc" num="20"}
+                                {loop $data $r}
+                                    <li>
+                                    <a href="{$r[url]}">
+                                        <img src="{$r[thumb]}" height="100"/><br />
+                                        {$r[title]}<br />
                                     </a>
-                                    <div class="pic"><span>参考价格:</span>¥12,341</div>
-                                </li>
+                                    <div class="pic"><span>参考价格:</span>¥{$r[price]}</div>
+                               		</li>
+                                {/loop}
+                                {/pc}
                             </ul>
                         </div>
                         

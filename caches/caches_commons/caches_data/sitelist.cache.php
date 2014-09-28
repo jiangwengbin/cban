@@ -3,7 +3,7 @@ return array (
   1 => 
   array (
     'siteid' => '1',
-    'name' => 'CBAN中国家电品牌门户网',
+    'name' => '默认站点',
     'dirname' => '',
     'domain' => 'http://127.0.0.1:8080/cban/',
     'site_title' => 'CBAN中国家电品牌门户网站',
