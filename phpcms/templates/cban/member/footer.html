@@ -4,10 +4,21 @@
 <a href="{$r[url]}" target="_blank">{$r[catname]}</a> |  
 {/loop}
 {/pc}
+<!--
 <a href="{APP_PATH}index.php?m=link" target="_blank">友情链接</a>
+-->
 
-<p class="cp">Powered by <strong><a href="http://www.phpcms.cn" target="_blank">PHPCMS</a></strong> <em>v9</em> &copy; {date('Y', SYS_TIME)} <img src="{IMG_PATH}copyright.gif"/>
+<p class="cp">
+
+
+{pc:link  action="type_list" siteid="1" order="listorder DESC" num="20" return="pic_link"}
+{loop $pic_link $v}
+           <li style="float:left; padding:5px;"><a href="{$v['url']}" title="{$v['name']}" target="_blank">{$v[name]}</a></li>
+{/loop}
+{/pc} 
+
 </p>
+
 </div>
 </body>
 </html>
