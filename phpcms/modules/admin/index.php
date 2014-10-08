@@ -215,10 +215,14 @@ class index extends admin {
 		$common_cache = getcache('common','commons');
 		$logsize_warning = errorlog_size() > $common_cache['errorlog_size'] ? '1' : '0';
 		$adminpanel = $this->panel_db->select(array('userid'=>$userid), '*',20 , 'datetime');
-		$product_copyright = '酷溜网(北京)科技有限公司';
-		$architecture = '王参加';
-		$programmer = '王参加、王官庆、郝国新、张二强、陈学旺、郝川、赵宏伟';
- 		$designer = '张二强';
+		$product_copyright = '微星工作室';
+		$architecture = 'Bean、小飞侠';
+		$programmer = 'Bean';
+ 		$designer = '小飞侠、欧阳';
+ 		
+ 		$lianxifangshi = '联系QQ：';
+ 		$lianxifangshi_datail = '【Bean】395470684 【小飞侠】1103244979';
+ 		
 		ob_start();
 		include $this->admin_tpl('main');
 		$data = ob_get_contents();
